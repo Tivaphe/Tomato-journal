@@ -60,9 +60,11 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 }
 
 .brand-lockup { display: flex; align-items: center; gap: 11px; padding: 0 10px; }
-.brand-mark { width: 35px; height: 35px; display: grid; place-items: center; color: var(--tomato); }
-.brand-mark svg { display: block; width: 100%; height: 100%; }
+.brand-mark { width: 35px; height: 35px; display: grid; place-items: center; color: var(--tomato); border-radius: 9px; overflow: hidden; background: transparent; }
+.brand-mark svg, .brand-mark img { display: block; width: 100%; height: 100%; }
+.brand-mark img { object-fit: contain; border-radius: 9px; }
 .brand-mark.small { width: 28px; height: 28px; }
+.brand-mark.small img { border-radius: 7px; }
 .brand-name { font-weight: 750; letter-spacing: -0.02em; font-size: 16px; }
 .brand-subtitle { margin-top: 4px; color: var(--muted-2); letter-spacing: 0.2em; font-size: 8px; font-weight: 700; white-space: nowrap; }
 
@@ -176,8 +178,9 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .plant-metric-label { margin-top: 5px; color: var(--muted-2); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
 
 .empty-state { min-height: 440px; display: grid; place-items: center; padding: 50px 25px; text-align: center; border: 1px dashed var(--line-strong); border-radius: var(--radius); background: rgba(255,255,255,.46); }
-.empty-illustration { width: 70px; height: 70px; display: grid; place-items: center; margin: 0 auto 18px; border-radius: 23px; color: var(--tomato); background: var(--tomato-soft); }
+.empty-illustration { width: 70px; height: 70px; display: grid; place-items: center; margin: 0 auto 18px; border-radius: 23px; color: var(--tomato); background: var(--tomato-soft); overflow: hidden; }
 .empty-illustration svg { width: 43px; height: 43px; }
+.empty-illustration img { width: 100%; height: 100%; display: block; object-fit: contain; border-radius: 16px; }
 .empty-state h3 { margin: 0; font-size: 21px; letter-spacing: -0.04em; }
 .empty-state p { max-width: 330px; margin: 9px auto 20px; color: var(--muted); line-height: 1.5; }
 
@@ -463,8 +466,9 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .share-card-top, .share-card-heading, .share-main-stats, .share-records, .share-badges, .share-challenge, .share-card-footer { position: relative; z-index: 1; }
 .share-card-top { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
 .share-card-brand { display: flex; align-items: center; gap: 8px; }
-.share-brand-mark { width: 31px; height: 31px; display: grid; place-items: center; color: #fff; border-radius: 10px; background: rgba(255,255,255,.16); }
+.share-brand-mark { width: 31px; height: 31px; display: grid; place-items: center; color: #fff; border-radius: 10px; background: rgba(255,255,255,.16); overflow: hidden; }
 .share-brand-mark svg { width: 21px; height: 21px; }
+.share-brand-mark img { width: 100%; height: 100%; display: block; object-fit: contain; border-radius: 8px; }
 .share-card-brand strong, .share-card-brand small { display: block; }
 .share-card-brand strong { font-size: 11px; letter-spacing: -.01em; }
 .share-card-brand small { margin-top: 3px; color: rgba(255,255,255,.66); letter-spacing: .15em; font-size: 7px; }
@@ -1581,8 +1585,9 @@ body[data-theme="night"] .cross-status, body[data-theme="night"] .cross-row-icon
 .onboarding-visual::before, .onboarding-visual::after { content: ""; position: absolute; width: 210px; height: 210px; border: 1px solid rgba(255,255,255,.27); border-radius: 50%; }
 .onboarding-visual::before { transform: translate(-22px, -56px); }
 .onboarding-visual::after { width: 280px; height: 280px; transform: translate(42px, 75px); border-color: rgba(255,255,255,.14); }
-.onboarding-orbit { position: relative; z-index: 1; width: 92px; height: 92px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: #fff; background: rgba(255,255,255,.15); box-shadow: 0 16px 32px rgba(50,20,15,.16); }
+.onboarding-orbit { position: relative; z-index: 1; width: 92px; height: 92px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: #fff; background: rgba(255,255,255,.15); box-shadow: 0 16px 32px rgba(50,20,15,.16); overflow: hidden; }
 .onboarding-orbit svg { width: 56px; height: 56px; }
+.onboarding-orbit img { width: 100%; height: 100%; display: block; object-fit: cover; border-radius: 50%; }
 .onboarding-orbit-ring { position: absolute; width: 130px; height: 130px; border: 1px dashed rgba(255,255,255,.53); border-radius: 50%; transform: rotate(-25deg) skewX(-15deg); }
 .onboarding-modal .modal-body { display: flex; flex-direction: column; justify-content: center; padding: 31px 29px; }
 .onboarding-modal h2 { margin: 9px 0 0; font-size: 27px; letter-spacing: -.055em; line-height: 1.03; }
