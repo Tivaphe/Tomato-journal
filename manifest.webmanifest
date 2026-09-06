@@ -1,0 +1,43 @@
+{
+  "id": "./",
+  "name": "Tomato Journal — Suivi du potager",
+  "short_name": "Tomato Journal",
+  "description": "Le carnet local pour suivre une saison de tomates.",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f0e3",
+  "theme_color": "#f5f0e3",
+  "categories": ["lifestyle", "food", "productivity"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Noter une récolte",
+      "short_name": "Récolte",
+      "url": "./?action=harvest",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Ajouter une plante",
+      "short_name": "Plante",
+      "url": "./?action=plant",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

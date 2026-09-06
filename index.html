@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f0e3" />
+    <meta name="description" content="Tomato Journal, le carnet local pour suivre une saison de tomates." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Tomato Journal" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <title>Tomato Journal · Suivi du potager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="orbital">
+    <div id="app" class="app-shell">
+      <aside class="sidebar" aria-label="Navigation principale">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <path d="M11 30c0-11 9-20 21-20s21 9 21 20c0 15-10 25-21 25S11 45 11 30Z" fill="currentColor" />
+              <path d="M32 13c-2-7 1-11 6-13 1 5-1 9-6 13Zm0 1c-6-8-13-8-18-4 5 1 11 3 18 10 7-7 13-9 18-10-5-4-12-4-18 4Z" fill="#4f815f" />
+            </svg>
+          </div>
+          <div>
+            <div class="brand-name">Tomato Journal</div>
+            <div class="brand-subtitle">MON CARNET DE CULTURE</div>
+          </div>
+        </div>
+
+        <div class="sidebar-season">
+          <span class="eyebrow">SAISON ACTIVE</span>
+          <button class="season-switch" id="sidebar-season-button" type="button" aria-label="Changer de saison">
+            <span id="sidebar-season-year">2026</span>
+            <span class="chevron">⌄</span>
+          </button>
+        </div>
+
+        <nav class="primary-nav" id="primary-nav">
+          <button class="nav-item active" data-route="garden" type="button">
+            <span class="nav-icon" data-icon="tomato"></span><span>Potager</span>
+          </button>
+          <button class="nav-item" data-route="yields" type="button">
+            <span class="nav-icon" data-icon="yields"></span><span>Analyse détaillée</span>
+          </button>
+          <button class="nav-item" data-route="seasons" type="button">
+            <span class="nav-icon" data-icon="seasons"></span><span>Saisons</span>
+          </button>
+          <button class="nav-item" data-route="varieties" type="button">
+            <span class="nav-icon" data-icon="tag"></span><span>Variétés</span>
+          </button>
+          <button class="nav-item" data-route="more" type="button">
+            <span class="nav-icon" data-icon="menu"></span><span>Plus</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="season-note">
+            <span class="season-note-icon" data-icon="sun"></span>
+            <div>
+              <strong>La saison bat son plein</strong>
+              <span>Continuez à noter chaque récolte.</span>
+            </div>
+          </div>
+          <div class="local-badge" data-storage-indicator><span class="status-dot"></span><span data-storage-status>Données enregistrées sur cet appareil</span></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="mobile-brand">
+            <div class="brand-mark small" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M11 30c0-11 9-20 21-20s21 9 21 20c0 15-10 25-21 25S11 45 11 30Z" fill="currentColor" /><path d="M32 13c-2-7 1-11 6-13 1 5-1 9-6 13Zm0 1c-6-8-13-8-18-4 5 1 11 3 18 10 7-7 13-9 18-10-5-4-12-4-18 4Z" fill="#4f815f" /></svg>
+            </div>
+            <span>Tomato Journal</span>
+          </div>
+          <div class="topbar-context" id="topbar-context">Saison 2026 <span class="context-divider">·</span> Bordeaux</div>
+          <div class="global-search-wrap">
+            <div class="global-search" role="search">
+              <span class="global-search-leading" data-icon="search"></span>
+              <input id="global-search" type="search" autocomplete="off" placeholder="Rechercher dans le carnet…" aria-label="Rechercher dans le carnet" />
+              <button class="global-search-clear" data-action="clear-global-search" type="button" aria-label="Effacer la recherche" hidden>×</button>
+            </div>
+            <div id="global-search-results" class="global-search-results" role="listbox" hidden></div>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="quick-add-button" type="button" aria-label="Ajouter une plante" title="Ajouter une plante"><span data-icon="plus"></span></button>
+            <button class="icon-button" id="theme-toggle-button" type="button" aria-label="Changer de thème" title="Changer de thème"><span data-icon="sun"></span></button>
+            <button class="avatar" id="profile-button" type="button" aria-label="Ouvrir le profil">MC</button>
+          </div>
+        </header>
+
+        <div id="page-content" class="page-content"></div>
+      </main>
+
+      <nav class="bottom-nav" id="bottom-nav" aria-label="Navigation mobile">
+        <button class="bottom-nav-item active" data-route="garden" type="button"><span data-icon="tomato"></span><span>Potager</span></button>
+        <button class="bottom-nav-item" data-route="yields" type="button"><span data-icon="yields"></span><span>Analyse détaillée</span></button>
+        <button class="bottom-nav-item" data-route="seasons" type="button"><span data-icon="seasons"></span><span>Saisons</span></button>
+        <button class="bottom-nav-item" data-route="varieties" type="button"><span data-icon="tag"></span><span>Variétés</span></button>
+        <button class="bottom-nav-item" data-route="more" type="button"><span data-icon="menu"></span><span>Plus</span></button>
+      </nav>
+    </div>
+
+    <div id="modal-root" aria-live="polite"></div>
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="seed-catalog.js"></script>
+    <script type="module" src="photo-storage.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
