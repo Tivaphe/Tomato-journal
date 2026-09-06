@@ -36,6 +36,8 @@ python3 -m http.server 4173
 ### Fonctionnalités
 
 - Potager : plantes, zones, filtres et affichage grille/liste.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215401.png" alt="Potager — vue grille des plantes avec zones, filtres et statistiques de la saison" width="700"/></p>
 - Gestion des zones : ajout, renommage et suppression d'une zone depuis Potager ou Plus.
 - Les actions destructives demandent une double confirmation avant suppression.
 - Fiche plante : variété, caractéristiques, emplacement et notes.
@@ -43,9 +45,15 @@ python3 -m http.server 4173
 - Journal photo : photos compressées et conservées localement avec titre, date et observation.
 - Calendrier de culture : plantations, maturités estimées, tâches et jours de récolte.
 - Analyse détaillée : récoltes, rythmes, répartitions, rendements par zone et comparaison des saisons au même endroit. Un graphique annuel affiche les douze mois avec des barres empilées par variété : la hauteur représente le poids récolté et chaque segment reprend la couleur de la fiche concernée. Les poids acceptent les décimales en grammes (par exemple 1 200,5 g) et restent pris en compte dans tous les totaux et moyennes.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215439.png" alt="Analyse détaillée — graphique annuel des récoltes par mois et par variété" width="700"/></p>
 - L’analyse détaillée comprend aussi les rendements par plant et par zone, les moyennes, la meilleure journée et la note gustative moyenne. Les fenêtres longues de planification et de budget restent défilables sur ordinateur comme sur mobile.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215459.png" alt="Analyse détaillée — rythme des récoltes, répartition par variété et journal des récoltes" width="700"/></p>
 - Notes gustatives : saveur, sucrosité, acidité, texture, note globale et commentaires.
 - Saisons : résumé annuel, état du bilan (en cours, incomplet ou clôturé) et moments à retenir.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215512.png" alt="Saisons — résumé annuel de la saison et bilan qualitatif" width="700"/></p>
 - Bilan qualitatif : goût, vigueur, précocité, quantité perçue et décision à retenir/revoir/écarter, sans pesée obligatoire.
 - Comparaison de saisons : rendement, variétés productives, zones, notes gustatives et budget année par année.
 - Planification : sélection pour la prochaine saison et recommandations basées sur les performances actuelles.
@@ -53,9 +61,13 @@ python3 -m http.server 4173
 - Croisements et lignées : parents femelle/mâle issus du potager ou du catalogue, génération F1/F2/F3, dates de pollinisation et d’extraction, quantité de graines, plants sélectionnés, caractères recherchés et stabilité. Chaque lignée peut alimenter automatiquement le catalogue local et les candidats de saison.
 - Budget du potager : dépenses par catégorie, variété et zone, avec restauration depuis la corbeille.
 - Catalogue de variétés : 130 fiches importées depuis `claud6 catalogue seed.html`, réparties dans 25 familles, avec familles, sous-familles et détails botaniques conservés ; recherche, filtres, consultation de fiche, ajout de nouvelles variétés et ajout prérempli au potager. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue pour remplir automatiquement les champs correspondants.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215524.png" alt="Catalogue de variétés — 130 fiches, recherche et filtres par famille" width="700"/></p>
 - Corbeille : restauration des plantes, zones, récoltes, tâches, photos, dégustations, dépenses, candidats de saison, croisements et fiches de catalogue.
 - Bilan partageable : carte visuelle, badges, indice potager, records et défi amical, avec copie du texte, partage natif et téléchargement de la carte SVG.
 - Thèmes visuels : **Bio-Orbital** en mode clair et **Night Garden HUD** en mode sombre, avec bascule rapide et préférence mémorisée.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215414.png" alt="Potager en thème sombre Night Garden HUD" width="700"/></p>
 - Palette des fruits : sélection de 1 à 3 teintes, prévisualisation immédiate, choix **Couleur unie** ou **Dégradé multicolore**. En mode uni, plusieurs teintes sont mélangées en une couleur résultante ; en mode dégradé, elles restent visibles séparément. La palette calculée alimente les bandes latérales des fiches plantes et variétés, les repères et encadrés de la page Récoltes, ainsi que les détails et les exports. Les anciennes données sans `colorMode` restent compatibles : une palette multiple est affichée en dégradé par défaut.
 - Export de données : sauvegarde JSON complète et fichier **Contexte pour une IA** en Markdown, JSON structuré ou texte brut, avec vue d'ensemble, zones, plantes, récoltes, tâches, dégustations, journal photo, budget, bilans qualitatifs, croisements, candidats et plans de saison.
 - Sauvegarde locale dans le navigateur, export/import JSON. Le catalogue fourni est inclus dans les sauvegardes et dans le contexte exporté pour une IA.
@@ -86,6 +98,8 @@ Aucun compte, serveur externe ou appel réseau n'est nécessaire pour les foncti
 ### Améliorations produit — onboarding et suivi avancé
 
 - **Première visite** : un parcours léger propose de conserver la démo ou de repartir avec un carnet vide, puis guide vers une zone, une plante et une première récolte.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215338.png" alt="Première visite — conserver la démo ou commencer avec un carnet vide" width="700"/></p>
 - **Actions groupées** : le bouton « Sélectionner » du Potager permet de sélectionner plusieurs plantes et d'appliquer un statut, une zone, l'archivage, la comparaison ou une suppression vers la corbeille avec double confirmation.
 - **Inventaire de graines** : stocks restants, unités, achat/récolte, viabilité, emplacement, source, notes et candidate associée. Les candidates « à acheter » sans stock sont signalées.
 - **Suivi sanitaire** : symptômes structurés, gravité, traitement, date, évolution, notes et photo locale associée. L'historique est modifiable, exporté pour l'IA et restaurable depuis la corbeille.
@@ -124,6 +138,8 @@ python3 -m http.server 4173
 ### Features
 
 - **Garden** (*Potager*): plants, zones, filters, and grid/list views.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215401.png" alt="Garden — grid view of plants with zones, filters and season statistics" width="700"/></p>
 - Zone management: add, rename and delete a zone from the Garden or More screens.
 - Destructive actions require double confirmation before deletion.
 - Plant sheet: variety, characteristics, location and notes.
@@ -131,9 +147,15 @@ python3 -m http.server 4173
 - Photo journal: photos compressed and stored locally with a title, date and observation.
 - Growing calendar: plantings, estimated maturity dates, tasks and harvest days.
 - Detailed analysis: harvests, pacing, distributions, yields per zone and season-over-season comparison for the same spot. A yearly chart shows all twelve months with stacked bars per variety: the height represents the harvested weight and each segment reuses the color of the related plant sheet. Weights accept decimals in grams (e.g. 1200.5 g) and count toward every total and average.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215439.png" alt="Detailed analysis — yearly harvest chart by month and variety" width="700"/></p>
 - The detailed analysis also covers yields per plant and per zone, averages, the best day and the average taste rating. Long planning and budget windows stay scrollable on desktop and mobile.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215459.png" alt="Detailed analysis — harvest rhythm, breakdown per variety and harvest journal" width="700"/></p>
 - Taste notes: flavor, sweetness, acidity, texture, overall rating and comments.
 - Seasons: yearly summary, review status (in progress, incomplete or closed) and highlights worth remembering.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215512.png" alt="Seasons — yearly summary of the season and qualitative review" width="700"/></p>
 - Qualitative review: taste, vigor, earliness, perceived quantity and a keep/reconsider/drop decision — no weighing required.
 - Season comparison: yield, most productive varieties, zones, taste ratings and budget, year by year.
 - Planning: selection for the next season and recommendations based on current performance.
@@ -141,9 +163,13 @@ python3 -m http.server 4173
 - Crosses and lines: female/male parents from the garden or the catalog, F1/F2/F3 generation, pollination and extraction dates, seed count, selected seedlings, target traits and stability. Each line can automatically feed the local catalog and the season candidates.
 - Garden budget: expenses by category, variety and zone, with restore from the trash.
 - Variety catalog: 130 sheets imported from `claud6 catalogue seed.html`, spread across 25 families with families, sub-families and botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. The "Add a plant" form also offers a catalog dropdown to fill the matching fields automatically.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215524.png" alt="Variety catalog — 130 sheets, search and filters per family" width="700"/></p>
 - Trash: restore plants, zones, harvests, tasks, photos, tastings, expenses, season candidates, crosses and catalog sheets.
 - Shareable summary: visual card, badges, garden score, records and a friendly challenge, with copy-to-text, native sharing and SVG card download.
 - Visual themes: **Bio-Orbital** in light mode and **Night Garden HUD** in dark mode, with a quick toggle and a remembered preference.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215414.png" alt="Garden in the Night Garden HUD dark theme" width="700"/></p>
 - Fruit palette: pick 1 to 3 hues with instant preview, then choose **Solid color** or **Multicolor gradient**. In solid mode, several hues blend into one resulting color; in gradient mode they stay separately visible. The computed palette drives the side bands of plant and variety sheets, the markers and boxes on the Harvests page, as well as details and exports. Older data without `colorMode` remains compatible: a multi-hue palette is shown as a gradient by default.
 - Data export: full JSON backup and a **Context for an AI** file in Markdown, structured JSON or plain text, covering the overview, zones, plants, harvests, tasks, tastings, photo journal, budget, qualitative reviews, crosses, candidates and season plans.
 - Local browser storage with JSON export/import. The bundled catalog is included in backups and in the exported AI context.
@@ -174,6 +200,8 @@ No account, external server or network call is required for the growing features
 ### Product improvements — onboarding and advanced tracking
 
 - **First visit**: a lightweight onboarding offers to keep the demo data or start with an empty journal, then guides you toward a zone, a plant and a first harvest.
+
+  <p align="center"><img src="screen/Capture%20d%27%C3%A9cran%202026-09-06%20215338.png" alt="First visit — keep the demo or start with an empty journal" width="700"/></p>
 - **Bulk actions**: the "Select" button in the Garden lets you pick several plants and apply a status, a zone, archiving, comparison, or a deletion to the trash with double confirmation.
 - **Seed inventory**: remaining stock, units, purchase/harvest, viability, location, source, notes and the linked candidate. "To buy" candidates without stock are flagged.
 - **Plant health tracking**: structured symptoms, severity, treatment, date, evolution, notes and an attached local photo. The history is editable, exported for AI and restorable from the trash.
