@@ -1,6 +1,6 @@
 # Tomato Journal
 
-Une application web locale, sans dépendance, inspirée des captures fournies pour suivre une saison de culture de tomates.
+Une application web locale, sans dépendance, pour suivre une saison de culture de tomates.
 
 ## Lancer en local
 
