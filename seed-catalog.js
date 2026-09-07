@@ -2080,12 +2080,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Tuxhorn",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété américaine tardive, proche du type Ananas, à fruits côtelés et bigarrés.",
+      "fruit": "Fruits rouge foncé marbrés d’orange, 200 à 500 g, chair dense et douce, plus riche et sucrée à pleine maturité.",
+      "type_de_fruit": "Côtelée type Ananas",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "200 à 500 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-132",
     "catalogIndex": 132,
@@ -2097,12 +2097,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Striped German",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété adaptée aux régions chaudes, remarquable par ses gros fruits et sa bonne tolérance à la chaleur.",
+      "fruit": "Fruits aplatis et fortement côtelés de type Ananas, 200 à 500 g, peau jaune et rouge, chair jaune au cœur rouge.",
+      "type_de_fruit": "Beefsteak côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "200 à 500 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-133",
     "catalogIndex": 133,
@@ -2114,12 +2114,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Jaune",
     "name": "Manyel",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : jaune. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Très ancienne variété amérindienne, vigoureuse et productive. Son nom signifie « plusieurs lunes ». Les fruits peuvent éclater après une sécheresse suivie d’un arrosage abondant.",
+      "fruit": "Abondance de fruits jaune-or ronds, parfois aplatis et côtelés, 150 à 300 g, à saveur douce et acidulée.",
+      "type_de_fruit": "Ronde légèrement côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "150 à 300 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-134",
     "catalogIndex": 134,
@@ -2131,12 +2131,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Clear Pink",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété russe adaptée aux climats frais, présentée au Seed Savers Exchange en 1995 avec Cosmonaut Volkov ; son nom originel a été perdu.",
+      "fruit": "Fruits rose clair ronds et lisses, 90 à 150 g, peu grainés, juteux, doux et légèrement acidulés.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "précoce"
+      "taille": "90 à 150 g",
+      "maturité": "Précoce"
     },
     "id": "catalog-135",
     "catalogIndex": 135,
@@ -2148,12 +2148,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "1884",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété américaine découverte par James Lyde Williamson dans des débris après une inondation à Friendly en 1884. Elle est appréciée pour son rendement et son goût.",
+      "fruit": "Fruits rose foncé aplatis pouvant atteindre 1 kg, juteux et très savoureux.",
+      "type_de_fruit": "Beefsteak aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "300 à 1000 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-136",
     "catalogIndex": 136,
@@ -2165,12 +2165,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Brandywine Sudduth’s Strain",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Sélection de Pink Brandywine conservée par la famille Sudduth depuis plus d’un siècle ; Ben Quisenberry l’a reçue de Doris Sudduth Hill en 1980.",
+      "fruit": "Fruits roses de type beefsteak, arrondis et légèrement aplatis, 600 à 1000 g, à saveur intense. Plante pouvant atteindre 3 m, feuillage pomme de terre.",
+      "type_de_fruit": "Beefsteak aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "600 à 1000 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-137",
     "catalogIndex": 137,
@@ -2182,12 +2182,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Marizol Purple",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété allemande originaire de la Forêt Noire, amenée aux États-Unis puis transmise au Seed Savers Exchange en 1994. Vigoureuse, résistante à l’éclatement et aux maladies, feuillage pomme de terre.",
+      "fruit": "Grappes de 3 à 4 fruits roses ovales de 500 à 1000 g, à chair dense et juteuse, douce et acidulée.",
+      "type_de_fruit": "Ovale côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "500 à 1000 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-138",
     "catalogIndex": 138,
@@ -3185,12 +3185,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Jaune",
     "name": "Russian Lemon",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : jaune. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété russe produisant de nombreuses grappes de 4 à 5 fruits ovales, légèrement creux et divisés en deux lobes.",
+      "fruit": "Fruits jaunes ovales ressemblant à des citrons, 60 à 90 g, chair ferme, douce et rafraîchissante.",
+      "type_de_fruit": "Ovale à deux lobes",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "60 à 90 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-197",
     "catalogIndex": 197,
