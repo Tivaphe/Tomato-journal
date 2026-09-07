@@ -2199,12 +2199,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Crnkovic Yougoslavian Pink",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété vigoureuse originaire de l’ex-Yougoslavie, apportée aux États-Unis par Yasha Crnkovic, membre du Seed Savers Exchange de New York.",
+      "fruit": "Grappes de 3 à 6 fruits roses juteux de type chair de bœuf, environ 400 à 600 g et 8 à 15 cm. Peu sensibles à l’éclatement, de bonne conservation et adaptés au séchage.",
+      "type_de_fruit": "Chair de bœuf côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "400 à 600 g ; 8 à 15 cm",
+      "maturité": "Tardive"
     },
     "id": "catalog-139",
     "catalogIndex": 139,
@@ -2216,12 +2216,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Grandma Mary’s Paste",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété sélectionnée par Jeanne Griffin, dans l’ouest du Maine, pour la taille de ses fruits et sa précocité ; introduite par Fedco Seeds. Vigoureuse et tolérante aux climats froids.",
+      "fruit": "Abondance de fruits rouges allongés et charnus, de 100 à 300 g et 6 à 8 cm. Chair juteuse contenant peu de graines, adaptée aux sauces et aux salades.",
+      "type_de_fruit": "Allongé à chair",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "précoce"
+      "taille": "100 à 300 g ; 6 à 8 cm",
+      "maturité": "Précoce"
     },
     "id": "catalog-140",
     "catalogIndex": 140,
@@ -2233,12 +2233,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Petros",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété à végétation compacte, de moins d’un mètre de haut, produisant des grappes de 5 à 6 fruits jusqu’aux gelées. Elle peut se cultiver en pleine terre, en pot ou sous serre.",
+      "fruit": "Fruits rouges ronds, légèrement ondulés sur le dessus, de 50 à 100 g et 4 à 6 cm. Chair juteuse et saveur douce.",
+      "type_de_fruit": "Ronde légèrement ondulée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "50 à 100 g ; 4 à 6 cm",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-141",
     "catalogIndex": 141,
@@ -2250,12 +2250,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Sieger",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété adaptée à la culture en plein champ, originaire d’Allemagne. Elle produit une abondance de fruits et convient aussi bien aux coulis qu’aux salades.",
+      "fruit": "Fruits rouges ronds d’environ 80 g et 6 à 7 cm, à chair fine et saveur douce.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "80 g ; 6 à 7 cm",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-142",
     "catalogIndex": 142,
@@ -2267,12 +2267,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Ponderosa Red",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété fixée originaire du Nebraska, présentée en 1892 par Peter Henderson, Seedsman. Vigoureuse et adaptée aux climats humides.",
+      "fruit": "Très gros fruits rouges aplatis et côtelés de type chair de bœuf, de 600 à 1000 g. Chair ferme contenant peu de graines.",
+      "type_de_fruit": "Chair de bœuf aplatie côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "600 à 1000 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-143",
     "catalogIndex": 143,
@@ -2284,12 +2284,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Super Colosse",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété à croissance vigoureuse produisant des fruits fermes de type chair de bœuf. Son origine semble inconnue.",
+      "fruit": "Fruits rose foncé à rouge vif, fermes et juteux, de 250 à 400 g, à chair offrant une pointe d’acidité.",
+      "type_de_fruit": "Chair de bœuf ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "250 à 400 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-144",
     "catalogIndex": 144,
@@ -2301,12 +2301,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Vert",
     "name": "Green Velvet",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : vert. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété de tomate verte très douce et savoureuse, produisant des fruits de type chair de bœuf qui restent verts à maturité avec des teintes jaune doré.",
+      "fruit": "Fruits verts teintés de jaune d’or à maturité, côtelés, environ 110 à 130 g. Chair vert chartreuse et texture charnue.",
+      "type_de_fruit": "Chair de bœuf côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "110 à 130 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-145",
     "catalogIndex": 145,
@@ -2318,12 +2318,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Vert",
     "name": "Ananas Vert / Green Pineapple",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : vert. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété originaire de Springfield, dans l’Ohio, introduite en 1991 par le Seed Savers Exchange. Port assez buissonnant et récolte possible juste avant la complète maturité.",
+      "fruit": "Gros fruits verts marbrés de type chair de bœuf, aplatis, de 150 à 400 g. Chair juteuse et saveur riche.",
+      "type_de_fruit": "Chair de bœuf aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "150 à 400 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-146",
     "catalogIndex": 146,
