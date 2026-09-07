@@ -2777,12 +2777,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Musk Zebra",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : précoce. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente de type Zebra issue du croisement entre Green Zebra et Moskwich, sélectionnée pour sa précocité.",
+      "fruit": "Fruits plus petits et plus foncés que Green Zebra, verts à rouges, unis ou striés, à chair parfumée et sucrée.",
+      "type_de_fruit": "Ronde striée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "précoce"
+      "taille": "Non précisé",
+      "maturité": "Précoce"
     },
     "id": "catalog-173",
     "catalogIndex": 173,
@@ -2794,12 +2794,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Pineapple Blues",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente développée par Tom Wagner, à grande variabilité de forme, couleur et saveur.",
+      "fruit": "Fruits généralement ronds et charnus, roses à orange avec des teintes indigo au soleil, 60 à 90 g.",
+      "type_de_fruit": "Ronde bigarrée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "60 à 90 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-174",
     "catalogIndex": 174,
@@ -2811,12 +2811,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Indigo",
     "name": "Alki Blue Blood",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : indigo. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Obtention récente de Tom Wagner. Variété productive à feuillage clairsemé ; les anthocyanes colorent les fruits sous l’action du soleil.",
+      "fruit": "Fruits ronds moyens, avec des teintes indigo variables ; la couleur, la forme et la saveur peuvent être inconstantes.",
+      "type_de_fruit": "Ronde indigo",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-175",
     "catalogIndex": 175,
@@ -2828,12 +2828,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Noir",
     "name": "Violet Jasper",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : noir. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété chinoise de mi-saison, aussi appelée Tzi Bi U ou Violette Jasper. Très productive et adaptée aux régions à saison courte ou à été frais.",
+      "fruit": "Fruits ronds lisses de 30 à 90 g, rouge violacé marbré de vert, à chair rouge et savoureuse.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "30 à 90 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-176",
     "catalogIndex": 176,
@@ -2845,12 +2845,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Beauty Mark",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente développée par Tom Wagner, issue de White Brandy et Brandy Stripes. Les fruits peuvent varier de couleur, de forme et de saveur.",
+      "fruit": "Fruits bigarrés de taille moyenne, à chair parfumée avec des notes d’agrumes.",
+      "type_de_fruit": "Bigarrée aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Taille moyenne",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-177",
     "catalogIndex": 177,
@@ -2862,12 +2862,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Churra Plum",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente de Tom Wagner, nommée en référence à une race de moutons espagnole. Feuillage gris-vert, duveteux et angora ; forte variabilité.",
+      "fruit": "Fruits ovales ou allongés, panachés de jaune et de rouge, aux couleurs, formes et saveurs variables.",
+      "type_de_fruit": "Ovale ou allongée bigarrée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-178",
     "catalogIndex": 178,
@@ -2879,12 +2879,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Cote d’Zebra",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente développée par Tom Wagner, issue de croisements entre Green Zebra, Turk’s Turban et Sundrop.",
+      "fruit": "Gros fruits de type Green Zebra, mais à chair orange.",
+      "type_de_fruit": "Ronde bigarrée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-179",
     "catalogIndex": 179,
@@ -2896,12 +2896,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Early Sue",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente développée par Tom Wagner, particulièrement résistante au mildiou.",
+      "fruit": "Fruits ronds rouge foncé, striés d’orange ; calibre non précisé sur la fiche.",
+      "type_de_fruit": "Ronde striée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-180",
     "catalogIndex": 180,
