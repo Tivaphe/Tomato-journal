@@ -1,6 +1,6 @@
 /* Seed catalogue imported from claud6 catalogue seed.html.
  * Source: script#variety-data · 40 entries imported + 16 classic French-garden
- * varieties + 10 US-garden classics = 66 entries.
+ * varieties + 10 US-garden classics + 10 Dwarf Tomato Project releases = 76.
  * Tomates uniquement (Solanum lycopersicum).
  * This file is static so the local app also works offline on first revisit.
  */
@@ -994,5 +994,155 @@ window.SEED_CATALOG = [
     },
     "id": "catalog-066",
     "catalogIndex": 66
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Rosella Purple",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sleepy » (Budai Torpe X Stump of the World), publiée en 2011 ; l'une des naines les plus cultivées du projet.",
+      "fruit": "150 à 300 g, légèrement aplatie, pourpre sombre à reflets rosés. Chair dense et juteuse, saveur riche et sucrée typique des tomates foncées.",
+      "type_de_fruit": "Beefsteak pourprée",
+      "gènes_potentiels": "",
+      "taille": "60 à 120 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-067",
+    "catalogIndex": 67
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Dwarf Mr. Snow",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sneezy » (Golden Dwarf Champion X Green Giant), publiée en 2011 ; référence des naines à fruits clairs.",
+      "fruit": "100 à 300 g, arrondie à légèrement aplatie, jaune très pâle presque ivoire. Chair douce et délicatement fruitée, faible acidité.",
+      "type_de_fruit": "Ronde jaune pâle",
+      "gènes_potentiels": "",
+      "taille": "80 à 120 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-068",
+    "catalogIndex": 68
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Summertime Gold",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sneezy » (Golden Dwarf Champion X Green Giant), publiée en 2011 ; naine dorée très appréciée pour sa saveur équilibrée.",
+      "fruit": "100 à 250 g, arrondie, jaune doré lumineux. Chair charnue et juteuse, saveur sucrée avec une pointe d'acidité, très équilibrée.",
+      "type_de_fruit": "Ronde jaune",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-069",
+    "catalogIndex": 69
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Dwarf Emerald Giant",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sneezy » (Golden Dwarf Champion X Green Giant), publiée en 2011 ; naine à fruits verts à maturité.",
+      "fruit": "150 à 300 g, arrondie à légèrement aplatie, verte à maturité avec des reflets émeraude. Chair verte juteuse, saveur douce et fruitée, acidulée juste ce qu'il faut.",
+      "type_de_fruit": "Ronde verte",
+      "gènes_potentiels": "",
+      "taille": "80 à 120 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (78 à 88 jours)."
+    },
+    "id": "catalog-070",
+    "catalogIndex": 70
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Tasmanian Chocolate",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Happy » (New Big Dwarf X Paul Robeson), publiée en 2011 ; remarquée pour sa précocité et sa saveur pleine (notée 8/10 par Craig LeHoullier).",
+      "fruit": "100 à 250 g, arrondie légèrement aplatie, brun chocolat à reflets pourpres. Chair dense, saveur riche, sucrée et complexe, parmi les meilleures du projet.",
+      "type_de_fruit": "Ronde brune",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Précoce à mi-saison (70 à 78 jours)."
+    },
+    "id": "catalog-071",
+    "catalogIndex": 71
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Rosella Crimson",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sleepy » (Budai Torpe X Stump of the World), publiée en 2014 ; sœur de Rosella Purple en version rouge profond.",
+      "fruit": "100 à 200 g, arrondie, rouge cramoisi profond. Chair juteuse, saveur sucrée et acidulée bien équilibrée, très régulière en grappes.",
+      "type_de_fruit": "Ronde cramoisie",
+      "gènes_potentiels": "",
+      "taille": "60 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-072",
+    "catalogIndex": 72
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Chocolate Lightning",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Beauty » (Dwarf Wild Fred x Beauty King), publiée en 2015 ; originale par sa robe brune finement zébrée.",
+      "fruit": "100 à 250 g, arrondie, brun chocolat parcouru de fines zébrures vert doré. Chair juteuse, saveur sucrée, riche et légèrement fumée.",
+      "type_de_fruit": "Ronde brune zébrée",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-073",
+    "catalogIndex": 73
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Dwarf Wild Fred",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sleazy A » (Carbon X New Big Dwarf), publiée en 2011 ; feuillage pomme de terre hérité de Carbon, fruits foncés charnus.",
+      "fruit": "150 à 300 g, arrondie à légèrement aplatie, pourpre brun foncé. Chair charnue et juteuse, saveur riche et douce aux notes de pruneau.",
+      "type_de_fruit": "Beefsteak pourpre",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage pomme de terre rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-074",
+    "catalogIndex": 74
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Kangaroo Paw Green",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Famille « Kangaroo Paw » publiée en 2015 ; version verte à maturité, format cerise allongé, très productive en pot.",
+      "fruit": "20 à 40 g, ovale allongée type cerise, verte à maturité avec des zébrures discrètes. Chair croquante et juteuse, saveur sucrée-acidulée rafraîchissante.",
+      "type_de_fruit": "Cerise allongée verte",
+      "gènes_potentiels": "",
+      "taille": "50 à 90 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (72 à 80 jours)."
+    },
+    "id": "catalog-075",
+    "catalogIndex": 75
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Adelaide Festival",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Tidy » (Rosella Purple X Pink Berkeley Tie-Dye), publiée en 2014-2015 ; robe tie-dye spectaculaire héritée de Berkeley Tie-Dye.",
+      "fruit": "100 à 250 g, arrondie légèrement aplatie, rouge cuivré zébré de vert et d'or. Chair marbrée, saveur sucrée, acidulée et complexe.",
+      "type_de_fruit": "Ronde zébrée tie-dye",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-076",
+    "catalogIndex": 76
   }
 ];

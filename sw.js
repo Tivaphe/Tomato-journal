@@ -1,4 +1,4 @@
-const CACHE_NAME = "tomato-journal-shell-845e4c378548";
+const CACHE_NAME = "tomato-journal-shell-060aff24ad1d";
 const APP_SHELL = [
   "./",
   "./index.html",
