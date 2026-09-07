@@ -1,9 +1,4 @@
-/* Seed catalogue imported from claud6 catalogue seed.html.
- * Source: script#variety-data · 40 entries imported + 16 classic French-garden
- * varieties + 10 US-garden classics + 10 Dwarf Tomato Project releases + 36 Kokopelli listings = 112.
- * Tomates uniquement (Solanum lycopersicum).
- * This file is static so the local app also works offline on first revisit.
- */
+/* Seed catalogue enriched from Kokopelli product pages. */
 window.SEED_CATALOG = [
   {
     "family": "Tomate (Solanum lycopersicum)",
@@ -1145,616 +1140,616 @@ window.SEED_CATALOG = [
     "id": "catalog-076",
     "catalogIndex": 76
   },
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Green",
-  "name": "Aunt Ruby’s German Green",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : tardive, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : green. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "tardive"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Green",
+    "name": "Aunt Ruby’s German Green",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : tardive, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : green. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "tardive"
+    },
+    "id": "catalog-077",
+    "catalogIndex": 77,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-077",
-  "catalogIndex": 77,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Yellow",
-  "name": "Yellow Perfection",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : yellow. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Yellow",
+    "name": "Yellow Perfection",
+    "details": {
+      "description_histoire_particularités": "Très ancienne variété anglaise introduite par Unwin Seedsmen en 1890. Son feuillage rappelle celui de la pomme de terre ; la peau fine rend les fruits sensibles à l’éclatement après une sécheresse suivie d’arrosages abondants.",
+      "fruit": "Petits fruits ronds jaune brillant d’environ 5 cm, à peau fine et chair juteuse.",
+      "type_de_fruit": "Petit fruit rond",
+      "gènes_potentiels": "",
+      "taille": "Environ 5 cm",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-078",
+    "catalogIndex": 78,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6625-Yellow-Perfection"
   },
-  "id": "catalog-078",
-  "catalogIndex": 78,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · White",
-  "name": "White Wonder",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : white. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · White",
+    "name": "White Wonder",
+    "details": {
+      "description_histoire_particularités": "Ancienne variété américaine déjà connue en 1860. Elle produit des fruits de type beefsteak et se cultive en pleine terre ou sous serre.",
+      "fruit": "Gros fruits blanc ivoire, aplatis et côtelés, de 120 à 300 g. Chair ivoire sucrée, douce, de très bonne texture.",
+      "type_de_fruit": "Beefsteak côtelé",
+      "gènes_potentiels": "",
+      "taille": "120 à 300 g ; 8 à 10 cm",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-079",
+    "catalogIndex": 79,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7626-White-Wonder"
   },
-  "id": "catalog-079",
-  "catalogIndex": 79,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Orange",
-  "name": "Gold Dust",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : orange. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Orange",
+    "name": "Gold Dust",
+    "details": {
+      "description_histoire_particularités": "Variété compacte et résistante aux maladies, développée aux États-Unis. Elle correspond à la version orange de « Taxi », développée par l’Université du New Hampshire.",
+      "fruit": "Fruits orange bien ronds de 100 à 250 g, à chair ferme et de bonne saveur.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "",
+      "taille": "100 à 250 g ; 5 à 10 cm",
+      "maturité": "Précoce"
+    },
+    "id": "catalog-080",
+    "catalogIndex": 80,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6402-Gold-Dust"
   },
-  "id": "catalog-080",
-  "catalogIndex": 80,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Api Rouge",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Api Rouge",
+    "details": {
+      "description_histoire_particularités": "Variété originaire des États-Unis, à feuillage de pomme de terre et à port semi-déterminé. Elle forme des grappes de 3 à 4 fruits et convient à la culture en pleine terre, en pot ou sous serre.",
+      "fruit": "Petits fruits ronds rouges de 30 à 50 g (4 à 6 cm), à chair juteuse, douce et parfumée.",
+      "type_de_fruit": "Cerise / petit fruit",
+      "gènes_potentiels": "",
+      "taille": "30 à 50 g ; 4 à 6 cm",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-081",
+    "catalogIndex": 81,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6296-Api-Rouge"
   },
-  "id": "catalog-081",
-  "catalogIndex": 81,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · White",
-  "name": "Pêche Blanche",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : white. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · White",
+    "name": "Pêche Blanche",
+    "details": {
+      "description_histoire_particularités": "Ancienne variété à fruits duveteux, adaptée à la culture en pleine terre ou sous serre. Elle figure dans le catalogue de référence « Semences de Kokopelli » de Dominique Guillet.",
+      "fruit": "Fruits blanc crème ronds, de la taille d’une pêche, 60 à 90 g. Épiderme légèrement duveteux, chair juteuse, douce, sucrée et délicatement acidulée.",
+      "type_de_fruit": "Ronde type pêche",
+      "gènes_potentiels": "",
+      "taille": "60 à 90 g",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-082",
+    "catalogIndex": 82,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7312-Peche-Blanche"
   },
-  "id": "catalog-082",
-  "catalogIndex": 82,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Yellow",
-  "name": "Délice d’Or",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : yellow. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Yellow",
+    "name": "Délice d’Or",
+    "details": {
+      "description_histoire_particularités": "Variété compacte originaire des États-Unis, développée à l’Université du Dakota du Sud sous le nom « Golden Delight ». Sa peau ferme résiste assez bien à l’éclatement.",
+      "fruit": "Fruits jaune-orange ronds de 90 à 120 g et 6 à 8 cm, contenant peu de graines. Chair douce, très appréciée.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "",
+      "taille": "90 à 120 g ; 6 à 8 cm",
+      "maturité": "Précoce"
+    },
+    "id": "catalog-083",
+    "catalogIndex": 83,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6400-Delice-d-Or"
   },
-  "id": "catalog-083",
-  "catalogIndex": 83,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Yellow",
-  "name": "Golden Jubilee",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : yellow. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Yellow",
+    "name": "Golden Jubilee",
+    "details": {
+      "description_histoire_particularités": "Variété américaine introduite par W. Atlee Burpee en 1941, issue du croisement « Tangerine » × « Rutgers » et lauréate All America Selection en 1943.",
+      "fruit": "Abondance de fruits orange vif ronds et légèrement aplatis, autour de 190 à 210 g, contenant peu de graines. Chair ferme, très douce et peu acide.",
+      "type_de_fruit": "Ronde légèrement aplatie",
+      "gènes_potentiels": "",
+      "taille": "190 à 210 g",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-084",
+    "catalogIndex": 84,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6606-Golden-Jubilee"
   },
-  "id": "catalog-084",
-  "catalogIndex": 84,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Orange",
-  "name": "Mountain Gold",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : orange. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Orange",
+    "name": "Mountain Gold",
+    "details": {
+      "description_histoire_particularités": "Variété américaine développée par Randy Gardner en Caroline du Nord et introduite en 1991. Elle est peu sensible au Fusarium et au Verticillium, à l’éclatement et se conserve bien.",
+      "fruit": "Fruits jaune-orangé ronds, légèrement côtelés dans la partie supérieure, de 150 à 300 g. Chair ferme.",
+      "type_de_fruit": "Ronde légèrement côtelée",
+      "gènes_potentiels": "",
+      "taille": "150 à 300 g",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-085",
+    "catalogIndex": 85,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6612-Mountain-Gold"
   },
-  "id": "catalog-085",
-  "catalogIndex": 85,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Orange",
-  "name": "Yellow Belgium",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : orange. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Orange",
+    "name": "Yellow Belgium",
+    "details": {
+      "description_histoire_particularités": "Très ancienne variété probablement issue de « Giant Belgium », variété à fruits roses développée dans l’Ohio. Elle produit peu de graines et possède un feuillage régulier.",
+      "fruit": "Gros fruits ronds jaune-orangé de 150 à 300 g, à chair dense et juteuse, douce et légèrement sucrée.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "",
+      "taille": "150 à 300 g",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-086",
+    "catalogIndex": 86,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6623-Yellow-Belgium"
   },
-  "id": "catalog-086",
-  "catalogIndex": 86,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Ispolin",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Ispolin",
+    "details": {
+      "description_histoire_particularités": "Variété transmise par le docteur Nikolaï Andriev depuis la Sibérie ; son nom signifie « géant ». Vigoureuse et bien adaptée aux régions fraîches ou aux saisons courtes.",
+      "fruit": "Gros fruits rose-rouge aplatis, de type chair de bœuf, autour de 300 g (parfois davantage). Chair dense, charnue et juteuse.",
+      "type_de_fruit": "Beefsteak aplatie",
+      "gènes_potentiels": "",
+      "taille": "150 à 350 g ; 5 à 15 cm",
+      "maturité": "Précoce"
+    },
+    "id": "catalog-087",
+    "catalogIndex": 87,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6911-Ispolin"
   },
-  "id": "catalog-087",
-  "catalogIndex": 87,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Pink",
-  "name": "Maritime Pink",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : pink. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Pink",
+    "name": "Maritime Pink",
+    "details": {
+      "description_histoire_particularités": "Ancienne variété originaire de l’île de Sakhaline en Sibérie ; son nom russe originel a été perdu. Elle supporte assez bien les conditions fraîches, mais ses fruits peuvent éclater après sécheresse et arrosage abondant.",
+      "fruit": "Fruits roses ronds de 140 à 200 g, à chair juteuse : une première note citronnée laisse place à une saveur sucrée.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "",
+      "taille": "140 à 200 g ; 8 à 10 cm",
+      "maturité": "Précoce"
+    },
+    "id": "catalog-088",
+    "catalogIndex": 88,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6903-Maritime-Pink"
   },
-  "id": "catalog-088",
-  "catalogIndex": 88,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Pink",
-  "name": "Mission Dike",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : pink. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Pink",
+    "name": "Mission Dike",
+    "details": {
+      "description_histoire_particularités": "Variété originaire du Kansas, mentionnée au catalogue Gleckler’s Seedmen dans l’Ohio en 1958. Vigoureuse, peu sensible aux maladies et à la sécheresse.",
+      "fruit": "Fruits roses légèrement côtelés, de type chair de bœuf, de 150 à 350 g environ. Chair dense, juteuse et douce.",
+      "type_de_fruit": "Chair de bœuf côtelée",
+      "gènes_potentiels": "",
+      "taille": "150 à 350 g ; 8 à 10 cm",
+      "maturité": "Mi-saison"
+    },
+    "id": "catalog-089",
+    "catalogIndex": 89,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7009-Mission-Dike"
   },
-  "id": "catalog-089",
-  "catalogIndex": 89,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Pink",
-  "name": "Rose de Berne",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : pink. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Pink",
+    "name": "Rose de Berne",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : pink. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-090",
+    "catalogIndex": 90,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-090",
-  "catalogIndex": 90,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Sasha Altaï",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Sasha Altaï",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-091",
+    "catalogIndex": 91,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-091",
-  "catalogIndex": 91,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Stupice / Stupické",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Stupice / Stupické",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-092",
+    "catalogIndex": 92,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-092",
-  "catalogIndex": 92,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Basket Vee",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Basket Vee",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-093",
+    "catalogIndex": 93,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-093",
-  "catalogIndex": 93,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Double Rich",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Double Rich",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-094",
+    "catalogIndex": 94,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-094",
-  "catalogIndex": 94,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Fireworks",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Fireworks",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-095",
+    "catalogIndex": 95,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-095",
-  "catalogIndex": 95,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Marmande",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Marmande",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-096",
+    "catalogIndex": 96,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-096",
-  "catalogIndex": 96,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Perestroika",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Perestroika",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-097",
+    "catalogIndex": 97,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-097",
-  "catalogIndex": 97,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Bonny Best",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Bonny Best",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-098",
+    "catalogIndex": 98,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-098",
-  "catalogIndex": 98,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Merveille des Marchés",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Merveille des Marchés",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-099",
+    "catalogIndex": 99,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-099",
-  "catalogIndex": 99,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Roi Humbert",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Roi Humbert",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-100",
+    "catalogIndex": 100,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-100",
-  "catalogIndex": 100,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Zakopane",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Zakopane",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-101",
+    "catalogIndex": 101,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-101",
-  "catalogIndex": 101,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Dix Doigts de Naples",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : tardive, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "tardive"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Dix Doigts de Naples",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : tardive, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "tardive"
+    },
+    "id": "catalog-102",
+    "catalogIndex": 102,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-102",
-  "catalogIndex": 102,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Potiron Écarlate",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : tardive, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "tardive"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Potiron Écarlate",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : tardive, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "tardive"
+    },
+    "id": "catalog-103",
+    "catalogIndex": 103,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-103",
-  "catalogIndex": 103,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Moskvich",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Moskvich",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-104",
+    "catalogIndex": 104,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-104",
-  "catalogIndex": 104,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Precocibec",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Precocibec",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-105",
+    "catalogIndex": 105,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-105",
-  "catalogIndex": 105,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Orange",
-  "name": "Orange Strawberry",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : orange. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Orange",
+    "name": "Orange Strawberry",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
+      "fruit": "Couleur indiquée par Kokopelli : orange. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-106",
+    "catalogIndex": 106,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-106",
-  "catalogIndex": 106,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Corrogo",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Corrogo",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-107",
+    "catalogIndex": 107,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-107",
-  "catalogIndex": 107,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Early Siberian / Sibirskiy Skorospelyi",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Early Siberian / Sibirskiy Skorospelyi",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-108",
+    "catalogIndex": 108,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-108",
-  "catalogIndex": 108,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Gem State",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Gem State",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-109",
+    "catalogIndex": 109,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-109",
-  "catalogIndex": 109,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Glacier",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "precoce"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Glacier",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : precoce.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "precoce"
+    },
+    "id": "catalog-110",
+    "catalogIndex": 110,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-110",
-  "catalogIndex": 110,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "Saint Pierre",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "Saint Pierre",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison, variété ancienne.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-111",
+    "catalogIndex": 111,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
   },
-  "id": "catalog-111",
-  "catalogIndex": 111,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-},
-{
-  "family": "Tomate (Solanum lycopersicum)",
-  "subfamily": "Kokopelli · Red",
-  "name": "San Marzano",
-  "details": {
-    "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
-    "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
-    "type_de_fruit": "",
-    "gènes_potentiels": "",
-    "taille": "",
-    "maturité": "mi-saison"
-  },
-  "id": "catalog-112",
-  "catalogIndex": 112,
-  "source": "Kokopelli Semences",
-  "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
-}
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Red",
+    "name": "San Marzano",
+    "details": {
+      "description_histoire_particularités": "Variété proposée au catalogue Kokopelli. Informations de classement relevées sur la page Tomates : mi-saison.",
+      "fruit": "Couleur indiquée par Kokopelli : red. Les dimensions, la forme et la saveur détaillées ne sont pas précisées dans la liste.",
+      "type_de_fruit": "",
+      "gènes_potentiels": "",
+      "taille": "",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-112",
+    "catalogIndex": 112,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
+  }
 ];
