@@ -1,5 +1,7 @@
 /* Seed catalogue imported from claud6 catalogue seed.html.
- * Source: script#variety-data · 40 entries · Tomates uniquement (Solanum lycopersicum).
+ * Source: script#variety-data · 40 entries imported + 16 classic French-garden
+ * varieties + 10 US-garden classics + 10 Dwarf Tomato Project releases = 76.
+ * Tomates uniquement (Solanum lycopersicum).
  * This file is static so the local app also works offline on first revisit.
  */
 window.SEED_CATALOG = [
@@ -602,5 +604,545 @@ window.SEED_CATALOG = [
     },
     "id": "catalog-040",
     "catalogIndex": 40
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Cœur de Bœuf (authentique Cuor di Bue)",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne italienne (Piémont), la vraie « cuor di bue » que l'on retrouve partout dans les potagers et sur les marchés français — attention aux imitations côtelées vendues sous ce nom. Gros fruits lisses en forme de cœur, chair fondante à peu de graines. Plant vigoureux à croissance indéterminée, à tuteurer soigneusement.",
+      "fruit": "250 à 500 g, en cœur lisse et pointu, rouge rosé profond. Chair charnue, fondante et juteuse, douce avec très peu d'acidité et peu de graines.",
+      "type_de_fruit": "Beefsteak en cœur",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; SUN/+ probable; lc/lc probable; Sp/Sp; c+/c+](hypothèse d'après phénotype : rouge via R dominant ; forme cœur/allongée via duplication du locus SUN (effet dominant, portée par ~80 % des fruits « oxheart ») ; calibre et locules via lc récessif ; indéterminé Sp/Sp ; feuillage régulier = allèle sauvage du locus c (pomme de terre c/c récessif absent) — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m et plus (indéterminée, vigoureuse).",
+      "maturité": "Mi-saison à tardive (85 à 100 jours)."
+    },
+    "id": "catalog-041",
+    "catalogIndex": 41
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Marmande",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne française du Lot-et-Garonne, classique transmis de génération en génération et l'une des plus cultivées dans les potagers de l'Hexagone. Fruits aplatis fortement côtelés, plante semi-déterminée de taille modérée, productive même en climat frais.",
+      "fruit": "200 à 400 g (jusqu'à 500 g), aplatis et fortement côtelés, rouge vif. Chair dense et charnue, saveur équilibrée entre douceur et acidité, très bon rendement.",
+      "type_de_fruit": "Beefsteak côtelée",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; lc/lc probable; fas/fas possible; Sp/sp probable](hypothèse d'après phénotype : rouge via R dominant ; forme aplatie et côtelée via lc récessif (présent chez ~80 % des fruits plats) avec fas récessif possible ; port semi-déterminé : hypothèse sp/sp partiel, génétique exacte non publiée — gènes supposés, non vérifiés).",
+      "taille": "1,2 à 1,6 m (semi-déterminée).",
+      "maturité": "Mi-saison à tardive (70 à 80 jours après plantation)."
+    },
+    "id": "catalog-042",
+    "catalogIndex": 42
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Saint-Pierre",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne française, incontournable des potagers et des marchés depuis des décennies. Fruits ronds, lisses et réguliers portés en grappes ; plant vigoureux à croissance indéterminée, fiable et productif en mi-saison.",
+      "fruit": "150 à 250 g, ronds et lisses, rouge vif. Chair ferme et juteuse, saveur équilibrée classique de tomate de plein champ, bonne conservation.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; Sp/Sp; c+/c+](hypothèse d'après phénotype : rouge via R dominant ; indéterminé Sp/Sp ; feuillage régulier = allèle sauvage du locus c ; forme ronde lisse : aucun gène majeur simple identifié à notre connaissance — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Mi-saison (70 à 80 jours)."
+    },
+    "id": "catalog-043",
+    "catalogIndex": 43
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Rose de Berne",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne originaire de Suisse (région de Berne), chérie des amateurs de saveurs et régulièrement citée parmi les tomates colorées préférées des jardins français. Fruits roses ronds et légèrement aplatis, peau très fine ; plant indéterminé à feuillage régulier très découpé, vigoureux et résistant.",
+      "fruit": "150 à 300 g, ronds légèrement aplatis, roses. Chair épaisse, charnue et juteuse, très sucrée et parfumée avec une acidité discrète ; peau fine sensible à l'éclatement.",
+      "type_de_fruit": "Ronde rose",
+      "gènes_potentiels": "[R/R; y/y; T/T; Sp/Sp; c+/c+](hypothèse d'après phénotype : rose via épiderme incolore y/y récessif (allèle issu de Solanum chmielewskii) sur chair rouge R/R dominant ; feuillage régulier très découpé confirmé par les descriptions = allèle sauvage du locus c ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m (indéterminée).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-044",
+    "catalogIndex": 44
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Ananas (Pineapple)",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne américaine dite « Pineapple », beefsteak bicolore spectaculaire aussi belle que bonne, tardive et appréciée des potagers passionnés. Chair marbrée de jaune et de rouge, peu d'acidité.",
+      "fruit": "300 à 600 g, aplatis et lisses, jaunes striés de rouge rosé. Chair ferme marbrée jaune et rouge, sucrée, fruitée, presque sans acidité.",
+      "type_de_fruit": "Beefsteak bicolore",
+      "gènes_potentiels": "[r/r; Y/Y; T/T; lc/lc probable; Sp/Sp](hypothèse d'après phénotype : chair jaune via r/r récessif, marbrures rouges d'expression instable (gènes modificateurs non identifiés) ; forme aplatie et charnue via lc récessif ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m (indéterminée).",
+      "maturité": "Tardive (90 à 100 jours)."
+    },
+    "id": "catalog-045",
+    "catalogIndex": 45
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Green Zebra",
+    "details": {
+      "description_histoire_particularités": "Variété moderne créée par Tom Wagner (États-Unis, 1983), star des tomates « de couleur » dans les jardins français. Fruits verts zébrés de jaune à maturité, saveur acidulée et rafraîchissante ; plant indéterminé de vigueur moyenne.",
+      "fruit": "60 à 120 g, ronds, vert émeraude zébré de jaune à maturité. Chair ferme et juteuse, saveur acidulée et tonique, très appréciée en salade.",
+      "type_de_fruit": "Ronde zébrée verte",
+      "gènes_potentiels": "[gf/gf; R/R; Y/Y; T/T; Sp/Sp](hypothèse d'après phénotype : chair verte à maturité via gf/gf récessif ; zébrures : déterminisme génétique non élucidé à notre connaissance (l'hypothèse u/u, maturité non uniforme, n'est pas démontrée) ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,4 à 1,8 m (indéterminée).",
+      "maturité": "Mi-saison (75 à 80 jours)."
+    },
+    "id": "catalog-046",
+    "catalogIndex": 46
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Cornue des Andes (Andine Cornue)",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne d'origine andine, très répandue dans les potagers français pour ses fruits en forme de corne ou de poivron, presque sans graines et peu acides. Précoce, productive, plant indéterminé vigoureux.",
+      "fruit": "150 à 250 g, allongés et pointus (type corne/poivron), rouge vif. Chair très dense avec très peu de graines, douce et presque sans acidité, idéale en coulis et conserves.",
+      "type_de_fruit": "Allongée cornue",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; SUN/+ probable; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; forte élongation pointue via duplication du locus SUN (effet dominant) probable ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Précoce à mi-saison (70 à 78 jours)."
+    },
+    "id": "catalog-047",
+    "catalogIndex": 47
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "San Marzano",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne italienne de Campanie, référence mondiale des tomates à conserver et à sauces, courante en jardinerie. Fruits cylindriques allongés en grappes ; plant indéterminé à tuteurer.",
+      "fruit": "100 à 150 g, cylindriques allongés, rouge vif. Chair ferme, peu de graines, saveur sucrée et intense, parfaite en sauces et bocaux.",
+      "type_de_fruit": "Allongée",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; SUN/+ probable; ov/ov possible; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; forme cylindrique allongée via duplication SUN probable, avec ovate ov/ov récessif possible ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-048",
+    "catalogIndex": 48
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Roma",
+    "details": {
+      "description_histoire_particularités": "Variété de type italien sélectionnée pour la transformation, très courante en jardinerie et au potager. Fruits prune allongés ; plant compact à croissance déterminée, adapté au plein champ comme au grand pot.",
+      "fruit": "60 à 90 g, prune allongée, rouge. Chair dense avec peu de graines et peu de jus, idéale en coulis, concentré et conserves.",
+      "type_de_fruit": "Prune allongée",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; SUN/+ probable; ov/ov probable; sp/sp](hypothèse d'après phénotype : type prune : SUN (présent chez les prunes commerciales) et ovate ov/ov récessif probables ; port déterminé compact via sp/sp récessif — gènes supposés, non vérifiés).",
+      "taille": "60 à 100 cm (déterminée, compacte).",
+      "maturité": "Mi-saison (75 à 80 jours)."
+    },
+    "id": "catalog-049",
+    "catalogIndex": 49
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Poire jaune (Yellow Pearshape)",
+    "details": {
+      "description_histoire_particularités": "Variété très ancienne d'Europe (décrite dès le XIXe siècle), classique des jardins français où elle se ressème parfois seule. Petites fruits jaunes en forme de poire, en grappes très généreuses ; plant indéterminé très vigoureux.",
+      "fruit": "15 à 25 g, en poire, jaune vif. Chair tendre, douce et peu acide, appréciée des enfants à l'apéritif.",
+      "type_de_fruit": "Cerise poire jaune",
+      "gènes_potentiels": "[r/r; Y/Y; T/T; ov/ov; Sp/Sp](hypothèse d'après phénotype : chair jaune via r/r récessif ; forme de poire via ovate ov/ov récessif (codon stop prématuré) ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2,2 m (indéterminée, très vigoureuse).",
+      "maturité": "Mi-saison (70 à 80 jours)."
+    },
+    "id": "catalog-050",
+    "catalogIndex": 50
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Black Cherry",
+    "details": {
+      "description_histoire_particularités": "Variété récente d'origine américaine (années 2000), la tomate cerise brune la plus fréquente dans les jardins français. Fruits ronds acajou à reflets violacés en grappes ; plant indéterminé vigoureux.",
+      "fruit": "20 à 30 g, ronds, brun acajou à noirâtre. Chair juteuse, saveur sucrée complexe avec des notes fumées, typique des tomates « noires ».",
+      "type_de_fruit": "Cerise brune",
+      "gènes_potentiels": "[R/R; gf/gf probable; y/y probable; Sp/Sp](hypothèse d'après phénotype : teinte brune via chair verte gf/gf et épiderme incolore y/y (récessifs) sur fond rouge R/R dominant, par analogie avec Noire de Crimée ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m (indéterminée, vigoureuse).",
+      "maturité": "Mi-saison (70 à 80 jours)."
+    },
+    "id": "catalog-051",
+    "catalogIndex": 51
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Sungold F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 japonais (Tokita), la tomate cerise orange de référence vendue en plants dans les jardineries françaises. Sucrosité exceptionnelle, plant très vigoureux à croissance indéterminée.",
+      "fruit": "15 à 20 g, ronds à légèrement ovales, orange lumineux. Chair très sucrée au parfum fruité, parmi les plus riches en sucres des cerises.",
+      "type_de_fruit": "Cerise orange",
+      "gènes_potentiels": "[R/R; Y/Y; t/t probable; Sp/Sp](hypothèse d'après phénotype : orange via tangerine t/t récessif, ou B (bêta-carotène) dominant — hybride F1, génotype non publié ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,5 m (indéterminée, très vigoureuse).",
+      "maturité": "Précoce à mi-saison (65 à 75 jours)."
+    },
+    "id": "catalog-052",
+    "catalogIndex": 52
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Super Sweet 100 F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 américain très productif, référence des tomates cerises rouges en longues grappes, courant en jardinerie. Plante vigoureuse à croissance indéterminée, production continue jusqu'aux fraîcheurs.",
+      "fruit": "15 à 20 g, ronds, rouge vif. Chair très sucrée et juteuse, grappes pouvant dépasser une centaine de fruits.",
+      "type_de_fruit": "Cerise rouge",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; indéterminé Sp/Sp ; hybride F1 : génotype non publié, aucun autre gène simple déductible de l'apparence — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,5 m (indéterminée, vigoureuse).",
+      "maturité": "Précoce à mi-saison (65 à 70 jours)."
+    },
+    "id": "catalog-053",
+    "catalogIndex": 53
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Ferline F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 de sélection française, très vendu en France pour sa tolérance au mildiou. Fruits ronds et lisses en grappes régulières, plant vigoureux à croissance indéterminée, production fiable même en année humide.",
+      "fruit": "130 à 150 g, ronds et lisses, rouge soutenu. Chair ferme et charnue, saveur correcte à bonne, fruits peu sensibles à l'éclatement.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; U/+ probable; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; maturité uniforme sans épaules vertes via U dominant probable ; indéterminé Sp/Sp ; tolérance au mildiou = déterminisme quantitatif non visible au phénotype ; hybride F1 — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée, vigoureuse).",
+      "maturité": "Mi-saison à tardive (78 à 85 jours)."
+    },
+    "id": "catalog-054",
+    "catalogIndex": 54
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Maskotka",
+    "details": {
+      "description_histoire_particularités": "Variété fixée d'origine polonaise, très populaire en pot, bac et balcon. Plant nain compact à croissance déterminée, couvert de bouquets de cerises rouges ; précoce et décorative.",
+      "fruit": "25 à 40 g, ronds et lisses, rouge vif. Chair ferme et croquante, saveur douce et légèrement sucrée.",
+      "type_de_fruit": "Cerise rouge",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; sp/sp; d/d probable; c+/c+](hypothèse d'après phénotype : port déterminé via sp/sp récessif ; nanisme via dwarf d/d récessif (déficit en brassinostéroïdes, co-ségrégeant classiquement avec feuilles rugose vert foncé, non observé ici) probable ; feuillage régulier décrit = allèle sauvage du locus c — gènes supposés, non vérifiés).",
+      "taille": "30 à 50 cm (déterminée, naine).",
+      "maturité": "Précoce (55 à 65 jours)."
+    },
+    "id": "catalog-055",
+    "catalogIndex": 55
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Micro naine",
+    "name": "Tumbling Tom Red",
+    "details": {
+      "description_histoire_particularités": "Sélection micro-naine retombante d'origine britannique, star des suspensions, jardinières et pots sur rebord de fenêtre. Port cascading déterminé, couverture continue de petites cerises rouges.",
+      "fruit": "15 à 20 g, ronds, rouge vif. Chair juteuse, saveur acidulée et équilibrée, production continue en pot.",
+      "type_de_fruit": "Cerise rouge",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; sp/sp](hypothèse d'après phénotype : port déterminé via sp/sp récessif ; stature micro-naine retombante : déterminisme génétique non élucidé à notre connaissance (allèle d ou autre locus de nanisme, non vérifié) — gènes supposés, non vérifiés).",
+      "taille": "20 à 30 cm (retombante, micro-naine).",
+      "maturité": "Précoce (60 à 70 jours)."
+    },
+    "id": "catalog-056",
+    "catalogIndex": 56
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Brandywine",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne américaine emblématique (communautés amish du comté de Chester, Pennsylvanie, fin du XIXe siècle), référence des tomates roses aux États-Unis et très cultivée par les passionnés français. Feuillage « pomme de terre » (potato leaf), plant vigoureux à croissance indéterminée.",
+      "fruit": "300 à 450 g, beefsteak irrégulière, rose. Chair fondante et charnue, saveur riche, sucrée et équilibrée, considérée comme un sommet gustatif.",
+      "type_de_fruit": "Beefsteak rose",
+      "gènes_potentiels": "[R/R; y/y; T/T; lc/lc probable; Sp/Sp; c/c](hypothèse d'après phénotype : rose via épiderme incolore y/y récessif sur chair rouge R/R dominant ; gros calibre beefsteak via lc récessif ; feuillage pomme de terre via c/c récessif (MYB interrompu par le rétrotransposon Rider) ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,5 m (indéterminée, feuillage pomme de terre).",
+      "maturité": "Mi-saison à tardive (80 à 100 jours)."
+    },
+    "id": "catalog-057",
+    "catalogIndex": 57
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Cherokee Purple",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne américaine (Tennessee, transmise par une famille cherokee), redécouverte et diffusée au début des années 1990 ; l'une des trois grandes tomates « foncées » des potagers US avec Black Krim et Paul Robeson. Plant indéterminé ; le type de feuillage divise les sources (régulier pour le type original, pomme de terre pour certaines souches).",
+      "fruit": "250 à 400 g, beefsteak légèrement aplatie, pourpre sombre à épaules vertes. Chair dense et juteuse, saveur riche, sucrée et fumée, typique des tomates noires.",
+      "type_de_fruit": "Beefsteak pourprée",
+      "gènes_potentiels": "[R/R; y/y probable; gf/gf probable; u/u probable; Sp/Sp](hypothèse d'après phénotype : pourpre sombre via épiderme incolore y/y et chair verte gf/gf (récessifs) sur fond rouge, par analogie avec Noire de Crimée ; épaules vertes via maturité non uniforme u/u (allèle sauvage) ; indéterminé Sp/Sp ; feuillage : sources contradictoires, génotype du locus c non tranché — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Mi-saison (80 à 90 jours)."
+    },
+    "id": "catalog-058",
+    "catalogIndex": 58
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Mortgage Lifter",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne américaine (Virginie-Occidentale, années 1930, créée par « Radiator Charlie » Byles qui aurait remboursé son prêt immobilier grâce à ses plants). Beefsteak rose géante, plant indéterminé vigoureux.",
+      "fruit": "450 g à 1 kg, beefsteak aplatie, rose. Chair douce et peu acide, peu de graines, idéale en tranches.",
+      "type_de_fruit": "Beefsteak rose",
+      "gènes_potentiels": "[R/R; y/y; T/T; lc/lc probable; fas/fas possible; Sp/Sp](hypothèse d'après phénotype : rose via y/y récessif sur fond rouge R/R dominant ; très gros calibre via lc récessif, avec fas récessif possible ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,5 m (indéterminée, vigoureuse).",
+      "maturité": "Mi-saison à tardive (85 à 95 jours)."
+    },
+    "id": "catalog-059",
+    "catalogIndex": 59
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Hillbilly",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne américaine des Appalaches, beefsteak bicolore spectaculaire à chair marbrée, prisée des jardins outre-Atlantique pour sa douceur. Plant indéterminé vigoureux, tardif.",
+      "fruit": "450 à 900 g, aplatie, jaune strié de rouge rosé. Chair ferme marbrée, sucrée, douce et peu acide.",
+      "type_de_fruit": "Beefsteak bicolore",
+      "gènes_potentiels": "[r/r; Y/Y; T/T; lc/lc probable; Sp/Sp](hypothèse d'après phénotype : chair jaune via r/r récessif, marbrures rouges d'expression instable (modificateurs non identifiés) ; gros calibre aplati via lc récessif ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,4 m (indéterminée).",
+      "maturité": "Tardive (85 à 95 jours)."
+    },
+    "id": "catalog-060",
+    "catalogIndex": 60
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Amish Paste",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne américaine (communauté amish du Wisconsin), référence des tomates à chair dense pour sauces et conserves, très répandue dans les potagers US. Plant indéterminé.",
+      "fruit": "170 à 240 g, ovale à piriforme, rouge. Chair très dense et charnue, peu de graines, saveur sucrée, idéale en coulis.",
+      "type_de_fruit": "Prune ovale",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; ov/ov probable; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; forme ovale/piriforme via ovate ov/ov récessif probable ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2,2 m (indéterminée).",
+      "maturité": "Mi-saison à tardive (80 à 90 jours)."
+    },
+    "id": "catalog-061",
+    "catalogIndex": 61
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Early Girl F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 très populaire aux États-Unis pour sa précocité, fiable même dans les régions à saison courte ; présent dans de nombreuses jardineries. Plant indéterminé à croissance rapide.",
+      "fruit": "110 à 170 g (4 à 6 oz), ronds, rouge vif. Chair ferme et juteuse, saveur équilibrée pour une tomate précoce.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; indéterminé Sp/Sp ; précocité : déterminisme quantitatif non lisible au phénotype ; hybride F1, génotype non publié — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Très précoce (50 à 62 jours après plantation)."
+    },
+    "id": "catalog-062",
+    "catalogIndex": 62
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Better Boy F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 américain parmi les plus vendus depuis les années 1970, réputé pour ses rendements records de fruits ronds et lisses. Plant vigoureux à croissance indéterminée.",
+      "fruit": "250 à 450 g, ronds et lisses, rouge profond. Chair charnue et juteuse, saveur équilibrée, fruits peu sensibles aux fentes.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; indéterminé Sp/Sp ; hybride F1 : génotype non publié, aucun autre gène simple déductible de l'apparence — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,4 m (indéterminée).",
+      "maturité": "Mi-saison (70 à 75 jours)."
+    },
+    "id": "catalog-063",
+    "catalogIndex": 63
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Big Beef F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 américain très cultivé, type beefsteak précoce et tolérant aux maladies, fréquent en jardinerie. Plant vigoureux à croissance indéterminée.",
+      "fruit": "300 à 400 g (10 à 12 oz), beefsteak, rouge. Chair charnue, peu de graines, saveur riche de tomate ancienne avec la régularité d'un hybride.",
+      "type_de_fruit": "Beefsteak",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; lc/lc probable; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; calibre beefsteak via lc récessif probable ; indéterminé Sp/Sp ; hybride F1, génotype non publié — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,4 m (indéterminée).",
+      "maturité": "Précoce à mi-saison (64 à 70 jours)."
+    },
+    "id": "catalog-064",
+    "catalogIndex": 64
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Jet Star F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 populaire aux États-Unis pour ses fruits ronds peu acides et résistants aux fentes, souvent recommandé aux débutants. Plant à croissance indéterminée.",
+      "fruit": "170 à 230 g (6 à 8 oz), ronds, rouge. Chair ferme, saveur douce et peu acide, appréciée crue.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; indéterminé Sp/Sp ; faible acidité : déterminisme quantitatif non identifiable par un gène simple ; hybride F1, génotype non publié — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Précoce à mi-saison (72 jours)."
+    },
+    "id": "catalog-065",
+    "catalogIndex": 65
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Juliet F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 américain très courant, type « grape » allongé, ultra-productif en grappes et résistant à l'éclatement ; incontournable des jardins et marchés US. Plant vigoureux à croissance indéterminée.",
+      "fruit": "15 à 30 g (0,5 à 1 oz), grape allongée, rouge brillant. Chair ferme et charnue, très sucrée, excellente conservation après récolte.",
+      "type_de_fruit": "Grape allongée",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; SUN/+ probable; Sp/Sp](hypothèse d'après phénotype : rouge via R dominant ; forme grape allongée via duplication du locus SUN (effet dominant) probable ; indéterminé Sp/Sp ; hybride F1, génotype non publié — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,5 m (indéterminée, vigoureuse).",
+      "maturité": "Précoce à mi-saison (60 à 70 jours)."
+    },
+    "id": "catalog-066",
+    "catalogIndex": 66
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Rosella Purple",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sleepy » (Budai Torpe X Stump of the World), publiée en 2011 ; l'une des naines les plus cultivées du projet.",
+      "fruit": "150 à 300 g, légèrement aplatie, pourpre sombre à reflets rosés. Chair dense et juteuse, saveur riche et sucrée typique des tomates foncées.",
+      "type_de_fruit": "Beefsteak pourprée",
+      "gènes_potentiels": "",
+      "taille": "60 à 120 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-067",
+    "catalogIndex": 67
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Dwarf Mr. Snow",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sneezy » (Golden Dwarf Champion X Green Giant), publiée en 2011 ; référence des naines à fruits clairs.",
+      "fruit": "100 à 300 g, arrondie à légèrement aplatie, jaune très pâle presque ivoire. Chair douce et délicatement fruitée, faible acidité.",
+      "type_de_fruit": "Ronde jaune pâle",
+      "gènes_potentiels": "",
+      "taille": "80 à 120 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-068",
+    "catalogIndex": 68
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Summertime Gold",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sneezy » (Golden Dwarf Champion X Green Giant), publiée en 2011 ; naine dorée très appréciée pour sa saveur équilibrée.",
+      "fruit": "100 à 250 g, arrondie, jaune doré lumineux. Chair charnue et juteuse, saveur sucrée avec une pointe d'acidité, très équilibrée.",
+      "type_de_fruit": "Ronde jaune",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-069",
+    "catalogIndex": 69
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Dwarf Emerald Giant",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sneezy » (Golden Dwarf Champion X Green Giant), publiée en 2011 ; naine à fruits verts à maturité.",
+      "fruit": "150 à 300 g, arrondie à légèrement aplatie, verte à maturité avec des reflets émeraude. Chair verte juteuse, saveur douce et fruitée, acidulée juste ce qu'il faut.",
+      "type_de_fruit": "Ronde verte",
+      "gènes_potentiels": "",
+      "taille": "80 à 120 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (78 à 88 jours)."
+    },
+    "id": "catalog-070",
+    "catalogIndex": 70
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Tasmanian Chocolate",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Happy » (New Big Dwarf X Paul Robeson), publiée en 2011 ; remarquée pour sa précocité et sa saveur pleine (notée 8/10 par Craig LeHoullier).",
+      "fruit": "100 à 250 g, arrondie légèrement aplatie, brun chocolat à reflets pourpres. Chair dense, saveur riche, sucrée et complexe, parmi les meilleures du projet.",
+      "type_de_fruit": "Ronde brune",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Précoce à mi-saison (70 à 78 jours)."
+    },
+    "id": "catalog-071",
+    "catalogIndex": 71
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Rosella Crimson",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sleepy » (Budai Torpe X Stump of the World), publiée en 2014 ; sœur de Rosella Purple en version rouge profond.",
+      "fruit": "100 à 200 g, arrondie, rouge cramoisi profond. Chair juteuse, saveur sucrée et acidulée bien équilibrée, très régulière en grappes.",
+      "type_de_fruit": "Ronde cramoisie",
+      "gènes_potentiels": "",
+      "taille": "60 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-072",
+    "catalogIndex": 72
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Chocolate Lightning",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Beauty » (Dwarf Wild Fred x Beauty King), publiée en 2015 ; originale par sa robe brune finement zébrée.",
+      "fruit": "100 à 250 g, arrondie, brun chocolat parcouru de fines zébrures vert doré. Chair juteuse, saveur sucrée, riche et légèrement fumée.",
+      "type_de_fruit": "Ronde brune zébrée",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-073",
+    "catalogIndex": 73
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Dwarf Wild Fred",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Sleazy A » (Carbon X New Big Dwarf), publiée en 2011 ; feuillage pomme de terre hérité de Carbon, fruits foncés charnus.",
+      "fruit": "150 à 300 g, arrondie à légèrement aplatie, pourpre brun foncé. Chair charnue et juteuse, saveur riche et douce aux notes de pruneau.",
+      "type_de_fruit": "Beefsteak pourpre",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage pomme de terre rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-074",
+    "catalogIndex": 74
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Kangaroo Paw Green",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Famille « Kangaroo Paw » publiée en 2015 ; version verte à maturité, format cerise allongé, très productive en pot.",
+      "fruit": "20 à 40 g, ovale allongée type cerise, verte à maturité avec des zébrures discrètes. Chair croquante et juteuse, saveur sucrée-acidulée rafraîchissante.",
+      "type_de_fruit": "Cerise allongée verte",
+      "gènes_potentiels": "",
+      "taille": "50 à 90 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (72 à 80 jours)."
+    },
+    "id": "catalog-075",
+    "catalogIndex": 75
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Adelaide Festival",
+    "details": {
+      "description_histoire_particularités": "Variété issue du Dwarf Tomato Project, premier projet mondial de sélection collaborative de tomates (lancé en 2005 par Patrina Nuske-Small en Australie et Craig LeHoullier aux États-Unis, plus de 250 bénévoles, variétés ouvertes et associées à l'Open Source Seed Initiative). Plant nain « tree-type » à feuillage rugose vert foncé, idéal en pot et petits jardins. Lignée « Tidy » (Rosella Purple X Pink Berkeley Tie-Dye), publiée en 2014-2015 ; robe tie-dye spectaculaire héritée de Berkeley Tie-Dye.",
+      "fruit": "100 à 250 g, arrondie légèrement aplatie, rouge cuivré zébré de vert et d'or. Chair marbrée, saveur sucrée, acidulée et complexe.",
+      "type_de_fruit": "Ronde zébrée tie-dye",
+      "gènes_potentiels": "",
+      "taille": "70 à 110 cm (naine tree-type, feuillage rugose).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-076",
+    "catalogIndex": 76
   }
 ];
