@@ -2539,12 +2539,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Livingston’s Main Crop Pink",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété introduite avant 1900 par Alexander Livingston, grand obtenteur américain du XIXe siècle, référencée dans son catalogue de semences.",
+      "fruit": "Fruits roses aplatis et légèrement côtelés, environ 200 à 300 g, denses, charnus et savoureux.",
+      "type_de_fruit": "Chair de bœuf aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "200 à 300 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-159",
     "catalogIndex": 159,
@@ -2573,12 +2573,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Azure",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété russe extrêmement prolifique, compacte et de moins d’un mètre. Elle forme des grappes de 7 à 9 fruits et convient particulièrement aux conserves et aux sauces.",
+      "fruit": "Fruits rouges de type grosse prune, 50 à 100 g, à peau épaisse et chair dense.",
+      "type_de_fruit": "Prune",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "50 à 100 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-161",
     "catalogIndex": 161,
@@ -2590,12 +2590,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Polish Linguisa",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Très ancienne variété polonaise connue depuis les années 1800, introduite aux États-Unis par une famille immigrée et répertoriée au Seed Savers Yearbook en 2003.",
+      "fruit": "Abondantes grappes de 4 à 5 fruits rouges allongés type Cornue des Andes, fermes, sucrés et peu grainés, adaptés aux sauces.",
+      "type_de_fruit": "Allongée type Cornue des Andes",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "200 à 300 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-162",
     "catalogIndex": 162,
@@ -2607,12 +2607,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Calabash Red",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Très ancienne variété probablement originaire du Chiapas au Mexique, appelée aussi Calabash Rouge ou Red Calabash ; son origine exacte reste discutée. Tuteurage nécessaire.",
+      "fruit": "Fruits rouges aplatis et fortement côtelés, de 115 à 135 g, à peau très fine et chair douce.",
+      "type_de_fruit": "Aplatie fortement côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "115 à 135 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-163",
     "catalogIndex": 163,
@@ -2641,12 +2641,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Blue Beech",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété italienne transmise vers 1945 à Fedco Seeds par Annette Smith de Blue Beech Farm, au Vermont. Bien adaptée aux climats frais.",
+      "fruit": "Fruits rouges allongés type Cornue des Andes, 180 à 300 g, à chair dense et peu grainée, douce et riche ; adaptée aux sauces et conserves.",
+      "type_de_fruit": "Allongée type Cornue des Andes",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "180 à 300 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-165",
     "catalogIndex": 165,
@@ -2709,12 +2709,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Rosso Sicilian",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété originaire de Sicile, apportée aux États-Unis en 1987 puis introduite au Seed Savers Exchange. Sa végétation reste sous un mètre ; elle se cultive en buisson et demande un bon tuteurage.",
+      "fruit": "Fruits rouges aplatis et fortement côtelés, 60 à 180 g, chair douce et parfumée, adaptés aux sauces et aux farces.",
+      "type_de_fruit": "Aplatie et côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "60 à 180 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-169",
     "catalogIndex": 169,
@@ -2726,12 +2726,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Indigo",
     "name": "Blue Green Zebra",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : indigo. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente développée par Tom Wagner, à forte teneur en anthocyanes et présentant une grande variabilité de couleurs, formes et saveurs.",
+      "fruit": "Fruits ronds parfois côtelés, striés de vert avec des épaules bleu-violet intense ; chair douce et riche.",
+      "type_de_fruit": "Ronde striée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-170",
     "catalogIndex": 170,
@@ -2760,12 +2760,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Indigo",
     "name": "Russian Cossack",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : indigo. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Sélection de Tom Wagner issue de Bearded Cossack ; il s’agit d’une quatrième génération pas totalement stabilisée contenant des caractères bleus.",
+      "fruit": "Fruits ronds moyens à chair noir-fumé ; peau noire striée de vert et de rose, avec de l’indigo au collet. Couleurs, formes et saveurs variables.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-172",
     "catalogIndex": 172,
