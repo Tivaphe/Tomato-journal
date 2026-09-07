@@ -3049,12 +3049,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Budai Torpe",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : précoce, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété hongroise à port buissonnant, ne dépassant pas un mètre. Elle compte parmi les premières tomates du jardin.",
+      "fruit": "Petits fruits rouge foncé, denses et légèrement aplatis, 60 à 120 g, chair épaisse et juteuse, douce avec une pointe d’acidité.",
+      "type_de_fruit": "Ronde aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "précoce"
+      "taille": "60 à 120 g",
+      "maturité": "Précoce"
     },
     "id": "catalog-189",
     "catalogIndex": 189,
@@ -3066,12 +3066,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Orange",
     "name": "Kaki Coing",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : orange. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété française présentée au Seed Savers Yearbook en 1994 par Bill Minkey, qui avait reçu les semences de Norbert Parreira.",
+      "fruit": "Fruits orange abricot éclatant, légèrement étirés, 90 à 120 g, peau épaisse et chair dense, ferme, très douce, adaptée aux conserves.",
+      "type_de_fruit": "Prune légèrement étirée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "90 à 120 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-190",
     "catalogIndex": 190,
@@ -3083,12 +3083,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Hungarian Oval",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : tardive, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété familiale originaire de Hongrie, introduite au Seed Savers Exchange Yearbook en 1991 après avoir été importée d’un village près de Budapest en 1901.",
+      "fruit": "Fruits roses ovales à cordiformes, 250 à 500 g, type beefsteak, chair ferme, peu grainée, intense, fruitée et sucrée.",
+      "type_de_fruit": "Ovale à cordiforme",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "250 à 500 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-191",
     "catalogIndex": 191,
@@ -3100,12 +3100,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Noir",
     "name": "Brown Flesh",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : noir. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété non stabilisée issue du pool génétique Brown Derby Mix introduit par Tom Wagner dans les années 1980 ; Black Zebra est une autre lignée.",
+      "fruit": "Fruits sombres marbrés de vert et d’or, souvent aplatis à trois lobes irréguliers, 60 à 180 g, peu grainés, adaptés aux tomates farcies.",
+      "type_de_fruit": "Variable, souvent aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "60 à 180 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-192",
     "catalogIndex": 192,
@@ -3117,12 +3117,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Noir",
     "name": "Purple Calabash",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : noir. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété introduite en 1985 par les Seed Savers, issue de la banque USDA au Texas et parfois réintroduite en France sous le nom Noire de Coseboeuf. Bonne adaptation aux climats arides.",
+      "fruit": "Fruits rose bronze à maturité, côtelés et parfois tourmentés, 90 à 120 g, résistants à l’éclatement et de bonne conservation.",
+      "type_de_fruit": "Côtelée variable",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "90 à 120 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-193",
     "catalogIndex": 193,
@@ -3134,12 +3134,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Vert",
     "name": "Greenwich",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : vert. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Obtention de Tom Wagner introduite par David Cavagnaro à Decorah en 1989. Variété résistante et productive.",
+      "fruit": "Fruits vert-jaune teintés d’ambre à maturité, assez irréguliers, 200 à 300 g, chair dense jaune-verdâtre et saveur équilibrée.",
+      "type_de_fruit": "Ronde et aplatie irrégulière",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "200 à 300 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-194",
     "catalogIndex": 194,
@@ -3151,12 +3151,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Jaune",
     "name": "Jaune à Farcir",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : jaune. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété vigoureuse et productive, également connue sous le nom Yellow Stuffer. Son fruit presque creux est particulièrement adapté au farcissage.",
+      "fruit": "Abondance de fruits jaunes ressemblant à des poivrons, fermes et cylindriques, contenant très peu de graines.",
+      "type_de_fruit": "Cylindrique à farcir",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-195",
     "catalogIndex": 195,
@@ -3168,12 +3168,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Blanc",
     "name": "Beauté Blanche du Canada",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : blanc. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété fixée issue de la collection de Ben Quisenberry. Isbell’s Seed Co. la présentait en 1927 comme la meilleure variété blanche récoltée ; elle pourrait être connue depuis avant 1850.",
+      "fruit": "Abondance de fruits jaune très pâle presque transparents, aplatis et légèrement côtelés, type beefsteak, à chair blanche douce.",
+      "type_de_fruit": "Beefsteak aplatie côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-196",
     "catalogIndex": 196,
