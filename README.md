@@ -177,7 +177,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 
 <br/>
 
-- **Catalogue de variétés** : 130 fiches réparties dans **25 familles**, avec familles, sous-familles et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
+- **Catalogue de variétés** : 40 fiches, avec noms des variétés et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
 - **Photos catalogue** : chaque fiche peut recevoir une photo de référence locale, stockée dans IndexedDB et incluse dans les sauvegardes.
 - **Inventaire de graines** : stocks restants, unités, achat/récolte, viabilité, emplacement, source, notes et candidate associée. Les candidates « à acheter » sans stock sont signalées.
 - **Candidats et achats** : liste séparée pour la saison suivante — *candidate, à acheter, achetée, semée, plantée, retenue, écartée* — avec priorité, quantité et notes.
@@ -421,7 +421,7 @@ Installs on desktop, Android and iPhone, and works offline.
 
 <br/>
 
-- **Variety catalog**: 130 sheets across **25 families**, with families, sub-families and botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. The "Add a plant" form also offers a catalog dropdown.
+- **Variety catalog**: 40 sheets vaietys botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. The "Add a plant" form also offers a catalog dropdown.
 - **Catalog photos**: every sheet can carry a local reference photo, stored in IndexedDB and included in JSON backups.
 - **Seed inventory**: remaining stock, units, purchase/harvest, viability, location, source, notes and the linked candidate. "To buy" candidates without stock are flagged.
 - **Candidates and purchases**: a separate list for next season — *candidate, to buy, bought, sown, planted, kept, dropped* — with priority, quantity and notes.
