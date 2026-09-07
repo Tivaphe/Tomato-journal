@@ -2454,12 +2454,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Noir",
     "name": "Black From Tula",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : noir. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Originaire de Russie, cette variété à feuillage abondant produit de gros fruits de type chair de bœuf.",
+      "fruit": "Fruits rouge sombre de 300 à 400 g, épaules vert foncé, chair rouge-brun intense, très douce et riche.",
+      "type_de_fruit": "Chair de bœuf côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "300 à 400 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-154",
     "catalogIndex": 154,
@@ -2471,12 +2471,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Giant Belgium",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : tardive, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété originaire de Belgique, développée dans l’Ohio dans les années 1930. Ses fruits très sucrés étaient traditionnellement utilisés pour le vin.",
+      "fruit": "Gros fruits roses aux épaules jaune pâle, légèrement aplatis et côtelés, de 600 à 1200 g, à chair dense très sucrée et sans acidité.",
+      "type_de_fruit": "Gros fruit aplati côtelé",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "600 à 1200 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-155",
     "catalogIndex": 155,
@@ -2488,12 +2488,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Micado Violettor",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Très ancienne variété australienne, mentionnée dans Les Plantes Potagères de Vilmorin-Andrieux en 1885 et aussi appelée Mikado Violette. Vigoureuse, résistante et adaptée aux climats chauds ; feuillage pomme de terre.",
+      "fruit": "Fruits ronds rose pourpre à violacé, de 80 à 150 g, d’excellente saveur.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "80 à 150 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-156",
     "catalogIndex": 156,
@@ -2505,12 +2505,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Tiffen Mennonite",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété issue de la communauté Mennonite des États-Unis, introduite au Seed Savers Exchange par Thane H. Earle du Wisconsin. Feuillage pomme de terre.",
+      "fruit": "Grappes de 4 à 5 fruits roses souvent aplatis et côtelés, de 250 à 500 g. Chair dense de type beefsteak, proche de Brandywine.",
+      "type_de_fruit": "Beefsteak aplatie côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "250 à 500 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-157",
     "catalogIndex": 157,
@@ -2522,12 +2522,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Cœur de Bœuf Slankard",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : tardive. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété originaire des États-Unis, transmise par la famille de Michael Byrne à Lawton. Cycle tardif et port indéterminé.",
+      "fruit": "Gros fruits roses charnus de 500 à 700 g, peu grainés, à saveur très appréciée.",
+      "type_de_fruit": "Cœur de bœuf",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "500 à 700 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-158",
     "catalogIndex": 158,
@@ -2556,12 +2556,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Costoluto Fiorentino",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété originaire de Florence, en Toscane. Très productive, elle donne une cinquantaine de fruits et se consomme fraîche ou en conserve.",
+      "fruit": "Fruits rouges fortement côtelés dans la partie supérieure, de 180 à 300 g, denses, charnus et juteux.",
+      "type_de_fruit": "Beefsteak côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "180 à 300 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-160",
     "catalogIndex": 160,
@@ -2624,12 +2624,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Cœur de Bœuf de Nice",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété de la région de Nice, aussi appelée Cuor di Bue. Port indéterminé et récolte de juin à octobre ; la taille n’est pas recommandée.",
+      "fruit": "Fruits rouges légèrement allongés en poire, de 200 à 300 g, à chair dense, savoureuse et pauvre en graines.",
+      "type_de_fruit": "Cœur de bœuf en poire",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "200 à 300 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-164",
     "catalogIndex": 164,
@@ -2658,12 +2658,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Red Brandywine",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété américaine référencée en 1884. Elle est vigoureuse et développe une grande végétation.",
+      "fruit": "Nombreux fruits rouges ronds de type beefsteak, 250 à 350 g, à chair charnue.",
+      "type_de_fruit": "Beefsteak ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "250 à 350 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-166",
     "catalogIndex": 166,
