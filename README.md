@@ -18,7 +18,7 @@
 <img src="https://img.shields.io/badge/Dépendances-0-E63946?style=flat-square" alt="Zero dependencies" />
 <img src="https://img.shields.io/badge/PWA-hors_ligne-5A189A?style=flat-square" alt="PWA" />
 <img src="https://img.shields.io/badge/Données-100%25_locales-2A9D8F?style=flat-square" alt="Local first" />
-<img src="https://img.shields.io/badge/Catalogue-130_variétés-F4A261?style=flat-square" alt="130 varieties" />
+<img src="https://img.shields.io/badge/Catalogue-40_variétés-F4A261?style=flat-square" alt="40 varieties" />
 <img src="https://img.shields.io/badge/Licence-MIT-457B9D?style=flat-square" alt="MIT" />
 
 <br/><br/>
@@ -186,7 +186,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 
 <div align="center">
 <img src="screen/catalogue-varietes.png" width="88%" alt="Catalogue de variétés" /><br/>
-<sub><i>Le catalogue : 130 fiches réparties dans 25 familles, avec recherche et filtres par type.</i></sub>
+<sub><i>Le catalogue : 40 fiches de tomates réparties en 4 sous-familles, avec recherche et filtres.</i></sub>
 </div>
 
 </details>
@@ -287,7 +287,7 @@ Tomato-journal/
 ├── app.js                  # Logique, vues et dispatch des actions
 ├── styles.css              # Thèmes Bio-Orbital & Night Garden HUD
 ├── photo-storage.js        # Persistance binaire (IndexedDB)
-├── seed-catalog.js         # Catalogue de 130 variétés / 25 familles
+├── seed-catalog.js         # Catalogue de 40 variétés de tomates / 4 sous-familles
 ├── sw.js                   # Service worker (hors ligne)
 ├── build-sw-cache.mjs      # Génération du cache versionné
 ├── manifest.webmanifest    # Manifeste PWA
@@ -430,7 +430,7 @@ Installs on desktop, Android and iPhone, and works offline.
 
 <div align="center">
 <img src="screen/catalogue-varietes.png" width="88%" alt="Variety catalog" /><br/>
-<sub><i>The catalog: 130 sheets across 25 families, with search and type filters.</i></sub>
+<sub><i>The catalog: 40 tomato sheets across 4 subfamilies, with search and filters.</i></sub>
 </div>
 
 </details>
@@ -531,7 +531,7 @@ Tomato-journal/
 ├── app.js                  # Logic, views and action dispatch
 ├── styles.css              # Bio-Orbital & Night Garden HUD themes
 ├── photo-storage.js        # Binary persistence (IndexedDB)
-├── seed-catalog.js         # Catalog of 130 varieties / 25 families
+├── seed-catalog.js         # Catalog of 40 tomato varieties / 4 subfamilies
 ├── sw.js                   # Service worker (offline)
 ├── build-sw-cache.mjs      # Versioned cache generation
 ├── manifest.webmanifest    # PWA manifest
