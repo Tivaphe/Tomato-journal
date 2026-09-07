@@ -2913,12 +2913,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Vert",
     "name": "Green Zebra Arizona Hawai Strain",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : vert. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Obtention récente développée par Tom Wagner à partir de Green Zebra. Variété vigoureuse qui produit de nombreux fruits.",
+      "fruit": "Fruits ronds verts striés de nuances plus claires, à chair vert émeraude, douce et riche.",
+      "type_de_fruit": "Ronde striée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "Non précisé",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-181",
     "catalogIndex": 181,
@@ -2930,12 +2930,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Pastel Sleeves",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente développée par Tom Wagner, dont les fruits peuvent varier fortement en couleur, forme et saveur.",
+      "fruit": "Fruits allongés ou parfois en cloche de 100 à 150 g, bariolés de rouge, jaune, orange et vert, à chair complètement verte.",
+      "type_de_fruit": "Allongée ou cloche bigarrée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "100 à 150 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-182",
     "catalogIndex": 182,
@@ -2947,12 +2947,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Polish Nights",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété récente sélectionnée par Tom Wagner, à feuillage pomme de terre et à variabilité possible des couleurs et des formes.",
+      "fruit": "Fruits rose foncé légèrement aplatis, épaules finement vertes, 150 à 200 g, chair dense et juteuse de type beefsteak.",
+      "type_de_fruit": "Beefsteak aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "150 à 200 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-183",
     "catalogIndex": 183,
@@ -2964,12 +2964,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Alicante",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété anglaise introduite en 1966 à la suite de recherches sur le type Moneymaker. Elle est très productive.",
+      "fruit": "Fruits rouges très ronds, fermes après cuisson, de la taille d’une balle de golf et autour de 80 g.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "50 à 100 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-184",
     "catalogIndex": 184,
@@ -2981,12 +2981,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Blanc",
     "name": "Halfmoon China",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : blanc. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété originaire de Chine, à fruits de type beefsteak et à croissance indéterminée.",
+      "fruit": "Fruits un peu aplatis de 150 à 350 g, peau jaune pâle avec blush rose à maturité, chair claire et juteuse au léger goût de melon.",
+      "type_de_fruit": "Beefsteak aplatie",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "150 à 350 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-185",
     "catalogIndex": 185,
@@ -2998,12 +2998,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rose",
     "name": "Bear Claw",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : tardive, variété ancienne. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : rose. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété probablement originaire de West Virginia, introduite au Seed Savers Exchange en 1984. Son nom signifie griffe d’ours. Production longue et régulière.",
+      "fruit": "Larges fruits rouge-rose de formes variables, type beefsteak, de 200 à 700 g, à chair dense et exceptionnelle.",
+      "type_de_fruit": "Beefsteak variable",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "tardive"
+      "taille": "200 à 700 g",
+      "maturité": "Tardive"
     },
     "id": "catalog-186",
     "catalogIndex": 186,
@@ -3015,12 +3015,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Noir",
     "name": "Slovenian Black",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : noir. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété slovène résistante aux pathogènes, produisant de nombreuses grappes.",
+      "fruit": "Une douzaine de fruits sombres par grappe, légèrement oblongs, 100 à 250 g, à chair dense et juteuse.",
+      "type_de_fruit": "Oblongue",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "100 à 250 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-187",
     "catalogIndex": 187,
@@ -3032,12 +3032,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Bigarrée",
     "name": "Northern Light",
     "details": {
-      "description_histoire_particularités": "Variété référencée dans le catalogue Kokopelli. Classement de la fiche : mi-saison. La fiche produit est conservée comme source de vérification.",
-      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Voir la fiche produit pour les caractéristiques détaillées du fruit.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété adaptée aux régions fraîches, produisant des grappes de 5 à 6 fruits.",
+      "fruit": "Gros fruits bigarrés jaune-orange et roses, 200 à 400 g, chair beefsteak orange marbrée de rouge, douce et sucrée.",
+      "type_de_fruit": "Beefsteak côtelée",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "200 à 400 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-188",
     "catalogIndex": 188,
