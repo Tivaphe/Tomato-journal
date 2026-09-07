@@ -18,7 +18,7 @@
 <img src="https://img.shields.io/badge/Dépendances-0-E63946?style=flat-square" alt="Zero dependencies" />
 <img src="https://img.shields.io/badge/PWA-hors_ligne-5A189A?style=flat-square" alt="PWA" />
 <img src="https://img.shields.io/badge/Données-100%25_locales-2A9D8F?style=flat-square" alt="Local first" />
-<img src="https://img.shields.io/badge/Catalogue-40_variétés-F4A261?style=flat-square" alt="40 varieties" />
+<img src="https://img.shields.io/badge/Catalogue-56_variétés-F4A261?style=flat-square" alt="56 varieties" />
 <img src="https://img.shields.io/badge/Licence-MIT-457B9D?style=flat-square" alt="MIT" />
 
 <br/><br/>
@@ -177,7 +177,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 
 <br/>
 
-- **Catalogue de variétés** : 40 fiches, avec noms des variétés et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
+- **Catalogue de variétés** : 56 fiches (40 importées + 16 classiques des jardins français), avec noms des variétés et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
 - **Photos catalogue** : chaque fiche peut recevoir une photo de référence locale, stockée dans IndexedDB et incluse dans les sauvegardes.
 - **Inventaire de graines** : stocks restants, unités, achat/récolte, viabilité, emplacement, source, notes et candidate associée. Les candidates « à acheter » sans stock sont signalées.
 - **Candidats et achats** : liste séparée pour la saison suivante — *candidate, à acheter, achetée, semée, plantée, retenue, écartée* — avec priorité, quantité et notes.
@@ -186,7 +186,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 
 <div align="center">
 <img src="screen/catalogue-varietes.png" width="88%" alt="Catalogue de variétés" /><br/>
-<sub><i>Le catalogue : 40 fiches de tomates réparties en 4 sous-familles, avec recherche et filtres.</i></sub>
+<sub><i>Le catalogue : 56 fiches de tomates réparties en 4 sous-familles, avec recherche et filtres.</i></sub>
 </div>
 
 </details>
@@ -287,7 +287,7 @@ Tomato-journal/
 ├── app.js                  # Logique, vues et dispatch des actions
 ├── styles.css              # Thèmes Bio-Orbital & Night Garden HUD
 ├── photo-storage.js        # Persistance binaire (IndexedDB)
-├── seed-catalog.js         # Catalogue de 40 variétés de tomates / 4 sous-familles
+├── seed-catalog.js         # Catalogue de 56 variétés de tomates / 4 sous-familles
 ├── sw.js                   # Service worker (hors ligne)
 ├── build-sw-cache.mjs      # Génération du cache versionné
 ├── manifest.webmanifest    # Manifeste PWA
@@ -421,7 +421,7 @@ Installs on desktop, Android and iPhone, and works offline.
 
 <br/>
 
-- **Variety catalog**: 40 sheets vaietys botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. The "Add a plant" form also offers a catalog dropdown.
+- **Variety catalog**: 56 sheets (40 imported + 16 French-garden classics) with botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. The "Add a plant" form also offers a catalog dropdown.
 - **Catalog photos**: every sheet can carry a local reference photo, stored in IndexedDB and included in JSON backups.
 - **Seed inventory**: remaining stock, units, purchase/harvest, viability, location, source, notes and the linked candidate. "To buy" candidates without stock are flagged.
 - **Candidates and purchases**: a separate list for next season — *candidate, to buy, bought, sown, planted, kept, dropped* — with priority, quantity and notes.
@@ -430,7 +430,7 @@ Installs on desktop, Android and iPhone, and works offline.
 
 <div align="center">
 <img src="screen/catalogue-varietes.png" width="88%" alt="Variety catalog" /><br/>
-<sub><i>The catalog: 40 tomato sheets across 4 subfamilies, with search and filters.</i></sub>
+<sub><i>The catalog: 56 tomato sheets across 4 subfamilies, with search and filters.</i></sub>
 </div>
 
 </details>
@@ -531,7 +531,7 @@ Tomato-journal/
 ├── app.js                  # Logic, views and action dispatch
 ├── styles.css              # Bio-Orbital & Night Garden HUD themes
 ├── photo-storage.js        # Binary persistence (IndexedDB)
-├── seed-catalog.js         # Catalog of 40 tomato varieties / 4 subfamilies
+├── seed-catalog.js         # Catalog of 56 tomato varieties / 4 subfamilies
 ├── sw.js                   # Service worker (offline)
 ├── build-sw-cache.mjs      # Versioned cache generation
 ├── manifest.webmanifest    # PWA manifest

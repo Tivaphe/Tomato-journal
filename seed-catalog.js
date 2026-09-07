@@ -1,5 +1,6 @@
 /* Seed catalogue imported from claud6 catalogue seed.html.
- * Source: script#variety-data · 40 entries · Tomates uniquement (Solanum lycopersicum).
+ * Source: script#variety-data · 40 entries imported + 16 classic French-garden varieties.
+ * Tomates uniquement (Solanum lycopersicum).
  * This file is static so the local app also works offline on first revisit.
  */
 window.SEED_CATALOG = [
@@ -602,5 +603,245 @@ window.SEED_CATALOG = [
     },
     "id": "catalog-040",
     "catalogIndex": 40
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Cœur de Bœuf (authentique Cuor di Bue)",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne italienne (Piémont), la vraie « cuor di bue » que l'on retrouve partout dans les potagers et sur les marchés français — attention aux imitations côtelées vendues sous ce nom. Gros fruits lisses en forme de cœur, chair fondante à peu de graines. Plant vigoureux à croissance indéterminée, à tuteurer soigneusement.",
+      "fruit": "250 à 500 g, en cœur lisse et pointu, rouge rosé profond. Chair charnue, fondante et juteuse, douce avec très peu d'acidité et peu de graines.",
+      "type_de_fruit": "Beefsteak en cœur",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; sun/sun probable; lc/lc probable; Sp/Sp](hypothèse d'après phénotype : rouge standard via R dominant ; forme cœur/allongée via sun récessif, présent chez la plupart des fruits « oxheart » ; locules nombreuses via lc récessif ; indéterminé Sp/Sp ; feuillage régulier C+/C+ — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m et plus (indéterminée, vigoureuse).",
+      "maturité": "Mi-saison à tardive (85 à 100 jours)."
+    },
+    "id": "catalog-041",
+    "catalogIndex": 41
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Marmande",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne française du Lot-et-Garonne, classique transmis de génération en génération et l'une des plus cultivées dans les potagers de l'Hexagone. Fruits aplatis fortement côtelés, plante semi-déterminée de taille modérée, productive même en climat frais.",
+      "fruit": "200 à 400 g (jusqu'à 500 g), aplatis et fortement côtelés, rouge vif. Chair dense et charnue, saveur équilibrée entre douceur et acidité, très bon rendement.",
+      "type_de_fruit": "Beefsteak côtelée",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; lc/lc probable; fas/fas possible; Sp/sp probable](hypothèse d'après phénotype : rouge standard via R dominant ; forme aplatie et côtelée via lc récessif, présent chez environ 80 % des fruits plats, avec fas récessif possible ; port semi-déterminé via sp/sp partiel probable — gènes supposés, non vérifiés).",
+      "taille": "1,2 à 1,6 m (semi-déterminée).",
+      "maturité": "Mi-saison à tardive (70 à 80 jours après plantation)."
+    },
+    "id": "catalog-042",
+    "catalogIndex": 42
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Saint-Pierre",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne française, incontournable des potagers et des marchés depuis des décennies. Fruits ronds, lisses et réguliers portés en grappes ; plant vigoureux à croissance indéterminée, fiable et productif en mi-saison.",
+      "fruit": "150 à 250 g, ronds et lisses, rouge vif. Chair ferme et juteuse, saveur équilibrée classique de tomate de plein champ, bonne conservation.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; U/U probable; Sp/Sp](hypothèse d'après phénotype : rouge standard via R dominant ; maturité uniforme sans épaules vertes via U dominant ; indéterminé Sp/Sp ; feuillage régulier C+/C+ — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Mi-saison (70 à 80 jours)."
+    },
+    "id": "catalog-043",
+    "catalogIndex": 43
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Rose de Berne",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne originaire de Suisse (région de Berne), chérie des amateurs de saveurs et régulièrement citée parmi les tomates colorées préférées des jardins français. Fruits roses ronds et légèrement aplatis, peau très fine ; plant indéterminé à feuillage régulier très découpé, vigoureux et résistant.",
+      "fruit": "150 à 300 g, ronds légèrement aplatis, roses. Chair épaisse, charnue et juteuse, très sucrée et parfumée avec une acidité discrète ; peau fine sensible à l'éclatement.",
+      "type_de_fruit": "Ronde rose",
+      "gènes_potentiels": "[R/R; y/y; T/T; Sp/Sp; C+/C+](hypothèse d'après phénotype : rose via épiderme incolore y/y récessif sur chair rouge R/R dominant ; indéterminé Sp/Sp ; feuillage régulier C+/C+ — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m (indéterminée).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-044",
+    "catalogIndex": 44
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Ananas (Pineapple)",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne américaine dite « Pineapple », beefsteak bicolore spectaculaire aussi belle que bonne, tardive et appréciée des potagers passionnés. Chair marbrée de jaune et de rouge, peu d'acidité.",
+      "fruit": "300 à 600 g, aplatis et lisses, jaunes striés de rouge rosé. Chair ferme marbrée jaune et rouge, sucrée, fruitée, presque sans acidité.",
+      "type_de_fruit": "Beefsteak bicolore",
+      "gènes_potentiels": "[r/r; Y/Y; T/T; lc/lc probable; Sp/Sp](hypothèse d'après phénotype : chair jaune via r/r récessif, marbrures rouges d'expression instable ; forme aplatie et charnue via lc récessif ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m (indéterminée).",
+      "maturité": "Tardive (90 à 100 jours)."
+    },
+    "id": "catalog-045",
+    "catalogIndex": 45
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Green Zebra",
+    "details": {
+      "description_histoire_particularités": "Variété moderne créée par Tom Wagner (États-Unis, 1983), star des tomates « de couleur » dans les jardins français. Fruits verts zébrés de jaune à maturité, saveur acidulée et rafraîchissante ; plant indéterminé de vigueur moyenne.",
+      "fruit": "60 à 120 g, ronds, vert émeraude zébré de jaune à maturité. Chair ferme et juteuse, saveur acidulée et tonique, très appréciée en salade.",
+      "type_de_fruit": "Ronde zébrée verte",
+      "gènes_potentiels": "[gf/gf; u/u probable; R/R; Y/Y; T/T; Sp/Sp](hypothèse d'après phénotype : chair verte à maturité via gf/gf récessif ; zébrures et épaules vertes persistantes via maturité non uniforme u/u récessive — gènes supposés, non vérifiés).",
+      "taille": "1,4 à 1,8 m (indéterminée).",
+      "maturité": "Mi-saison (75 à 80 jours)."
+    },
+    "id": "catalog-046",
+    "catalogIndex": 46
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Cornue des Andes (Andine Cornue)",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne d'origine andine, très répandue dans les potagers français pour ses fruits en forme de corne ou de poivron, presque sans graines et peu acides. Précoce, productive, plant indéterminé vigoureux.",
+      "fruit": "150 à 250 g, allongés et pointus (type corne/poivron), rouge vif. Chair très dense avec très peu de graines, douce et presque sans acidité, idéale en coulis et conserves.",
+      "type_de_fruit": "Allongée cornue",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; sun/sun probable; ov/ov possible; Sp/Sp](hypothèse d'après phénotype : rouge standard via R dominant ; forte élongation via sun récessif, retrouvé chez la plupart des fruits allongés, avec ov récessif possible — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Précoce à mi-saison (70 à 78 jours)."
+    },
+    "id": "catalog-047",
+    "catalogIndex": 47
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "San Marzano",
+    "details": {
+      "description_histoire_particularités": "Variété ancienne italienne de Campanie, référence mondiale des tomates à conserver et à sauces, courante en jardinerie. Fruits cylindriques allongés en grappes ; plant indéterminé à tuteurer.",
+      "fruit": "100 à 150 g, cylindriques allongés, rouge vif. Chair ferme, peu de graines, saveur sucrée et intense, parfaite en sauces et bocaux.",
+      "type_de_fruit": "Allongée",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; sun/sun probable; ov/ov possible; Sp/Sp](hypothèse d'après phénotype : rouge standard via R dominant ; forme allongée via sun et/ou ov récessifs — gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée).",
+      "maturité": "Mi-saison (75 à 85 jours)."
+    },
+    "id": "catalog-048",
+    "catalogIndex": 48
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Roma",
+    "details": {
+      "description_histoire_particularités": "Variété de type italien sélectionnée pour la transformation, très courante en jardinerie et au potager. Fruits prune allongés ; plant compact à croissance déterminée, adapté au plein champ comme au grand pot.",
+      "fruit": "60 à 90 g, prune allongée, rouge. Chair dense avec peu de graines et peu de jus, idéale en coulis, concentré et conserves.",
+      "type_de_fruit": "Prune allongée",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; ov/ov probable; sp/sp](hypothèse d'après phénotype : rouge standard via R dominant ; forme prune via ovate ov/ov récessif ; port déterminé compact via sp/sp récessif — gènes supposés, non vérifiés).",
+      "taille": "60 à 100 cm (déterminée, compacte).",
+      "maturité": "Mi-saison (75 à 80 jours)."
+    },
+    "id": "catalog-049",
+    "catalogIndex": 49
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Poire jaune (Yellow Pearshape)",
+    "details": {
+      "description_histoire_particularités": "Variété très ancienne d'Europe (décrite dès le XIXe siècle), classique des jardins français où elle se ressème parfois seule. Petites fruits jaunes en forme de poire, en grappes très généreuses ; plant indéterminé très vigoureux.",
+      "fruit": "15 à 25 g, en poire, jaune vif. Chair tendre, douce et peu acide, appréciée des enfants à l'apéritif.",
+      "type_de_fruit": "Cerise poire jaune",
+      "gènes_potentiels": "[r/r; Y/Y; T/T; ov/ov; Sp/Sp](hypothèse d'après phénotype : chair jaune via r/r récessif ; forme de poire via ovate ov/ov récessif ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2,2 m (indéterminée, très vigoureuse).",
+      "maturité": "Mi-saison (70 à 80 jours)."
+    },
+    "id": "catalog-050",
+    "catalogIndex": 50
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Black Cherry",
+    "details": {
+      "description_histoire_particularités": "Variété récente d'origine américaine (années 2000), la tomate cerise brune la plus fréquente dans les jardins français. Fruits ronds acajou à reflets violacés en grappes ; plant indéterminé vigoureux.",
+      "fruit": "20 à 30 g, ronds, brun acajou à noirâtre. Chair juteuse, saveur sucrée complexe avec des notes fumées, typique des tomates « noires ».",
+      "type_de_fruit": "Cerise brune",
+      "gènes_potentiels": "[R/R; gf/gf probable; y/y probable; Sp/Sp](hypothèse d'après phénotype : teinte brune via chair verte gf/gf récessive et épiderme incolore y/y récessif sur fond rouge R/R dominant, comme chez Noire de Crimée — gènes supposés, non vérifiés).",
+      "taille": "1,6 à 2 m (indéterminée, vigoureuse).",
+      "maturité": "Mi-saison (70 à 80 jours)."
+    },
+    "id": "catalog-051",
+    "catalogIndex": 51
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Sungold F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 japonais (Tokita), la tomate cerise orange de référence vendue en plants dans les jardineries françaises. Sucrosité exceptionnelle, plant très vigoureux à croissance indéterminée.",
+      "fruit": "15 à 20 g, ronds à légèrement ovales, orange lumineux. Chair très sucrée au parfum fruité, parmi les plus riches en sucres des cerises.",
+      "type_de_fruit": "Cerise orange",
+      "gènes_potentiels": "[R/R; Y/Y; t/t probable; Sp/Sp](hypothèse d'après phénotype : orange via tangerine t/t récessif, ou B (bêta-carotène) dominant — hybride F1, génotype non publié ; indéterminé Sp/Sp — gènes supposés, non vérifiés).",
+      "taille": "1,8 à 2,5 m (indéterminée, très vigoureuse).",
+      "maturité": "Précoce à mi-saison (65 à 75 jours)."
+    },
+    "id": "catalog-052",
+    "catalogIndex": 52
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Super Sweet 100 F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 américain très productif, référence des tomates cerises rouges en longues grappes, courant en jardinerie. Plante vigoureuse à croissance indéterminée, production continue jusqu'aux fraîcheurs.",
+      "fruit": "15 à 20 g, ronds, rouge vif. Chair très sucrée et juteuse, grappes pouvant dépasser une centaine de fruits.",
+      "type_de_fruit": "Cerise rouge",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; Sp/Sp](hypothèse d'après phénotype : rouge standard via R dominant ; indéterminé Sp/Sp — hybride F1, génotype non publié, gènes supposés d'après apparence).",
+      "taille": "1,8 à 2,5 m (indéterminée, vigoureuse).",
+      "maturité": "Précoce à mi-saison (65 à 70 jours)."
+    },
+    "id": "catalog-053",
+    "catalogIndex": 53
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Normale",
+    "name": "Ferline F1",
+    "details": {
+      "description_histoire_particularités": "Hybride F1 de sélection française, très vendu en France pour sa tolérance au mildiou. Fruits ronds et lisses en grappes régulières, plant vigoureux à croissance indéterminée, production fiable même en année humide.",
+      "fruit": "130 à 150 g, ronds et lisses, rouge soutenu. Chair ferme et charnue, saveur correcte à bonne, fruits peu sensibles à l'éclatement.",
+      "type_de_fruit": "Ronde",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; U/U probable; Sp/Sp](hypothèse d'après phénotype : rouge standard via R dominant ; maturité uniforme via U dominant ; indéterminé Sp/Sp ; tolérance au mildiou portée par un fond génétique quantitatif non visible — hybride F1, gènes supposés, non vérifiés).",
+      "taille": "1,5 à 2 m (indéterminée, vigoureuse).",
+      "maturité": "Mi-saison à tardive (78 à 85 jours)."
+    },
+    "id": "catalog-054",
+    "catalogIndex": 54
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Dwarf (Naine)",
+    "name": "Maskotka",
+    "details": {
+      "description_histoire_particularités": "Variété fixée d'origine polonaise, très populaire en pot, bac et balcon. Plant nain compact à croissance déterminée, couvert de bouquets de cerises rouges ; précoce et décorative.",
+      "fruit": "25 à 40 g, ronds et lisses, rouge vif. Chair ferme et croquante, saveur douce et légèrement sucrée.",
+      "type_de_fruit": "Cerise rouge",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; sp/sp; d/d probable; C+/C+](hypothèse d'après phénotype : rouge standard via R dominant ; port déterminé via sp/sp récessif ; stature naine via dwarf d/d récessif ; feuillage régulier C+/C+ — gènes supposés, non vérifiés).",
+      "taille": "30 à 50 cm (déterminée, naine).",
+      "maturité": "Précoce (55 à 65 jours)."
+    },
+    "id": "catalog-055",
+    "catalogIndex": 55
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Micro naine",
+    "name": "Tumbling Tom Red",
+    "details": {
+      "description_histoire_particularités": "Sélection micro-naine retombante d'origine britannique, star des suspensions, jardinières et pots sur rebord de fenêtre. Port cascading déterminé, couverture continue de petites cerises rouges.",
+      "fruit": "15 à 20 g, ronds, rouge vif. Chair juteuse, saveur acidulée et équilibrée, production continue en pot.",
+      "type_de_fruit": "Cerise rouge",
+      "gènes_potentiels": "[R/R; Y/Y; T/T; sp/sp; dw/dw probable](hypothèse d'après phénotype : rouge standard via R dominant ; port déterminé via sp/sp récessif et stature micro-naine retombante via dw/dw récessif — gènes supposés, non vérifiés).",
+      "taille": "20 à 30 cm (retombante, micro-naine).",
+      "maturité": "Précoce (60 à 70 jours)."
+    },
+    "id": "catalog-056",
+    "catalogIndex": 56
   }
 ];

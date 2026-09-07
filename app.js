@@ -162,11 +162,12 @@ const pageMeta = {
   garden: { title: "Potager", subtitle: "Votre saison de tomates, en un coup d’œil." },
   yields: { title: "Analyse détaillée", subtitle: "Récoltes, rendements et comparaisons de vos saisons." },
   seasons: { title: "Saisons", subtitle: "Comparez vos années et gardez une trace de vos progrès." },
-  varieties: { title: "Variétés", subtitle: "Le catalogue fourni, avec 40 fiches de tomates à explorer." },
+  varieties: { title: "Variétés", subtitle: `Le catalogue fourni, avec ${defaultSeedCatalog().length} fiches de tomates à explorer.` },
   more: { title: "Plus", subtitle: "Outils, préférences et sauvegarde de vos données." },
 };
 
 let pendingCatalogPruneNotice = 0;
+let pendingCatalogEnrichNotice = 0;
 const TOMATO_FAMILY_HINTS = ["tomate", "tomato", "lycopersicum", "lycopersicon", "solanum"];
 const CATALOG_SUBFAMILY_ORDER = ["Micro naine", "Dwarf (Naine)", "Normale", "Espèce sauvage"];
 let state = loadState();
@@ -696,6 +697,12 @@ function loadState() {
           merged.catalogPrunedAt = todayIso();
           pendingCatalogPruneNotice = prune.removed.length;
         }
+        defaultSeedCatalog().forEach((entry) => {
+          if (!merged.catalog.some((current) => current.id === entry.id)) {
+            merged.catalog.push(cloneData(entry));
+            pendingCatalogEnrichNotice += 1;
+          }
+        });
         if (!merged.budgetSettings || typeof merged.budgetSettings !== "object") merged.budgetSettings = { marketPricePerKg: 4.5, projectionRate: 1.15 };
         merged.budgetSettings.marketPricePerKg = Number(merged.budgetSettings.marketPricePerKg) > 0 ? Number(merged.budgetSettings.marketPricePerKg) : 4.5;
         merged.budgetSettings.projectionRate = Number(merged.budgetSettings.projectionRate) > 0 ? Number(merged.budgetSettings.projectionRate) : 1.15;
@@ -4421,11 +4428,20 @@ function importData(file) {
 function init() {
   hydrateIcons();
   render();
-  if (pendingCatalogPruneNotice > 0) {
-    const removedCount = pendingCatalogPruneNotice;
+  if (pendingCatalogPruneNotice > 0 || pendingCatalogEnrichNotice > 0) {
+    const parts = [];
+    if (pendingCatalogPruneNotice > 0) {
+      const n = pendingCatalogPruneNotice;
+      parts.push(`${n} fiche${n > 1 ? "s" : ""} autre${n > 1 ? "s" : ""} que la tomate retirée${n > 1 ? "s" : ""} de la page Variétés`);
+    }
+    if (pendingCatalogEnrichNotice > 0) {
+      const n = pendingCatalogEnrichNotice;
+      parts.push(`${n} nouvelle${n > 1 ? "s" : ""} variété${n > 1 ? "s" : ""} de tomates ajoutée${n > 1 ? "s" : ""} au catalogue`);
+    }
     pendingCatalogPruneNotice = 0;
+    pendingCatalogEnrichNotice = 0;
     saveState();
-    setTimeout(() => toast(`Catalogue nettoyé : ${removedCount} fiche${removedCount > 1 ? "s" : ""} autre${removedCount > 1 ? "s" : ""} que la tomate retirée${removedCount > 1 ? "s" : ""} de la page Variétés.`, "success"), 0);
+    setTimeout(() => toast(`Catalogue mis à jour : ${parts.join(" et ")}.`, "success"), 0);
   }
   document.addEventListener("click", handleClick);
   document.addEventListener("submit", handleSubmit);
