@@ -2335,12 +2335,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Odessa",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété précoce originaire d’Odessa en Ukraine, adaptée aux conditions sèches et chaudes. Son port compact et sa production abondante conviennent à la transformation.",
+      "fruit": "20 à 30 fruits rouges ronds et juteux, de 120 à 180 g, adaptés aux coulis et aux sauces.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "précoce"
+      "taille": "120 à 180 g",
+      "maturité": "Précoce"
     },
     "id": "catalog-147",
     "catalogIndex": 147,
@@ -2352,12 +2352,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Aurora",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété très hâtive originaire de Sibérie ; une variété roumaine du même nom a été introduite dans la banque de semences de Prague en 1955.",
+      "fruit": "Bouquets de 3 à 4 fruits rouge vif, ronds, de 60 à 90 g, à chair dense et ferme.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "précoce"
+      "taille": "60 à 90 g",
+      "maturité": "Précoce"
     },
     "id": "catalog-148",
     "catalogIndex": 148,
@@ -2369,12 +2369,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Bulgarian Triumph",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété bulgare à croissance vigoureuse et au feuillage développé, produisant une abondance de grappes.",
+      "fruit": "Grappes de 4 à 5 fruits rouges ronds, de 60 à 120 g et 6 à 8 cm. Chair juteuse, peu graineuse, à la saveur douce et acidulée.",
+      "type_de_fruit": "Ronde",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "60 à 120 g ; 6 à 8 cm",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-149",
     "catalogIndex": 149,
@@ -2386,12 +2386,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Cornue des Andes",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété originaire d’Amérique du Sud, également appelée Cornue des Andes ou Andine Cornue. Très productive, à croissance semi-déterminée.",
+      "fruit": "Fruits rouges allongés en forme de piment, de 150 à 250 g et 15 à 18 cm. Chair dense, ferme et charnue, contenant peu de graines et de jus.",
+      "type_de_fruit": "Allongée type tomate-piment",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "150 à 250 g ; 15 à 18 cm",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-150",
     "catalogIndex": 150,
@@ -2403,12 +2403,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Cœur de Bœuf Géant / Reif Red",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété familiale originaire d’Italie, transmise par J. Reif de Pennsylvanie. Peu sensible à l’éclatement.",
+      "fruit": "Très gros fruits rouges charnus en forme de cœur, de 500 à 700 g. Chair dense contenant peu de graines, à saveur très douce.",
+      "type_de_fruit": "Cœur de bœuf",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "500 à 700 g",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-151",
     "catalogIndex": 151,
@@ -2420,12 +2420,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "San Marzano Redorta",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Variété italienne dont le nom fait référence au Pizzo Redorta, une montagne de Bergame. Très appréciée pour les coulis et les conserves maison.",
+      "fruit": "Grappes de 3 à 4 fruits rouges allongés en forme de corne, de 150 à 350 g et 6 à 8 cm. Chair ferme, peu graineuse, très douce et fruitée.",
+      "type_de_fruit": "Allongée en forme de corne",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "150 à 350 g ; 6 à 8 cm",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-152",
     "catalogIndex": 152,
@@ -2437,12 +2437,12 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Rouge",
     "name": "Liberty Bell",
     "details": {
-      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
-      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
-      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "description_histoire_particularités": "Ancienne variété originaire des États-Unis, issue d’un vieil héritage. Citée en 1894 dans le catalogue Longstreth, dans l’Ohio, puis en 1900 dans Livingston’s Seed Annual ; cousine de Yellow Stuffer.",
+      "fruit": "Fruits rouges ressemblant à de petits poivrons, lobés, de 90 à 150 g et 5 à 10 cm. Très peu de graines, chair ferme et saveur douce sans acidité, idéale à farcir.",
+      "type_de_fruit": "Lobée à farcir",
       "gènes_potentiels": "",
-      "taille": "Voir la fiche produit Kokopelli.",
-      "maturité": "mi-saison"
+      "taille": "90 à 150 g ; 5 à 10 cm",
+      "maturité": "Mi-saison"
     },
     "id": "catalog-153",
     "catalogIndex": 153,
@@ -2454,8 +2454,8 @@ window.SEED_CATALOG = [
     "subfamily": "Kokopelli · Noir",
     "name": "Black From Tula",
     "details": {
-      "description_histoire_particularités": "Originaire de Russie, cette variété à feuillage abondant produit de gros fruits de type chair de bœuf.",
-      "fruit": "Fruits rouge sombre de 300 à 400 g, épaules vert foncé, chair rouge-brun intense, très douce et riche.",
+      "description_histoire_particularités": "Variété originaire de Russie, au feuillage abondant, produisant de beaux fruits de type chair de bœuf.",
+      "fruit": "Fruits rouge sombre aux épaules vert foncé, de 300 à 400 g. Chair rouge-brun intense, très douce et riche.",
       "type_de_fruit": "Chair de bœuf côtelée",
       "gènes_potentiels": "",
       "taille": "300 à 400 g",
