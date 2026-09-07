@@ -1751,5 +1751,702 @@ window.SEED_CATALOG = [
     "catalogIndex": 112,
     "source": "Kokopelli Semences",
     "sourceUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Caspian Pink",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-113",
+    "catalogIndex": 113,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7120-Caspian-Pink"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Cœur de Bœuf Akers",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-114",
+    "catalogIndex": 114,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7104-Coeur-de-Boeuf-Akers"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Cœur de Bœuf Hongrois",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-115",
+    "catalogIndex": 115,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7117-Coeur-de-Boeuf-Hongrois"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Pêche Rose / Fuzzy",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-116",
+    "catalogIndex": 116,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7022-Peche-Rose-Fuzzy"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "German Johnson Pink",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-117",
+    "catalogIndex": 117,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7125-German-Johnson-Pink"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "June Pink",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-118",
+    "catalogIndex": 118,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7006-June-Pink"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Livingston’s Magnus",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-119",
+    "catalogIndex": 119,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7129-Livingston-s-Magnus"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Brandywine Pink - Rose",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-120",
+    "catalogIndex": 120,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7001-Brandywine-Pink"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Grégory Altaï",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "précoce"
+    },
+    "id": "catalog-121",
+    "catalogIndex": 121,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6901-Gregory-Altai"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Zarianka",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "précoce"
+    },
+    "id": "catalog-122",
+    "catalogIndex": 122,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6906-Zarianka"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Grushovka",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "précoce"
+    },
+    "id": "catalog-123",
+    "catalogIndex": 123,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6902-Grushovka"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Anna Russian",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-124",
+    "catalogIndex": 124,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6900-Anna-Russian"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Olirose de St Domingue",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-125",
+    "catalogIndex": 125,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7010-Olirose-de-St-Domingue"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Cœur de Bœuf Yasha Yougoslavian",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-126",
+    "catalogIndex": 126,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7109-Coeur-de-Boeuf-Yasha-Yougoslavian"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Blanc",
+    "name": "White Beauty",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : blanc. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-127",
+    "catalogIndex": 127,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7503-White-Beauty"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Blanc",
+    "name": "White Queen",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : blanc. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-128",
+    "catalogIndex": 128,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7501-White-Queen"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Orange",
+    "name": "Amana Orange",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : orange. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-129",
+    "catalogIndex": 129,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6766-Amana-Orange"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Jaune",
+    "name": "Azoychka Russian",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : jaune. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-130",
+    "catalogIndex": 130,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6755-Azoychka-Russian"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Jaune",
+    "name": "Cœur de Bœuf Jaune",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : jaune. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-131",
+    "catalogIndex": 131,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6700-Coeur-de-Boeuf-Jaune"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Bigarrée",
+    "name": "Tuxhorn",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-132",
+    "catalogIndex": 132,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7451-Tuxhorn"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Bigarrée",
+    "name": "Striped German",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : bigarrée. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-133",
+    "catalogIndex": 133,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7305-Striped-German"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Jaune",
+    "name": "Manyel",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : jaune. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-134",
+    "catalogIndex": 134,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6757-Manyel"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Clear Pink",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "précoce"
+    },
+    "id": "catalog-135",
+    "catalogIndex": 135,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6910-Clear-Pink"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "1884",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-136",
+    "catalogIndex": 136,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7034-1884"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Brandywine Sudduth’s Strain",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-137",
+    "catalogIndex": 137,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7134-Brandywine-Sudduth-s-Strain"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Marizol Purple",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-138",
+    "catalogIndex": 138,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7007-Marizol-Purple"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rose",
+    "name": "Crnkovic Yougoslavian Pink",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rose. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-139",
+    "catalogIndex": 139,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7135-Crnkovic-Yougoslavian-Pink"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Grandma Mary’s Paste",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "précoce"
+    },
+    "id": "catalog-140",
+    "catalogIndex": 140,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6214-Grandma-Mary-s-Paste"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Petros",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-141",
+    "catalogIndex": 141,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6281-Petros"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Sieger",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-142",
+    "catalogIndex": 142,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6253-sieger"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Ponderosa Red",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-143",
+    "catalogIndex": 143,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6356-Ponderosa-Red"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Super Colosse",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-144",
+    "catalogIndex": 144,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6316-Super-Colosse"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Vert",
+    "name": "Green Velvet",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : vert. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-145",
+    "catalogIndex": 145,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7429-Green-Velvet"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Vert",
+    "name": "Ananas Vert / Green Pineapple",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : tardive, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : vert. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "tardive"
+    },
+    "id": "catalog-146",
+    "catalogIndex": 146,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P7411-Ananas-Vert-Green-Pineapple"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Odessa",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "précoce"
+    },
+    "id": "catalog-147",
+    "catalogIndex": 147,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6007-Odessa"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Aurora",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : précoce. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "précoce"
+    },
+    "id": "catalog-148",
+    "catalogIndex": 148,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6101-Aurora"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Bulgarian Triumph",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-149",
+    "catalogIndex": 149,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6042-Bulgarian-Triumph"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Cornue des Andes",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-150",
+    "catalogIndex": 150,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6210-Des-Andes"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Cœur de Bœuf Géant / Reif Red",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-151",
+    "catalogIndex": 151,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6271-Coeur-de-Boeuf-Geant-Reif-Red"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "San Marzano Redorta",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-152",
+    "catalogIndex": 152,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6341-San-Marzano-Redorta"
+  },
+  {
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Kokopelli · Rouge",
+    "name": "Liberty Bell",
+    "details": {
+      "description_histoire_particularités": "Variété référencée par Kokopelli dans son catalogue de tomates. Classement de la fiche : mi-saison, variété ancienne. La fiche produit détaillée est conservée comme source pour compléter les caractéristiques propres à cette variété.",
+      "fruit": "Couleur indiquée par Kokopelli : rouge. Les autres caractéristiques du fruit doivent être lues sur la fiche produit détaillée.",
+      "type_de_fruit": "Voir la fiche produit Kokopelli.",
+      "gènes_potentiels": "",
+      "taille": "Voir la fiche produit Kokopelli.",
+      "maturité": "mi-saison"
+    },
+    "id": "catalog-153",
+    "catalogIndex": 153,
+    "source": "Kokopelli Semences",
+    "sourceUrl": "https://kokopelli-semences.fr/fr/p/P6217-Liberty-Bell"
   }
 ];
