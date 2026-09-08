@@ -419,3 +419,11 @@ aucune URL nouvelle hors `verification.sources`, aucune fiche ajoutée/supprimé
   conservé 2026-09-07. Alias « Black Moor » non ajouté à Cherny Mavr car déjà porté par la fiche
   distincte Black Mauri (P6066) — synonymie mentionnée en note.
   → **Rapport : 1 986 fiches, 2 507 références (2 490 → 2 507), tests 30/30.**
+
+## Feuillages remarquables (demande utilisateur, 08/09/2026)
+Ajout de la fiche **Maushor** (`data/enrichissement-2026/grainedecarotte/`, source Tomaten-Atlas,
+`checkedAt` conservé 2026-09-07) : seule variété connue à feuillage « oreille de souris » selon
+Graine de Carotte. Le sélecteur « Feuillage » propose désormais **feuille-carotte**, **pompon / gène
+stick**, **oreille de souris**, **chou kale** et **panaché**, avec des surcharges ciblées par fiche
+pour éviter les faux positifs (bouquets de fruits ≠ stick, « Kaleidoscopic » juxtant le nom ≠ chou kale).
+→ **Catalogue : 1 987 fiches**, tests 31/31, rapport 2 509 références.

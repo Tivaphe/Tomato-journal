@@ -18,7 +18,7 @@
 <img src="https://img.shields.io/badge/Dépendances-0-E63946?style=flat-square" alt="Zero dependencies" />
 <img src="https://img.shields.io/badge/PWA-hors_ligne-5A189A?style=flat-square" alt="PWA" />
 <img src="https://img.shields.io/badge/Données-100%25_locales-2A9D8F?style=flat-square" alt="Local first" />
-<img src="https://img.shields.io/badge/Catalogue-1986_variétés-F4A261?style=flat-square" alt="1986 varieties" />
+<img src="https://img.shields.io/badge/Catalogue-1987_variétés-F4A261?style=flat-square" alt="1987 varieties" />
 <img src="https://img.shields.io/badge/Licence-MIT-457B9D?style=flat-square" alt="MIT" />
 
 <br/><br/>
@@ -177,8 +177,8 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 
 <br/>
 
-- **Catalogue de variétés** : 1986 fiches (193 d'origine, enrichies depuis Kokopelli, Meraki Seeds et Baker Creek) réparties en cinq types de plantes : **Micro-naine, Dwarf, Bush, Déterminée et Indéterminée**, avec noms des variétés et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Les filtres par type de plante se combinent à des filtres par caractéristiques (couleur, taille et forme du fruit, maturité, type de feuillage, tolérances au climat et résistances déclarées) ; une tolérance n’est retenue que si la fiche l’énonce explicitement, jamais sur une simple évocation ou une formule négative. Chaque fiche affiche un résumé « Caractéristiques retenues » (celles qui alimentent les filtres) et une section « Contrôle partiel » repliée par défaut. Chaque fiche peut être modifiée directement dans l’application : les retouches sont enregistrées localement sans écraser la vérification documentaire. Cliquez à nouveau sur le type actif pour afficher toutes les variétés. Les anciennes catégories sont mises à jour au chargement et lors de l’import des sauvegardes. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
-- **Vérification documentaire** : les 1986 fiches ont été passées en revue avec un contrôle daté, des sources et une portée explicite. Les erreurs documentées sont corrigées ; les contradictions, souches incertaines et lots personnels sont signalés, sans certification globale. [Rapport complet du 7 septembre 2026](docs/verification-catalogue.md). Les délais non documentés depuis plantation utilisent une hypothèse de calendrier de 75 jours, signalée et modifiable.
+- **Catalogue de variétés** : 1987 fiches (193 d'origine, enrichies depuis Kokopelli, Meraki Seeds et Baker Creek) réparties en cinq types de plantes : **Micro-naine, Dwarf, Bush, Déterminée et Indéterminée**, avec noms des variétés et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Les filtres par type de plante se combinent à des filtres par caractéristiques (couleur, taille et forme du fruit, maturité, type de feuillage, tolérances au climat et résistances déclarées) ; une tolérance n’est retenue que si la fiche l’énonce explicitement, jamais sur une simple évocation ou une formule négative. Chaque fiche affiche un résumé « Caractéristiques retenues » (celles qui alimentent les filtres) et une section « Contrôle partiel » repliée par défaut. Chaque fiche peut être modifiée directement dans l’application : les retouches sont enregistrées localement sans écraser la vérification documentaire. Cliquez à nouveau sur le type actif pour afficher toutes les variétés. Les anciennes catégories sont mises à jour au chargement et lors de l’import des sauvegardes. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
+- **Vérification documentaire** : les 1987 fiches ont été passées en revue avec un contrôle daté, des sources et une portée explicite. Les erreurs documentées sont corrigées ; les contradictions, souches incertaines et lots personnels sont signalés, sans certification globale. [Rapport complet du 7 septembre 2026](docs/verification-catalogue.md). Les délais non documentés depuis plantation utilisent une hypothèse de calendrier de 75 jours, signalée et modifiable.
 - **Photos catalogue** : chaque fiche peut recevoir une photo de référence locale, stockée dans IndexedDB et incluse dans les sauvegardes.
 - **Inventaire de graines** : stocks restants, unités, achat/récolte, viabilité, emplacement, source, notes et candidate associée. Les candidates « à acheter » sans stock sont signalées.
 - **Candidats et achats** : liste séparée pour la saison suivante — *candidate, à acheter, achetée, semée, plantée, retenue, écartée* — avec priorité, quantité et notes.
@@ -187,7 +187,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 
 <div align="center">
 <img src="docs/screenshots/catalogue-varietes.png" width="88%" alt="Catalogue de variétés" /><br/>
-<sub><i>Le catalogue : 1986 fiches de tomates réparties en 5 types de plantes, avec recherche et filtres.</i></sub>
+<sub><i>Le catalogue : 1987 fiches de tomates réparties en 5 types de plantes, avec recherche et filtres.</i></sub>
 </div>
 
 </details>
@@ -291,7 +291,7 @@ Tomato-journal/
 │   ├── app.js                     # Logique, vues et dispatch des actions
 │   ├── styles.css                 # Thèmes Bio-Orbital & Night Garden HUD
 │   ├── photo-storage.js           # Persistance binaire (IndexedDB)
-│   └── seed-catalog.js            # Catalogue de 1986 variétés de tomates / 5 types de plantes
+│   └── seed-catalog.js            # Catalogue de 1987 variétés de tomates / 5 types de plantes
 ├── assets/
 │   ├── manifest.webmanifest       # Manifeste PWA
 │   ├── favicon.png                # Icône d'onglet
@@ -304,7 +304,7 @@ Tomato-journal/
 │   ├── build-catalog-enrich.mjs   # Enrichissement multi-sources
 │   └── build-catalog-report.mjs   # Génération du rapport documentaire
 ├── docs/
-│   ├── verification-catalogue.md  # Audit des 1986 fiches
+│   ├── verification-catalogue.md  # Audit des 1987 fiches
 │   ├── enrichissement-catalogue.md # Suivi de l'enrichissement
 │   └── screenshots/               # Captures d'écran
 ├── data/                          # Données d'enrichissement du catalogue
@@ -438,8 +438,8 @@ Installs on desktop, Android and iPhone, and works offline.
 
 <br/>
 
-- **Variety catalog**: 1986 sheets (193 originals, enriched from Kokopelli, Meraki Seeds and Baker Creek) grouped into five plant types: **Micro-dwarf, Dwarf, Bush, Determinate and Indeterminate**, with botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. Plant-type filters combine with characteristic filters (fruit colour, size and shape, maturity, leaf type, climate tolerances and declared resistances); a tolerance is kept only when the sheet states it explicitly, never from a passing mention or a negative wording. Every sheet shows a "Retained characteristics" summary (the values that drive the filters) and a "Partial check" section collapsed by default. Every sheet can be edited directly in the app: changes are saved locally without overwriting the documentary verification. Click the active type again to show all varieties. Legacy categories are updated on load and when importing backups. The "Add a plant" form also offers a catalog dropdown.
-- **Documentary review**: all 1986 sheets were reviewed with a dated control, references and explicit scope. Documented errors are corrected; conflicting sources, uncertain identities and personal seed lots are flagged, not certified. [Full report, 7 September 2026 (French)](docs/verification-catalogue.md). Where no transplant-based maturity is documented, the editable 75-day calendar assumption is explicitly disclosed.
+- **Variety catalog**: 1987 sheets (193 originals, enriched from Kokopelli, Meraki Seeds and Baker Creek) grouped into five plant types: **Micro-dwarf, Dwarf, Bush, Determinate and Indeterminate**, with botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. Plant-type filters combine with characteristic filters (fruit colour, size and shape, maturity, leaf type, climate tolerances and declared resistances); a tolerance is kept only when the sheet states it explicitly, never from a passing mention or a negative wording. Every sheet shows a "Retained characteristics" summary (the values that drive the filters) and a "Partial check" section collapsed by default. Every sheet can be edited directly in the app: changes are saved locally without overwriting the documentary verification. Click the active type again to show all varieties. Legacy categories are updated on load and when importing backups. The "Add a plant" form also offers a catalog dropdown.
+- **Documentary review**: all 1987 sheets were reviewed with a dated control, references and explicit scope. Documented errors are corrected; conflicting sources, uncertain identities and personal seed lots are flagged, not certified. [Full report, 7 September 2026 (French)](docs/verification-catalogue.md). Where no transplant-based maturity is documented, the editable 75-day calendar assumption is explicitly disclosed.
 - **Catalog photos**: every sheet can carry a local reference photo, stored in IndexedDB and included in JSON backups.
 - **Seed inventory**: remaining stock, units, purchase/harvest, viability, location, source, notes and the linked candidate. "To buy" candidates without stock are flagged.
 - **Candidates and purchases**: a separate list for next season — *candidate, to buy, bought, sown, planted, kept, dropped* — with priority, quantity and notes.
@@ -448,7 +448,7 @@ Installs on desktop, Android and iPhone, and works offline.
 
 <div align="center">
 <img src="docs/screenshots/catalogue-varietes.png" width="88%" alt="Variety catalog" /><br/>
-<sub><i>The catalog: 1986 tomato sheets across 5 plant types, with search and filters.</i></sub>
+<sub><i>The catalog: 1987 tomato sheets across 5 plant types, with search and filters.</i></sub>
 </div>
 
 </details>
@@ -552,7 +552,7 @@ Tomato-journal/
 │   ├── app.js                     # Logic, views and action dispatch
 │   ├── styles.css                 # Bio-Orbital & Night Garden HUD themes
 │   ├── photo-storage.js           # Binary persistence (IndexedDB)
-│   └── seed-catalog.js            # Catalog of 1986 tomato varieties / 5 plant types
+│   └── seed-catalog.js            # Catalog of 1987 tomato varieties / 5 plant types
 ├── assets/
 │   ├── manifest.webmanifest       # PWA manifest
 │   ├── favicon.png                # Tab icon
@@ -565,7 +565,7 @@ Tomato-journal/
 │   ├── build-catalog-enrich.mjs   # Multi-source enrichment
 │   └── build-catalog-report.mjs   # Documentary report generation
 ├── docs/
-│   ├── verification-catalogue.md  # Audit of all 1986 sheets
+│   ├── verification-catalogue.md  # Audit of all 1987 sheets
 │   ├── enrichissement-catalogue.md # Enrichment follow-up
 │   └── screenshots/               # Screenshots
 ├── data/                          # Catalog enrichment data

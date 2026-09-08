@@ -611,17 +611,78 @@ function catalogMaturityClass(entry) {
   return "";
 }
 
+// Feuillages remarquables : les catégories tirées du guide « Les différents
+// feuillages des tomates » (Graine de Carotte) sont conservées avec leurs
+// variétés documentées. Les surcharges sont volontairement limitées aux fiches
+// vérifiées pour éviter qu'un mot courant (« bouquets », « panaché » en parlant
+// du fruit, etc.) ne crée un faux positif.
+const CATALOG_LEAF_OVERRIDES = {
+  "catalog-016": ["feuille-carotte"],
+  "catalog-ref-meraki-carrot-mini-micro-dwarf-tomato": ["feuille-carotte"],
+  "catalog-ref-meraki-lucinda-tomato": ["feuille-carotte"],
+  "catalog-ref-meraki-spike-bush-tomato": ["feuille-carotte"],
+  "catalog-030": ["stick"],
+  "catalog-ref-meraki-mooncalf-stick-cherry-tomato": ["stick"],
+  "catalog-ref-meraki-stick-brown-cherry-tomato": ["stick"],
+  "catalog-ref-meraki-stick-red-tomato": ["stick"],
+  "catalog-ref-meraki-stick-yellow-cherry-tomato": ["stick"],
+  "catalog-ref-meraki-curly-kaley-long-micro-dwarf-tomato": ["chou-kale", "rugueux"],
+  "catalog-ref-meraki-curly-kaley-tomato": ["chou-kale", "rugueux"],
+  "catalog-ref-grainedecarotte-maushor": ["oreille-souris"],
+  "catalog-017": ["panaché", "régulier"],
+  "catalog-031": ["panaché", "régulier"],
+  "catalog-ref-meraki-allies-july-dtp-dwarf-tomato": ["panaché", "régulier", "rugueux"],
+  "catalog-ref-meraki-deans-haleys-rainbow-dwarf-tomato": ["panaché", "régulier"],
+  "catalog-ref-meraki-elsies-fancy-dwarf-tomato": ["panaché", "pomme-de-terre", "rugueux"],
+  "catalog-ref-meraki-faelans-first-snow-beefsteak-tomato": ["panaché"],
+  "catalog-ref-meraki-flashy-ace-dwarf-tomato": ["panaché"],
+  "catalog-ref-meraki-iriss-magic-tomato": ["panaché"],
+  "catalog-ref-meraki-moonlight-mile-tomato": ["panaché", "régulier"],
+  "catalog-ref-meraki-painted-lady-tomato": ["panaché", "pomme-de-terre"],
+  "catalog-ref-meraki-picos-pride-dwarf-tomato": ["panaché", "pomme-de-terre", "rugueux"],
+  "catalog-ref-meraki-potatoleaf-variegated-cherry-tomato": ["panaché", "pomme-de-terre"],
+  "catalog-ref-meraki-sandy-stripes-dwarf-tomato": ["panaché", "régulier", "rugueux"],
+  "catalog-ref-meraki-shimofuri-tomato-not": ["panaché"],
+  "catalog-ref-meraki-splash-of-cream-tomato": ["panaché"],
+  "catalog-ref-meraki-sweet-splash-electra-dwarf-tomato": ["panaché", "pomme-de-terre", "rugueux"],
+  "catalog-ref-meraki-variegated-dragon-tomato": ["panaché"],
+  "catalog-ref-meraki-walters-fancy-dwarf-tomato": ["panaché", "pomme-de-terre", "rugueux"],
+};
+
+function catalogLeafText(entry) {
+  return normalizeSearchText([
+    catalogDetailValue(entry, "feuillage", "leaf", "foliage", "feuilles"),
+    catalogDetailValue(entry, "description_histoire_particularités", "description", "description_history"),
+  ].join(" "));
+}
+
+function catalogLeafTypes(entry) {
+  if (!entry?.userEdited && CATALOG_LEAF_OVERRIDES[entry?.id]) return CATALOG_LEAF_OVERRIDES[entry.id].slice();
+  const text = catalogLeafText(entry);
+  if (!text || /non (document|pr[eé]cis|renseign|connu)/.test(text)) return [];
+  const types = [];
+  // Les types de feuillage rares sont testés avant les termes plus génériques
+  // pour qu'une fiche « chou kale » ne soit pas classée par simple mention du
+  // port « bâton », et qu'une fiche « panachée » reste bien dans « panaché ».
+  if (/maushor|maushör|mouse[- ]?ear|oreille[- ]?de[- ]?souris/.test(text)) types.push("oreille-souris");
+  if (/chou[- ]?kale|(?:feuill|foliage)[^.;]{0,50}(?:fris[ée]|kale|cabbage)|fris[ée] type chou|feuilles? fris[ée]s?/.test(text)) types.push("chou-kale");
+  if (/panach|variegat|(?:feuill|foliage)[^.;]{0,70}(?:cr[èe]me[- ]?blanc|blanc[- ]?vert|vert[- ]?blanc|stries cr[èe]me)|(?:cr[èe]me[- ]?blanc|blanc[- ]?vert|vert[- ]?blanc|stries cr[èe]me)[^.;]{0,70}(?:feuill|foliage)/.test(text)) types.push("panaché");
+  if (/(?:feuill|foliage)[^.;]{0,70}(?:carotte|carrot)|(?:carotte|carrot)[^.;]{0,30}(?:feuill|foliage)|type carotte|carrot leaf/.test(text)) types.push("feuille-carotte");
+  if (/(?:feuill|foliage)[^.;]{0,70}(?:pompon|bouquet)|(?:pompon|pompom|bouquet|port b[âa]ton|g[èe]ne stick|g[èe]ne b[âa]ton|stick gene|port stick)[^.;]{0,30}(?:feuill|foliage)/.test(text) || /port stick|g[èe]ne stick|stick gene/.test(catalogDetailValue(entry, "feuillage", "leaf", "foliage", "feuilles"))) types.push("stick");
+  if (/pomme de terre|potato/.test(text)) types.push("pomme-de-terre");
+  if (/rugueux/.test(text)) types.push("rugueux");
+  if (/laineux|duvet|poilu/.test(text)) types.push("laineux");
+  if (/fin(ement)? (et )?d[eé]coup|wispy|effil/.test(text)) types.push("fin-découpé");
+  if (/chartreuse|vert clair/.test(text)) types.push("chartreuse");
+  if (/r[eé]gulier|regular/.test(text)) types.push("régulier");
+  return types;
+}
+
 function catalogLeafType(entry) {
-  const text = normalizeSearchText(catalogDetailValue(entry, "feuillage", "leaf", "foliage", "feuilles"));
-  if (!text || /non (document|pr[eé]cis|renseign|connu)/.test(text)) return "";
-  if (/laineux|duvet|poilu/.test(text)) return "laineux";
-  if (/fin(ement)? (et )?d[eé]coup|wispy|effil/.test(text)) return "fin-découpé";
-  if (/chartreuse|vert clair/.test(text)) return "chartreuse";
-  if (/pomme de terre|potato/.test(text)) return "pomme-de-terre";
-  if (/rugueux/.test(text)) return "rugueux";
-  if (/stick|bouquets/.test(text)) return "stick";
-  if (/r[eé]gulier|regular/.test(text)) return "régulier";
-  return "autre";
+  const types = catalogLeafTypes(entry);
+  // Retourne le premier type du classement de la fiche pour les formulaires
+  // monovaleur ; le filtre, lui, accepte tous les types renvoyés ci-dessus.
+  return types[0] || "";
 }
 
 // Tolerance signals are extracted from explicit, positively-phrased claims so a
@@ -2128,7 +2189,7 @@ function varietiesForFilter() {
     const matchesSize = varietyFacets.size === "all" || size === varietyFacets.size;
     const matchesShape = varietyFacets.shape === "all" || catalogShape(entry) === varietyFacets.shape;
     const matchesMaturity = varietyFacets.maturity === "all" || catalogMaturityClass(entry) === varietyFacets.maturity;
-    const matchesLeaf = varietyFacets.leaf === "all" || catalogLeafType(entry) === varietyFacets.leaf;
+    const matchesLeaf = varietyFacets.leaf === "all" || catalogLeafTypes(entry).includes(varietyFacets.leaf);
     const matchesTolerance = varietyFacets.tolerance === "all" || catalogToleranceLabels(entry).includes(varietyFacets.tolerance);
     return matchesSearch && matchesFilter && matchesColor && matchesSize && matchesShape && matchesMaturity && matchesLeaf && matchesTolerance;
   });
@@ -2143,7 +2204,19 @@ const CATALOG_FACET_OPTIONS = {
   size: [["cerise", "Cerise"], ["petit", "Petit"], ["moyen", "Moyen"], ["gros", "Gros"]],
   shape: [["rond", "Rond"], ["aplati", "Aplati"], ["beefsteak", "Beefsteak"], ["côtelé", "Côtelé"], ["allongé", "Allongé"], ["prune", "Prune"], ["cœur", "Cœur"], ["poire", "Poire"], ["ovale", "Ovale"], ["variable", "Variable"], ["poivron", "Poivron"]],
   maturity: [["précoce", "Précoce"], ["mi-saison", "Mi-saison"], ["tardive", "Tardive"]],
-  leaf: [["régulier", "Régulier"], ["pomme-de-terre", "Pomme de terre"], ["rugueux", "Rugueux"], ["laineux", "Laineux"], ["fin-découpé", "Fin découpé"], ["chartreuse", "Chartreuse"]],
+  leaf: [
+    ["régulier", "Régulier"],
+    ["pomme-de-terre", "Pomme de terre"],
+    ["rugueux", "Rugueux"],
+    ["laineux", "Laineux"],
+    ["fin-découpé", "Fin découpé"],
+    ["chartreuse", "Chartreuse"],
+    ["feuille-carotte", "Feuille de carotte"],
+    ["stick", "Pompon / gène stick"],
+    ["oreille-souris", "Oreille de souris (Mouse Ear)"],
+    ["chou-kale", "Chou kale (Curly Kaley)"],
+    ["panaché", "Panaché"],
+  ],
   tolerance: [["chaleur", "Chaleur / sécheresse"], ["froid", "Froid / saison courte"], ["maladies", "Résistances déclarées"]],
 };
 
@@ -2245,7 +2318,7 @@ function renderCatalogFacts(entry, maturityText) {
   const maturityClass = catalogMaturityClass(entry);
   const maturityLabel = catalogFacetValueLabel("maturity", maturityClass);
   const colors = catalogColors(entry).map((color) => colorMeta[color]?.label).filter(Boolean);
-  const leafLabel = catalogFacetValueLabel("leaf", catalogLeafType(entry));
+  const leafLabel = catalogLeafTypes(entry).map((type) => catalogFacetValueLabel("leaf", type)).filter(Boolean).join(" · ");
   const toleranceLabels = catalogToleranceLabels(entry).map((label) => catalogFacetValueLabel("tolerance", label)).filter(Boolean);
   const shape = catalogShape(entry);
   const shapeLabel = FRUIT_SHAPES.includes(shape) ? shape[0].toUpperCase() + shape.slice(1) : "";

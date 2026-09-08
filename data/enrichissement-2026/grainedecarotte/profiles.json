@@ -1,0 +1,25 @@
+{
+  "maushor": {
+    "growth": "I",
+    "colors": [
+      "red"
+    ],
+    "shape": "rond",
+    "weight": "10 à 50 g",
+    "height": "1,20 à 2,50 m selon les conditions",
+    "maturity": "Mi-saison",
+    "leaf": "Feuillage rare « oreille de souris » : petites feuilles recroquevillées.",
+    "origin": "Non documenté",
+    "description": "Tomate allemande réputée pour son feuillage extrêmement rare, formé de petites feuilles recroquevillées et enroulées sur elles-mêmes, comparable à une oreille de souris. Fruits ronds et rouges de 10 à 50 g, à 2 ou 3 loges, mûrissant en mi-saison. La plante dépasse facilement 1,20 à 2,50 m selon les conditions. Le feuillage décrit ici reste la caractéristique la plus distinctive et la plus à vérifier sur le lot, car cette forme de feuille est extrêmement rare.",
+    "fruit": "Fruits ronds et rouges, de 10 à 50 g ; 2 à 3 loges, sans côtes.",
+    "sources": [
+      "https://www.tomaten-atlas.de/sorten/m/1546-maushor",
+      "https://grainedecarotte.odoo.com/en/blog/genetics-1/the-different-foliage-of-tomatoes-15"
+    ],
+    "aliases": [
+      "Maushör"
+    ],
+    "note": "Source principale Tomaten-Atlas ; Graine de Carotte confirme le feuillage « oreille de souris » et n'en connaît pas d'autre variété.",
+    "status": "partial"
+  }
+}
