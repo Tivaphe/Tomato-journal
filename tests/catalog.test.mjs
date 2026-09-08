@@ -499,3 +499,40 @@ test("the readme catalog count matches the reference catalog size", () => {
   assert.equal(found.length, 12);
   assert.ok(found.every((count) => count === referenceCount));
 });
+
+test("catalogMaturityClass buckets maturity keywords and numeric ranges", () => {
+  const app = createApp();
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"Précoce\" } })"), "précoce");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"Mi-saison\" } })"), "mi-saison");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"Tardive\" } })"), "tardive");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"60 jours annoncés, base non précisée.\" } })"), "précoce");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"90 jours annoncés, base non précisée.\" } })"), "tardive");
+  assert.equal(app.run("catalogMaturityClass({ details: {} })"), "");
+});
+
+test("catalogLeafType recognises documented leaf shapes and ignores unknowns", () => {
+  const app = createApp();
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Pomme de terre (rugueux), vert sombre" } })'), "pomme-de-terre");
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Régulier" } })'), "régulier");
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Laineux argenté" } })'), "laineux");
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Non documenté" } })'), "");
+  assert.equal(app.run("catalogLeafType({ details: {} })"), "");
+});
+
+test("catalogToleranceLabels flags heat, cold and declared disease resistance", () => {
+  const app = createApp();
+  const labels = app.read('catalogToleranceLabels({ details: { fruit: "résistante au mildiou, tolère la chaleur", description_histoire_particularités: "réussit par temps froid" } })');
+  assert.ok(labels.includes("maladies"));
+  assert.ok(labels.includes("chaleur"));
+  assert.ok(labels.includes("froid"));
+  assert.deepEqual(app.read("catalogToleranceLabels({ details: { fruit: \"aucune résistance générale garantie\" } })"), []);
+});
+
+test("variety facets narrow the catalogue by fruit colour", () => {
+  const app = createApp();
+  app.run("varietyFacets.color = 'red'; varietyFacets.size = 'all'; varietyFacets.shape = 'all'; varietyFacets.maturity = 'all'; varietyFacets.leaf = 'all'; varietyFacets.tolerance = 'all';");
+  const rows = app.read("varietiesForFilter().map((entry) => entry.id)");
+  const colors = app.read("varietiesForFilter().map((entry) => catalogColors(entry))");
+  assert.ok(rows.length > 0 && rows.length < referenceCount);
+  assert.ok(colors.every((list) => list.includes("red")));
+});
