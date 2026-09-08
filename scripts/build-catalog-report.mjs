@@ -3,9 +3,9 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
 
-const root = dirname(fileURLToPath(import.meta.url));
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const context = vm.createContext({ window: {} });
-vm.runInContext(await readFile(join(root, "seed-catalog.js"), "utf8"), context);
+vm.runInContext(await readFile(join(root, "src/seed-catalog.js"), "utf8"), context);
 const entries = context.window.SEED_CATALOG;
 const labels = {
   partial: "Contrôle partiel",

@@ -1,16 +1,16 @@
-const CACHE_NAME = "tomato-journal-shell-6b822829fa1b";
+const CACHE_NAME = "tomato-journal-shell-b6e0a0a8bb76";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./photo-storage.js",
-  "./seed-catalog.js",
+  "./src/styles.css",
+  "./src/app.js",
+  "./src/photo-storage.js",
+  "./src/seed-catalog.js",
   "./docs/verification-catalogue.md",
   "./docs/enrichissement-catalogue.md",
-  "./manifest.webmanifest",
-  "./icon-192.png",
-  "./icon-512.png"
+  "./assets/manifest.webmanifest",
+  "./assets/icon-192.png",
+  "./assets/icon-512.png"
 ];
 
 self.addEventListener("install", (event) => {

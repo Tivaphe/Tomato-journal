@@ -3,18 +3,18 @@ import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = dirname(fileURLToPath(import.meta.url));
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const shellFiles = [
   "index.html",
-  "styles.css",
-  "app.js",
-  "photo-storage.js",
-  "seed-catalog.js",
+  "src/styles.css",
+  "src/app.js",
+  "src/photo-storage.js",
+  "src/seed-catalog.js",
   "docs/verification-catalogue.md",
   "docs/enrichissement-catalogue.md",
-  "manifest.webmanifest",
-  "icon-192.png",
-  "icon-512.png",
+  "assets/manifest.webmanifest",
+  "assets/icon-192.png",
+  "assets/icon-512.png",
 ];
 const hash = createHash("sha256");
 for (const file of shellFiles) hash.update(await readFile(join(root, file)));

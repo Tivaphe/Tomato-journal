@@ -262,6 +262,13 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .catalog-filter-controls { flex: 1; min-width: 0; }
 .catalog-filter-controls .filter-chips { flex-wrap: wrap; overflow: visible; }
 .catalog-filter-controls .form-help { display: block; margin-top: 4px; }
+.catalog-facets { display: flex; align-items: end; flex-wrap: wrap; gap: 9px; margin: 2px 0 24px; padding: 12px 13px; border: 1px dashed var(--line-strong); border-radius: 12px; background: var(--surface); }
+.catalog-facet { display: flex; flex-direction: column; gap: 5px; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.catalog-facet select { height: 34px; min-width: 128px; padding: 0 28px 0 10px; border: 1px solid var(--line-strong); border-radius: 9px; background: #fff; color: var(--ink); font-size: 12px; font-weight: 500; text-transform: none; letter-spacing: 0; }
+.catalog-facet select:focus { border-color: var(--tomato); box-shadow: 0 0 0 3px rgba(212,84,52,.11); outline: none; }
+.facet-reset { display: inline-flex; align-items: center; gap: 6px; height: 34px; margin-left: auto; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 9px; background: transparent; color: var(--tomato); font-size: 12px; font-weight: 650; }
+.facet-reset:hover { border-color: var(--tomato); }
+.facet-reset svg { width: 14px; height: 14px; }
 .variety-groups { display: grid; gap: 27px; }
 .variety-group h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 11px; color: var(--muted); font-size: 11px; letter-spacing: .17em; text-transform: uppercase; }
 .variety-group h2::after { content: ""; height: 1px; flex: 1; background: var(--line); }
@@ -792,6 +799,7 @@ body[data-theme="orbital"] .modal-header { border-color: #e0dbce; }
 body[data-theme="orbital"] .modal-header h2, body[data-theme="orbital"] .detail-visual-copy h2 { color: #285440; }
 body[data-theme="orbital"] .close-button { color: #708074; background: #eee7d6; }
 body[data-theme="orbital"] .form-field input, body[data-theme="orbital"] .form-field select, body[data-theme="orbital"] .form-field textarea { color: #293a30; background: #fffdf7; border-color: #b8b8a9; }
+body[data-theme="orbital"] .catalog-facet select { color: #293a30; background: #fffdf7; border-color: #b8b8a9; }
 body[data-theme="orbital"] .detail-visual-copy h2 { color: #fff; }
 body[data-theme="orbital"] .detail-visual { background: linear-gradient(120deg, #285440, #5c9568 65%, #d9b56a); }
 body[data-theme="orbital"] .detail-visual.green { background: linear-gradient(120deg, #285440, #669979 65%, #b7c687); }
@@ -882,6 +890,7 @@ body[data-theme="night"] .modal-header { border-color: #294439; }
 body[data-theme="night"] .modal-header h2 { color: #e7f9e7; }
 body[data-theme="night"] .close-button { color: #75a88a; background: #172c22; }
 body[data-theme="night"] .form-field input, body[data-theme="night"] .form-field select, body[data-theme="night"] .form-field textarea { color: #e4f4e5; background: #13271f; border-color: #416b55; }
+body[data-theme="night"] .catalog-facet select { color: #e4f4e5; background: #13271f; border-color: #416b55; }
 body[data-theme="night"] .form-field input::placeholder, body[data-theme="night"] .form-field textarea::placeholder { color: #5d806d; }
 body[data-theme="night"] .detail-visual { background: linear-gradient(120deg, #173d2b, #317355 65%, #a6b85d); }
 body[data-theme="night"] .detail-visual.green { background: linear-gradient(120deg, #163a29, #3f8060 65%, #9eb875); }
@@ -1805,15 +1814,26 @@ body[data-theme="night"] .comparison-table tbody tr:hover { background: #142b22;
 .catalog-review-status { display: inline-flex; align-items: center; gap: 5px; margin: 1px 0 5px; color: var(--muted); font-size: 10px; }
 .catalog-review-status svg { width: 12px; height: 12px; }
 .catalog-review-status.warning { color: var(--tomato); }
-.catalog-verification { margin: 16px 0; padding: 16px; border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 12px; background: var(--surface); }
+.catalog-verification { margin: 16px 0; border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 12px; background: var(--surface); }
 .catalog-verification.warning { border-left-color: var(--tomato); }
-.catalog-verification-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 15px; }
+.catalog-verification > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; cursor: pointer; list-style: none; }
+.catalog-verification > summary::-webkit-details-marker { display: none; }
+.catalog-verification > summary::marker { content: ""; }
+.catalog-verification-heading { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .catalog-verification-heading strong { color: var(--ink); font-size: 13px; }
-.catalog-verification-heading span { color: var(--muted); font-size: 11px; }
+.catalog-verification-heading span { color: var(--muted); font-size: 11px; line-height: 1.45; }
+.catalog-verification-chevron { display: inline-flex; flex: none; color: var(--muted-2); transition: transform .18s ease; }
+.catalog-verification-chevron svg { width: 16px; height: 16px; }
+.catalog-verification[open] .catalog-verification-chevron { transform: rotate(90deg); }
+.catalog-verification-body { padding: 0 14px 14px; }
 .catalog-verification p { margin: 10px 0 0; color: var(--ink); font-size: 12px; line-height: 1.6; }
 .catalog-verification .catalog-verification-limits { color: var(--muted); font-size: 11px; }
 .catalog-verification-sources { display: grid; gap: 7px; margin: 12px 0 0; padding-left: 18px; font-size: 12px; }
 .catalog-verification-sources a { color: var(--green); overflow-wrap: anywhere; text-underline-offset: 3px; }
+.catalog-facts { margin: 16px 0 0; }
+.catalog-facts-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin: 0 0 9px; }
+.catalog-facts-heading strong { color: var(--muted-2); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.catalog-facts-heading span { color: var(--muted); font-size: 10px; }
 .catalog-planning-notice { color: var(--muted); font-size: 11px; line-height: 1.6; }
 .catalog-form-source .catalog-planning-notice { padding-top: 6px; }
 .catalog-audit-link + .catalog-audit-link { margin-left: 16px; }

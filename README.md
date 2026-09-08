@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="icon-192.png" width="120" alt="Tomato Journal" />
+<img src="assets/icon-192.png" width="120" alt="Tomato Journal" />
 
 # 🍅 Tomato Journal
 
@@ -26,11 +26,11 @@
 <table>
 <tr>
 <td width="50%" align="center">
-<img src="screen/potager-theme-clair.png" alt="Thème clair Bio-Orbital" /><br/>
+<img src="docs/screenshots/potager-theme-clair.png" alt="Thème clair Bio-Orbital" /><br/>
 <sub><b>☀️ Bio-Orbital</b> — thème clair</sub>
 </td>
 <td width="50%" align="center">
-<img src="screen/potager-theme-sombre.png" alt="Thème sombre Night Garden HUD" /><br/>
+<img src="docs/screenshots/potager-theme-sombre.png" alt="Thème sombre Night Garden HUD" /><br/>
 <sub><b>🌙 Night Garden HUD</b> — thème sombre</sub>
 </td>
 </tr>
@@ -115,7 +115,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 | **Actions groupées** | Le bouton « Sélectionner » applique un statut, une zone, l'archivage, la comparaison ou une suppression à plusieurs plantes. |
 
 <div align="center">
-<img src="screen/potager-theme-clair.png" width="88%" alt="Potager" /><br/>
+<img src="docs/screenshots/potager-theme-clair.png" width="88%" alt="Potager" /><br/>
 <sub><i>Le Potager en thème clair <b>Bio-Orbital</b> : statistiques de la saison, filtres par zone et cartes des plantes.</i></sub>
 </div>
 
@@ -133,10 +133,10 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 - Les fenêtres longues de planification et de budget restent défilables sur ordinateur comme sur mobile.
 
 <div align="center">
-<img src="screen/analyse-detaillee-mois-varietes.png" width="88%" alt="Récoltes par mois et par variété" /><br/>
+<img src="docs/screenshots/analyse-detaillee-mois-varietes.png" width="88%" alt="Récoltes par mois et par variété" /><br/>
 <sub><i>Graphique annuel : douze mois en barres empilées par variété.</i></sub>
 <br/><br/>
-<img src="screen/analyse-detaillee-rythme-repartition.png" width="88%" alt="Rythme et répartition" /><br/>
+<img src="docs/screenshots/analyse-detaillee-rythme-repartition.png" width="88%" alt="Rythme et répartition" /><br/>
 <sub><i>Rythme hebdomadaire, répartition par variété, plus beaux fruits et journal des récoltes.</i></sub>
 </div>
 
@@ -166,7 +166,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 - **Bilan partageable** : carte visuelle, badges, indice potager, records et défi amical, avec copie du texte, partage natif et téléchargement de la carte SVG.
 
 <div align="center">
-<img src="screen/saisons-bilan-qualitatif.png" width="88%" alt="Saisons et bilan qualitatif" /><br/>
+<img src="docs/screenshots/saisons-bilan-qualitatif.png" width="88%" alt="Saisons et bilan qualitatif" /><br/>
 <sub><i>La page Saisons : résumé de l'année, état du bilan et bilan qualitatif variété par variété.</i></sub>
 </div>
 
@@ -177,7 +177,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 
 <br/>
 
-- **Catalogue de variétés** : 1986 fiches (193 d'origine, enrichies depuis Kokopelli, Meraki Seeds et Baker Creek) réparties en cinq types de plantes : **Micro-naine, Dwarf, Bush, Déterminée et Indéterminée**, avec noms des variétés et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Cliquez à nouveau sur le type actif pour afficher toutes les variétés. Les anciennes catégories sont mises à jour au chargement et lors de l’import des sauvegardes. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
+- **Catalogue de variétés** : 1986 fiches (193 d'origine, enrichies depuis Kokopelli, Meraki Seeds et Baker Creek) réparties en cinq types de plantes : **Micro-naine, Dwarf, Bush, Déterminée et Indéterminée**, avec noms des variétés et détails botaniques conservés ; recherche, filtres, consultation, ajout de variétés et ajout prérempli au potager. Les filtres par type de plante se combinent à des filtres par caractéristiques (couleur, taille et forme du fruit, maturité, type de feuillage, tolérances au climat et résistances déclarées) ; une tolérance n’est retenue que si la fiche l’énonce explicitement, jamais sur une simple évocation ou une formule négative. Chaque fiche affiche un résumé « Caractéristiques retenues » (celles qui alimentent les filtres) et une section « Contrôle partiel » repliée par défaut. Chaque fiche peut être modifiée directement dans l’application : les retouches sont enregistrées localement sans écraser la vérification documentaire. Cliquez à nouveau sur le type actif pour afficher toutes les variétés. Les anciennes catégories sont mises à jour au chargement et lors de l’import des sauvegardes. Le formulaire « Ajouter une plante » propose aussi un menu déroulant du catalogue.
 - **Vérification documentaire** : les 1986 fiches ont été passées en revue avec un contrôle daté, des sources et une portée explicite. Les erreurs documentées sont corrigées ; les contradictions, souches incertaines et lots personnels sont signalés, sans certification globale. [Rapport complet du 7 septembre 2026](docs/verification-catalogue.md). Les délais non documentés depuis plantation utilisent une hypothèse de calendrier de 75 jours, signalée et modifiable.
 - **Photos catalogue** : chaque fiche peut recevoir une photo de référence locale, stockée dans IndexedDB et incluse dans les sauvegardes.
 - **Inventaire de graines** : stocks restants, unités, achat/récolte, viabilité, emplacement, source, notes et candidate associée. Les candidates « à acheter » sans stock sont signalées.
@@ -186,7 +186,7 @@ S'installe sur ordinateur, Android et iPhone, et fonctionne hors ligne.
 - **Planification** : sélection pour la prochaine saison et recommandations basées sur les performances actuelles.
 
 <div align="center">
-<img src="screen/catalogue-varietes.png" width="88%" alt="Catalogue de variétés" /><br/>
+<img src="docs/screenshots/catalogue-varietes.png" width="88%" alt="Catalogue de variétés" /><br/>
 <sub><i>Le catalogue : 1986 fiches de tomates réparties en 5 types de plantes, avec recherche et filtres.</i></sub>
 </div>
 
@@ -241,7 +241,7 @@ Bascule rapide et préférence mémorisée.
 Un parcours léger propose de conserver la démo ou de repartir avec un carnet vide, puis guide vers une zone, une plante et une première récolte.
 
 <div align="center">
-<img src="screen/onboarding-premiere-visite.png" width="88%" alt="Onboarding" /><br/>
+<img src="docs/screenshots/onboarding-premiere-visite.png" width="88%" alt="Onboarding" /><br/>
 <sub><i>Première visite : conserver la démo ou commencer avec un carnet vide.</i></sub>
 </div>
 
@@ -275,8 +275,8 @@ Ouvrez l'application avec `http://localhost:4173` en développement, ou une adre
 <tr><td><b>Photos</b></td><td>Compressées puis conservées dans IndexedDB (<code>tomato-journal-media-v1</code>). L'état JSON ne garde que les métadonnées et l'identifiant média ; les anciennes photos en <code>dataUrl</code> sont migrées au premier lancement.</td></tr>
 <tr><td><b>Stockage</b></td><td>Le panneau <b>Plus</b> affiche une estimation du stockage, le nombre de photos et un avertissement en cas d'erreur ou de quota élevé.</td></tr>
 <tr><td><b>Recherche globale</b></td><td>Plantes, fiches catalogue, candidates, croisements, tâches, photos et récoltes.</td></tr>
-<tr><td><b>Modules</b></td><td><code>photo-storage.js</code> encapsule la persistance binaire IndexedDB. La table <code>actionDispatch</code> de <code>app.js</code> est le point d'entrée du dispatch des actions UI.</td></tr>
-<tr><td><b>Cache PWA</b></td><td><code>npm run build:sw</code> hashe les assets du shell et régénère <code>sw.js</code>. Cache courant : <code>tomato-journal-shell-6f4c97731c2f</code>.</td></tr>
+<tr><td><b>Modules</b></td><td><code>src/photo-storage.js</code> encapsule la persistance binaire IndexedDB. La table <code>actionDispatch</code> de <code>src/app.js</code> est le point d'entrée du dispatch des actions UI.</td></tr>
+<tr><td><b>Cache PWA</b></td><td><code>npm run build:sw</code> hashe les assets du shell et régénère <code>sw.js</code>. Cache courant : <code>tomato-journal-shell-b6e0a0a8bb76</code>.</td></tr>
 <tr><td><b>Sécurité du rendu</b></td><td>Contexte de zone de la topbar, titres de page, tâches et résultats de recherche échappés via <code>escapeHTML()</code>.</td></tr>
 </table>
 
@@ -284,18 +284,31 @@ Ouvrez l'application avec `http://localhost:4173` en développement, ou une adre
 
 ```text
 Tomato-journal/
-├── index.html              # Shell de l'application
-├── app.js                  # Logique, vues et dispatch des actions
-├── styles.css              # Thèmes Bio-Orbital & Night Garden HUD
-├── photo-storage.js        # Persistance binaire (IndexedDB)
-├── seed-catalog.js         # Catalogue de 1986 variétés de tomates / 5 types de plantes
-├── sw.js                   # Service worker (hors ligne)
-├── build-sw-cache.mjs      # Génération du cache versionné
-├── build-catalog-report.mjs # Génération du rapport documentaire
-├── docs/verification-catalogue.md # Audit des 1986 fiches
-├── tests/                  # Tests de non-régression
-├── manifest.webmanifest    # Manifeste PWA
-└── screen/                 # Captures d'écran
+├── index.html                     # Point d'entrée : lance l'application
+├── sw.js                          # Service worker (doit rester à la racine pour la portée PWA)
+├── package.json                   # Scripts npm (start, test, build)
+├── src/
+│   ├── app.js                     # Logique, vues et dispatch des actions
+│   ├── styles.css                 # Thèmes Bio-Orbital & Night Garden HUD
+│   ├── photo-storage.js           # Persistance binaire (IndexedDB)
+│   └── seed-catalog.js            # Catalogue de 1986 variétés de tomates / 5 types de plantes
+├── assets/
+│   ├── manifest.webmanifest       # Manifeste PWA
+│   ├── favicon.png                # Icône d'onglet
+│   ├── apple-touch-icon.png       # Icône iOS
+│   ├── icon-192.png               # Icône PWA 192 px
+│   └── icon-512.png               # Icône PWA 512 px
+├── scripts/
+│   ├── build-sw-cache.mjs         # Régénère le cache versionné (sw.js)
+│   ├── build-catalog-import.mjs   # Import du catalogue
+│   ├── build-catalog-enrich.mjs   # Enrichissement multi-sources
+│   └── build-catalog-report.mjs   # Génération du rapport documentaire
+├── docs/
+│   ├── verification-catalogue.md  # Audit des 1986 fiches
+│   ├── enrichissement-catalogue.md # Suivi de l'enrichissement
+│   └── screenshots/               # Captures d'écran
+├── data/                          # Données d'enrichissement du catalogue
+└── tests/                         # Tests de non-régression
 ```
 
 <br/>
@@ -363,7 +376,7 @@ Installs on desktop, Android and iPhone, and works offline.
 | **Bulk actions** | The "Select" button applies a status, a zone, archiving, comparison or deletion to several plants. |
 
 <div align="center">
-<img src="screen/potager-theme-clair.png" width="88%" alt="Garden" /><br/>
+<img src="docs/screenshots/potager-theme-clair.png" width="88%" alt="Garden" /><br/>
 <sub><i>The Garden in the <b>Bio-Orbital</b> light theme: season stats, zone filters and plant cards.</i></sub>
 </div>
 
@@ -381,10 +394,10 @@ Installs on desktop, Android and iPhone, and works offline.
 - Long planning and budget windows stay scrollable on desktop and mobile.
 
 <div align="center">
-<img src="screen/analyse-detaillee-mois-varietes.png" width="88%" alt="Harvests per month and variety" /><br/>
+<img src="docs/screenshots/analyse-detaillee-mois-varietes.png" width="88%" alt="Harvests per month and variety" /><br/>
 <sub><i>Yearly chart: twelve months as stacked bars per variety.</i></sub>
 <br/><br/>
-<img src="screen/analyse-detaillee-rythme-repartition.png" width="88%" alt="Pace and distribution" /><br/>
+<img src="docs/screenshots/analyse-detaillee-rythme-repartition.png" width="88%" alt="Pace and distribution" /><br/>
 <sub><i>Weekly harvest pace, distribution per variety, biggest fruits and harvest journal.</i></sub>
 </div>
 
@@ -414,7 +427,7 @@ Installs on desktop, Android and iPhone, and works offline.
 - **Shareable summary**: visual card, badges, garden score, records and a friendly challenge, with copy-to-text, native sharing and SVG card download.
 
 <div align="center">
-<img src="screen/saisons-bilan-qualitatif.png" width="88%" alt="Seasons and qualitative review" /><br/>
+<img src="docs/screenshots/saisons-bilan-qualitatif.png" width="88%" alt="Seasons and qualitative review" /><br/>
 <sub><i>The Seasons page: yearly summary, review status and the qualitative review, variety by variety.</i></sub>
 </div>
 
@@ -425,7 +438,7 @@ Installs on desktop, Android and iPhone, and works offline.
 
 <br/>
 
-- **Variety catalog**: 1986 sheets (193 originals, enriched from Kokopelli, Meraki Seeds and Baker Creek) grouped into five plant types: **Micro-dwarf, Dwarf, Bush, Determinate and Indeterminate**, with botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. Click the active type again to show all varieties. Legacy categories are updated on load and when importing backups. The "Add a plant" form also offers a catalog dropdown.
+- **Variety catalog**: 1986 sheets (193 originals, enriched from Kokopelli, Meraki Seeds and Baker Creek) grouped into five plant types: **Micro-dwarf, Dwarf, Bush, Determinate and Indeterminate**, with botanical details preserved; search, filters, sheet viewing, adding new varieties and pre-filled add to garden. Plant-type filters combine with characteristic filters (fruit colour, size and shape, maturity, leaf type, climate tolerances and declared resistances); a tolerance is kept only when the sheet states it explicitly, never from a passing mention or a negative wording. Every sheet shows a "Retained characteristics" summary (the values that drive the filters) and a "Partial check" section collapsed by default. Every sheet can be edited directly in the app: changes are saved locally without overwriting the documentary verification. Click the active type again to show all varieties. Legacy categories are updated on load and when importing backups. The "Add a plant" form also offers a catalog dropdown.
 - **Documentary review**: all 1986 sheets were reviewed with a dated control, references and explicit scope. Documented errors are corrected; conflicting sources, uncertain identities and personal seed lots are flagged, not certified. [Full report, 7 September 2026 (French)](docs/verification-catalogue.md). Where no transplant-based maturity is documented, the editable 75-day calendar assumption is explicitly disclosed.
 - **Catalog photos**: every sheet can carry a local reference photo, stored in IndexedDB and included in JSON backups.
 - **Seed inventory**: remaining stock, units, purchase/harvest, viability, location, source, notes and the linked candidate. "To buy" candidates without stock are flagged.
@@ -434,7 +447,7 @@ Installs on desktop, Android and iPhone, and works offline.
 - **Planning**: selection for the next season and recommendations based on current performance.
 
 <div align="center">
-<img src="screen/catalogue-varietes.png" width="88%" alt="Variety catalog" /><br/>
+<img src="docs/screenshots/catalogue-varietes.png" width="88%" alt="Variety catalog" /><br/>
 <sub><i>The catalog: 1986 tomato sheets across 5 plant types, with search and filters.</i></sub>
 </div>
 
@@ -489,7 +502,7 @@ Quick toggle and remembered preference.
 A lightweight onboarding offers to keep the demo data or start with an empty journal, then guides you toward a zone, a plant and a first harvest.
 
 <div align="center">
-<img src="screen/onboarding-premiere-visite.png" width="88%" alt="Onboarding" /><br/>
+<img src="docs/screenshots/onboarding-premiere-visite.png" width="88%" alt="Onboarding" /><br/>
 <sub><i>First visit: keep the demo data or start with an empty journal.</i></sub>
 </div>
 
@@ -523,8 +536,8 @@ Open the app at `http://localhost:4173` in development, or at an `https://` addr
 <tr><td><b>Photos</b></td><td>Compressed, then kept in IndexedDB (<code>tomato-journal-media-v1</code>). The JSON state only keeps metadata and the media id; legacy <code>dataUrl</code> photos are migrated on first launch.</td></tr>
 <tr><td><b>Storage</b></td><td>The <b>More</b> panel shows a storage estimate, the photo count, and a warning on errors or high quota.</td></tr>
 <tr><td><b>Global search</b></td><td>Plants, catalog sheets, candidates, crosses, tasks, photos and harvests.</td></tr>
-<tr><td><b>Modules</b></td><td><code>photo-storage.js</code> wraps IndexedDB binary persistence. The <code>actionDispatch</code> table in <code>app.js</code> is the entry point for UI action dispatch.</td></tr>
-<tr><td><b>PWA cache</b></td><td><code>npm run build:sw</code> hashes the shell assets and regenerates <code>sw.js</code>. Current cache: <code>tomato-journal-shell-6f4c97731c2f</code>.</td></tr>
+<tr><td><b>Modules</b></td><td><code>src/photo-storage.js</code> wraps IndexedDB binary persistence. The <code>actionDispatch</code> table in <code>src/app.js</code> is the entry point for UI action dispatch.</td></tr>
+<tr><td><b>PWA cache</b></td><td><code>npm run build:sw</code> hashes the shell assets and regenerates <code>sw.js</code>. Current cache: <code>tomato-journal-shell-b6e0a0a8bb76</code>.</td></tr>
 <tr><td><b>Render safety</b></td><td>Top bar zone context, page titles, tasks and search results escaped with <code>escapeHTML()</code>.</td></tr>
 </table>
 
@@ -532,18 +545,31 @@ Open the app at `http://localhost:4173` in development, or at an `https://` addr
 
 ```text
 Tomato-journal/
-├── index.html              # App shell
-├── app.js                  # Logic, views and action dispatch
-├── styles.css              # Bio-Orbital & Night Garden HUD themes
-├── photo-storage.js        # Binary persistence (IndexedDB)
-├── seed-catalog.js         # Catalog of 1986 tomato varieties / 5 plant types
-├── sw.js                   # Service worker (offline)
-├── build-sw-cache.mjs      # Versioned cache generation
-├── build-catalog-report.mjs # Documentary report generation
-├── docs/verification-catalogue.md # Audit of all 1986 sheets
-├── tests/                  # Regression tests
-├── manifest.webmanifest    # PWA manifest
-└── screen/                 # Screenshots
+├── index.html                     # Entry point: launches the app
+├── sw.js                          # Service worker (root scope: must stay here)
+├── package.json                   # npm scripts (start, test, build)
+├── src/
+│   ├── app.js                     # Logic, views and action dispatch
+│   ├── styles.css                 # Bio-Orbital & Night Garden HUD themes
+│   ├── photo-storage.js           # Binary persistence (IndexedDB)
+│   └── seed-catalog.js            # Catalog of 1986 tomato varieties / 5 plant types
+├── assets/
+│   ├── manifest.webmanifest       # PWA manifest
+│   ├── favicon.png                # Tab icon
+│   ├── apple-touch-icon.png       # iOS icon
+│   ├── icon-192.png               # PWA icon 192 px
+│   └── icon-512.png               # PWA icon 512 px
+├── scripts/
+│   ├── build-sw-cache.mjs         # Regenerates the versioned cache (sw.js)
+│   ├── build-catalog-import.mjs   # Catalog import
+│   ├── build-catalog-enrich.mjs   # Multi-source enrichment
+│   └── build-catalog-report.mjs   # Documentary report generation
+├── docs/
+│   ├── verification-catalogue.md  # Audit of all 1986 sheets
+│   ├── enrichissement-catalogue.md # Enrichment follow-up
+│   └── screenshots/               # Screenshots
+├── data/                          # Catalog enrichment data
+└── tests/                         # Regression tests
 ```
 
 ---

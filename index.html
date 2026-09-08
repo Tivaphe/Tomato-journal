@@ -9,19 +9,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Tomato Journal" />
-    <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="assets/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <title>Tomato Journal · Suivi du potager</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body data-theme="orbital">
     <div id="app" class="app-shell">
       <aside class="sidebar" aria-label="Navigation principale">
         <div class="brand-lockup">
           <div class="brand-mark" aria-hidden="true">
-            <img src="icon-192.png" alt="" />
+            <img src="assets/icon-192.png" alt="" />
           </div>
           <div>
             <div class="brand-name">Tomato Journal</div>
@@ -71,7 +71,7 @@
         <header class="topbar">
           <div class="mobile-brand">
             <div class="brand-mark small" aria-hidden="true">
-              <img src="icon-192.png" alt="" />
+              <img src="assets/icon-192.png" alt="" />
             </div>
             <span>Tomato Journal</span>
           </div>
@@ -106,8 +106,8 @@
     <div id="modal-root" aria-live="polite"></div>
     <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
 
-    <script src="seed-catalog.js"></script>
-    <script type="module" src="photo-storage.js"></script>
-    <script src="app.js"></script>
+    <script src="src/seed-catalog.js"></script>
+    <script type="module" src="src/photo-storage.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import vm from "node:vm";
 
-const scripts = ["seed-catalog.js", "app.js"].map((file) => ({
+const scripts = ["src/seed-catalog.js", "src/app.js"].map((file) => ({
   file,
   source: readFileSync(new URL(`../${file}`, import.meta.url), "utf8"),
 }));
@@ -498,4 +498,66 @@ test("the readme catalog count matches the reference catalog size", () => {
   const found = patterns.flatMap((pattern) => [...readme.matchAll(pattern)].map((m) => Number(m[0].match(/\d+/)[0])));
   assert.equal(found.length, 12);
   assert.ok(found.every((count) => count === referenceCount));
+});
+
+test("catalogMaturityClass buckets maturity keywords and numeric ranges", () => {
+  const app = createApp();
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"Précoce\" } })"), "précoce");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"Mi-saison\" } })"), "mi-saison");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"Tardive\" } })"), "tardive");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"60 jours annoncés, base non précisée.\" } })"), "précoce");
+  assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"90 jours annoncés, base non précisée.\" } })"), "tardive");
+  assert.equal(app.run("catalogMaturityClass({ details: {} })"), "");
+});
+
+test("catalogLeafType recognises documented leaf shapes and ignores unknowns", () => {
+  const app = createApp();
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Pomme de terre (rugueux), vert sombre" } })'), "pomme-de-terre");
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Régulier" } })'), "régulier");
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Laineux argenté" } })'), "laineux");
+  assert.equal(app.run('catalogLeafType({ details: { feuillage: "Non documenté" } })'), "");
+  assert.equal(app.run("catalogLeafType({ details: {} })"), "");
+});
+
+test("catalogToleranceLabels flags heat, cold and declared disease resistance", () => {
+  const app = createApp();
+  const labels = app.read('catalogToleranceLabels({ details: { fruit: "résistante au mildiou, tolère la chaleur", description_histoire_particularités: "réussit par temps froid" } })');
+  assert.ok(labels.includes("maladies"));
+  assert.ok(labels.includes("chaleur"));
+  assert.ok(labels.includes("froid"));
+  assert.deepEqual(app.read("catalogToleranceLabels({ details: { fruit: \"aucune résistance générale garantie\" } })"), []);
+});
+
+test("catalogToleranceLabels never promotes a trait that is negated or unrelated", () => {
+  const app = createApp();
+  const read = (details) => app.read(`catalogToleranceLabels({ details: ${JSON.stringify(details)} })`);
+  // Explicit positive claims are kept.
+  assert.deepEqual(read({ fruit: "résistante à la sécheresse et à la chaleur" }), ["chaleur"]);
+  assert.deepEqual(read({ "description_histoire_particularités": "réussit aussi par temps plus frais" }), ["froid"]);
+  assert.deepEqual(read({ fruit: "décrite comme peu sensible aux maladies" }), ["maladies"]);
+  // Negations are discarded, not promoted.
+  assert.deepEqual(read({ fruit: "aucune résistance générale aux maladies ou à la sécheresse n’est garantie" }), []);
+  assert.deepEqual(read({ "description_histoire_particularités": "les observations ne garantissent ni précocité ni résistance au mildiou" }), []);
+  assert.deepEqual(read({ "description_histoire_particularités": "cela ne démontre pas une résistance aux maladies" }), []);
+  // Unrelated words must not leak in ("usage frais" is fresh use, "chaleureuse" is a colour word).
+  assert.deepEqual(read({ fruit: "saveur douce, usage frais, sauce ou conserve" }), []);
+  assert.deepEqual(read({ fruit: "belle couleur orange profonde et chaleureuse" }), []);
+});
+
+test("the verification block is a collapsed disclosure by default", () => {
+  const app = createApp();
+  const html = app.run('renderCatalogDetail(catalogEntryById("catalog-009"))');
+  assert.match(html, /<details class="catalog-verification/);
+  assert.doesNotMatch(html, /<details class="catalog-verification[^"]*"\s+open/);
+  assert.match(html, /Vérification documentaire/);
+  assert.match(html, /catalog-verification-chevron/);
+});
+
+test("variety facets narrow the catalogue by fruit colour", () => {
+  const app = createApp();
+  app.run("varietyFacets.color = 'red'; varietyFacets.size = 'all'; varietyFacets.shape = 'all'; varietyFacets.maturity = 'all'; varietyFacets.leaf = 'all'; varietyFacets.tolerance = 'all';");
+  const rows = app.read("varietiesForFilter().map((entry) => entry.id)");
+  const colors = app.read("varietiesForFilter().map((entry) => catalogColors(entry))");
+  assert.ok(rows.length > 0 && rows.length < referenceCount);
+  assert.ok(colors.every((list) => list.includes("red")));
 });
