@@ -624,19 +624,35 @@ function catalogLeafType(entry) {
   return "autre";
 }
 
-function catalogToleranceLabels(entry) {
-  const text = normalizeSearchText([
+// Tolerance signals are extracted from explicit, positively-phrased claims so a
+// filter never promotes a variety for a trait it does not actually declare.
+// Negations ("aucune résistance… n'est garantie"), hedges ("ne démontre pas une
+// résistance") and unrelated words ("usage frais", "couleur chaleureuse") are
+// excluded by splitting the text into clauses and testing each clause alone.
+const TOLERANCE_NEGATION = /aucune|ne garant|n'est pas|n'est ni|non garantie|sans garantie|pas de garantie|pas de r[eé]sistance|\bne\b[^,.;]{0,16}\bpas\b|\bni\b[^,.;]{0,40}\bni\b/;
+const TOLERANCE_HEAT = /((r[eé]sistant|r[eé]sistance|r[eé]siste|tol[eé]rante?|tol[eé]rance|tol[eé]re|supportent?|supporte|tolerant|appr[eé]ci[eé]e pour sa tol[eé]rance|bonne tol[eé]rance|forte tol[eé]rance|tres r[eé]sistante?)[^,]{0,50}(chaleur(?![eu])|s[eé]cheresse|drought|heat))|((chaleur(?![eu])|s[eé]cheresse)[^,]{0,30}(tol[eé]r|r[eé]sist|support))|faibles? besoins? en eau/;
+const TOLERANCE_COLD = /saisons? courtes?|climats? frais|r[eé]gions? fra[iî]ches?|r[eé]gions? [aà] saisons? courtes?|[eé]t[eé]s? frais|d[eé]buts? de saison frais/;
+const TOLERANCE_COLD_TERM = /temps (plus )?frais|froid/;
+const TOLERANCE_COLD_VERB = /reussit|reussissent|reussissant|se comporte|tol[eé]re|tol[eé]rant|supporte|r[eé]sist|adapt|creee? pour|recommande? pour|s[eé]lectionn|developp|recherch|fiable|productive|cultivee?|presentee? pour|convient/;
+const TOLERANCE_DISEASE = /(mildiou|verticill|fusariose|n[eé]matode|alternari|cladospori|mosa[iï]que|virus|bact[eé]rienne|bacteriose|oidium|n[eé]crose|maladies?|fletrissement|tache grise)[^,]{0,50}(r[eé]sistant|r[eé]sistance|tol[eé]rant|tol[eé]rance|peu sensible|sain)|(r[eé]sistant|r[eé]sistance|tol[eé]rant|tol[eé]rance|peu sensible|sain)[^,]{0,50}(mildiou|verticill|fusariose|n[eé]matode|alternari|cladospori|mosa[iï]que|virus|bact[eé]rienne|bacteriose|oidium|n[eé]crose|maladies?|fletrissement|tache grise)/;
+
+function catalogToleranceText(entry) {
+  return normalizeSearchText([
     catalogDetailValue(entry, "résistances_déclarées", "resistances"),
     catalogDetailValue(entry, "fruit"),
     catalogDetailValue(entry, "description_histoire_particularités", "description"),
     catalogDetailValue(entry, "origine"),
   ].join(" "));
+}
+
+function catalogToleranceLabels(entry) {
+  const text = catalogToleranceText(entry);
+  if (!text) return [];
+  const clauses = text.split(/[.;]/).map((part) => part.trim()).filter(Boolean);
   const labels = [];
-  if (/chaleur|s[eé]cheresse|drought|heat/.test(text)) labels.push("chaleur");
-  if (/froid|cold|gel|saison courte|temps frais|temps plus frais|[eé]t[eé]s frais/.test(text)) labels.push("froid");
-  const disease = /mildiou|verticill|fusariose|n[eé]matode|alternari|cladospori|mosa[iï]que|virus|bact[eé]rienne|oidium|n[eé]crose/.test(text);
-  const positive = /r[eé]sistante?|tol[eé]rante?|peu sensible|haute r[eé]sistance|bonne r[eé]sistance|r[eé]sistance (annonc[eé]e|document[eé]e|conf[eé]rm[eé]e|av[eé]r[eé]e)|pr[eé]sent[eé]e comme (saine et )?r[eé]sistante?/.test(text);
-  if (disease && positive) labels.push("maladies");
+  if (clauses.some((clause) => TOLERANCE_HEAT.test(clause) && !TOLERANCE_NEGATION.test(clause))) labels.push("chaleur");
+  if (clauses.some((clause) => !TOLERANCE_NEGATION.test(clause) && (TOLERANCE_COLD.test(clause) || (TOLERANCE_COLD_TERM.test(clause) && TOLERANCE_COLD_VERB.test(clause))))) labels.push("froid");
+  if (clauses.some((clause) => TOLERANCE_DISEASE.test(clause) && !TOLERANCE_NEGATION.test(clause))) labels.push("maladies");
   return labels;
 }
 
@@ -2136,6 +2152,11 @@ function catalogFacetOptionsHTML(key) {
   return options.map(([value, label]) => `<option value="${escapeHTML(value)}" ${varietyFacets[key] === value ? "selected" : ""}>${escapeHTML(label)}</option>`).join("");
 }
 
+function catalogFacetValueLabel(key, value) {
+  const option = (CATALOG_FACET_OPTIONS[key] || []).find(([candidate]) => candidate === value);
+  return option ? option[1] : "";
+}
+
 function renderVarieties() {
   const allCatalog = currentSeedCatalog();
   const subfamilyCounts = allCatalog.reduce((counts, entry) => {
@@ -2209,7 +2230,34 @@ function renderCatalogVerification(entry) {
   const scope = Array.isArray(review.scope) ? review.scope : [];
   const sources = (Array.isArray(review.sources) ? review.sources : []).filter((source) => source && catalogSourceUrl(source.url));
   const date = /^\d{4}-\d{2}-\d{2}$/.test(review.checkedAt) && Number.isFinite(Date.parse(review.checkedAt)) ? formatDate(review.checkedAt) : "Date non renseignée";
-  return `<section class="catalog-verification ${meta.warning ? "warning" : ""}" aria-label="Vérification documentaire"><div class="catalog-verification-heading"><strong>${escapeHTML(meta.label)}</strong><span>Contrôle documentaire · ${escapeHTML(date)}</span></div><p>${escapeHTML(review.note || "Documentation à compléter.")}</p>${scope.length ? `<p><strong>Points recoupés :</strong> ${scope.map(escapeHTML).join(", ")}.</p>` : `<p><strong>Aucun caractère du lot n’est confirmé par une source publique exploitable.</strong></p>`}<p class="catalog-verification-limits">Le contrôle est partiel : les autres caractères restent à confirmer. Les poids, le goût et les délais varient avec les conditions de culture.</p>${sources.length ? `<ul class="catalog-verification-sources">${sources.map((source, index) => `<li><a href="${escapeHTML(catalogSourceUrl(source.url))}" target="_blank" rel="noopener noreferrer">[${index + 1}] ${escapeHTML(source.title || "Référence documentaire")}</a></li>`).join("")}</ul>` : `<p class="form-help">La référence du sachet, des photos et un suivi du lot permettront de compléter cette fiche.</p>`}</section>`;
+  const summary = scope.length
+    ? `${scope.length} caractère${scope.length > 1 ? "s" : ""} recoupé${scope.length > 1 ? "s" : ""} · ${sources.length} source${sources.length > 1 ? "s" : ""} · ${date}`
+    : `Aucun caractère du lot confirmé par une source publique · ${date}`;
+  return `<details class="catalog-verification ${meta.warning ? "warning" : ""}" aria-label="Vérification documentaire"><summary><span class="catalog-verification-heading"><strong>${escapeHTML(meta.label)}</strong><span>${escapeHTML(summary)}</span></span><span class="catalog-verification-chevron" aria-hidden="true">${icon("chevron")}</span></summary><div class="catalog-verification-body"><p>${escapeHTML(review.note || "Documentation à compléter.")}</p>${scope.length ? `<p><strong>Points recoupés :</strong> ${scope.map(escapeHTML).join(", ")}.</p>` : `<p><strong>Aucun caractère du lot n’est confirmé par une source publique exploitable.</strong></p>`}<p class="catalog-verification-limits">Le contrôle est partiel : les autres caractères restent à confirmer. Les poids, le goût et les délais varient avec les conditions de culture.</p>${sources.length ? `<ul class="catalog-verification-sources">${sources.map((source, index) => `<li><a href="${escapeHTML(catalogSourceUrl(source.url))}" target="_blank" rel="noopener noreferrer">[${index + 1}] ${escapeHTML(source.title || "Référence documentaire")}</a></li>`).join("")}</ul>` : `<p class="form-help">La référence du sachet, des photos et un suivi du lot permettront de compléter cette fiche.</p>`}</div></details>`;
+}
+
+function catalogSizeLabel(entry) {
+  const size = ["cerise", "petit", "moyen", "gros"].includes(entry.plantDefaults?.size) ? entry.plantDefaults.size : catalogSize(entry);
+  return catalogFacetValueLabel("size", size);
+}
+
+function renderCatalogFacts(entry, maturityText) {
+  const maturityClass = catalogMaturityClass(entry);
+  const maturityLabel = catalogFacetValueLabel("maturity", maturityClass);
+  const colors = catalogColors(entry).map((color) => colorMeta[color]?.label).filter(Boolean);
+  const leafLabel = catalogFacetValueLabel("leaf", catalogLeafType(entry));
+  const toleranceLabels = catalogToleranceLabels(entry).map((label) => catalogFacetValueLabel("tolerance", label)).filter(Boolean);
+  const shape = catalogShape(entry);
+  const shapeLabel = FRUIT_SHAPES.includes(shape) ? shape[0].toUpperCase() + shape.slice(1) : "";
+  const facts = [
+    ["Couleurs", colors.join(" · ") || "Non précisée"],
+    ["Taille du fruit", catalogSizeLabel(entry) || "Non précisée"],
+    ["Forme", shapeLabel || "Non précisée"],
+    ["Maturité", maturityLabel ? `${maturityLabel}${maturityText ? ` · ${maturityText}` : ""}` : (maturityText || "Non précisée")],
+    ["Feuillage", leafLabel || "Non documenté"],
+    ["Tolérances", toleranceLabels.join(" · ") || "Aucune déclarée"],
+  ];
+  return `<section class="catalog-facts"><div class="catalog-facts-heading"><strong>Caractéristiques retenues</strong><span>Ces valeurs, issues de la fiche, alimentent les filtres de l’onglet Variétés.</span></div><div class="catalog-detail-facts">${facts.map(([label, value]) => `<span><strong>${escapeHTML(label)}</strong>${escapeHTML(value)}</span>`).join("")}</div></section>`;
 }
 
 function renderCatalogDetail(entry) {
@@ -2223,7 +2271,7 @@ function renderCatalogDetail(entry) {
   const nextCandidate = candidateForCatalog(entry.id, nextSeasonYear());
   const referencePhoto = catalogPhotoForEntry(entry);
   const referenceSource = referencePhoto ? catalogPhotoSource(referencePhoto) : "";
-  return `<div class="modal-backdrop"><div class="modal catalog-detail-modal" role="dialog" aria-modal="true" aria-labelledby="catalog-detail-title"><div class="modal-header"><div><span class="eyebrow">${sourceLabel}</span><h2 id="catalog-detail-title">${escapeHTML(entry.name)}</h2><p>${escapeHTML(entry.family || "Famille non précisée")} · ${escapeHTML(catalogSubfamily(entry))}</p></div><div class="catalog-header-actions">${cross ? `<button class="mini-button" data-action="edit-cross" data-id="${escapeHTML(cross.id)}" type="button" title="Modifier le croisement" aria-label="Modifier le croisement">${icon("edit")}</button>` : `<button class="mini-button" data-action="edit-catalog-entry" data-id="${escapeHTML(entry.id || "")}" type="button" title="Modifier la fiche" aria-label="Modifier la fiche">${icon("edit")}</button>`}<button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div></div><div class="modal-body"><div class="catalog-detail-banner" style="--accent:${catalogAccent(entry)};--accent-primary:${colorPrimary(catalogColors(entry), catalogColorMode(entry))}"><span class="catalog-detail-symbol">${icon("tomato")}</span><div><strong>${escapeHTML(typeMeta[normalized.type] || "Variété")}</strong><span>${escapeHTML(fruitType)}</span></div><span class="catalog-detail-origin">${relatedPlants.length ? `${relatedPlants.length} fiche${relatedPlants.length > 1 ? "s" : ""} au potager` : "Pas encore au potager"}</span></div>${renderCatalogVerification(entry)}<dl class="catalog-detail-grid">${details.map(([label, value]) => `<div class="catalog-detail-field"><dt>${escapeHTML(label.replaceAll("_", " "))}</dt><dd>${escapeHTML(value)}</dd></div>`).join("") || `<div class="no-results">Aucun détail supplémentaire dans la fiche source.</div>`}</dl>${referencePhoto ? `<section class="catalog-reference-photo"><div class="catalog-reference-visual">${referenceSource ? `<img src="${escapeHTML(referenceSource)}" alt="${escapeHTML(referencePhoto.title || `Photo de ${entry.name}`)}" />` : `<div class="photo-missing">${icon("camera")}<span>Image en cours de chargement</span></div>`}</div><div><span class="eyebrow">VOTRE REPÈRE LOCAL</span><h3>${escapeHTML(referencePhoto.title || "Photo de référence")}</h3>${referencePhoto.caption ? `<p>${escapeHTML(referencePhoto.caption)}</p>` : ""}<div class="catalog-reference-actions"><button class="button ghost" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("edit")} Remplacer</button><button class="button ghost" data-action="delete-catalog-photo" data-id="${escapeHTML(referencePhoto.id)}" type="button">${icon("trash")} Retirer</button></div></div></section>` : `<section class="catalog-reference-empty"><span>${icon("camera")}</span><div><strong>Ajouter une photo de référence</strong><p>Associez une image locale à cette variété pour retrouver son aspect l'année prochaine.</p></div><button class="button secondary" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("camera")} Ajouter</button></section>`}<div class="catalog-detail-facts"><span><strong>Maturité estimée</strong>${escapeHTML(maturity)}</span><span><strong>Couleurs détectées</strong>${escapeHTML(normalized.colors.map((color) => colorMeta[color]?.label).filter(Boolean).join(" · ") || "Non précisée")}</span></div>${catalogMaturityNotice(entry) ? `<p class="catalog-planning-notice">${escapeHTML(catalogMaturityNotice(entry))}</p>` : ""}<div class="catalog-detail-actions"><div><strong>Prêt à l'essayer&nbsp;?</strong><span>Préparez son achat pour ${nextSeasonYear()} ou créez une fiche de suivi préremplie avec les caractéristiques de cette variété.</span></div><div class="catalog-detail-action-buttons"><button class="button secondary" data-action="add-candidate" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" data-season="${nextSeasonYear()}" data-status="to-buy" type="button">${icon("leaf")} ${nextCandidate ? "Modifier la préparation" : `Préparer ${nextSeasonYear()}`}</button><button class="button primary" data-action="add-catalog-entry" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" type="button">${icon("plus")} Ajouter au potager</button></div></div><div class="form-actions"><button class="button secondary" data-action="close-modal" type="button">Fermer</button></div></div></div></div>`;
+  return `<div class="modal-backdrop"><div class="modal catalog-detail-modal" role="dialog" aria-modal="true" aria-labelledby="catalog-detail-title"><div class="modal-header"><div><span class="eyebrow">${sourceLabel}</span><h2 id="catalog-detail-title">${escapeHTML(entry.name)}</h2><p>${escapeHTML(entry.family || "Famille non précisée")} · ${escapeHTML(catalogSubfamily(entry))}</p></div><div class="catalog-header-actions">${cross ? `<button class="mini-button" data-action="edit-cross" data-id="${escapeHTML(cross.id)}" type="button" title="Modifier le croisement" aria-label="Modifier le croisement">${icon("edit")}</button>` : `<button class="mini-button" data-action="edit-catalog-entry" data-id="${escapeHTML(entry.id || "")}" type="button" title="Modifier la fiche" aria-label="Modifier la fiche">${icon("edit")}</button>`}<button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div></div><div class="modal-body"><div class="catalog-detail-banner" style="--accent:${catalogAccent(entry)};--accent-primary:${colorPrimary(catalogColors(entry), catalogColorMode(entry))}"><span class="catalog-detail-symbol">${icon("tomato")}</span><div><strong>${escapeHTML(typeMeta[normalized.type] || "Variété")}</strong><span>${escapeHTML(fruitType)}</span></div><span class="catalog-detail-origin">${relatedPlants.length ? `${relatedPlants.length} fiche${relatedPlants.length > 1 ? "s" : ""} au potager` : "Pas encore au potager"}</span></div>${renderCatalogVerification(entry)}${renderCatalogFacts(entry, maturity)}<dl class="catalog-detail-grid">${details.map(([label, value]) => `<div class="catalog-detail-field"><dt>${escapeHTML(label.replaceAll("_", " "))}</dt><dd>${escapeHTML(value)}</dd></div>`).join("") || `<div class="no-results">Aucun détail supplémentaire dans la fiche source.</div>`}</dl>${referencePhoto ? `<section class="catalog-reference-photo"><div class="catalog-reference-visual">${referenceSource ? `<img src="${escapeHTML(referenceSource)}" alt="${escapeHTML(referencePhoto.title || `Photo de ${entry.name}`)}" />` : `<div class="photo-missing">${icon("camera")}<span>Image en cours de chargement</span></div>`}</div><div><span class="eyebrow">VOTRE REPÈRE LOCAL</span><h3>${escapeHTML(referencePhoto.title || "Photo de référence")}</h3>${referencePhoto.caption ? `<p>${escapeHTML(referencePhoto.caption)}</p>` : ""}<div class="catalog-reference-actions"><button class="button ghost" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("edit")} Remplacer</button><button class="button ghost" data-action="delete-catalog-photo" data-id="${escapeHTML(referencePhoto.id)}" type="button">${icon("trash")} Retirer</button></div></div></section>` : `<section class="catalog-reference-empty"><span>${icon("camera")}</span><div><strong>Ajouter une photo de référence</strong><p>Associez une image locale à cette variété pour retrouver son aspect l'année prochaine.</p></div><button class="button secondary" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("camera")} Ajouter</button></section>`}${catalogMaturityNotice(entry) ? `<p class="catalog-planning-notice">${escapeHTML(catalogMaturityNotice(entry))}</p>` : ""}<div class="catalog-detail-actions"><div><strong>Prêt à l'essayer&nbsp;?</strong><span>Préparez son achat pour ${nextSeasonYear()} ou créez une fiche de suivi préremplie avec les caractéristiques de cette variété.</span></div><div class="catalog-detail-action-buttons"><button class="button secondary" data-action="add-candidate" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" data-season="${nextSeasonYear()}" data-status="to-buy" type="button">${icon("leaf")} ${nextCandidate ? "Modifier la préparation" : `Préparer ${nextSeasonYear()}`}</button><button class="button primary" data-action="add-catalog-entry" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" type="button">${icon("plus")} Ajouter au potager</button></div></div><div class="form-actions"><button class="button secondary" data-action="close-modal" type="button">Fermer</button></div></div></div></div>`;
 }
 function renderCatalogForm(entry = null) {
   const isEdit = Boolean(entry?.id);
