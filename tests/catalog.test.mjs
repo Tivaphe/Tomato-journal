@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import vm from "node:vm";
 
-const scripts = ["seed-catalog.js", "app.js"].map((file) => ({
+const scripts = ["src/seed-catalog.js", "src/app.js"].map((file) => ({
   file,
   source: readFileSync(new URL(`../${file}`, import.meta.url), "utf8"),
 }));

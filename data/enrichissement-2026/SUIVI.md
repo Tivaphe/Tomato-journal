@@ -3,7 +3,7 @@
 Ajout de variétés au catalogue de référence depuis quatre catalogues en ligne, sans doublon.
 Mécanique : chaque source = un dossier `data/enrichissement-2026/<source>/` avec `manifest.json`,
 `listing.tsv` (page<TAB>slug<TAB>nom), `profiles.json` (détails par slug), `identity-decisions.json`.
-Puis : `node build-catalog-enrich.mjs` (reconstruit `seed-catalog.js`), `node build-catalog-report.mjs`
+Puis : `node scripts/build-catalog-enrich.mjs` (reconstruit `src/seed-catalog.js`), `node scripts/build-catalog-report.mjs`
 (régénère `docs/verification-catalogue.md`), `node --test`.
 
 Règles communes (validées par l'utilisateur le 7 septembre 2026) :

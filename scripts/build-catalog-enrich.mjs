@@ -13,7 +13,7 @@ import vm from "node:vm";
 //   identity-decisions.json -> { excluded:{}, aliases:{}, existing:{} }
 // La base lue est le seed-catalog.js courant ; chaque passage est idempotent :
 // ré-exécuter ne duplique jamais une entrée et ne réécrit jamais les fiches existantes.
-const root = dirname(fileURLToPath(import.meta.url));
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const sourcesDir = join(root, "data", "enrichissement-2026");
 const { readdir } = await import("node:fs/promises");
 
@@ -27,7 +27,7 @@ const normalize = (value) =>
     .replaceAll("æ", "ae")
     .replace(/[^\p{L}\p{N}]/gu, "");
 const context = vm.createContext({ window: {} });
-vm.runInContext(await read("seed-catalog.js"), context);
+vm.runInContext(await read("src/seed-catalog.js"), context);
 const base = JSON.parse(JSON.stringify(context.window.SEED_CATALOG));
 const baselineIds = new Set(base.map((entry) => entry.id));
 const baselineNames = new Set(base.flatMap((entry) => [entry.name, ...(entry.aliases || [])].filter(Boolean).map(normalize)));
@@ -205,6 +205,6 @@ for (const source of dirs) {
 
 if (new Set(catalogue.map((entry) => entry.id)).size !== catalogue.length) throw new Error("Identifiants de catalogue en double");
 for (const entry of catalogue) entry.details.gènes_potentiels = "";
-const header = "/* Catalogue de référence — données documentaires, champs incertains explicités.\n * Génération : node build-catalog-enrich.mjs + node build-catalog-import.mjs ; détails dans data/. */\n";
-await writeFile(join(root, "seed-catalog.js"), `${header}window.SEED_CATALOG_IMPORT = ${JSON.stringify(context.window.SEED_CATALOG_IMPORT || null, null, 2)};\nwindow.SEED_CATALOG = ${JSON.stringify(catalogue, null, 2)};\n`);
+const header = "/* Catalogue de référence — données documentaires, champs incertains explicités.\n * Génération : node scripts/build-catalog-enrich.mjs + node scripts/build-catalog-import.mjs ; détails dans data/. */\n";
+await writeFile(join(root, "src/seed-catalog.js"), `${header}window.SEED_CATALOG_IMPORT = ${JSON.stringify(context.window.SEED_CATALOG_IMPORT || null, null, 2)};\nwindow.SEED_CATALOG = ${JSON.stringify(catalogue, null, 2)};\n`);
 console.log(`Catalogue final : ${catalogue.length} fiches (${catalogue.length - base.length} ajoutées par l'enrichissement).`);

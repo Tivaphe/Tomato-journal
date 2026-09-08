@@ -3,7 +3,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
 
-const root = dirname(fileURLToPath(import.meta.url));
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (file) => readFile(join(root, file), "utf8");
 const manifest = JSON.parse(await read("data/catalogue-import/manifest.json"));
 const decisions = JSON.parse(await read("data/catalogue-import/identity-decisions.json"));
@@ -16,7 +16,7 @@ if (listing.length !== manifest.advertisedProductCount || new Set(listing.map((i
 for (const page of manifest.pages) if (listing.filter((item) => item.page === page.page).length !== page.productCount) throw new Error(`Incomplete page ${page.page}`);
 
 const context = vm.createContext({ window: {} });
-vm.runInContext(await read("seed-catalog.js"), context);
+vm.runInContext(await read("src/seed-catalog.js"), context);
 // The original curated catalogue remains the base. Re-running the build never
 // duplicates an imported row and never replaces the earlier botanical review.
 const base = JSON.parse(JSON.stringify(context.window.SEED_CATALOG.filter((entry) => !entry.importedFrom)));
@@ -140,8 +140,8 @@ const summary = {
   pending: ledger.filter((item) => item.status === "pending").length,
   total: catalogue.length,
 };
-const header = "/* Catalogue de référence — données documentaires, champs incertains explicités.\n * Génération : node build-catalog-import.mjs ; détails dans data/catalogue-import/. */\n";
-await writeFile(join(root, "seed-catalog.js"), `${header}window.SEED_CATALOG_IMPORT = ${JSON.stringify(summary, null, 2)};\nwindow.SEED_CATALOG = ${JSON.stringify(catalogue, null, 2)};\n`);
+const header = "/* Catalogue de référence — données documentaires, champs incertains explicités.\n * Génération : node scripts/build-catalog-import.mjs ; détails dans data/catalogue-import/. */\n";
+await writeFile(join(root, "src/seed-catalog.js"), `${header}window.SEED_CATALOG_IMPORT = ${JSON.stringify(summary, null, 2)};\nwindow.SEED_CATALOG = ${JSON.stringify(catalogue, null, 2)};\n`);
 await writeFile(join(root, "data/catalogue-import/progress.json"), JSON.stringify({ ...summary, entries: ledger }, null, 2) + "\n");
 await mkdir(join(root, "docs"), { recursive: true });
 const label = { added: "Ajoutée", existing: "Déjà présente", alias: "Synonyme rattaché", excluded: "Écartée", pending: "À documenter" };

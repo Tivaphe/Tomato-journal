@@ -1,5 +1,5 @@
 /* Catalogue de référence — données documentaires, champs incertains explicités.
- * Génération : node build-catalog-enrich.mjs + node build-catalog-import.mjs ; détails dans data/. */
+ * Génération : node scripts/build-catalog-enrich.mjs + node scripts/build-catalog-import.mjs ; détails dans data/. */
 window.SEED_CATALOG_IMPORT = {
   "collectedAt": "2026-09-07",
   "listingUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates",
