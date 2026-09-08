@@ -608,11 +608,13 @@
     "description": "Grosse cerise ronde brun-rouge chocolat à collet vert sombre ; chair rouge et gel vert, saveur excellente, forte, épicée et sucrée. Le semencier, qui l'a appréciée en 2023, signale l'existence d'une autre 'Ambrosia Giant' à épaules côtelées (J&L Gardens) et juge incertain que cette forme ronde en soit un simple off-type.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/ambrosia-giant-cherry-tomato"
+      "https://merakiseeds.com/ambrosia-giant-cherry-tomato",
+      "https://www.tomatofifou.com/en/produit/ambrosia-giant/",
+      "https://www.semeur.fr/wiki/index.php?title=Tomate_Ambrosia_giant"
     ],
     "breeder": "J&L Gardens",
     "aliases": [],
-    "note": "Forme ronde dont l'identité (off-type de la forme côtelée ?) est incertaine selon le semencier.",
+    "note": "Corroborée par plusieurs sources : création de J&L Gardens (USA), la plus grosse de la lignée Ambrosia ; fruits ronds légèrement côtelés de 50-80 g, robe acajou, épaules noires, chair rouge juteuse et gel vert, saveur épicée-sucrée, plante indéterminée à grand développement. L'identité de la forme ronde lisse (par opposition à une autre forme côtelée dite 'Ambrosia Giant') reste à confirmer sur le lot.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -2655,11 +2657,12 @@
     "description": "Fruits ronds de 50 à 100 g, passant du vert à collet vert sombre à un mélange (GWR) ocre doré à collet vert ; saveur complexe et sucrée. Croisement 'Green Mustang' × 'ATVO0102' (cocktail bêta-carotène d'Afrique, résistances annoncées nématodes/flétrissement bactérien et tolérance chaleur humide). Les deux sœurs du même croisement sont 'Bayou Dusk' et 'Bayou Moon'. Création de Bunny Hop Seeds (USA) ; le semencier signale que la stabilité semblait acquise vers 2023 mais que des variations pourraient subsister.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/bayou-sun-tomato"
+      "https://merakiseeds.com/bayou-sun-tomato",
+      "https://heritageseedmarket.com/index.php/product/bayou-sun/"
     ],
     "breeder": "Bunny Hop Seeds",
     "aliases": [],
-    "note": "Stabilité et résistances annoncées par le semencier, non vérifiées ici.",
+    "note": "Corroborée par l'obtentrice (Bunny Hop Seeds) : deuxième lancement de la série 'Bayou' (avec Bayou Dusk et Bayou Moon), fruits GWR/bicolores de 50-170 g à la saveur sucrée-robuste. La stabilité est annoncée comme probable mais non garantie par l'obtentrice elle-même.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -5603,15 +5606,17 @@
     "height": "Plante de type buissonnant, 80 à 100 cm.",
     "maturity": "65 à 70 jours annoncés, base non précisée.",
     "leaf": "Non documenté",
-    "origin": "Non documenté",
+    "origin": "Royaume-Uni (Heritage Seed Library)",
     "description": "Plante de type buissonnant (80 à 100 cm) mais annoncée indéterminée par le semencier : produit une abondance de minuscules tomates groseille orange en grappes moyennes à longues ; saveur sucrée et corsée. Plants très vigoureux et rustiques.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/cape-teaser-bush-tomato"
+      "https://merakiseeds.com/cape-teaser-bush-tomato",
+      "https://heritageseedmarket.com/index.php/product/cape-teaser/",
+      "https://www.hrseeds.com/product-page/cape-teaser-tomato"
     ],
     "breeder": "",
     "aliases": [],
-    "note": "Le semencier annonce à la fois « bush-like » et « Indeterminate » : port à confirmer sur culture.",
+    "note": "Petite tomate groseille orange, issue de la Heritage Seed Library (Garden Organic, Royaume-Uni), nommée 'Cape Teaser' en 2015 ; plante rustique et productive. Le port est rapporté tantôt comme buissonnant/touffu, tantôt comme indéterminé, et ce type 'currant' n'est pas une espèce sauvage (S. lycopersicum) : à confirmer sur le lot.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -5792,11 +5797,13 @@
     "description": "Fruits ronds de la taille d'une balle de ping-pong, mûrissant du vert-pourpre au rouge bordeaux sombre à collet très sombre presque noir ; saveur excellente, fruitée et pleine. Croisement entre la célèbre Green Zebra de Tom Wagner et une variété indigo. Croissance semi-indéterminée, 100 à 130 cm.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/cascade-village-blue-tomato"
+      "https://merakiseeds.com/cascade-village-blue-tomato",
+      "https://www.tomatofifou.com/en/produit/cascade-blue-village/",
+      "https://bountyhunterseeds.com/product/cascade-village-blue-tomato/"
     ],
     "breeder": "Tom Wagner",
     "aliases": [],
-    "note": "Le semencier indique que la variété pourrait ne pas encore être stable.",
+    "note": "Corroborée par plusieurs sources : création récente de Tom Wagner (Washington), croisement de sa Green Zebra avec une tomate indigo/bleue, non encore entièrement stabilisée ; fruits cerise ronds qui virent du rouge au rouge sombre presque noir avec marbrures bleues selon l'exposition. Port et calibre varient selon les sources.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -6132,18 +6139,21 @@
     "weight": "Fruits de type pâte d'environ 5 cm de long.",
     "height": "Plante grimpante d'environ 200 cm.",
     "maturity": "70 à 75 jours annoncés, base non précisée.",
-    "leaf": "Non documenté",
-    "origin": "Non documenté",
-    "description": "« Cherny Mavr » (« mère noire ») : tomate de type pâte, fruits ovales renflés d'environ 5 cm, brun-rouge sombre et fermes, à la saveur sucrée agréable ; bonne tenue après récolte. Réussit par temps plus frais. Variété indéterminée d'environ 200 cm.",
+    "leaf": "Régulier",
+    "origin": "Russie",
+    "description": "« Cherny Mavr » (Чёрный Мавр = « Moor noir ») : tomate de type pâte, fruits ovales renflés d'environ 5 cm, brun-rouge sombre et fermes, à la saveur sucrée agréable ; bonne tenue après récolte. Réussit par temps plus frais. Variété indéterminée d'environ 200 cm.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/cherny-mavr-tomato"
+      "https://merakiseeds.com/cherny-mavr-tomato",
+      "http://t.tatianastomatobase.com/wiki/Chernyi_Mavr",
+      "https://www.tomatofifou.com/en/produit/tchornyi-mavr/"
     ],
     "breeder": "",
     "aliases": [
-      "Black Mother"
+      "Black Mavr",
+      "Чёрный Мавр"
     ],
-    "note": "Le semencier évoque une possible synonymie avec 'Black Plum' (déjà au catalogue) : identité à confirmer sur culture.",
+    "note": "Variété russe (Чёрный Мавр = 'Moor noir', et non 'mère noire'). Plusieurs sources la rapprochent fortement de 'Black Plum' (fruits prune sombres à chair ferme), sans trancher une synonymie stricte. Port rapporté indéterminé (certains le donnent déterminé) : à confirmer sur le lot.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -6444,7 +6454,7 @@
     ],
     "breeder": "",
     "aliases": [],
-    "note": "Deux couleurs issues de la même source de graines (l'une claire, l'autre sombre) : souche à surveiller.",
+    "note": "Version sombre d'une grande cerise type 'petite Brandywine', issue d'une mutation/spontanée apparentée à Brandywine (feuillage pomme de terre, résistance à l'oïdium rapportée) ; deux couleurs sont sorties de la même source de graines, donc souche à surveiller sur plusieurs générations.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -8346,11 +8356,13 @@
     "description": "Fruits ronds de calibre normal, 60 à 100 g, d'une beauté saisissante : multicolores rose, rouge-bleu-orangé-pourpre-vert. Résistants à l'éclatement, excellente saveur sucrée de tomate. La variété devait être naine mais s'est révélée indéterminée. Création de Dean Slater.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/damascus-steel-tomato"
+      "https://merakiseeds.com/damascus-steel-tomato",
+      "https://tomato-king.com/damascus-steel-tomato/",
+      "https://bountyhunterseeds.com/product/damascus-steel-tomato/"
     ],
     "breeder": "Dean Slater",
     "aliases": [],
-    "note": "Annoncée à l'origine comme naine, finalement indéterminée : port à confirmer.",
+    "note": "Création récente de Dean Slater (Michigan, USA), non entièrement stabilisée ; plusieurs sources signalent une généalogie impliquant une lignée antho (Purple Dragon) et décrivent des fruits de 60-120 g à fortes traces d'anthocyanes, port rapporté tantôt indéterminé vigoureux tantôt compact. Le port et la parenté exacte restent à confirmer sur le lot.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -9181,11 +9193,12 @@
     "description": "Tomate de calibre normal à petit beefsteak, 100 à 250 g : fruits ronds à légèrement aplatis, jaunes, avec quelques taches donnant un aspect « poussiéreux ». Saveur juteuse et sucrée. Décrite ailleurs comme naine et comme indéterminée ; les plants du semencier ont poussé en indéterminée.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/dirty-little-chicken-tomato"
+      "https://merakiseeds.com/dirty-little-chicken-tomato",
+      "https://www.tomatenfluesterer.at/products/dirty-little-chicken"
     ],
     "breeder": "",
     "aliases": [],
-    "note": "Port décrit différemment selon les sources : les plants du semencier étaient indéterminés.",
+    "note": "Création de Dean Slater (USA), diffusée vers 2017 ; plusieurs sources confirment des fruits jaunes tachés de 100-250 g à saveur douce-fruitée et un port qui, annoncé nain, dépasse souvent 1,5 m (quasi normal). Le port du lot reste à confirmer.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -9936,13 +9949,14 @@
     "description": "« Elf Tears White » : cerises en forme de goutte, ivoire-blanc-jaune, à la saveur douce et sucrée, arôme fruité. Ces graines sont d'abord arrivées chez le semencier sous le nom 'Elf Tears' — qui a pourtant des fruits rouges ; cette sélection blanche est productive et ses fruits sont beaux et savoureux. Variété indéterminée.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/elf-tears-not-cherry-tomato"
+      "https://merakiseeds.com/elf-tears-not-cherry-tomato",
+      "https://tomato-king.com/elf-tears-tomato/"
     ],
     "breeder": "",
     "aliases": [
       "Elf Tears White"
     ],
-    "note": "Graines reçues sous le nom 'Elf Tears' (variété à fruits rouges distincte) : sélection blanche à part.",
+    "note": "La sélection blanche ('Elf Tears White', gouttes ivoire-blanc-jaune) est distincte de la variété 'Elf Tears' à fruits roses/rouges en forme de larme. Les graines reçues sous 'Elf Tears' ont produit du blanc/jaune : sélection à part, productive. Port indéterminé.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -10236,15 +10250,16 @@
     "height": "Hauteur non précisée par le semencier.",
     "maturity": "85 à 95 jours annoncés, base non précisée.",
     "leaf": "Non documenté",
-    "origin": "Non documenté",
+    "origin": "Ukraine / Russie (type Eros orange allongé)",
     "description": "Tomate de type pâte allongée, environ 100 g et 10 cm de long : fruits jaune-orangé doré, fermes, à peu de graines. Saveur sucrée et fruitée, se conserve environ 3 semaines après récolte. Variété indéterminée.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/eros-orange-tomato"
+      "https://merakiseeds.com/eros-orange-tomato",
+      "https://www.tomatofifou.com/en/produit/eros/"
     ],
     "breeder": "",
     "aliases": [],
-    "note": "Un catalogue concurrent diffuse une variété nommée simplement « Eros » (déjà au catalogue) : identité à confirmer.",
+    "note": "Des sources décrivent un 'Eros' orange allongé (type pâte, 90-150 g, bonne tenue ~3 semaines) rattaché à une variété ukrainienne, proche d'\"Auria\"/orange ; il existe par ailleurs un 'Eros' tchèque (Milan Sodomka) et un hybride F1 homonyme. L'identité précise du lot 'Eros Orange' reste à confirmer.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -13405,15 +13420,17 @@
     "height": "Dwarf de 120 à 150 cm.",
     "maturity": "75 jours annoncés, base non précisée.",
     "leaf": "Non documenté",
-    "origin": "Non documenté",
+    "origin": "États-Unis (Dwarf Tomato Project)",
     "description": "« Great Scott NOT » : variété naine (dwarf) de 120 à 150 cm, assez récente. Elle devrait produire des fruits en forme de cœur, mais tous les plants du semencier en 2024 ont donné des fruits aplatis à collet côtelé : rouge clair à rayures dorées, environ 100 g. Saveur sucrée et bien équilibrée.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/great-scott-dwarf-tomato"
+      "https://merakiseeds.com/great-scott-dwarf-tomato",
+      "https://www.tomatorevolution.co.uk/store/GREAT-SCOTT-p531365767",
+      "https://www.craiglehoullier.com/blog1/2021/10/16/2021-garden-review-part-3-at-lastthe-tomatoes"
     ],
-    "breeder": "",
+    "breeder": "Dwarf Tomato Project",
     "aliases": [],
-    "note": "Forme du fruit à confirmer : fruits aplatis observés en 2024 au lieu de la forme de cœur attendue.",
+    "note": "Variété du Dwarf Tomato Project (DTP), lancée pour la saison 2024 ; plusieurs sources décrivent des fruits en cœur rosé rayé d'or, mais la forme en cœur n'a pas toujours été observée (fruits aplatis possibles). Port nain (dwarf). La stabilité de la forme reste à confirmer sur le lot.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -13678,15 +13695,16 @@
     "height": "Hauteur non précisée par le semencier.",
     "maturity": "75 jours annoncés, base non précisée.",
     "leaf": "Non documenté",
-    "origin": "Non documenté",
+    "origin": "Canada (off-type apparu chez Tatiana's TOMATObase)",
     "description": "Cerises rondes à légèrement aplaties, vertes à reflet doré : saveur juteuse, croquante et sucrée. Issue d'une mutation spontanée de 'Black Krim Cherry' : la souche pourrait être encore légèrement instable, avec d'occasionnels fruits roses. Variété indéterminée.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/green-krim-cherry-tomato"
+      "https://merakiseeds.com/green-krim-cherry-tomato",
+      "https://www.tomatofifou.com/en/produit/green-krim-cherry/"
     ],
     "breeder": "",
     "aliases": [],
-    "note": "Souche issue d'une mutation de 'Black Krim Cherry', instabilité possible (rares fruits roses).",
+    "note": "Cerise verte (parfois rosissant à l'apex), rapportée par plusieurs sources comme un off-type de 'Black Krim Cherry' apparu dans le jardin de Tatiana's TOMATObase ; la souche n'est pas entièrement stabilisée (rares fruits roses). Port indéterminé vigoureux.",
     "daysFromTransplant": 0,
     "status": "identity"
   },
@@ -20429,11 +20447,12 @@
     "description": "« Micro Purple » : micro-naine de 20 à 25 cm de haut. Produit de belles cerises qui mûrissent du vert-bleu-pourpre au rouge-pourpre sombre. Saveur sucrée-acidulée. Variété déterminée. Pourrait être la même variété que 'Tartufo' selon le semencier. Sachet de 10 graines.",
     "fruit": "",
     "sources": [
-      "https://merakiseeds.com/micro-purple-tomato"
+      "https://merakiseeds.com/micro-purple-tomato",
+      "https://nrtomatoseed.com/micro-purple-tomato"
     ],
     "breeder": "",
     "aliases": [],
-    "note": "Équivalence possible avec 'Tartufo' signalée par le semencier — identité à confirmer.",
+    "note": "Micro-naine très compacte (20-30 cm) à cerises antho rouge-pourpre sombre, saveur sucrée-acidulée ; l'équivalence avec 'Tartufo' est évoquée par plusieurs semenciers mais reste à confirmer. La croissance déterminée de ce micro-nain est cohérente.",
     "daysFromTransplant": 0,
     "status": "identity"
   },

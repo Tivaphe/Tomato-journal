@@ -399,3 +399,23 @@ aucune URL nouvelle hors `verification.sources`, aucune fiche ajoutée/supprimé
   doublons/homonymes (White Beauty vs Beauté blanche du Canada ; Musk Zebra prune chocolat vs
   sélection danoise). Les deux fiches Cornue des Andes restent distinctes pour préserver les liens.
   → **Rapport : 1 986 fiches, 2 490 références (2 471 → 2 490), tests 30/30.**
+- **Lot 3 (13 fiches catalog-ref-meraki « sources divergentes »/« souche à préciser ») : terminé.**
+  Contrairement aux lots 1-2 (fiches de base), ces fiches sont régénérées : l'enrichissement a été
+  écrit dans `data/enrichissement-2026/meraki/profiles.json` puis `node scripts/build-catalog-enrich.mjs`
+  a reconstruit `src/seed-catalog.js` (méthode retenue par l'utilisateur pour les fiches ref enrichies).
+  12 fiches ont reçu une seconde source web indépendante + une note de recoupement ; une 13e
+  (`cherry-brandywine-dark`) n'a reçu qu'une note (aucune source indépendante fiable trouvée).
+  Fiches : Ambrosia Giant Round Cherry, Cascade Village Blue, Damascus Steel, Dirty Little Chicken,
+  Great Scott (NOT Dwarf), Micro Purple, Cape Teaser Bush, Bayou Sun, Cherny Mavr, Green Krim Cherry,
+  Eros Orange, Elf Tears (White Cherry), Cherry Brandywine Dark. Apports : origines/généalogies
+  précisées là où les sources concordent (ex. Great Scott = Dwarf Tomato Project, lancement 2024 ;
+  Cherny Mavr = Чёрный Мавр « Moor noir » et non « mère noire », type pâte allongé ; Cape Teaser =
+  Heritage Seed Library ; Bayou Sun ; Eros Orange type pâte orange d'Ukraine/Russie distinct de la
+  « Eros » tchèque ; Green Krim Cherry = mutation canadienne de Black Krim Cherry chez Tatiana).
+  Divergences restantes signalées sans certifier (Damascus Steel : généalogie et stabilité non
+  confirmées ; Micro Purple vs Tartufo non prouvé ; port de Cape Teaser rapporté variable ; Green
+  Krim Cherry encore instable ; identité de l'Eros Orange à confirmer sur le lot). Gelbes Trier a été
+  **écarté** (aucune documentation indépendante). Champ `gènes_potentiels` laissé vide, `checkedAt`
+  conservé 2026-09-07. Alias « Black Moor » non ajouté à Cherny Mavr car déjà porté par la fiche
+  distincte Black Mauri (P6066) — synonymie mentionnée en note.
+  → **Rapport : 1 986 fiches, 2 507 références (2 490 → 2 507), tests 30/30.**

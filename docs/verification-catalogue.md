@@ -8,7 +8,7 @@ Les **1986 fiches** ont été passées en revue. Le catalogue contenait des erre
 
 **Il ne s’agit pas d’une certification de toutes les informations ni des lots de graines.** Les points effectivement recoupés sont indiqués pour chaque fiche. Toute autre caractéristique conservée reste à confirmer, même si elle figure encore dans le catalogue.
 
-- 1982 fiches possèdent au moins une référence documentaire ; 2490 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
+- 1982 fiches possèdent au moins une référence documentaire ; 2507 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
 - 1984 fiches ont reçu des mises à jour de texte ou de structuration. Cela ne signifie pas que ces 1984 fiches étaient entièrement fausses.
 - 17 classements ont été révisés. Les cinq filtres demandés sont conservés.
 - 55 fiches disposent d’un délai chiffré explicitement rapporté à la plantation dans les références retenues.
@@ -9911,7 +9911,7 @@ Référence relevée sur la page 1 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 1 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Forme ronde dont l'identité (off-type de la forme côtelée ?) est incertaine selon le semencier. Non établis précisément : hauteur, calibre, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 1 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Corroborée par plusieurs sources : création de J&L Gardens (USA), la plus grosse de la lignée Ambrosia ; fruits ronds légèrement côtelés de 50-80 g, robe acajou, épaules noires, chair rouge juteuse et gel vert, saveur épicée-sucrée, plante indéterminée à grand développement. L'identité de la forme ronde lisse (par opposition à une autre forme côtelée dite 'Ambrosia Giant') reste à confirmer sur le lot. Non établis précisément : hauteur, calibre, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 70 à 75 jours annoncés, base non précisée — précoce.
@@ -9921,6 +9921,8 @@ Référence relevée sur la page 1 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Ambrosia Giant Round Cherry Tomato — [1](https://merakiseeds.com/ambrosia-giant-cherry-tomato)
+- Tomatofifou — Ambrosia Giant Round Cherry Tomato — [2](https://www.tomatofifou.com/en/produit/ambrosia-giant/)
+- semeur.fr — Ambrosia Giant Round Cherry Tomato — [3](https://www.semeur.fr/wiki/index.php?title=Tomate_Ambrosia_giant)
 
 <a id="catalog-ref-meraki-ambrosia-gold-cherry-tomato"></a>
 
@@ -11621,7 +11623,7 @@ Référence relevée sur la page 2 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 2 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Stabilité et résistances annoncées par le semencier, non vérifiées ici. Non établis précisément : hauteur, feuillage, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 2 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Corroborée par l'obtentrice (Bunny Hop Seeds) : deuxième lancement de la série 'Bayou' (avec Bayou Dusk et Bayou Moon), fruits GWR/bicolores de 50-170 g à la saveur sucrée-robuste. La stabilité est annoncée comme probable mais non garantie par l'obtentrice elle-même. Non établis précisément : hauteur, feuillage, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 75 jours annoncés, base non précisée.
@@ -11631,6 +11633,7 @@ Référence relevée sur la page 2 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Bayou Sun Tomato — [1](https://merakiseeds.com/bayou-sun-tomato)
+- heritageseedmarket.com — Bayou Sun Tomato — [2](https://heritageseedmarket.com/index.php/product/bayou-sun/)
 
 <a id="catalog-ref-meraki-beastly-yellow-heart-dwarf-tomato"></a>
 
@@ -14054,7 +14057,7 @@ Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Le semencier annonce à la fois « bush-like » et « Indeterminate » : port à confirmer sur culture. Non établis précisément : calibre, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Petite tomate groseille orange, issue de la Heritage Seed Library (Garden Organic, Royaume-Uni), nommée 'Cape Teaser' en 2015 ; plante rustique et productive. Le port est rapporté tantôt comme buissonnant/touffu, tantôt comme indéterminé, et ce type 'currant' n'est pas une espèce sauvage (S. lycopersicum) : à confirmer sur le lot. Non établis précisément : calibre, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 65 à 70 jours annoncés, base non précisée.
@@ -14064,6 +14067,8 @@ Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Cape Teaser Bush Tomato — [1](https://merakiseeds.com/cape-teaser-bush-tomato)
+- heritageseedmarket.com — Cape Teaser Bush Tomato — [2](https://heritageseedmarket.com/index.php/product/cape-teaser/)
+- hrseeds.com — Cape Teaser Bush Tomato — [3](https://www.hrseeds.com/product-page/cape-teaser-tomato)
 
 <a id="catalog-ref-meraki-captain-lucky-white-tomato"></a>
 
@@ -14206,7 +14211,7 @@ Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Le semencier indique que la variété pourrait ne pas encore être stable. Non établis précisément : feuillage, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Corroborée par plusieurs sources : création récente de Tom Wagner (Washington), croisement de sa Green Zebra avec une tomate indigo/bleue, non encore entièrement stabilisée ; fruits cerise ronds qui virent du rouge au rouge sombre presque noir avec marbrures bleues selon l'exposition. Port et calibre varient selon les sources. Non établis précisément : feuillage, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 75 jours annoncés, base non précisée.
@@ -14216,6 +14221,8 @@ Référence relevée sur la page 3 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Cascade Village Blue Tomato — [1](https://merakiseeds.com/cascade-village-blue-tomato)
+- Tomatofifou — Cascade Village Blue Tomato — [2](https://www.tomatofifou.com/en/produit/cascade-blue-village/)
+- bountyhunterseeds.com — Cascade Village Blue Tomato — [3](https://bountyhunterseeds.com/product/cascade-village-blue-tomato/)
 
 <a id="catalog-ref-meraki-casino-chips-cherry-tomato"></a>
 
@@ -14491,7 +14498,7 @@ Référence relevée sur la page 4 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 4 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Le semencier évoque une possible synonymie avec 'Black Plum' (déjà au catalogue) : identité à confirmer sur culture. Non établis précisément : origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 4 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Variété russe (Чёрный Мавр = 'Moor noir', et non 'mère noire'). Plusieurs sources la rapprochent fortement de 'Black Plum' (fruits prune sombres à chair ferme), sans trancher une synonymie stricte. Port rapporté indéterminé (certains le donnent déterminé) : à confirmer sur le lot. Non établis précisément : délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 70 à 75 jours annoncés, base non précisée.
@@ -14501,6 +14508,8 @@ Référence relevée sur la page 4 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Cherny Mavr Paste-Type Tomato — [1](https://merakiseeds.com/cherny-mavr-tomato)
+- t.tatianastomatobase.com — Cherny Mavr Paste-Type Tomato — [2](http://t.tatianastomatobase.com/wiki/Chernyi_Mavr)
+- Tomatofifou — Cherny Mavr Paste-Type Tomato — [3](https://www.tomatofifou.com/en/produit/tchornyi-mavr/)
 
 <a id="catalog-ref-meraki-cherny-slon-beefsteak-tomato"></a>
 
@@ -14738,7 +14747,7 @@ Référence relevée sur la page 4 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 4 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Deux couleurs issues de la même source de graines (l'une claire, l'autre sombre) : souche à surveiller. Non établis précisément : hauteur, origine, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 4 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Version sombre d'une grande cerise type 'petite Brandywine', issue d'une mutation/spontanée apparentée à Brandywine (feuillage pomme de terre, résistance à l'oïdium rapportée) ; deux couleurs sont sorties de la même source de graines, donc souche à surveiller sur plusieurs générations. Non établis précisément : hauteur, origine, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 75 jours annoncés, base non précisée.
@@ -16297,7 +16306,7 @@ Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Annoncée à l'origine comme naine, finalement indéterminée : port à confirmer. Non établis précisément : hauteur, feuillage, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Création récente de Dean Slater (Michigan, USA), non entièrement stabilisée ; plusieurs sources signalent une généalogie impliquant une lignée antho (Purple Dragon) et décrivent des fruits de 60-120 g à fortes traces d'anthocyanes, port rapporté tantôt indéterminé vigoureux tantôt compact. Le port et la parenté exacte restent à confirmer sur le lot. Non établis précisément : hauteur, feuillage, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 75 jours annoncés, base non précisée.
@@ -16307,6 +16316,8 @@ Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Damascus Steel Tomato — [1](https://merakiseeds.com/damascus-steel-tomato)
+- tomato-king.com — Damascus Steel Tomato — [2](https://tomato-king.com/damascus-steel-tomato/)
+- bountyhunterseeds.com — Damascus Steel Tomato — [3](https://bountyhunterseeds.com/product/damascus-steel-tomato/)
 
 <a id="catalog-ref-meraki-damskiy-ugodnik-paste-type-tomato"></a>
 
@@ -16981,7 +16992,7 @@ Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Port décrit différemment selon les sources : les plants du semencier étaient indéterminés. Non établis précisément : hauteur, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Création de Dean Slater (USA), diffusée vers 2017 ; plusieurs sources confirment des fruits jaunes tachés de 100-250 g à saveur douce-fruitée et un port qui, annoncé nain, dépasse souvent 1,5 m (quasi normal). Le port du lot reste à confirmer. Non établis précisément : hauteur, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 75 à 80 jours annoncés, base non précisée.
@@ -16991,6 +17002,7 @@ Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Dirty Little Chicken Tomato — [1](https://merakiseeds.com/dirty-little-chicken-tomato)
+- tomatenfluesterer.at — Dirty Little Chicken Tomato — [2](https://www.tomatenfluesterer.at/products/dirty-little-chicken)
 
 <a id="catalog-ref-meraki-ditmarsher-cascading-tomato"></a>
 
@@ -17609,7 +17621,7 @@ Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Graines reçues sous le nom 'Elf Tears' (variété à fruits rouges distincte) : sélection blanche à part. Non établis précisément : hauteur, calibre, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. La sélection blanche ('Elf Tears White', gouttes ivoire-blanc-jaune) est distincte de la variété 'Elf Tears' à fruits roses/rouges en forme de larme. Les graines reçues sous 'Elf Tears' ont produit du blanc/jaune : sélection à part, productive. Port indéterminé. Non établis précisément : hauteur, calibre, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 75 jours annoncés, base non précisée.
@@ -17619,6 +17631,7 @@ Référence relevée sur la page 5 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Elf Tears White Cherry Tomato — [1](https://merakiseeds.com/elf-tears-not-cherry-tomato)
+- tomato-king.com — Elf Tears White Cherry Tomato — [2](https://tomato-king.com/elf-tears-tomato/)
 
 <a id="catalog-ref-meraki-elma-blue-tomato"></a>
 
@@ -17856,7 +17869,7 @@ Référence relevée sur la page 6 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 6 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Un catalogue concurrent diffuse une variété nommée simplement « Eros » (déjà au catalogue) : identité à confirmer. Non établis précisément : hauteur, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 6 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Des sources décrivent un 'Eros' orange allongé (type pâte, 90-150 g, bonne tenue ~3 semaines) rattaché à une variété ukrainienne, proche d'"Auria"/orange ; il existe par ailleurs un 'Eros' tchèque (Milan Sodomka) et un hybride F1 homonyme. L'identité précise du lot 'Eros Orange' reste à confirmer. Non établis précisément : hauteur, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 85 à 95 jours annoncés, base non précisée.
@@ -17866,6 +17879,7 @@ Référence relevée sur la page 6 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Eros Orange Paste-Type Tomato — [1](https://merakiseeds.com/eros-orange-tomato)
+- Tomatofifou — Eros Orange Paste-Type Tomato — [2](https://www.tomatofifou.com/en/produit/eros/)
 
 <a id="catalog-ref-meraki-espalda-verde-longkeeper-tomato"></a>
 
@@ -20479,7 +20493,7 @@ Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, précocité déclarée.
 
-Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Forme du fruit à confirmer : fruits aplatis observés en 2024 au lieu de la forme de cœur attendue. Non établis précisément : origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Variété du Dwarf Tomato Project (DTP), lancée pour la saison 2024 ; plusieurs sources décrivent des fruits en cœur rosé rayé d'or, mais la forme en cœur n'a pas toujours été observée (fruits aplatis possibles). Port nain (dwarf). La stabilité de la forme reste à confirmer sur le lot. Non établis précisément : feuillage, délai chiffré depuis plantation. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Non documentée.
 - **Maturité affichée :** 75 jours annoncés, base non précisée.
@@ -20489,6 +20503,8 @@ Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Great Scott NOT Dwarf Tomato — [1](https://merakiseeds.com/great-scott-dwarf-tomato)
+- tomatorevolution.co.uk — Great Scott NOT Dwarf Tomato — [2](https://www.tomatorevolution.co.uk/store/GREAT-SCOTT-p531365767)
+- craiglehoullier.com — Great Scott NOT Dwarf Tomato — [3](https://www.craiglehoullier.com/blog1/2021/10/16/2021-garden-review-part-3-at-lastthe-tomatoes)
 
 <a id="catalog-ref-meraki-great-white-purple-tomato"></a>
 
@@ -20707,7 +20723,7 @@ Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Desc
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Souche issue d'une mutation de 'Black Krim Cherry', instabilité possible (rares fruits roses). Non établis précisément : hauteur, calibre, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Cerise verte (parfois rosissant à l'apex), rapportée par plusieurs sources comme un off-type de 'Black Krim Cherry' apparu dans le jardin de Tatiana's TOMATObase ; la souche n'est pas entièrement stabilisée (rares fruits roses). Port indéterminé vigoureux. Non établis précisément : hauteur, calibre, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** 75 jours annoncés, base non précisée.
@@ -20717,6 +20733,7 @@ Référence relevée sur la page 7 du catalogue Meraki Seeds le 2026-09-07. Desc
 **Références consultées :**
 
 - Meraki Seeds — Green Krim Cherry Tomato — [1](https://merakiseeds.com/green-krim-cherry-tomato)
+- Tomatofifou — Green Krim Cherry Tomato — [2](https://www.tomatofifou.com/en/produit/green-krim-cherry/)
 
 <a id="catalog-ref-meraki-green-lantern-lights-tomato"></a>
 
@@ -26307,7 +26324,7 @@ Référence relevée sur la page 10 du catalogue Meraki Seeds le 2026-09-07. Des
 
 **Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
 
-Référence relevée sur la page 10 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Équivalence possible avec 'Tartufo' signalée par le semencier — identité à confirmer. Non établis précisément : calibre, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
+Référence relevée sur la page 10 du catalogue Meraki Seeds le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Micro-naine très compacte (20-30 cm) à cerises antho rouge-pourpre sombre, saveur sucrée-acidulée ; l'équivalence avec 'Tartufo' est évoquée par plusieurs semenciers mais reste à confirmer. La croissance déterminée de ce micro-nain est cohérente. Non établis précisément : calibre, origine, feuillage, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée. Les divergences ou l’identité de la souche demandent confirmation sur le lot de graines.
 
 - **Croissance renseignée :** Déterminée.
 - **Maturité affichée :** 55 à 60 jours annoncés, base non précisée.
@@ -26317,6 +26334,7 @@ Référence relevée sur la page 10 du catalogue Meraki Seeds le 2026-09-07. Des
 **Références consultées :**
 
 - Meraki Seeds — Micro Purple Micro Dwarf Tomato — [1](https://merakiseeds.com/micro-purple-tomato)
+- nrtomatoseed.com — Micro Purple Micro Dwarf Tomato — [2](https://nrtomatoseed.com/micro-purple-tomato)
 
 <a id="catalog-ref-meraki-micro-sun-micro-dwarf-tomato"></a>
 
