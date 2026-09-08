@@ -487,3 +487,15 @@ test("empty technical fields are not displayed as empty catalogue facts", () => 
   assert.doesNotMatch(html, /<dt>gènes potentiels<\/dt>/);
   assert.match(html, /Vérification documentaire/);
 });
+
+test("the readme catalog count matches the reference catalog size", () => {
+  const readme = readFileSync(new URL("../README.md", import.meta.url), "utf8");
+  const patterns = [
+    /(Catalogue-)\d+(_variétés)/g,
+    /(alt=")\d+( varieties")/g,
+    /\b\d{2,5}(?=\s+(?:fiches|variétés|sheets|tomato\s+(?:sheets|varieties)))/g,
+  ];
+  const found = patterns.flatMap((pattern) => [...readme.matchAll(pattern)].map((m) => Number(m[0].match(/\d+/)[0])));
+  assert.equal(found.length, 12);
+  assert.ok(found.every((count) => count === referenceCount));
+});

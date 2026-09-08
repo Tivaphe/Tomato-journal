@@ -362,4 +362,6 @@ fourchette ; GWR explicité ; synonymes cyrilliques conservés en alias (ex. А�
 ## Tomatofifou — en attente
 Non obligatoire ; à ne traiter que si l'utilisateur le redemande après CTR/Meraki/RareSeeds.
 
-Après chaque vague : relancer enrich + report + tests ; tenir ce document à jour.
+Après chaque vague : relancer enrich + report + tests ; tenir ce document à jour. Le report
+synchronise aussi le compteur du README (12 mentions, motifs + test « readme catalog count ») :
+ne jamais le mettre à jour à la main.

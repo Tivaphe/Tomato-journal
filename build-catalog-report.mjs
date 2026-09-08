@@ -113,4 +113,32 @@ for (const entry of entries) {
 }
 await mkdir(join(root, "docs"), { recursive: true });
 await writeFile(join(root, "docs/verification-catalogue.md"), lines.join("\n"));
+
+// La page web compte déjà dynamiquement (defaultSeedCatalog().length) ; le README,
+// lui, porte le compteur en dur : on le synchronise ici pour qu'aucune vague
+// d'enrichissement ne l'oublie. Les motifs ci-dessous doivent rester exhaustifs :
+// le test « readme catalog count » échoue s'ils ne capturent plus les 12 mentions.
+const readmePath = join(root, "README.md");
+const readme = await readFile(readmePath, "utf8");
+const countPatterns = [
+  /(Catalogue-)\d+(_variétés)/g,
+  /(alt=")\d+( varieties")/g,
+  /\b\d{2,5}(?=\s+(?:fiches|variétés|sheets|tomato\s+(?:sheets|varieties)))/g,
+];
+const found = countPatterns.flatMap((pattern) => [...readme.matchAll(pattern)].map((m) => m[0].match(/\d+/)[0]));
+const distinct = [...new Set(found)];
+if (distinct.length > 1) throw new Error(`README.md incohérent : compteurs ${distinct.join(", ")}`);
+if (found.length === 0) console.log("README.md : aucun compteur trouvé, motifs à réviser.");
+let synced = readme;
+for (const pattern of countPatterns) {
+  pattern.lastIndex = 0;
+  synced = synced.replace(pattern, (match, before, after) =>
+    typeof before !== "string" ? String(entries.length) : `${before}${entries.length}${after}`);
+}
+if (synced !== readme) {
+  await writeFile(readmePath, synced);
+  console.log(`README.md synchronisé : ${found.length} mentions → ${entries.length}.`);
+} else {
+  console.log(`README.md déjà à jour (${entries.length}).`);
+}
 console.log(`${entries.length} fiches, ${sourceCount} références, ${changedTypes.length} classements révisés.`);
