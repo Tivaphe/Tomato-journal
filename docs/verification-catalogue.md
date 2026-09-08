@@ -8,8 +8,8 @@ Les **1986 fiches** ont été passées en revue. Le catalogue contenait des erre
 
 **Il ne s’agit pas d’une certification de toutes les informations ni des lots de graines.** Les points effectivement recoupés sont indiqués pour chaque fiche. Toute autre caractéristique conservée reste à confirmer, même si elle figure encore dans le catalogue.
 
-- 1982 fiches possèdent au moins une référence documentaire ; 2448 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
-- 1983 fiches ont reçu des mises à jour de texte ou de structuration. Cela ne signifie pas que ces 1983 fiches étaient entièrement fausses.
+- 1982 fiches possèdent au moins une référence documentaire ; 2471 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
+- 1984 fiches ont reçu des mises à jour de texte ou de structuration. Cela ne signifie pas que ces 1984 fiches étaient entièrement fausses.
 - 17 classements ont été révisés. Les cinq filtres demandés sont conservés.
 - 55 fiches disposent d’un délai chiffré explicitement rapporté à la plantation dans les références retenues.
 - Aucun identifiant, nom de variété ou lien de photo n’a été supprimé. Les doublons potentiels sont signalés, pas fusionnés.
@@ -351,17 +351,19 @@ Classement micro-naine explicitement confirmé, et non dwarf de taille standard.
 
 **Portée du contrôle :** port, croissance, fruit, précocité.
 
-Port buissonnant déterminé concordant. L’origine diverge : Pologne chez Kings Seeds, Russie chez Uprising. Une tolérance commerciale au mildiou n’est pas une immunité ni une preuve de génotype. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : port déterminé compact, cerises rouges précoces et maturité groupée confirmés par plusieurs semenciers indépendants. L’origine reste partagée (Pologne pour les vendeurs européens, Russie pour plusieurs nord-américains) et n’est pas tranchée. La tolérance au mildiou annoncée n’est pas une immunité. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Déterminée.
-- **Maturité affichée :** Précoce ; Uprising annonce 65 jours, sans point de départ explicite.
+- **Maturité affichée :** Précoce ; Uprising annonce 65 jours et plusieurs sources 60 à 65 jours, sans point de départ toujours explicite. Il existe aussi un hybride « Koralik F1 » distinct à ne pas confondre.
 - **Hauteur affichée :** Environ 90 cm.
-- **Champs mis à jour :** Type de plante, Description / historique, Maturité.
+- **Champs mis à jour :** Description / historique, Description du fruit, Maturité, Croissance, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Kings Seeds — Koralik — [1](https://www.kingsseedsdirect.com/koralik-organic/p2336)
 - Uprising Organics — Koralik — [2](https://www.uprisingorganics.com/products/tomato-koralik)
+- Prairie Road Organic Seed — Koralik cherry — [3](https://www.prairieroadorganic.co/products/new-koralik-cherry-tomato-certified-organic-seed-1-packet-25-seeds)
+- The Seed Store — Tomato 'Koralik' — [4](https://theseedstore.eu/en/seeds/vegetable-seeds/tomatoes/tomato-koralik/)
 
 <a id="catalog-016"></a>
 
@@ -601,17 +603,19 @@ Fruit sombre de type beefsteak ; la résistance à la sécheresse n’est pas d�
 
 **Portée du contrôle :** dénomination, croissance, fruit.
 
-Deux noms très voisins recouvrent des descriptions incompatibles : Babka orange allongée et Baba verte aplatie. Ne pas les fusionner ni attribuer les caractéristiques de l’une à l’autre ; vérifier le sachet du lot. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : les sources russes et est-européennes décrivent une « Romovaya/Rumovaya Baba » verte-ambre, aplatie, côtelée, de 250-600 g, indéterminée (registre d’État russe 2013), ce qui diffère nettement de la description « Romovaya Babka » orange allongée de Cultive ta Rue. Les deux noms ne doivent pas être fusionnés ni les caractères reportés d’une variété à l’autre ; vérifier le sachet du lot. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Mi-saison dans la fiche Romovaya Babka ; identité du lot à confirmer.
+- **Maturité affichée :** Mi-saison ; 110 à 120 jours depuis la levée selon les fiches est-européennes du type Romovaya Baba ; base plantation non précisée.
 - **Hauteur affichée :** Plant robuste.
-- **Champs mis à jour :** Description / historique, Maturité.
+- **Champs mis à jour :** Description / historique, Description du fruit, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Cultive ta Rue — Romovaya Babka — [1](https://cultivetarue.fr/products/romovaya-babka/?lang=en)
 - Cultive ta Rue — Romovaja Baba — [2](https://cultivetarue.fr/produit/romovaja-baba/?lang=en)
+- Decorexpro — Tomate Romovaya Baba (caractéristiques) — [3](https://garden.decorexpro.com/en/sad-i-ogorod/ovoshhi/tomat-romovaya-baba-otzyvy-foto.html)
+- Seemnemaailm — Tomate 'Romovaja Baba' — [4](https://seemnemaailm.com/en/tomato-romovaja-baba.html)
 
 <a id="catalog-029"></a>
 
@@ -660,17 +664,19 @@ Feuillage en pompons et indétermination confirmés. Le gène wiry n’est pas �
 
 **Portée du contrôle :** fruit, feuillage.
 
-Fruits rouges et feuillage panaché confirmés ; croissance contradictoire (déterminée ou indéterminée). Vérifier la souche. Le calibre cerise et les gènes vgv/ftsH étaient sans justification. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : le feuillage panaché vert/crème et les fruits rouges sont confirmés par plusieurs sources indépendantes. La croissance est majoritairement décrite indéterminée (Reimer, HR Seeds, Semences des Artisans) mais une source la donne déterminée : vérifier la souche. La panachure décrit un aspect, pas un génotype. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** Mi-saison dans une référence ; délai précis non confirmé.
-- **Hauteur affichée :** Non spécifiée.
-- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Maturité.
+- **Maturité affichée :** Mi-saison ; environ 70 à 90 jours selon les semenciers, base non toujours explicite.
+- **Hauteur affichée :** Indéterminée, de l’ordre de 1,2 à 2 m ; hauteur à confirmer selon la conduite.
+- **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Tomatofifou — Variegated — [1](https://www.tomatofifou.com/en/produit/variegated/)
-- Semences des Artisans — Variegated — [2](https://www.semencesdesartisans.ca/en/product/variegated-splash-of-cream-tomato)
+- Semences des Artisans — Variegated (Splash of Cream) — [2](https://www.semencesdesartisans.ca/en/product/variegated-splash-of-cream-tomato)
+- Reimer Seeds — Variegated Tomato — [3](https://www.reimerseeds.com/variegated-tomato-2)
+- HR Seeds — Variegated Tomato — [4](https://www.hrseeds.com/product-page/variegated-tomato)
 
 <a id="catalog-032"></a>
 
@@ -699,17 +705,19 @@ Fruit ivoire à jaune, croissance indéterminée et origine de diffusion recoup�
 
 **Portée du contrôle :** fruit, précocité.
 
-Croissance et calibre diffèrent entre références (indéterminée ou semi-déterminée). Le chiffre de tétra-cis-lycopène 8,04 était inutilisable sans unité, méthode ni référence analytique. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : Tatiana’s TOMATOBase caractérise Orange Crimea en semi-déterminée, feuillage régulier, fruit orange rond de taille moyenne, tardive ; Sand Hill Preservation la dit également tardive, semi-déterminée et plus grosse. Ces données s’écartent de la description indéterminée à calibre 50-150 g de Meraki Seeds : la souche reste à identifier sur le lot. Le chiffre de tétra-cis-lycopène 8,04 demeure inexploitable sans unité ni méthode. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** Mi-saison à tardive ; environ 85 jours annoncés par Meraki Seeds, point de départ non précisé.
+- **Maturité affichée :** Mi-saison à tardive ; environ 85 jours annoncés par Meraki Seeds (base non précisée), « tardive » selon Tatiana et Sand Hill Preservation.
 - **Hauteur affichée :** Indéterminée.
-- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Maturité.
+- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Meraki Seeds — Orange Crimea — [1](https://merakiseeds.com/orange-crimea-tomato)
-- Dave’s Garden — Orange Crimea — [2](https://davesgarden.com/guides/pf/go/118839)
+- Dave's Garden — Orange Crimea — [2](https://davesgarden.com/guides/pf/go/118839)
+- Tatiana's TOMATObase — Orange Crimea — [3](https://tatianastomatobase.com/wiki/Orange_Crimea)
+- Sand Hill Preservation — Tomates jaunes/dorées — [4](https://www.sandhillpreservation.com/yellow-gold-tomatoes)
 
 <a id="catalog-034"></a>
 
@@ -834,16 +842,16 @@ Espèce à petits fruits rouges ; plusieurs centaines d’accessions au TGRC. Re
 
 **Portée du contrôle :** croissance, fruit, maturité.
 
-Fruit minuscule rouge et croissance indéterminée confirmés. Le rattachement certain à S. pimpinellifolium n’est pas démontré : Baker Creek la classe S. lycopersicum. Ne pas prendre le nom commercial pour une identification taxonomique. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : le fruit minuscule rouge et la croissance indéterminée sont confirmés. Le rattachement à S. pimpinellifolium reste non démontré : le principal diffuseur classe le lot en Solanum lycopersicum. Ne pas prendre le nom commercial pour une identification taxonomique ; pour un lot sauvage non identifié, demander un numéro d’accession. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Environ 65 à 70 jours après plantation selon Baker Creek ; indicatif.
+- **Maturité affichée :** Précoce ; environ 65 à 70 jours après plantation selon Baker Creek ; indicatif.
 - **Hauteur affichée :** 1,5-2 m+ (vigoureuse).
-- **Champs mis à jour :** Description / historique, Maturité.
+- **Champs mis à jour :** Description / historique, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
-- Baker Creek — Spoon — [1](https://www.rareseeds.com/tomato-spoon)
+- Baker Creek / Rare Seeds — Tomato Spoon — [1](https://www.rareseeds.com/tomato-spoon)
 
 <a id="catalog-041"></a>
 
@@ -1007,16 +1015,17 @@ Type allongé à sauce ; ne pas confondre San Marzano avec toutes ses sélection
 
 **Portée du contrôle :** type de fruit, dénomination.
 
-Roma, Roma VF et Italian Roma Bush ne sont pas strictement interchangeables. Type à sauce confirmé ; la souche précise du lot doit être indiquée pour valider le port et les résistances. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : le type prune à sauce est confirmé et l’origine américaine (USDA Beltsville, ~1955) est établie par plusieurs sources, contrairement à une origine italienne suggérée par le nom. Roma, Roma VF et Italian Roma Bush restent distincts ; la souche précise du lot doit être indiquée pour valider le port et les résistances. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** Mi-saison (75 à 80 jours).
-- **Hauteur affichée :** 60 à 100 cm (déterminée, compacte).
-- **Champs mis à jour :** aucun changement de texte botanique ; ajout de la traçabilité.
+- **Maturité affichée :** Mi-saison ; environ 75 à 80 jours, base non toujours précisée.
+- **Hauteur affichée :** Déterminée et compacte (environ 60 à 100 cm), adaptée au plein champ et au grand pot.
+- **Champs mis à jour :** Description / historique, Origine, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Victory Seeds — Roma VF — [1](https://victoryseeds.com/products/roma-vf-tomato)
+- Wikipédia — Roma tomato (historique) — [2](https://en.wikipedia.org/wiki/Roma_tomato)
 
 <a id="catalog-050"></a>
 
@@ -1160,16 +1169,17 @@ Le semencier la décrit comme bush retombante, pas comme micro-naine érigée. H
 
 **Portée du contrôle :** dénomination, croissance, fruit, feuillage, précocité.
 
-Nom à préciser par souche ; doublon possible entre Brandywine et Brandywine Pink. L’histoire amish ancienne souvent répétée n’est pas démontrée pour toutes les formes roses. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : le type rose, feuillage pomme de terre, croissance indéterminée et le grand calibre sont confirmés. L’ancienneté du nom (publicité Johnson & Stokes 1889 citée par C. LeHoullier) est documentée, mais l’histoire « amish » ancienne n’est pas démontrée pour toutes les formes roses, et de nombreuses sous-souches circulent. La souche précise du lot (Sudduth, Joyce’s Strain, etc.) reste à nommer. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Tardive ; environ 90 jours annoncés par Victory Seeds, point de départ non explicite.
+- **Maturité affichée :** Tardive ; environ 80 à 100 jours selon les sources, point de départ non toujours explicite.
 - **Hauteur affichée :** 1,8 à 2,5 m (indéterminée, feuillage pomme de terre).
-- **Champs mis à jour :** Description / historique, Description du fruit, Maturité.
+- **Champs mis à jour :** Description / historique, Description du fruit, Maturité, Origine, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Victory Seeds — Brandywine Pink — [1](https://victoryseeds.com/products/brandywine-pink-tomato)
+- Craig LeHoullier — Brandywine and Company — [2](http://www.webgrower.com/information/craig_brandywine.html)
 
 <a id="catalog-058"></a>
 
@@ -1619,16 +1629,16 @@ Port compact déterminé et fruit orange recoupés ; retirer la résistance gén
 
 **Portée du contrôle :** croissance, feuillage, couleur, forme.
 
-Semi-déterminée à feuillage pomme de terre confirmé. Le calibre de 30–50 g diverge fortement de l’observation canadienne (environ 110–225 g) ; origine américaine non confirmée. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : semi-déterminée et feuillage pomme de terre confirmés par la base de Tatiana, qui donne 70-80 jours et des fruits rouges de 110-225 g sujets à l’éclatement. Ces valeurs s’opposent au calibre 30-50 g d’autres fiches : le calibre et l’origine (américaine supposée) restent à confirmer sur le lot. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Semi-déterminée.
-- **Maturité affichée :** Mi-saison
+- **Maturité affichée :** Mi-saison ; 70 à 80 jours depuis la plantation dans les essais recensés par Tatiana.
 - **Hauteur affichée :** Non documentée dans les références consultées.
-- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante.
+- **Champs mis à jour :** Description / historique, Description du fruit, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
-- Tatiana’s TOMATObase — Api Rouge — [1](https://tatianastomatobase.com/wiki/Api_Rouge)
+- Tatiana's TOMATObase — Api Rouge — [1](https://tatianastomatobase.com/wiki/Api_Rouge)
 
 <a id="catalog-082"></a>
 
@@ -1773,17 +1783,18 @@ Croissance indéterminée et fruits roses 80–200 g recoupés. Origine de Sakha
 
 **Portée du contrôle :** dénomination, croissance, fruit, hauteur.
 
-Mission Dike correspond probablement à Mission Dyke. Port et fruit rose confirmés ; les origines Kansas/Floride divergent. L’introduction exacte en 1958 n’a pas été recoupée. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : Mission Dike correspond probablement à Mission Dyke. Le port indéterminé, le fruit rose beefsteak à épaules vertes et le calibre 200-500 g sont confirmés par plusieurs sources, qui rattachent la variété au Kansas. L’introduction en 1958 et une origine floridienne ne sont pas recoupées. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** Mi-saison
-- **Hauteur affichée :** Environ 1,8 m dans la fiche Tomatofifou.
-- **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante.
+- **Hauteur affichée :** Indéterminée, environ 1,8 m.
+- **Champs mis à jour :** Description / historique, Description du fruit, Origine, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Tomatofifou — Mission Dyke — [1](https://www.tomatofifou.com/en/produit/mission-dyke/)
-- PlantAnswers — Mission Dyke — [2](https://www.plantanswers.com/breakout/qa1871.html)
+- Plant Answers — Mission Dyke — [2](https://www.plantanswers.com/breakout/qa1871.html)
+- Sand Hill Preservation — Tomates roses — [3](https://www.sandhillpreservation.com/pink-tomatoes)
 
 <a id="catalog-091"></a>
 
@@ -1850,16 +1861,19 @@ Variété canadienne de 1978, semi-déterminée. Ce n’est pas une micro-tomate
 
 **Portée du contrôle :** dénomination, fruit, précocité.
 
-La fiche moderne indique indéterminée, mais cite une ancienne description déterminée. Profil vitaminique historique non extrapolable aux fruits du jardin ; identifier la souche. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : la filiation (1953, A. Yeager, Dakota du Nord / New Hampshire, L. peruvianum × Michigan State Forcing) et la forte teneur en vitamine C sont confirmées par plusieurs sources indépendantes. La croissance reste majoritairement décrite indéterminée à ce jour, contre une ancienne description déterminée : identifier la souche. Le profil vitaminique annoncé ne s’applique pas à chaque fruit de jardin. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** Mi-saison ; la qualification précoce n’est pas confirmée par la référence consultée.
-- **Hauteur affichée :** Non documentée dans les références consultées.
-- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante, Maturité.
+- **Maturité affichée :** Mi-saison à précoce ; environ 65 à 80 jours selon les semenciers, base non toujours précisée.
+- **Hauteur affichée :** Indéterminée vigoureuse ; hauteur non précisée par les fiches, à mesurer sur le lot.
+- **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
-- Tatiana’s TOMATObase — Doublerich — [1](https://tatianastomatobase.com/wiki/Doublerich)
+- Tatiana's TOMATObase — Doublerich — [1](https://tatianastomatobase.com/wiki/Doublerich)
+- Cultive ta Rue — Double Rich — [2](https://cultivetarue.fr/products/double-rich/)
+- Kokopelli — Double Rich, Red Early Tomato — [3](https://kokopelli-semences.com/en/p/double-rich-red-early-tomato)
+- The Seedstead — Double Rich — [4](https://theseedstead.com/double-rich)
 
 <a id="catalog-095"></a>
 
@@ -2101,17 +2115,19 @@ Corrogo est cité comme synonyme de Korrogo du Sénégal. Port indéterminé et 
 
 **Portée du contrôle :** dénomination, fruit, précocité.
 
-L’équivalence des noms est documentée, mais un semencier indique indéterminée alors que le catalogue dit déterminée. Le lot doit être identifié avant de trancher. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : l’équivalence des noms est confirmée, et le port déterminé bas est établi par le registre russe cité par Tatiana (déterminée, 30-48 cm, créée à la station ouest-sibérienne, zonage 1959) ainsi que par plusieurs fiches. La mention « indéterminée » d’une source isolée semble être un lot mal étiqueté. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
-- **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** precoce
-- **Hauteur affichée :** Non documentée dans les références consultées.
-- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante.
+- **Croissance renseignée :** Déterminée.
+- **Maturité affichée :** Précoce ; 95 à 110 jours depuis la levée selon les fiches russes (98-108 jours au registre) ; base plantation non précisée.
+- **Hauteur affichée :** Déterminée et basse : environ 30 à 60 cm en pleine terre, jusqu’à 60 à 90 cm sous serre selon plusieurs fiches.
+- **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante, Croissance, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Semillas — Early Siberian — [1](https://www.semillas.de/en/produkt/early-siberian/)
 - Tomatesetzlig — Early Siberian — [2](https://tomatesetzlig.ch/produkt/early-siberian/)
+- Tatiana's TOMATObase — Sibirskiy Skorospelyi — [3](https://tatianastomatobase.com/wiki/Sibirskiy_Skorospelyi)
+- Tomatofifou — Early Siberian — [4](https://www.tomatofifou.com/en/produit/early-siberian/)
 
 <a id="catalog-109"></a>
 
@@ -2486,17 +2502,19 @@ Grande tomate orange indéterminée confirmée. Les très gros fruits sont possi
 
 **Portée du contrôle :** croissance, fruit, origine.
 
-Port indéterminé, fruits jaunes et origine russe recoupés. Fort écart des délais annoncés (60 contre 80–85 jours après plantation) : ne pas imposer une valeur unique. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : croissance indéterminée, fruits jaunes et origine russe confirmés. Tatiana’s TOMATObase apporte la généalogie (obtenue par V. P. Krouglova, nom d’origine « Azochka », aussi « Zolotoy Borago » depuis les années 1980). L’écart des délais publiés (60 contre 80-85 jours) persiste selon la base choisie : ne pas imposer une valeur unique. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Délais contradictoires selon les références : environ 60 à 85 jours après plantation. À mesurer sur le lot cultivé.
+- **Maturité affichée :** Mi-saison et relativement précoce pour sa taille ; 60 à 85 jours selon les sources et le point de départ (Tatiana relève 60-85 jours ; certaines fiches disent 80-85 depuis plantation).
 - **Hauteur affichée :** Non documentée dans les références consultées.
-- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante, Maturité.
+- **Champs mis à jour :** Description / historique, Description du fruit, Maturité, Origine, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Farmacie Isolde — Azoychka — [1](https://www.farmacieisolde.com/solanaceae/azoychka-tomato)
 - True Leaf Market — Azoychka — [2](https://trueleafmarket.com/products/tomato-seeds-azoychka)
+- Tatiana's TOMATObase — Azoychka — [3](https://tatianastomatobase.com/wiki/Azoychka)
+- Tomato Growers Supply — Azoychka Yellow Beefsteak — [4](https://tomatogrowers.com/products/azoychka)
 
 <a id="catalog-131"></a>
 
@@ -3144,16 +3162,17 @@ La référence distingue cette rouge de Purple Calabash. Fruits rouges côtelés
 
 **Portée du contrôle :** dénomination, fruit.
 
-Le cultivateur décrit son lot comme semi-déterminé, contrairement à la fiche antérieure. Le nom Cuor di Bue n’est pas une garantie d’identité commune à toutes les souches. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : l’origine niçoise (nom provençal « Cuor di Bue », diffusion Kokopelli), le fruit rouge en poire/cœur de 200-300 g et la chair peu graineuse sont confirmés par plusieurs sources françaises. Le port est majoritairement indéterminé et vigoureux ; un cultivateur le décrit semi-déterminé et plus hâtif. Le nom Cuor di Bue n’est pas une garantie d’identité commune à toutes les souches. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** Mi-saison
-- **Hauteur affichée :** Non documentée dans les références consultées.
-- **Champs mis à jour :** Description / historique, Hauteur de la plante.
+- **Maturité affichée :** Mi-saison à tardive ; environ 85 jours depuis la plantation selon une fiche de référence (point de départ non explicite).
+- **Hauteur affichée :** Indéterminée, vigoureuse : environ 1,8 à 2,2 m selon les fiches.
+- **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante, Origine, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Semences Nouveau Monde — Cœur de Bœuf de Nice — [1](https://www.semencesnouveaumonde.com/page-d-articles/tomate-coeur-de-boeuf-de-nice)
+- Alchimiaweb — Nice Oxheart Tomato (Kokopelli) — [2](https://www.alchimiaweb.com/en/kokopelli-nice-oxheart-tomato-product-20522.php)
 
 <a id="catalog-165"></a>
 
@@ -3279,17 +3298,19 @@ Indéterminée à fruits verts striés et épaules anthocyaniques confirmée. Ca
 
 **Portée du contrôle :** fruit, feuillage, origine.
 
-Fruits verts striés et duvet confirmés. Croissance contradictoire entre observations ; le terme woolly décrit un aspect, pas un génotype certifié. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : l’obtention par Tom Wagner, l’aspect laineux et les fruits verts striés plus doux que Green Zebra sont confirmés. La croissance reste rapportée de façon variable (indéterminée chez Meraki/Kokopelli, semi-déterminée dans une fiche) : le terme woolly décrit un aspect, pas un génotype. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
 - **Maturité affichée :** Mi-saison à tardive selon les observations.
-- **Hauteur affichée :** Non documentée dans les références consultées.
-- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante, Maturité.
+- **Hauteur affichée :** Selon la conduite : environ 1,2 à 2 m (indéterminée chez plusieurs semenciers).
+- **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
 - Kleverhof — Woolly Green Zebra — [1](https://kleverhof.de/Tomatensaatgut-Woolly-Green-Zebra/P11696)
 - Tomodori — Woolly Green Zebra — [2](https://tomodori.com/forum/topic7101.html)
+- Kokopelli — Woolly Green Zebra — [3](https://kokopelli-semences.com/en/p/woolly-green-zebra-green-mid-season-tomato)
+- Meraki Seeds — Woolly Green Zebra — [4](https://merakiseeds.com/woolly-tomatoes?pagesize=80)
 
 <a id="catalog-172"></a>
 
@@ -3299,17 +3320,19 @@ Fruits verts striés et duvet confirmés. Croissance contradictoire entre observ
 
 **Portée du contrôle :** fruit, origine.
 
-Indéterminée ou semi-déterminée selon les sources, avec variations de pigmentation. La mention F4 décrit un état historique, pas nécessairement les graines actuelles. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : l’obtention par Tom Wagner à partir de « Bearded Cossack » (génération 4, non stabilisée, gènes bleus) est confirmée par le diffuseur Kokopelli qui cite Wagner, et la croissance reste partagée entre indéterminée et semi-déterminée selon les sources. La pigmentation varie avec l’exposition. La mention F4 décrit un état historique, pas nécessairement les graines actuelles. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** Mi-saison
+- **Maturité affichée :** Mi-saison ; environ 65 à 85 jours depuis la plantation selon les sources.
 - **Hauteur affichée :** Non documentée dans les références consultées.
-- **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante.
+- **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante, Origine, Maturité, Références recoupées (recherche web 2026-09-08).
 
 **Références consultées :**
 
-- Tatiana’s TOMATObase — Russian Cossack — [1](https://tatianastomatobase.com/wiki/Russian_Cossack)
+- Tatiana's TOMATObase — Russian Cossack — [1](https://tatianastomatobase.com/wiki/Russian_Cossack)
 - Trade Winds Fruit — Russian Cossack — [2](https://www.tradewindsfruit.com/russian-cossack-tomato-seeds)
+- Kokopelli — Russian Cossack, Indigo — [3](https://kokopelli-semences.com/en/p/russian-cossack-indigo-mid-season-tomato)
+- Fan2Tomates — Russian Cossack — [4](https://www.fan2tomates.com/index.php/tomate-russian-cossack/)
 
 <a id="catalog-173"></a>
 

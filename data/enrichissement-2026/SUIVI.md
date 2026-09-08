@@ -365,3 +365,25 @@ Non obligatoire ; à ne traiter que si l'utilisateur le redemande après CTR/Mer
 Après chaque vague : relancer enrich + report + tests ; tenir ce document à jour. Le report
 synchronise aussi le compteur du README (12 mentions, motifs + test « readme catalog count ») :
 ne jamais le mettre à jour à la main.
+
+## Recoupement web multi-sources des fiches existantes (lancé le 08/09/2026)
+Complément au contrôle documentaire : recherche web croisée pour vérifier et enrichir des fiches
+**déjà présentes** (identifiées comme « sources divergentes », « souche à préciser » ou doublons
+potentiels). Les fiches enrichies sont des fiches de base du catalogue (sans `importedFrom`) : la
+modification se fait directement dans `src/seed-catalog.js`, puis `npm run build:audit` régénère
+`docs/verification-catalogue.md`. Contraintes tests respectées : `checkedAt` reste 2026-09-07,
+`subfamily` et `plantDefaults` inchangés (sauf Early Siberian → croissance déterminée alignée),
+aucune URL nouvelle hors `verification.sources`, aucune fiche ajoutée/supprimée.
+- **Lot 1 (15 fiches « sources divergentes » / identité) : terminé.** Koralik, Romovaya Babka,
+  Variegated, Orange Crimea, "Spoon", Api Rouge, Mission Dike, Double Rich, Early Siberian /
+  Sibirskiy Skorospelyi, Azoychka, Roma, Brandywine, Cœur de Bœuf de Nice, Woolly Green Zebra,
+  Russian Cossack. Apports : généalogies et origines précisées (ex. Azoychka → V. P. Krouglova,
+  nom « Azochka »/« Zolotoy Borago » ; Double Rich → 1953 A. Yeager Dakota du Nord × New Hampshire ;
+  Early Siberian → station ouest-sibérienne, zonage 1959, déterminée ; Roma → USDA Beltsville ~1955 ;
+  Russian Cossack → Tom Wagner, sélection de « Bearded Cossack » ; Brandywine → mention 1889
+  Johnson & Stokes), port tranché où les sources concordent (Early Siberian déterminée), divergences
+  restantes signalées sans certifier. Références ajoutées : Tatiana’s TOMATObase, Kokopelli,
+  Reimer, Sand Hill Preservation, etc.
+  → **Rapport : 1 986 fiches, 2 471 références (2 448 → 2 471), tests 30/30.**
+  Prochain lot : autres fiches signalées non encore recoupées (identité/doublons, puis « sources
+  divergentes » des catalog-ref enrichissement).
