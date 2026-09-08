@@ -365,3 +365,57 @@ Non obligatoire ; à ne traiter que si l'utilisateur le redemande après CTR/Mer
 Après chaque vague : relancer enrich + report + tests ; tenir ce document à jour. Le report
 synchronise aussi le compteur du README (12 mentions, motifs + test « readme catalog count ») :
 ne jamais le mettre à jour à la main.
+
+## Recoupement web multi-sources des fiches existantes (lancé le 08/09/2026)
+Complément au contrôle documentaire : recherche web croisée pour vérifier et enrichir des fiches
+**déjà présentes** (identifiées comme « sources divergentes », « souche à préciser » ou doublons
+potentiels). Les fiches enrichies sont des fiches de base du catalogue (sans `importedFrom`) : la
+modification se fait directement dans `src/seed-catalog.js`, puis `npm run build:audit` régénère
+`docs/verification-catalogue.md`. Contraintes tests respectées : `checkedAt` reste 2026-09-07,
+`subfamily` et `plantDefaults` inchangés (sauf Early Siberian → croissance déterminée alignée),
+aucune URL nouvelle hors `verification.sources`, aucune fiche ajoutée/supprimée.
+- **Lot 1 (15 fiches « sources divergentes » / identité) : terminé.** Koralik, Romovaya Babka,
+  Variegated, Orange Crimea, "Spoon", Api Rouge, Mission Dike, Double Rich, Early Siberian /
+  Sibirskiy Skorospelyi, Azoychka, Roma, Brandywine, Cœur de Bœuf de Nice, Woolly Green Zebra,
+  Russian Cossack. Apports : généalogies et origines précisées (ex. Azoychka → V. P. Krouglova,
+  nom « Azochka »/« Zolotoy Borago » ; Double Rich → 1953 A. Yeager Dakota du Nord × New Hampshire ;
+  Early Siberian → station ouest-sibérienne, zonage 1959, déterminée ; Roma → USDA Beltsville ~1955 ;
+  Russian Cossack → Tom Wagner, sélection de « Bearded Cossack » ; Brandywine → mention 1889
+  Johnson & Stokes), port tranché où les sources concordent (Early Siberian déterminée), divergences
+  restantes signalées sans certifier. Références ajoutées : Tatiana’s TOMATObase, Kokopelli,
+  Reimer, Sand Hill Preservation, etc.
+  → **Rapport : 1 986 fiches, 2 471 références (2 448 → 2 471), tests 30/30.**
+  Prochain lot : autres fiches signalées non encore recoupées (identité/doublons, puis « sources
+  divergentes » des catalog-ref enrichissement).
+- **Lot 2 (13 fiches « souche à préciser » / doublons) : terminé.** Cornue des Andes (les deux
+  fiches 047/150), Potiron Écarlate, Brandywine Pink - Rose, Cœur de Bœuf Jaune, Marizol Purple,
+  Odessa, Micado Violettor, Musk Zebra, Green Zebra Arizona Hawai Strain, Northern Light(s),
+  Brown Flesh, Beauté Blanche du Canada. Apports : synonymes et généalogies précisés (ex. Cornue
+  des Andes = Andine Cornue/Des Andes/Poivron des Andes, origine française rapportée des Andes ;
+  Marizol Purple = héritage Forêt-Noire, introduit par Joseph Bratka 1991, feuillage régulier vs
+  Marizol Korney à feuillage pomme de terre ; Musk Zebra = croisement Tom Wagner Moskvitch × Green
+  Zebra, non stabilisé ; Brown Flesh = Tom Wagner 1985 « Brown Derby Mix » ; Cœur de Bœuf Jaune =
+  Yellow Oxheart de Willis VA 1915 ; Green Zebra introduite 1983 par Wagner), distinction de
+  doublons/homonymes (White Beauty vs Beauté blanche du Canada ; Musk Zebra prune chocolat vs
+  sélection danoise). Les deux fiches Cornue des Andes restent distinctes pour préserver les liens.
+  → **Rapport : 1 986 fiches, 2 490 références (2 471 → 2 490), tests 30/30.**
+- **Lot 3 (13 fiches catalog-ref-meraki « sources divergentes »/« souche à préciser ») : terminé.**
+  Contrairement aux lots 1-2 (fiches de base), ces fiches sont régénérées : l'enrichissement a été
+  écrit dans `data/enrichissement-2026/meraki/profiles.json` puis `node scripts/build-catalog-enrich.mjs`
+  a reconstruit `src/seed-catalog.js` (méthode retenue par l'utilisateur pour les fiches ref enrichies).
+  12 fiches ont reçu une seconde source web indépendante + une note de recoupement ; une 13e
+  (`cherry-brandywine-dark`) n'a reçu qu'une note (aucune source indépendante fiable trouvée).
+  Fiches : Ambrosia Giant Round Cherry, Cascade Village Blue, Damascus Steel, Dirty Little Chicken,
+  Great Scott (NOT Dwarf), Micro Purple, Cape Teaser Bush, Bayou Sun, Cherny Mavr, Green Krim Cherry,
+  Eros Orange, Elf Tears (White Cherry), Cherry Brandywine Dark. Apports : origines/généalogies
+  précisées là où les sources concordent (ex. Great Scott = Dwarf Tomato Project, lancement 2024 ;
+  Cherny Mavr = Чёрный Мавр « Moor noir » et non « mère noire », type pâte allongé ; Cape Teaser =
+  Heritage Seed Library ; Bayou Sun ; Eros Orange type pâte orange d'Ukraine/Russie distinct de la
+  « Eros » tchèque ; Green Krim Cherry = mutation canadienne de Black Krim Cherry chez Tatiana).
+  Divergences restantes signalées sans certifier (Damascus Steel : généalogie et stabilité non
+  confirmées ; Micro Purple vs Tartufo non prouvé ; port de Cape Teaser rapporté variable ; Green
+  Krim Cherry encore instable ; identité de l'Eros Orange à confirmer sur le lot). Gelbes Trier a été
+  **écarté** (aucune documentation indépendante). Champ `gènes_potentiels` laissé vide, `checkedAt`
+  conservé 2026-09-07. Alias « Black Moor » non ajouté à Cherny Mavr car déjà porté par la fiche
+  distincte Black Mauri (P6066) — synonymie mentionnée en note.
+  → **Rapport : 1 986 fiches, 2 507 références (2 490 → 2 507), tests 30/30.**
