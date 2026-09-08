@@ -1,0 +1,53 @@
+{
+  "tomato-a-grappoli-d-inverno": {
+    "growth": "I",
+    "colors": [
+      "red"
+    ],
+    "shape": "ovale",
+    "weight": "Petits fruits de type cerise (calibre non chiffré par la source), évoquant de petites Roma une fois séchés.",
+    "height": "Plante indéterminée pouvant atteindre environ 1,20 m selon le guide du semencier ; tuteurage conseillé.",
+    "maturity": "75 jours annoncés par le semencier, base non précisée.",
+    "leaf": "Feuillage régulier (non précisé par la source).",
+    "origin": "Italie — ancienne variété surnommée « Winter Grape ».",
+    "description": "Ancienne tomate italienne surnommée « raisin d'hiver » : les pieds chargés de fruits étaient suspendus et les tomates se conservaient fraîches une grande partie de l'hiver. Elles se prêtent aussi parfaitement au séchage et évoquent alors de petites tomates Roma. Fruits savoureux, appréciés frais ou secs. Variété indéterminée annoncée à 75 jours, à cultiver au soleil (6 à 8 h) avec tuteurage.",
+    "fruit": "Petits fruits fermes à chair dense et riche en sucre, très bons à grignoter frais ou secs ; ils se conservent plusieurs mois suspendus dans un local frais et sec.",
+    "sources": [
+      "https://www.rareseeds.com/tomato-a-grappoli-d-inverno",
+      "https://merakiseeds.com/grappoli-dinvierno-longkeeper-tomato"
+    ],
+    "breeder": "",
+    "aliases": [
+      "Grappoli d'Invierno",
+      "Grappoli d'Invierno Longkeeper Tomato"
+    ],
+    "note": "La couleur rouge des fruits est celle montrée par les photographies officielles du semencier ; le texte ne la précise pas explicitement. Meraki Seeds vend le même type sous « Grappoli d'Invierno Longkeeper Tomato » (grappes de petits fruits ovales rouges à peau épaisse, conservation 5 à 6 mois, Italie) : lot annoncé semi-déterminé (100-120 cm, 60-70 jours) mais spécifié « Indeterminate » sur la même page.",
+    "daysFromTransplant": 0,
+    "status": "conflicting"
+  },
+  "tomato-seeds-aichi-first": {
+    "growth": "I",
+    "colors": [
+      "pink",
+      "red"
+    ],
+    "shape": "cœur",
+    "weight": "Fruits moyens à gros, jusqu'à environ 225 g (une demi-livre) selon le semencier.",
+    "height": "Hauteur non précisée par les sources.",
+    "maturity": "Mi-saison ; 80 à 90 jours annoncés, base non précisée.",
+    "leaf": "Feuillage régulier selon le semencier.",
+    "origin": "Japon — Toyohashi, préfecture d'Aichi, 1938 ; sélection issue de la lignée Ponderosa introduite à l'ère Meiji selon Tomato Revolution.",
+    "description": "Ancienne variété japonaise de Toyohashi (préfecture d'Aichi), datant de 1938 et issue, selon un semencier britannique, d'une sélection locale de la lignée Ponderosa introduite à l'ère Meiji. Fruits rose-rouge fermes, lourds, sucrés et croquants, à la saveur riche et classique, coiffés d'une pointe caractéristique plus marquée par temps frais. Variété productive de mi-saison, à feuillage régulier et croissance indéterminée.",
+    "fruit": "Fruit cordiforme à pointe variable ; rose / rouge. Calibre indicatif : fruits moyens à gros jusqu'à environ 225 g (une demi-livre).",
+    "sources": [
+      "https://www.rareseeds.com/tomato-seeds-aichi-first",
+      "https://verdantly.io/plants/0997c70f-8528-4feb-81e1-866cc825918e",
+      "https://www.tomatorevolution.co.uk/store/Aichi-First-p236133188"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "La forme est décrite comme un cœur émoussé par Tomato Revolution et comme un fruit à pointe variable par Baker Creek ; les deux descriptions sont compatibles avec un type cordiforme à pointe. Aucune hauteur n'est documentée.",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  }
+}

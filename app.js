@@ -99,6 +99,25 @@ const typeMeta = {
   open: "Pollinisation libre",
 };
 
+const growthMeta = {
+  indeterminate: "Indéterminée",
+  "déterminée": "Déterminée",
+  "semi-determinate": "Semi-déterminée",
+};
+const FRUIT_SHAPES = ["rond", "aplati", "beefsteak", "côtelé", "allongé", "prune", "cœur", "poire", "ovale", "variable", "poivron"];
+const catalogVerificationMeta = {
+  partial: { label: "Contrôle partiel", warning: false },
+  conflicting: { label: "Sources divergentes", warning: true },
+  identity: { label: "Souche à préciser", warning: true },
+  unconfirmed: { label: "Non confirmé", warning: true },
+  accession: { label: "Accession à identifier", warning: true },
+  local: { label: "Lot personnel", warning: true },
+};
+
+function growthOptionsHTML(selected = "") {
+  return `<option value="" ${!selected ? "selected" : ""}>Non précisée</option>${Object.entries(growthMeta).map(([value, label]) => `<option value="${value}" ${selected === value ? "selected" : ""}>${label}</option>`).join("")}`;
+}
+
 const statusMeta = {
   growing: { label: "En croissance", className: "" },
   harvesting: { label: "En récolte", className: "harvesting" },
@@ -168,8 +187,10 @@ const pageMeta = {
 
 let pendingCatalogPruneNotice = 0;
 let pendingCatalogEnrichNotice = 0;
+let pendingCatalogTypesNotice = false;
 const TOMATO_FAMILY_HINTS = ["tomate", "tomato", "lycopersicum", "lycopersicon", "solanum"];
-const CATALOG_SUBFAMILY_ORDER = ["Micro naine", "Dwarf (Naine)", "Normale", "Espèce sauvage"];
+const CATALOG_SUBFAMILY_ORDER = ["Micro-naine", "Dwarf", "Bush", "Déterminée", "Indéterminée"];
+const SEED_CATALOG_BY_ID = new Map(defaultSeedCatalog().map((entry) => [entry.id, entry]));
 let state = loadState();
 let route = "garden";
 let gardenFilter = "active";
@@ -348,7 +369,7 @@ function catalogDetailValue(entry, ...keys) {
 }
 
 function catalogDetailsText(entry) {
-  return Object.entries(entry?.details || {}).map(([label, value]) => `${label} ${value}`).join(" ");
+  return [...Object.entries(entry?.details || {}).map(([label, value]) => `${label} ${value}`), ...(Array.isArray(entry?.aliases) ? entry.aliases : [])].join(" ");
 }
 
 function isTomatoCatalogEntry(entry) {
@@ -365,23 +386,130 @@ function pruneNonTomatoCatalog(catalog) {
   return { kept, removed };
 }
 
+function normalizeCatalogName(value) {
+  return String(value || "").normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replaceAll("œ", "oe").replaceAll("æ", "ae").replace(/[^\p{L}\p{N}]/gu, "");
+}
+
+function catalogIdentityNames(entry) {
+  const names = [entry?.name, ...(Array.isArray(entry?.aliases) ? entry.aliases : [])];
+  // Only declared synonyms are used. Never strip colors, strains, F1/F2 or
+  // dwarf qualifiers, and never fuzzy-merge different tomato cultivars.
+  return [...new Set(names.filter((name) => typeof name === "string").map(normalizeCatalogName).filter(Boolean))];
+}
+
+function mergeReferenceCatalog(data) {
+  if (!Array.isArray(data.catalog)) data.catalog = [];
+  const ids = new Set(data.catalog.map((entry) => entry.id));
+  const names = new Set(data.catalog.flatMap(catalogIdentityNames));
+  let added = 0;
+  for (const reference of defaultSeedCatalog()) {
+    const keys = catalogIdentityNames(reference);
+    if (ids.has(reference.id) || keys.some((key) => names.has(key))) continue;
+    data.catalog.push(cloneData(reference));
+    ids.add(reference.id);
+    keys.forEach((key) => names.add(key));
+    added += 1;
+  }
+  return added;
+}
+
+function normalizeCatalogSubfamily(value) {
+  const label = normalizeSearchText(value).trim();
+  if (/^micro[- ]?(?:naine?|dwarf)$/.test(label)) return "Micro-naine";
+  if (/^(?:dwarf(?: \(naine\))?|naine?)$/.test(label)) return "Dwarf";
+  if (/^(?:bush|buisson(?:nante?)?)$/.test(label)) return "Bush";
+  if (/^indetermin(?:ee?|er|ate)$/.test(label)) return "Indéterminée";
+  if (/^determin(?:ee?|er|ate)$/.test(label)) return "Déterminée";
+  return "";
+}
+
 function catalogSubfamily(entry) {
-  return String(entry?.subfamily || "").trim() || "Sous-famille non précisée";
+  const explicit = normalizeCatalogSubfamily(entry?.subfamily);
+  if (explicit) return explicit;
+  const supplied = !entry?.userAdded && !entry?.crossId ? SEED_CATALOG_BY_ID.get(entry?.id) : null;
+  if (supplied) return supplied.subfamily;
+  // Older personal sheets can still have a free-text category. Compact habits
+  // take priority; otherwise use the recorded growth habit, then indeterminate.
+  const text = normalizeSearchText(`${entry?.subfamily || ""} ${catalogDetailValue(entry, "description_histoire_particularités", "description")} ${catalogDetailValue(entry, "taille")}`);
+  if (/\bmicro[- ]?(?:nain|dwarf)/.test(text)) return "Micro-naine";
+  if (/\bdwarf\b|\bnain(?:e|s|es)?\b/.test(text)) return "Dwarf";
+  if (/\bbush\b|buisson/.test(text)) return "Bush";
+  const growth = normalizeCatalogSubfamily(entry?.plantDefaults?.growth || entry?.growth);
+  if (growth) return growth;
+  if (/\bindetermin/.test(text)) return "Indéterminée";
+  if (/\bdetermin/.test(text)) return "Déterminée";
+  if (/\bcompact/.test(text)) return "Bush";
+  return "Indéterminée";
 }
 
 function catalogSubfamilyList(entries) {
-  const present = [...new Set(entries.map((entry) => catalogSubfamily(entry)))];
-  const ordered = CATALOG_SUBFAMILY_ORDER.filter((subfamily) => present.includes(subfamily));
-  return [...ordered, ...present.filter((subfamily) => !CATALOG_SUBFAMILY_ORDER.includes(subfamily))];
+  const present = new Set(entries.map((entry) => catalogSubfamily(entry)));
+  return CATALOG_SUBFAMILY_ORDER.filter((subfamily) => present.has(subfamily));
+}
+
+function catalogSubfamilyOptionsHTML(entry = null) {
+  const selected = catalogSubfamily(entry);
+  return CATALOG_SUBFAMILY_ORDER.map((value) => `<option value="${escapeHTML(value)}" ${value === selected ? "selected" : ""}>${escapeHTML(value)}</option>`).join("");
+}
+
+function migrateCatalogTypes(data) {
+  let changed = false;
+  const assign = (record, key, value) => {
+    if (JSON.stringify(record[key]) === JSON.stringify(value)) return;
+    record[key] = value;
+    changed = true;
+  };
+  const updateFields = (record, reference, detailsKey, supplied) => {
+    const legacyType = !CATALOG_SUBFAMILY_ORDER.includes(record.subfamily);
+    const legacySource = supplied && detailsKey === "details" && (Object.hasOwn(record, "source") || Object.hasOwn(record, "sourceUrl"));
+    const outdated = supplied && supplied.catalogRevision && record.catalogRevision !== supplied.catalogRevision;
+    if (outdated) assign(record, "subfamily", supplied.subfamily);
+    else if (legacyType) assign(record, "subfamily", catalogSubfamily(reference));
+    if (supplied && (legacyType || legacySource || outdated)) {
+      // Refresh only bundled reference fields, never observed plant traits,
+      // personal notes, harvests, photos or locally created varieties.
+      if (record[detailsKey]) assign(record, detailsKey, { ...record[detailsKey], ...supplied.details });
+      if (detailsKey === "details") {
+        if (supplied.plantDefaults) assign(record, "plantDefaults", { ...record.plantDefaults, ...supplied.plantDefaults });
+        if (supplied.verification) assign(record, "verification", cloneData(supplied.verification));
+        for (const key of ["aliases", "sourceRefs", "importedFrom"]) {
+          if (supplied[key]) assign(record, key, cloneData(supplied[key]));
+        }
+        for (const key of ["source", "sourceUrl"]) {
+          if (Object.hasOwn(record, key)) { delete record[key]; changed = true; }
+        }
+      }
+      if (supplied.catalogRevision) assign(record, "catalogRevision", supplied.catalogRevision);
+    }
+  };
+  const visit = (record, catalogById = new Map()) => {
+    if (!record || typeof record !== "object") return;
+    if (Array.isArray(record.catalog)) catalogById = new Map(record.catalog.map((entry) => [entry.id, entry]));
+    if (record.name && record.family && record.details) {
+      const supplied = !record.userAdded && !record.crossId ? SEED_CATALOG_BY_ID.get(record.id) : null;
+      updateFields(record, record, "details", supplied);
+    } else if (record.catalogId && (Object.hasOwn(record, "subfamily") || record.catalogDetails)) {
+      const reference = catalogById.get(record.catalogId) || SEED_CATALOG_BY_ID.get(record.catalogId);
+      if (reference) {
+        const supplied = !reference.userAdded && !reference.crossId ? SEED_CATALOG_BY_ID.get(reference.id) : null;
+        updateFields(record, reference, "catalogDetails", supplied);
+      }
+    }
+    // Include copies in candidates, cross parents, trash and saved snapshots so
+    // restoring an older item cannot bring the former supplier labels back.
+    Object.values(record).forEach((value) => visit(value, catalogById));
+  };
+  visit(data);
+  return changed;
 }
 
 function catalogColors(entry) {
   const explicit = entry?.plantDefaults?.colors;
-  if (Array.isArray(explicit) && explicit.length) return explicit.filter((color) => colorMeta[color]).slice(0, 3);
-  const text = `${entry?.name || ""} ${catalogDetailsText(entry)}`;
+  if (Array.isArray(explicit)) return explicit.filter((color) => colorMeta[color]).slice(0, 3);
+  const text = `${catalogDetailValue(entry, "fruit")} ${catalogDetailValue(entry, "type_de_fruit")}`;
   const rules = [
     ["red", /rouge|red|crimson|scarlet|bordeaux|burgundy|vermilion/i],
-    ["orange", /orange|abricot|peach|pêche|marmalade|carotte/i],
+    ["orange", /orange|abricot|marmalade|carotte/i],
     ["yellow", /jaune|yellow|gold|doré|dorée|lemon/i],
     ["green", /vert|green|lime|emerald|laitue/i],
     ["purple", /violet|purple|pourpre|black|noir|noire|indigo/i],
@@ -392,9 +520,10 @@ function catalogColors(entry) {
   ];
   const colors = rules.filter(([, pattern]) => pattern.test(text)).map(([color]) => color);
   if (colors.length) return colors.slice(0, 3);
-  return [String(entry?.family || "").toLowerCase().includes("tomate") ? "red" : "green"];
+  return [];
 }
 function catalogType(entry) {
+  if (["heirloom", "hybrid", "open"].includes(entry?.plantDefaults?.type)) return entry.plantDefaults.type;
   const text = `${entry?.name || ""} ${catalogDetailsText(entry)}`;
   if (/\bF1\b|hybride|hybrid/i.test(text)) return "hybrid";
   if (/heirloom|ancienne|héritage|pollinisation libre|open[- ]pollinated/i.test(text)) return "heirloom";
@@ -402,42 +531,77 @@ function catalogType(entry) {
 }
 
 function catalogSize(entry) {
-  if (!String(entry?.family || "").toLowerCase().includes("tomate")) return "";
-  const text = `${entry?.subfamily || ""} ${catalogDetailsText(entry)}`;
-  if (/micro|naine|nain|mini|petite|compact|20[-–]40\s*cm|30[-–]50\s*cm/i.test(text)) return "petit";
-  if (/gros|large|beefsteak|1[-–]2\s*m|2\s*m/i.test(text)) return "gros";
-  return "moyen";
+  const text = normalizeSearchText(`${catalogDetailValue(entry, "type_de_fruit")} ${catalogDetailValue(entry, "fruit")}`);
+  // Fruit size is independent from the height or dwarf habit of its plant.
+  if (/cerise|cherry|currant/.test(text)) return "cerise";
+  if (/cocktail|petits? fruits?/.test(text)) return "petit";
+  if (/beefsteak|gros fruits?|coeur|cordiform/.test(text)) return "gros";
+  const weight = text.match(/(\d+(?:[.,]\d+)?)\s*(?:a|-|–)\s*(\d+(?:[.,]\d+)?)\s*g\b/) || text.match(/(\d+(?:[.,]\d+)?)\s*g\b/);
+  if (weight) {
+    const grams = (Number(weight[1].replace(",", ".")) + Number((weight[2] || weight[1]).replace(",", "."))) / 2;
+    return grams < 50 ? "petit" : grams <= 200 ? "moyen" : "gros";
+  }
+  if (/calibre moyen|fruit moyen/.test(text)) return "moyen";
+  return "";
 }
 
 function catalogShape(entry) {
-  const text = `${entry?.name || ""} ${catalogDetailValue(entry, "type_de_fruit", "fruit")}`;
-  if (/cerise|cherry|currant|cocktail/i.test(text)) return "cerise";
-  if (/prune|plum|allong|elong/i.test(text)) return "prune";
-  if (/beefsteak|côtel|cotele|aplati|plate|flat/i.test(text)) return "beefsteak";
-  return String(entry?.family || "").toLowerCase().includes("tomate") ? "rond" : "";
+  const explicit = entry?.plantDefaults?.shape;
+  if (explicit === "" || FRUIT_SHAPES.includes(explicit)) return explicit;
+  const text = normalizeSearchText(`${catalogDetailValue(entry, "type_de_fruit")} ${catalogDetailValue(entry, "fruit")}`);
+  if (/coeur|cordiform|oxheart|heart/.test(text)) return "cœur";
+  if (/poire|pear/.test(text)) return "poire";
+  if (/prune|plum/.test(text)) return "prune";
+  if (/allong|elong/.test(text)) return "allongé";
+  if (/ovale|ovoide/.test(text)) return "ovale";
+  if (/cotel|ruffl|ribbed/.test(text)) return "côtelé";
+  if (/beefsteak/.test(text)) return "beefsteak";
+  if (/aplati|oblat|flat/.test(text)) return "aplati";
+  if (/rond|round|globe|cerise|cherry|cocktail/.test(text)) return "rond";
+  return "";
 }
 
 function catalogGrowth(entry) {
-  const text = `${entry?.subfamily || ""} ${catalogDetailsText(entry)}`;
-  if (/indétermin|indetermin|vigoureux|vigoureuse|1[-–]2\s*m|2\s*m/i.test(text)) return "indeterminate";
-  if (/détermin|determin|micro[- ]naine|dwarf|compact/i.test(text)) return "déterminée";
+  if (Object.hasOwn(entry?.plantDefaults || {}, "growth")) return growthMeta[entry.plantDefaults.growth] ? entry.plantDefaults.growth : "";
+  const text = normalizeSearchText(catalogDetailsText(entry));
+  if (/semi[- ]?determin/.test(text)) return "semi-determinate";
+  if (/\bindetermin/.test(text)) return "indeterminate";
+  if (/\bdetermin/.test(text)) return "déterminée";
+  const category = normalizeCatalogSubfamily(entry?.subfamily);
+  if (category === "Déterminée") return "déterminée";
+  if (category === "Indéterminée") return "indeterminate";
+  // A dwarf, a bushy habit or vigorous growth alone does not establish determinacy.
   return "";
 }
 
 function catalogMaturityDays(entry) {
   const explicit = Number(entry?.plantDefaults?.daysToMaturity);
   if (explicit > 0) return explicit;
+  // Audited sheets only provide a numeric default when its transplant basis is documented.
+  if (entry?.verification) return 75;
   const maturity = catalogDetailValue(entry, "maturité", "maturity");
   const match = maturity.match(/\b(\d{2,3})\b/);
   return match ? Number(match[1]) : 75;
 }
+function catalogMaturityNotice(entry) {
+  return entry?.verification && !(Number(entry?.plantDefaults?.daysToMaturity) > 0)
+    ? "Aucun délai fiable depuis la plantation n’est renseigné. Le formulaire du potager propose 75 jours comme hypothèse de calendrier, à ajuster : ce n’est pas une donnée vérifiée pour cette variété."
+    : "";
+}
+
 function catalogAccent(entry) {
   const colors = catalogColors(entry);
   return colorBackground(colors, catalogColorMode(entry)) || "#4f815f";
 }
 
 function catalogEntryById(id) {
-  return currentSeedCatalog().find((entry) => entry.id === id || String(entry.catalogIndex) === String(id));
+  const entries = currentSeedCatalog();
+  const exact = entries.find((entry) => entry.id === id || String(entry.catalogIndex) === String(id));
+  if (exact) return exact;
+  const reference = SEED_CATALOG_BY_ID.get(id);
+  if (!reference) return undefined;
+  const keys = new Set(catalogIdentityNames(reference));
+  return entries.find((entry) => catalogIdentityNames(entry).some((key) => keys.has(key)));
 }
 
 function catalogEntryToPlant(entry, options = {}) {
@@ -470,6 +634,7 @@ function catalogEntryToPlant(entry, options = {}) {
     family: entry.family || "",
     subfamily: entry.subfamily || "",
     catalogDetails: details,
+    ...(entry.catalogRevision ? { catalogRevision: entry.catalogRevision } : {}),
   };
 }
 
@@ -519,7 +684,7 @@ function applyCatalogToPlantForm(form, entry) {
   if (source) {
     source.hidden = false;
     const summary = catalogShortText(catalogDetailValue(entry, "description_histoire_particularités", "description", "fruit"), 190);
-    source.innerHTML = `<span>${icon("tag")}</span><div><strong>${escapeHTML(entry.family || "Catalogue local")}</strong><span>${escapeHTML(entry.subfamily || "Fiche sélectionnée")} · les caractéristiques ont été préremplies. Vous pouvez encore les ajuster.</span>${summary ? `<small>${escapeHTML(summary)}</small>` : ""}</div>`;
+    source.innerHTML = `<span>${icon("tag")}</span><div><strong>${escapeHTML(entry.family || "Catalogue local")}</strong><span>${escapeHTML(entry.subfamily || "Fiche sélectionnée")} · les caractéristiques ont été préremplies. Vous pouvez encore les ajuster.</span>${summary ? `<small>${escapeHTML(summary)}</small>` : ""}${catalogMaturityNotice(entry) ? `<small class="catalog-planning-notice">${escapeHTML(catalogMaturityNotice(entry))}</small>` : ""}</div>`;
   }
 }
 function buildDemoState() {
@@ -588,6 +753,7 @@ function buildDemoState() {
       family: spec.family,
       subfamily: spec.subfamily,
       catalogDetails: cloneData(spec.catalogDetails || {}),
+      ...(spec.catalogRevision ? { catalogRevision: spec.catalogRevision } : {}),
     };
   });
 
@@ -697,12 +863,8 @@ function loadState() {
           merged.catalogPrunedAt = todayIso();
           pendingCatalogPruneNotice = prune.removed.length;
         }
-        defaultSeedCatalog().forEach((entry) => {
-          if (!merged.catalog.some((current) => current.id === entry.id)) {
-            merged.catalog.push(cloneData(entry));
-            pendingCatalogEnrichNotice += 1;
-          }
-        });
+        pendingCatalogEnrichNotice += mergeReferenceCatalog(merged);
+        pendingCatalogTypesNotice = migrateCatalogTypes(merged);
         if (!merged.budgetSettings || typeof merged.budgetSettings !== "object") merged.budgetSettings = { marketPricePerKg: 4.5, projectionRate: 1.15 };
         merged.budgetSettings.marketPricePerKg = Number(merged.budgetSettings.marketPricePerKg) > 0 ? Number(merged.budgetSettings.marketPricePerKg) : 4.5;
         merged.budgetSettings.projectionRate = Number(merged.budgetSettings.projectionRate) > 0 ? Number(merged.budgetSettings.projectionRate) : 1.15;
@@ -1390,7 +1552,7 @@ function crossCatalogEntryFromCross(cross, existing = null) {
     ...(existing?.catalogIndex ? { catalogIndex: existing.catalogIndex } : {}),
     name: cross.name,
     family: cross.family || "Tomate (Solanum lycopersicum)",
-    subfamily: cross.subfamily || `Lignée ${generation}`,
+    subfamily: catalogSubfamily(cross),
     details,
     plantDefaults: {
       type: "open",
@@ -1581,6 +1743,7 @@ function restoreTrashItem(trashId) {
   }
 
   state.trash = state.trash.filter((entry) => entry.id !== trashId);
+  migrateCatalogTypes(state);
   saveState();
   render();
   if (item.type === "photo" || item.type === "plant" || item.type === "catalog" || item.type === "backup") void initializePhotoStorage();
@@ -1909,8 +2072,7 @@ function renderVarieties() {
     counts[subfamily] = (counts[subfamily] || 0) + 1;
     return counts;
   }, {});
-  const subfamilies = catalogSubfamilyList(allCatalog);
-  const filters = [["all", `Toutes · ${allCatalog.length}`], ...subfamilies.map((subfamily) => [subfamily, `${subfamily} · ${subfamilyCounts[subfamily] || 0}`])];
+  const filters = CATALOG_SUBFAMILY_ORDER.map((subfamily) => [subfamily, `${subfamily} · ${subfamilyCounts[subfamily] || 0}`]);
   const entries = varietiesForFilter();
   const groups = {};
   entries.forEach((entry) => {
@@ -1919,10 +2081,10 @@ function renderVarieties() {
     groups[group].push(entry);
   });
   const orderedGroups = catalogSubfamilyList(entries);
-  return `${renderPageHeading(pageMeta.varieties.title, `${allCatalog.length} variétés de tomates · ${subfamilies.length} sous-familles · catalogue importé depuis votre fichier`, `<button class="button secondary" data-action="add-catalog" type="button">${icon("plus")} Nouvelle variété</button><button class="button primary" data-action="add-plant" type="button">${icon("leaf")} Ajouter au potager</button>`)}
-    <section class="catalog-intro"><div class="catalog-intro-icon">${icon("tag")}</div><div><strong>Votre catalogue de semences est bien intégré</strong><p>La famille tomate, ses sous-familles et les détails botaniques du fichier fourni sont conservés. Ouvrez une fiche pour consulter sa description puis l'ajouter à votre saison.</p></div><span class="catalog-count">${allCatalog.length}<small>fiches</small></span></section>
-    <div class="variety-toolbar"><div class="search-box">${icon("search")}<input id="variety-search" type="search" placeholder="Rechercher un nom, une sous-famille ou une caractéristique…" value="${escapeHTML(varietySearch)}" aria-label="Rechercher dans le catalogue" /></div><div class="filter-chips">${filters.map(([value, label]) => `<button class="pill ${varietyFilter === value ? "active tomato" : ""}" data-action="variety-filter" data-filter="${escapeHTML(value)}" type="button">${escapeHTML(label)}</button>`).join("")}</div></div>
-    ${orderedGroups.length ? `<div class="variety-groups">${orderedGroups.map((group) => `<section class="variety-group"><h2>${escapeHTML(group)} <span class="catalog-group-count">${groups[group].length}</span></h2><div class="variety-cards">${groups[group].map(renderVarietyCard).join("")}</div></section>`).join("")}</div>` : `<div class="empty-state"><div><div class="empty-illustration" style="color:var(--purple);background:#f0e8ef">${icon("tag")}</div><h3>Aucune variété trouvée</h3><p>Essayez un autre mot-clé ou une autre sous-famille dans le catalogue.</p><button class="button primary" data-action="add-plant" type="button">${icon("plus")} Ajouter une plante</button></div></div>`}`;
+  return `${renderPageHeading(pageMeta.varieties.title, `${allCatalog.length} variétés de tomates · ${CATALOG_SUBFAMILY_ORDER.length} types de plantes`, `<button class="button secondary" data-action="add-catalog" type="button">${icon("plus")} Nouvelle variété</button><button class="button primary" data-action="add-plant" type="button">${icon("leaf")} Ajouter au potager</button>`)}
+    <section class="catalog-intro"><div class="catalog-intro-icon">${icon("tag")}</div><div><strong>Des sources et des réserves pour chaque fiche</strong><p>Ouvrez une variété pour voir les points recoupés et ceux qui restent à confirmer. Les cinq filtres sont des regroupements pratiques : le port nain ou buissonnant ne suffit pas à déterminer la croissance.</p><a class="catalog-audit-link" href="docs/verification-catalogue.md" target="_blank" rel="noopener">Lire le rapport des ${defaultSeedCatalog().length} fiches</a>${window.SEED_CATALOG_IMPORT ? `<a class="catalog-audit-link" href="docs/enrichissement-catalogue.md" target="_blank" rel="noopener">Suivi de l’enrichissement · ${window.SEED_CATALOG_IMPORT.added} ajouts</a>` : ""}</div><span class="catalog-count">${allCatalog.length}<small>fiches</small></span></section>
+    <div class="variety-toolbar"><div class="search-box">${icon("search")}<input id="variety-search" type="search" placeholder="Rechercher un nom, un type ou une caractéristique…" value="${escapeHTML(varietySearch)}" aria-label="Rechercher dans le catalogue" /></div><div class="catalog-filter-controls"><div class="filter-chips" role="group" aria-label="Filtrer par type de plante">${filters.map(([value, label]) => `<button class="pill ${varietyFilter === value ? "active tomato" : ""}" data-action="variety-filter" data-filter="${escapeHTML(value)}" type="button" aria-pressed="${varietyFilter === value}" title="${varietyFilter === value ? "Afficher tous les types" : `Filtrer : ${escapeHTML(value)}`}">${escapeHTML(label)}</button>`).join("")}</div><span class="form-help">Cliquez de nouveau sur le type actif pour tout afficher.</span></div></div>
+    ${orderedGroups.length ? `<div class="variety-groups">${orderedGroups.map((group) => `<section class="variety-group"><h2>${escapeHTML(group)} <span class="catalog-group-count">${groups[group].length}</span></h2><div class="variety-cards">${groups[group].map(renderVarietyCard).join("")}</div></section>`).join("")}</div>` : `<div class="empty-state"><div><div class="empty-illustration" style="color:var(--purple);background:#f0e8ef">${icon("tag")}</div><h3>Aucune variété trouvée</h3><p>Essayez un autre mot-clé ou un autre type de plante dans le catalogue.</p><button class="button primary" data-action="add-plant" type="button">${icon("plus")} Ajouter une plante</button></div></div>`}`;
 }
 
 function renderVarietyCard(entry) {
@@ -1931,8 +2093,8 @@ function renderVarietyCard(entry) {
   const fruitType = catalogDetailValue(entry, "type_de_fruit", "fruit") || normalized.fruitType;
   const maturity = catalogDetailValue(entry, "maturité", "maturity") || `${normalized.daysToMaturity} j environ`;
   const description = catalogDetailValue(entry, "description_histoire_particularités", "description", "description_history");
-  const sourceLabel = entry.crossId ? "Croisement personnel" : entry.userAdded ? "Ajout local" : (entry.subfamily || "Sous-famille non précisée");
-  return `<article class="variety-card catalog-card" style="--accent:${catalogAccent(entry)}" data-action="open-catalog-entry" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" tabindex="0" role="button"><div class="variety-card-top"><h3>${escapeHTML(entry.name)}</h3><span class="season-count">${escapeHTML(sourceLabel)}</span></div><p class="catalog-card-description">${escapeHTML(catalogShortText(description || fruitType || "Aucun détail descriptif renseigné."))}</p><div class="variety-card-bottom"><div class="variety-meta">${escapeHTML(typeLabel)} · ${escapeHTML(catalogShortText(fruitType, 60) || "Caractéristique non précisée")}</div><div class="variety-yield">${escapeHTML(maturity)} ${icon("chevron")}</div></div></article>`;
+  const sourceLabel = entry.crossId ? "Croisement personnel" : entry.userAdded ? "Ajout local" : catalogSubfamily(entry);
+  return `<article class="variety-card catalog-card" style="--accent:${catalogAccent(entry)}" data-action="open-catalog-entry" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" tabindex="0" role="button"><div class="variety-card-top"><h3>${escapeHTML(entry.name)}</h3><span class="season-count">${escapeHTML(sourceLabel)}</span></div><p class="catalog-card-description">${escapeHTML(catalogShortText(description || fruitType || "Aucun détail descriptif renseigné."))}</p>${renderCatalogVerificationBadge(entry)}<div class="variety-card-bottom"><div class="variety-meta">${escapeHTML(typeLabel)} · ${escapeHTML(catalogShortText(fruitType, 60) || "Caractéristique non précisée")}</div><div class="variety-yield" title="${escapeHTML(maturity)}">${escapeHTML(catalogShortText(maturity, 64))} ${icon("chevron")}</div></div></article>`;
 }
 
 function catalogPhotoForEntry(entry) {
@@ -1944,8 +2106,37 @@ function renderCatalogPhotoForm(entry) {
   return `<div class="modal-backdrop"><div class="modal compact" role="dialog" aria-modal="true" aria-labelledby="catalog-photo-title"><div class="modal-header"><div><span class="eyebrow">PHOTO DE RÉFÉRENCE</span><h2 id="catalog-photo-title">${existing ? "Remplacer la photo" : "Ajouter une photo"}</h2><p>Une image locale pour reconnaître la variété au premier coup d’œil.</p></div><button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div><form id="catalog-photo-form" class="modal-body" data-catalog-id="${escapeHTML(entry.id || "")}" data-existing-id="${escapeHTML(existing?.id || "")}"><div class="form-grid"><div class="form-field full"><label for="catalog-photo-file">Image *</label><input id="catalog-photo-file" name="file" type="file" accept="image/*" required /><span class="form-help">L'image est compressée et conservée uniquement dans ce navigateur.</span></div><div class="form-field full"><label for="catalog-photo-title">Légende</label><input id="catalog-photo-title" name="title" value="${escapeHTML(existing?.title || entry.name)}" placeholder="ex. Fruit mûr, feuillage, port…" /></div><div class="form-field full"><label for="catalog-photo-caption">Note</label><textarea id="catalog-photo-caption" name="caption" placeholder="Ce que cette photo doit vous rappeler…">${escapeHTML(existing?.caption || "")}</textarea></div></div><div class="form-actions">${existing ? `<button class="button danger" data-action="delete-catalog-photo" data-id="${escapeHTML(existing.id)}" type="button">${icon("trash")} Retirer l'image</button>` : ""}<span style="flex:1"></span><button class="button secondary" data-action="close-modal" type="button">Annuler</button><button class="button primary" type="submit">${icon("camera")} ${existing ? "Remplacer" : "Enregistrer"}</button></div></form></div></div>`;
 }
 
+function catalogVerificationStatus(entry) {
+  if (!entry?.verification) return null;
+  return Object.hasOwn(catalogVerificationMeta, entry.verification.status) ? catalogVerificationMeta[entry.verification.status] : catalogVerificationMeta.unconfirmed;
+}
+
+function renderCatalogVerificationBadge(entry) {
+  const meta = catalogVerificationStatus(entry);
+  return meta ? `<span class="catalog-review-status ${meta.warning ? "warning" : ""}">${icon("info")}${escapeHTML(meta.label)}</span>` : "";
+}
+
+function catalogSourceUrl(value) {
+  try {
+    const url = new URL(value);
+    return ["https:", "http:"].includes(url.protocol) && !url.username && !url.password ? url.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function renderCatalogVerification(entry) {
+  const review = entry?.verification;
+  if (!review) return "";
+  const meta = catalogVerificationStatus(entry);
+  const scope = Array.isArray(review.scope) ? review.scope : [];
+  const sources = (Array.isArray(review.sources) ? review.sources : []).filter((source) => source && catalogSourceUrl(source.url));
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(review.checkedAt) && Number.isFinite(Date.parse(review.checkedAt)) ? formatDate(review.checkedAt) : "Date non renseignée";
+  return `<section class="catalog-verification ${meta.warning ? "warning" : ""}" aria-label="Vérification documentaire"><div class="catalog-verification-heading"><strong>${escapeHTML(meta.label)}</strong><span>Contrôle documentaire · ${escapeHTML(date)}</span></div><p>${escapeHTML(review.note || "Documentation à compléter.")}</p>${scope.length ? `<p><strong>Points recoupés :</strong> ${scope.map(escapeHTML).join(", ")}.</p>` : `<p><strong>Aucun caractère du lot n’est confirmé par une source publique exploitable.</strong></p>`}<p class="catalog-verification-limits">Le contrôle est partiel : les autres caractères restent à confirmer. Les poids, le goût et les délais varient avec les conditions de culture.</p>${sources.length ? `<ul class="catalog-verification-sources">${sources.map((source, index) => `<li><a href="${escapeHTML(catalogSourceUrl(source.url))}" target="_blank" rel="noopener noreferrer">[${index + 1}] ${escapeHTML(source.title || "Référence documentaire")}</a></li>`).join("")}</ul>` : `<p class="form-help">La référence du sachet, des photos et un suivi du lot permettront de compléter cette fiche.</p>`}</section>`;
+}
+
 function renderCatalogDetail(entry) {
-  const details = Object.entries(entry.details || {});
+  const details = Object.entries(entry.details || {}).filter(([, value]) => String(value ?? "").trim());
   const normalized = catalogEntryToPlant(entry);
   const relatedPlants = (state.plants || []).filter((plant) => plant.catalogId === entry.id || (plant.name === entry.name && plant.family === entry.family));
   const fruitType = catalogDetailValue(entry, "type_de_fruit", "fruit") || normalized.fruitType || "Caractéristique de fruit non précisée";
@@ -1955,7 +2146,7 @@ function renderCatalogDetail(entry) {
   const nextCandidate = candidateForCatalog(entry.id, nextSeasonYear());
   const referencePhoto = catalogPhotoForEntry(entry);
   const referenceSource = referencePhoto ? catalogPhotoSource(referencePhoto) : "";
-  return `<div class="modal-backdrop"><div class="modal catalog-detail-modal" role="dialog" aria-modal="true" aria-labelledby="catalog-detail-title"><div class="modal-header"><div><span class="eyebrow">${sourceLabel}</span><h2 id="catalog-detail-title">${escapeHTML(entry.name)}</h2><p>${escapeHTML(entry.family || "Famille non précisée")} · ${escapeHTML(entry.subfamily || "Sous-famille non précisée")}</p></div><div class="catalog-header-actions">${cross ? `<button class="mini-button" data-action="edit-cross" data-id="${escapeHTML(cross.id)}" type="button" title="Modifier le croisement" aria-label="Modifier le croisement">${icon("edit")}</button>` : entry.userAdded ? `<button class="mini-button" data-action="edit-catalog-entry" data-id="${escapeHTML(entry.id || "")}" type="button" title="Modifier la fiche" aria-label="Modifier la fiche">${icon("edit")}</button>` : ""}<button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div></div><div class="modal-body"><div class="catalog-detail-banner" style="--accent:${catalogAccent(entry)};--accent-primary:${colorPrimary(catalogColors(entry), catalogColorMode(entry))}"><span class="catalog-detail-symbol">${icon("tomato")}</span><div><strong>${escapeHTML(typeMeta[normalized.type] || "Variété")}</strong><span>${escapeHTML(fruitType)}</span></div><span class="catalog-detail-origin">${relatedPlants.length ? `${relatedPlants.length} fiche${relatedPlants.length > 1 ? "s" : ""} au potager` : "Pas encore au potager"}</span></div><dl class="catalog-detail-grid">${details.map(([label, value]) => `<div class="catalog-detail-field"><dt>${escapeHTML(label.replaceAll("_", " "))}</dt><dd>${escapeHTML(value)}</dd></div>`).join("") || `<div class="no-results">Aucun détail supplémentaire dans la fiche source.</div>`}</dl>${referencePhoto ? `<section class="catalog-reference-photo"><div class="catalog-reference-visual">${referenceSource ? `<img src="${escapeHTML(referenceSource)}" alt="${escapeHTML(referencePhoto.title || `Photo de ${entry.name}`)}" />` : `<div class="photo-missing">${icon("camera")}<span>Image en cours de chargement</span></div>`}</div><div><span class="eyebrow">VOTRE REPÈRE LOCAL</span><h3>${escapeHTML(referencePhoto.title || "Photo de référence")}</h3>${referencePhoto.caption ? `<p>${escapeHTML(referencePhoto.caption)}</p>` : ""}<div class="catalog-reference-actions"><button class="button ghost" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("edit")} Remplacer</button><button class="button ghost" data-action="delete-catalog-photo" data-id="${escapeHTML(referencePhoto.id)}" type="button">${icon("trash")} Retirer</button></div></div></section>` : `<section class="catalog-reference-empty"><span>${icon("camera")}</span><div><strong>Ajouter une photo de référence</strong><p>Associez une image locale à cette variété pour retrouver son aspect l'année prochaine.</p></div><button class="button secondary" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("camera")} Ajouter</button></section>`}<div class="catalog-detail-facts"><span><strong>Maturité estimée</strong>${escapeHTML(maturity)}</span><span><strong>Couleurs détectées</strong>${escapeHTML(normalized.colors.map((color) => colorMeta[color]?.label).filter(Boolean).join(" · ") || "Non précisée")}</span></div><div class="catalog-detail-actions"><div><strong>Prêt à l'essayer&nbsp;?</strong><span>Préparez son achat pour ${nextSeasonYear()} ou créez une fiche de suivi préremplie avec les caractéristiques de cette variété.</span></div><div class="catalog-detail-action-buttons"><button class="button secondary" data-action="add-candidate" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" data-season="${nextSeasonYear()}" data-status="to-buy" type="button">${icon("leaf")} ${nextCandidate ? "Modifier la préparation" : `Préparer ${nextSeasonYear()}`}</button><button class="button primary" data-action="add-catalog-entry" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" type="button">${icon("plus")} Ajouter au potager</button></div></div><div class="form-actions"><button class="button secondary" data-action="close-modal" type="button">Fermer</button></div></div></div></div>`;
+  return `<div class="modal-backdrop"><div class="modal catalog-detail-modal" role="dialog" aria-modal="true" aria-labelledby="catalog-detail-title"><div class="modal-header"><div><span class="eyebrow">${sourceLabel}</span><h2 id="catalog-detail-title">${escapeHTML(entry.name)}</h2><p>${escapeHTML(entry.family || "Famille non précisée")} · ${escapeHTML(catalogSubfamily(entry))}</p></div><div class="catalog-header-actions">${cross ? `<button class="mini-button" data-action="edit-cross" data-id="${escapeHTML(cross.id)}" type="button" title="Modifier le croisement" aria-label="Modifier le croisement">${icon("edit")}</button>` : entry.userAdded ? `<button class="mini-button" data-action="edit-catalog-entry" data-id="${escapeHTML(entry.id || "")}" type="button" title="Modifier la fiche" aria-label="Modifier la fiche">${icon("edit")}</button>` : ""}<button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div></div><div class="modal-body"><div class="catalog-detail-banner" style="--accent:${catalogAccent(entry)};--accent-primary:${colorPrimary(catalogColors(entry), catalogColorMode(entry))}"><span class="catalog-detail-symbol">${icon("tomato")}</span><div><strong>${escapeHTML(typeMeta[normalized.type] || "Variété")}</strong><span>${escapeHTML(fruitType)}</span></div><span class="catalog-detail-origin">${relatedPlants.length ? `${relatedPlants.length} fiche${relatedPlants.length > 1 ? "s" : ""} au potager` : "Pas encore au potager"}</span></div>${renderCatalogVerification(entry)}<dl class="catalog-detail-grid">${details.map(([label, value]) => `<div class="catalog-detail-field"><dt>${escapeHTML(label.replaceAll("_", " "))}</dt><dd>${escapeHTML(value)}</dd></div>`).join("") || `<div class="no-results">Aucun détail supplémentaire dans la fiche source.</div>`}</dl>${referencePhoto ? `<section class="catalog-reference-photo"><div class="catalog-reference-visual">${referenceSource ? `<img src="${escapeHTML(referenceSource)}" alt="${escapeHTML(referencePhoto.title || `Photo de ${entry.name}`)}" />` : `<div class="photo-missing">${icon("camera")}<span>Image en cours de chargement</span></div>`}</div><div><span class="eyebrow">VOTRE REPÈRE LOCAL</span><h3>${escapeHTML(referencePhoto.title || "Photo de référence")}</h3>${referencePhoto.caption ? `<p>${escapeHTML(referencePhoto.caption)}</p>` : ""}<div class="catalog-reference-actions"><button class="button ghost" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("edit")} Remplacer</button><button class="button ghost" data-action="delete-catalog-photo" data-id="${escapeHTML(referencePhoto.id)}" type="button">${icon("trash")} Retirer</button></div></div></section>` : `<section class="catalog-reference-empty"><span>${icon("camera")}</span><div><strong>Ajouter une photo de référence</strong><p>Associez une image locale à cette variété pour retrouver son aspect l'année prochaine.</p></div><button class="button secondary" data-action="add-catalog-photo" data-id="${escapeHTML(entry.id)}" type="button">${icon("camera")} Ajouter</button></section>`}<div class="catalog-detail-facts"><span><strong>Maturité estimée</strong>${escapeHTML(maturity)}</span><span><strong>Couleurs détectées</strong>${escapeHTML(normalized.colors.map((color) => colorMeta[color]?.label).filter(Boolean).join(" · ") || "Non précisée")}</span></div>${catalogMaturityNotice(entry) ? `<p class="catalog-planning-notice">${escapeHTML(catalogMaturityNotice(entry))}</p>` : ""}<div class="catalog-detail-actions"><div><strong>Prêt à l'essayer&nbsp;?</strong><span>Préparez son achat pour ${nextSeasonYear()} ou créez une fiche de suivi préremplie avec les caractéristiques de cette variété.</span></div><div class="catalog-detail-action-buttons"><button class="button secondary" data-action="add-candidate" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" data-season="${nextSeasonYear()}" data-status="to-buy" type="button">${icon("leaf")} ${nextCandidate ? "Modifier la préparation" : `Préparer ${nextSeasonYear()}`}</button><button class="button primary" data-action="add-catalog-entry" data-id="${escapeHTML(entry.id || entry.catalogIndex || "")}" type="button">${icon("plus")} Ajouter au potager</button></div></div><div class="form-actions"><button class="button secondary" data-action="close-modal" type="button">Fermer</button></div></div></div></div>`;
 }
 function renderCatalogForm(entry = null) {
   const isEdit = Boolean(entry?.userAdded && entry?.id);
@@ -1969,7 +2160,7 @@ function renderCatalogForm(entry = null) {
   const growth = defaults.growth ?? (entry ? catalogGrowth(entry) : "");
   const days = defaults.daysToMaturity || (entry ? catalogMaturityDays(entry) : 75);
   const inputValue = (value) => escapeHTML(value || "");
-  return `<div class="modal-backdrop"><div class="modal catalog-form-modal" role="dialog" aria-modal="true" aria-labelledby="catalog-form-title"><div class="modal-header"><div><span class="eyebrow">CATALOGUE PERSONNEL</span><h2 id="catalog-form-title">${isEdit ? "Modifier la variété" : "Ajouter une variété au catalogue"}</h2><p>${isEdit ? "Mettez à jour cette fiche ajoutée localement." : "Créez une fiche réutilisable dans le menu de sélection des plantes."}</p></div><button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div><form id="catalog-form" class="modal-body" data-edit-id="${escapeHTML(entry?.id || "")}"><div class="form-grid"><div class="form-field full"><label for="catalog-name">Nom de la variété *</label><input id="catalog-name" name="name" required value="${inputValue(entry?.name)}" placeholder="ex. Ma sélection, variété locale…" /></div><div class="form-field"><label for="catalog-family">Famille *</label><input id="catalog-family" name="family" required value="${inputValue(entry?.family)}" placeholder="ex. Tomate (Solanum lycopersicum)…" /></div><div class="form-field"><label for="catalog-subfamily">Sous-famille</label><input id="catalog-subfamily" name="subfamily" value="${inputValue(entry?.subfamily)}" placeholder="ex. Cerise, naine…" /></div><div class="form-field"><label for="catalog-type">Type</label><select id="catalog-type" name="type"><option value="open" ${type === "open" ? "selected" : ""}>Pollinisation libre</option><option value="heirloom" ${type === "heirloom" ? "selected" : ""}>Ancienne</option><option value="hybrid" ${type === "hybrid" ? "selected" : ""}>Hybride</option></select></div><div class="form-field"><label for="catalog-fruit-type">Type de fruit / caractéristique</label><input id="catalog-fruit-type" name="fruitType" value="${inputValue(defaults.fruitType || details.type_de_fruit)}" placeholder="ex. Cerise, grain, fleur…" /></div><div class="form-field"><label for="catalog-size">Taille du fruit</label><select id="catalog-size" name="size"><option value="" ${!size ? "selected" : ""}>Non précisée</option>${["cerise","petit","moyen","gros"].map((value) => `<option value="${value}" ${size === value ? "selected" : ""}>${value[0].toUpperCase() + value.slice(1)}</option>`).join("")}</select></div><div class="form-field"><label for="catalog-shape">Forme</label><select id="catalog-shape" name="shape"><option value="" ${!shape ? "selected" : ""}>Non précisée</option>${["rond","aplati","beefsteak","côtelé","allongé","prune"].map((value) => `<option value="${value}" ${shape === value ? "selected" : ""}>${value[0].toUpperCase() + value.slice(1)}</option>`).join("")}</select></div><div class="form-field"><label for="catalog-growth">Port de la plante</label><select id="catalog-growth" name="growth"><option value="" ${!growth ? "selected" : ""}>Non précisé</option><option value="indeterminate" ${growth === "indeterminate" ? "selected" : ""}>Indéterminé</option><option value="déterminée" ${growth === "déterminée" ? "selected" : ""}>Déterminé</option></select></div><div class="form-field"><label for="catalog-days">Jours jusqu'à maturité</label><input id="catalog-days" name="daysToMaturity" type="number" min="1" max="365" value="${days}" /></div><div class="form-field"><label for="catalog-breeder">Obtenteur / source</label><input id="catalog-breeder" name="breeder" value="${inputValue(defaults.breeder)}" placeholder="ex. échange, semencier…" /></div><div class="form-field full"><label>Couleur / teinte <span class="form-help">· jusqu'à 3 couleurs</span></label><div class="color-choice-layout"><div class="color-choice-controls"><div class="color-picker">${Object.entries(colorMeta).map(([key, meta]) => `<button class="color-option ${colors.includes(key) ? "selected" : ""}" style="--option-color:${meta.hex}" data-action="pick-color" data-color="${key}" type="button" title="${meta.label}" aria-label="${meta.label}" aria-pressed="${colors.includes(key)}"></button>`).join("")}</div><div class="form-help" id="color-help">${colors.map((color) => colorMeta[color]?.label).filter(Boolean).join(" · ") || "Aucune couleur sélectionnée"}</div><label class="color-mode-control" for="catalog-color-mode">Affichage<select id="catalog-color-mode" name="colorMode"><option value="solid" ${colorMode === "solid" ? "selected" : ""}>Couleur unie</option><option value="gradient" ${colorMode === "gradient" ? "selected" : ""}>Dégradé multicolore</option></select></label></div><div class="color-preview" data-color-preview style="background:${colorBackground(colors, colorMode)};color:${previewTextColor(colors, colorMode)}"><span class="color-preview-symbol">${icon("tomato")}</span><div><strong>Aperçu du fruit</strong><small data-color-preview-label>${colorMode === "gradient" ? (colors.length > 1 ? "Dégradé multicolore" : "Dégradé prêt · ajoutez une deuxième couleur") : "Couleur unie"}</small></div></div></div></div><div class="form-field full"><label for="catalog-description">Description, histoire ou particularités</label><textarea id="catalog-description" name="description" placeholder="Origine, port, intérêt de la variété…">${inputValue(details.description_histoire_particularités || details.description)}</textarea></div><div class="form-field full"><label for="catalog-fruit">Description du fruit / de la récolte</label><textarea id="catalog-fruit" name="fruit" placeholder="Couleur à maturité, saveur, utilisation…">${inputValue(details.fruit)}</textarea></div><div class="form-field full"><label for="catalog-size-text">Taille de la plante ou de l'organe</label><input id="catalog-size-text" name="sizeText" value="${inputValue(details.taille)}" placeholder="ex. 30 à 50 cm, 1,5 m…" /></div><div class="form-field"><label for="catalog-maturity-text">Maturité / cycle</label><input id="catalog-maturity-text" name="maturityText" value="${inputValue(details.maturité)}" placeholder="ex. 75 jours" /></div><div class="form-field"><label for="catalog-genes">Gènes ou remarques techniques</label><input id="catalog-genes" name="genes" value="${inputValue(details.gènes_potentiels)}" placeholder="Facultatif" /></div></div><div class="form-help catalog-form-help">Le catalogue est réservé aux tomates et à leurs espèces proches (<em>Solanum</em>). Les champs botaniques sont conservés dans la fiche. La variété apparaîtra ensuite dans le menu déroulant de <strong>Ajouter une plante</strong>.</div><div class="form-actions">${isEdit ? `<button class="button danger" data-action="delete-catalog-entry" data-id="${entry.id}" type="button">${icon("trash")} Retirer du catalogue</button>` : ""}<span style="flex:1"></span><button class="button secondary" data-action="close-modal" type="button">Annuler</button><button class="button primary" type="submit">${icon("check")} ${isEdit ? "Enregistrer la fiche" : "Ajouter au catalogue"}</button></div></form></div></div>`;
+  return `<div class="modal-backdrop"><div class="modal catalog-form-modal" role="dialog" aria-modal="true" aria-labelledby="catalog-form-title"><div class="modal-header"><div><span class="eyebrow">CATALOGUE PERSONNEL</span><h2 id="catalog-form-title">${isEdit ? "Modifier la variété" : "Ajouter une variété au catalogue"}</h2><p>${isEdit ? "Mettez à jour cette fiche ajoutée localement." : "Créez une fiche réutilisable dans le menu de sélection des plantes."}</p></div><button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div><form id="catalog-form" class="modal-body" data-edit-id="${escapeHTML(entry?.id || "")}"><div class="form-grid"><div class="form-field full"><label for="catalog-name">Nom de la variété *</label><input id="catalog-name" name="name" required value="${inputValue(entry?.name)}" placeholder="ex. Ma sélection, variété locale…" /></div><div class="form-field"><label for="catalog-family">Famille *</label><input id="catalog-family" name="family" required value="${inputValue(entry?.family)}" placeholder="ex. Tomate (Solanum lycopersicum)…" /></div><div class="form-field"><label for="catalog-subfamily">Type de plante</label><select id="catalog-subfamily" name="subfamily">${catalogSubfamilyOptionsHTML(entry)}</select></div><div class="form-field"><label for="catalog-type">Type de variété</label><select id="catalog-type" name="type"><option value="open" ${type === "open" ? "selected" : ""}>Pollinisation libre</option><option value="heirloom" ${type === "heirloom" ? "selected" : ""}>Ancienne</option><option value="hybrid" ${type === "hybrid" ? "selected" : ""}>Hybride</option></select></div><div class="form-field"><label for="catalog-fruit-type">Type de fruit / caractéristique</label><input id="catalog-fruit-type" name="fruitType" value="${inputValue(defaults.fruitType || details.type_de_fruit)}" placeholder="ex. Cerise, grain, fleur…" /></div><div class="form-field"><label for="catalog-size">Taille du fruit</label><select id="catalog-size" name="size"><option value="" ${!size ? "selected" : ""}>Non précisée</option>${["cerise","petit","moyen","gros"].map((value) => `<option value="${value}" ${size === value ? "selected" : ""}>${value[0].toUpperCase() + value.slice(1)}</option>`).join("")}</select></div><div class="form-field"><label for="catalog-shape">Forme</label><select id="catalog-shape" name="shape"><option value="" ${!shape ? "selected" : ""}>Non précisée</option>${FRUIT_SHAPES.map((value) => `<option value="${value}" ${shape === value ? "selected" : ""}>${value[0].toUpperCase() + value.slice(1)}</option>`).join("")}</select></div><div class="form-field"><label for="catalog-growth">Croissance de la plante</label><select id="catalog-growth" name="growth">${growthOptionsHTML(growth)}</select></div><div class="form-field"><label for="catalog-days">Jours jusqu'à maturité</label><input id="catalog-days" name="daysToMaturity" type="number" min="1" max="365" value="${days}" /></div><div class="form-field"><label for="catalog-breeder">Obtenteur / source</label><input id="catalog-breeder" name="breeder" value="${inputValue(defaults.breeder)}" placeholder="ex. échange, semencier…" /></div><div class="form-field full"><label>Couleur / teinte <span class="form-help">· jusqu'à 3 couleurs</span></label><div class="color-choice-layout"><div class="color-choice-controls"><div class="color-picker">${Object.entries(colorMeta).map(([key, meta]) => `<button class="color-option ${colors.includes(key) ? "selected" : ""}" style="--option-color:${meta.hex}" data-action="pick-color" data-color="${key}" type="button" title="${meta.label}" aria-label="${meta.label}" aria-pressed="${colors.includes(key)}"></button>`).join("")}</div><div class="form-help" id="color-help">${colors.map((color) => colorMeta[color]?.label).filter(Boolean).join(" · ") || "Aucune couleur sélectionnée"}</div><label class="color-mode-control" for="catalog-color-mode">Affichage<select id="catalog-color-mode" name="colorMode"><option value="solid" ${colorMode === "solid" ? "selected" : ""}>Couleur unie</option><option value="gradient" ${colorMode === "gradient" ? "selected" : ""}>Dégradé multicolore</option></select></label></div><div class="color-preview" data-color-preview style="background:${colorBackground(colors, colorMode)};color:${previewTextColor(colors, colorMode)}"><span class="color-preview-symbol">${icon("tomato")}</span><div><strong>Aperçu du fruit</strong><small data-color-preview-label>${colorMode === "gradient" ? (colors.length > 1 ? "Dégradé multicolore" : "Dégradé prêt · ajoutez une deuxième couleur") : "Couleur unie"}</small></div></div></div></div><div class="form-field full"><label for="catalog-description">Description, histoire ou particularités</label><textarea id="catalog-description" name="description" placeholder="Origine, port, intérêt de la variété…">${inputValue(details.description_histoire_particularités || details.description)}</textarea></div><div class="form-field full"><label for="catalog-fruit">Description du fruit / de la récolte</label><textarea id="catalog-fruit" name="fruit" placeholder="Couleur à maturité, saveur, utilisation…">${inputValue(details.fruit)}</textarea></div><div class="form-field full"><label for="catalog-size-text">Hauteur de la plante</label><input id="catalog-size-text" name="sizeText" value="${inputValue(details.taille)}" placeholder="ex. 30 à 50 cm, 1,5 m…" /></div><div class="form-field"><label for="catalog-maturity-text">Maturité / cycle</label><input id="catalog-maturity-text" name="maturityText" value="${inputValue(details.maturité)}" placeholder="ex. 75 jours" /></div><div class="form-field"><label for="catalog-genes">Gènes ou remarques techniques</label><input id="catalog-genes" name="genes" value="${inputValue(details.gènes_potentiels)}" placeholder="Facultatif" /></div></div><div class="form-help catalog-form-help">Le catalogue est réservé aux tomates et à leurs espèces proches (<em>Solanum</em>). Les champs botaniques sont conservés dans la fiche. La variété apparaîtra ensuite dans le menu déroulant de <strong>Ajouter une plante</strong>.</div><div class="form-actions">${isEdit ? `<button class="button danger" data-action="delete-catalog-entry" data-id="${entry.id}" type="button">${icon("trash")} Retirer du catalogue</button>` : ""}<span style="flex:1"></span><button class="button secondary" data-action="close-modal" type="button">Annuler</button><button class="button primary" type="submit">${icon("check")} ${isEdit ? "Enregistrer la fiche" : "Ajouter au catalogue"}</button></div></form></div></div>`;
 }
 
 function catalogDetailsFromForm(data) {
@@ -1993,7 +2184,7 @@ function catalogEntryFromForm(form) {
   return {
     name,
     family,
-    subfamily: String(data.get("subfamily") || "").trim(),
+    subfamily: catalogSubfamily({ subfamily: data.get("subfamily") }),
     details,
     plantDefaults: {
       type: ["heirloom", "hybrid", "open"].includes(data.get("type")) ? data.get("type") : "open",
@@ -2282,7 +2473,7 @@ function renderPlantForm(plant = null) {
   const regions = [...new Set((state.regions || []).concat(seasonPlants().map((item) => item.region).filter(Boolean)))];
   const title = isEdit ? "Modifier la plante" : fromCatalog ? "Ajouter une variété du catalogue" : "Ajouter une plante";
   const subtitle = isEdit ? "Mettez à jour les informations de ce plant." : fromCatalog ? "Les caractéristiques du fichier fourni sont déjà préremplies. Ajoutez vos informations de culture." : "Commencez par les informations essentielles. Vous pourrez enrichir la fiche plus tard.";
-  return `<div class="modal-backdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="plant-form-title"><div class="modal-header"><div><h2 id="plant-form-title">${title}</h2><p>${subtitle}</p></div><button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div><form id="plant-form" class="modal-body" data-edit-id="${plant?.id || ""}" data-catalog-id="${escapeHTML(plant?.catalogId || "")}"><div class="catalog-form-source" data-catalog-selection-note ${hasCatalog ? "" : "hidden"}><span>${icon("tag")}</span><div><strong>${escapeHTML(plant?.family || "Catalogue fourni")}</strong><span>${escapeHTML(plant?.subfamily || "Fiche sélectionnée")} · les caractéristiques seront conservées avec la plante.</span>${catalogSummary ? `<small>${escapeHTML(catalogSummary)}</small>` : ""}</div></div><div class="form-grid">
+  return `<div class="modal-backdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="plant-form-title"><div class="modal-header"><div><h2 id="plant-form-title">${title}</h2><p>${subtitle}</p></div><button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div><form id="plant-form" class="modal-body" data-edit-id="${plant?.id || ""}" data-catalog-id="${escapeHTML(plant?.catalogId || "")}"><div class="catalog-form-source" data-catalog-selection-note ${hasCatalog ? "" : "hidden"}><span>${icon("tag")}</span><div><strong>${escapeHTML(plant?.family || "Catalogue fourni")}</strong><span>${escapeHTML(plant?.subfamily || "Fiche sélectionnée")} · les caractéristiques seront conservées avec la plante.</span>${catalogSummary ? `<small>${escapeHTML(catalogSummary)}</small>` : ""}${fromCatalog && catalogMaturityNotice(catalogEntryById(plant?.catalogId)) ? `<small class="catalog-planning-notice">${escapeHTML(catalogMaturityNotice(catalogEntryById(plant.catalogId)))}</small>` : ""}</div></div><div class="form-grid">
     <div class="form-field full"><label for="plant-name">Nom de la variété *</label><input id="plant-name" name="name" required value="${escapeHTML(plant?.name || "")}" placeholder="ex. Fat Frog, Koralik…" /></div>
     <div class="form-field full"><label for="plant-catalog-select">Choisir rapidement dans le catalogue</label><select id="plant-catalog-select" name="catalogSelect">${catalogOptionsHTML(plant?.catalogId || "")}</select><span class="form-help">Sélectionnez une fiche pour préremplir automatiquement le nom, le type, la taille, la forme, le port, la maturité et les couleurs.</span></div>
     <div class="form-field"><label for="plant-type">Type</label><select id="plant-type" name="type"><option value="heirloom" ${plant?.type === "heirloom" ? "selected" : ""}>Ancienne</option><option value="hybrid" ${plant?.type === "hybrid" ? "selected" : ""}>Hybride</option><option value="open" ${plant?.type === "open" ? "selected" : ""}>Pollinisation libre</option></select></div>
@@ -2293,8 +2484,8 @@ function renderPlantForm(plant = null) {
     <div class="form-field"><label for="plant-days">Jours jusqu'à maturité</label><input id="plant-days" name="daysToMaturity" type="number" min="1" max="365" value="${plant?.daysToMaturity || 75}" /></div>
     <div class="form-field"><label for="plant-size">Taille du fruit</label><select id="plant-size" name="size"><option value="" ${!plant?.size ? "selected" : ""}>Non précisée</option>${["cerise","petit","moyen","gros"].map((item) => `<option value="${item}" ${plant?.size === item ? "selected" : ""}>${item[0].toUpperCase()+item.slice(1)}</option>`).join("")}</select></div>
     <div class="form-field"><label for="plant-fruit-type">Type de fruit / caractéristique</label><input id="plant-fruit-type" name="fruitType" value="${escapeHTML(plant?.fruitType || "")}" placeholder="ex. Cerise, cocktail, fleur…" /></div>
-    <div class="form-field"><label for="plant-shape">Forme</label><select id="plant-shape" name="shape"><option value="" ${!plant?.shape ? "selected" : ""}>Non précisée</option>${["rond","aplati","beefsteak","côtelé","allongé","prune"].map((item) => `<option value="${item}" ${plant?.shape === item ? "selected" : ""}>${item[0].toUpperCase()+item.slice(1)}</option>`).join("")}</select></div>
-    <div class="form-field"><label for="plant-growth">Port de la plante</label><select id="plant-growth" name="growth"><option value="" ${!plant?.growth ? "selected" : ""}>Non précisé</option><option value="indeterminate" ${plant?.growth === "indeterminate" ? "selected" : ""}>Indéterminé</option><option value="déterminée" ${plant?.growth === "déterminée" ? "selected" : ""}>Déterminé</option></select></div>
+    <div class="form-field"><label for="plant-shape">Forme</label><select id="plant-shape" name="shape"><option value="" ${!plant?.shape ? "selected" : ""}>Non précisée</option>${FRUIT_SHAPES.map((item) => `<option value="${item}" ${plant?.shape === item ? "selected" : ""}>${item[0].toUpperCase()+item.slice(1)}</option>`).join("")}</select></div>
+    <div class="form-field"><label for="plant-growth">Croissance de la plante</label><select id="plant-growth" name="growth">${growthOptionsHTML(plant?.growth)}</select></div>
     <div class="form-field"><label for="plant-breeder">Obtenteur / source</label><input id="plant-breeder" name="breeder" value="${escapeHTML(plant?.breeder || "")}" placeholder="ex. Sudduth, échange…" /></div>
     <div class="form-field full"><label>Couleur du fruit <span class="form-help">· jusqu'à 3 couleurs</span></label><div class="color-choice-layout"><div class="color-choice-controls"><div class="color-picker">${Object.entries(colorMeta).map(([key, meta]) => `<button class="color-option ${colors.includes(key) ? "selected" : ""}" style="--option-color:${meta.hex}" data-action="pick-color" data-color="${key}" type="button" title="${meta.label}" aria-label="${meta.label}" aria-pressed="${colors.includes(key)}"></button>`).join("")}</div><div class="form-help" id="color-help">${colors.map((color) => colorMeta[color]?.label).filter(Boolean).join(" · ") || "Aucune couleur sélectionnée"}</div><label class="color-mode-control" for="plant-color-mode">Affichage<select id="plant-color-mode" name="colorMode"><option value="solid" ${colorMode === "solid" ? "selected" : ""}>Couleur unie</option><option value="gradient" ${colorMode === "gradient" ? "selected" : ""}>Dégradé multicolore</option></select></label></div><div class="color-preview" data-color-preview style="background:${colorBackground(colors, colorMode)};color:${previewTextColor(colors, colorMode)}"><span class="color-preview-symbol">${icon("tomato")}</span><div><strong>Aperçu du fruit</strong><small data-color-preview-label>${colorMode === "gradient" ? (colors.length > 1 ? "Dégradé multicolore" : "Dégradé prêt · ajoutez une deuxième couleur") : "Couleur unie"}</small></div></div></div></div>
     <div class="form-field full"><label for="plant-notes">Notes</label><textarea id="plant-notes" name="notes" placeholder="Observations, provenance, idées pour la prochaine saison…">${escapeHTML(plant?.notes || "")}</textarea></div>
@@ -2320,7 +2511,7 @@ function renderPlantDetail(plant) {
   const review = seasonReviewForPlant(plant.id, plant.season);
   const healthLogs = [...(state.healthLogs || [])].filter((log) => log.plantId === plant.id).sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
   const nextCandidate = candidateForPlant(plant, nextSeasonYear());
-  const tags = [typeMeta[plant.type] || "Variété", ...validColors(plant.colors).slice(0, 3).map((item) => colorMeta[item]?.label), plant.size, plant.shape, plant.growth === "indeterminate" ? "Indéterminée" : plant.growth === "déterminée" ? "Déterminée" : "", plant.family, plant.subfamily].filter(Boolean);
+  const tags = [typeMeta[plant.type] || "Variété", ...validColors(plant.colors).slice(0, 3).map((item) => colorMeta[item]?.label), plant.size, plant.shape, growthMeta[plant.growth] || "", plant.family, plant.subfamily].filter(Boolean);
   const catalogInfo = Object.entries(plant.catalogDetails || {}).length ? `<section class="plant-catalog-inline"><div class="detail-section-title"><h3>Fiche du catalogue fourni</h3><span>${escapeHTML(plant.family || "")}${plant.subfamily ? ` · ${escapeHTML(plant.subfamily)}` : ""}</span></div><div class="plant-catalog-fields">${Object.entries(plant.catalogDetails).map(([label, value]) => `<div><strong>${escapeHTML(label.replaceAll("_", " "))}</strong><span>${escapeHTML(value)}</span></div>`).join("")}</div></section>` : "";
   return `<div class="modal-backdrop"><div class="modal detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title"><div class="detail-visual ${plant.colors?.includes("green") ? "green" : ""}" style="background:${detailBackground}"><div class="detail-visual-copy"><div class="eyebrow" style="color:rgba(255,255,255,.66)">${statusMeta[plant.status]?.label || "Plant"} · ${plant.season}</div><h2 id="detail-title">${escapeHTML(plant.name)}</h2><p>${escapeHTML(plant.region || "Zone non renseignée")} · ${escapeHTML(plant.location || "Emplacement non renseigné")}</p></div><div class="detail-tomato">${icon("tomato")}</div></div><div class="detail-main"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:15px"><div class="detail-tags">${tags.map((tag) => `<span class="detail-tag">${escapeHTML(tag)}</span>`).join("")}</div><button class="close-button" data-action="close-modal" type="button" aria-label="Fermer">${icon("close")}</button></div><div class="detail-stats"><div class="detail-stat"><strong>${formatWeight(totals.weight)}</strong><span>Total récolté</span></div><div class="detail-stat"><strong>${formatNumber(totals.fruits)}</strong><span>Fruits</span></div><div class="detail-stat"><strong>${formatNumber(totals.harvests)}</strong><span>Récoltes</span></div><div class="detail-stat"><strong>${formatAverageFruit(totals.weight, totals.fruits)}</strong><span>Fruit moyen</span></div></div>${catalogInfo}<div class="detail-section-title"><h3>Journal photo</h3><button class="button ghost" data-action="add-photo" data-id="${escapeHTML(plant.id)}" type="button">${icon("camera")} Ajouter</button></div>${renderPlantPhotoStrip(plant.id)}<div class="detail-section-title"><h3>Notes gustatives</h3><button class="button ghost" data-action="rate-plant" data-id="${escapeHTML(plant.id)}" type="button">${icon("star")} Noter</button></div>${renderTasteSummary(plant.id)}<div class="detail-section-title"><h3>Bilan qualitatif ${plant.season}</h3><button class="button ghost" data-action="review-plant" data-id="${escapeHTML(plant.id)}" type="button">${icon("edit")} ${reviewHasContent(review) ? "Modifier" : "Noter"}</button></div>${renderReviewSummary(review)}<div class="detail-section-title"><h3>Suivi sanitaire</h3><button class="button ghost" data-action="add-health" data-id="${escapeHTML(plant.id)}" type="button">${icon("info")} ${healthLogs.length ? "Ajouter une observation" : "Observer"}</button></div>${healthLogs.length ? `<div class="health-inline-list">${healthLogs.slice(0, 3).map((log) => `<div class="health-inline-row"><span class="health-inline-mark">${icon(log.symptom === "mildew" ? "droplet" : "info")}</span><div><strong>${escapeHTML(healthSymptomLabel(log.symptom))}</strong><small>${formatDate(log.date)} · ${escapeHTML(healthSeverityLabel(log.severity))}${log.treatment ? ` · ${escapeHTML(log.treatment)}` : ""}</small></div><button class="mini-button" data-action="edit-health" data-id="${escapeHTML(log.id)}" type="button" title="Modifier">${icon("edit")}</button></div>`).join("")}</div>` : `<div class="photo-inline-empty"><span>${icon("info")}</span><div><strong>Aucune observation sanitaire</strong><small>Notez un symptôme pour garder un historique exploitable.</small></div><button class="button secondary" data-action="add-health" data-id="${escapeHTML(plant.id)}" type="button">Ajouter</button></div>`}<div class="detail-section-title"><h3>Journal de récolte</h3><span>Planté le ${formatDate(plant.datePlanted)}</span></div><div class="harvest-list">${harvests.slice(0, 8).map((harvest) => `<div class="harvest-line"><strong>${formatDate(harvest.date)}</strong><span>${harvest.fruits || 0} fruit${harvest.fruits > 1 ? "s" : ""}${harvest.notes ? ` · ${escapeHTML(harvest.notes)}` : ""}</span><span class="weight">${formatWeight(harvest.weight)}</span><button class="mini-button" data-action="delete-harvest" data-plant-id="${escapeHTML(plant.id)}" data-harvest-id="${harvest.id}" type="button" title="Supprimer cette récolte" aria-label="Supprimer cette récolte">${icon("trash")}</button></div>`).join("") || `<div class="no-results">Aucune récolte notée pour cette plante.</div>`}</div>${harvests.length > 8 ? `<div class="form-help" style="margin-top:9px">${harvests.length - 8} ancienne${harvests.length - 8 > 1 ? "s" : "e"} récolte${harvests.length - 8 > 1 ? "s" : ""} masquée${harvests.length - 8 > 1 ? "s" : ""} dans cet aperçu.</div>` : ""}<div class="detail-footer"><button class="button secondary" data-action="edit-plant" data-id="${escapeHTML(plant.id)}" type="button">${icon("edit")} Modifier la fiche</button><button class="button secondary" data-action="add-candidate-from-plant" data-id="${escapeHTML(plant.id)}" type="button">${icon("leaf")} ${nextCandidate ? "Modifier la préparation" : `Préparer ${nextSeasonYear()}`}</button><button class="button primary" data-action="log-harvest" data-id="${escapeHTML(plant.id)}" type="button">${icon("plus")} Noter une récolte</button></div></div></div></div>`;
 }
@@ -2641,8 +2832,9 @@ function openModal(html) {
 
 function closeModal() {
   document.getElementById("modal-root").innerHTML = "";
-  if (lastFocusedElement && document.contains(lastFocusedElement)) setTimeout(() => lastFocusedElement.focus(), 0);
+  const focusTarget = lastFocusedElement;
   lastFocusedElement = null;
+  if (focusTarget) setTimeout(() => { if (document.contains(focusTarget)) focusTarget.focus(); }, 0);
 }
 
 function toast(message, type = "success", action = null) {
@@ -3153,7 +3345,13 @@ function handleClick(event) {
   if (action === "garden-filter") { gardenFilter = actionElement.dataset.filter; render(); return; }
   if (action === "select-region") { selectedRegion = actionElement.dataset.region; render(); return; }
   if (action === "view-mode") { viewMode = actionElement.dataset.mode; render(); return; }
-  if (action === "variety-filter") { varietyFilter = actionElement.dataset.filter; render(); return; }
+  if (action === "variety-filter") {
+    const selected = actionElement.dataset.filter;
+    varietyFilter = varietyFilter === selected ? "all" : selected;
+    render();
+    document.querySelector(`[data-action="variety-filter"][data-filter="${selected}"]`)?.focus();
+    return;
+  }
   if (action === "select-season") {
     state.currentSeason = Number(actionElement.dataset.year);
     saveState();
@@ -3549,7 +3747,7 @@ function handleSubmit(event) {
           daysToMaturity: Number(data.get("daysToMaturity")) || 75,
           fruitType: String(data.get("fruitType") || "").trim(),
           size: data.get("size"), shape: data.get("shape"), growth: data.get("growth"), breeder: String(data.get("breeder") || "").trim(), notes: String(data.get("notes") || "").trim(), colors: plantColors, colorMode, accent: colorBackground(plantColors, colorMode),
-          ...(catalogPlant ? { fruitType: catalogPlant.fruitType, seedSource: catalogPlant.seedSource, catalogId: catalogEntry.id, family: catalogEntry.family, subfamily: catalogEntry.subfamily, catalogDetails: cloneData(catalogEntry.details || {}) } : {}),
+          ...(catalogPlant ? { fruitType: catalogPlant.fruitType, seedSource: catalogPlant.seedSource, catalogId: catalogEntry.id, family: catalogEntry.family, subfamily: catalogEntry.subfamily, catalogDetails: cloneData(catalogEntry.details || {}), ...(catalogEntry.catalogRevision ? { catalogRevision: catalogEntry.catalogRevision } : {}) } : {}),
         });
         if (!catalogPlant) {
           delete plant.catalogId;
@@ -3581,7 +3779,7 @@ function handleSubmit(event) {
         status: "growing",
         accent: colorBackground(plantColors, colorMode),
         harvests: [],
-        ...(catalogEntry ? { catalogId: catalogEntry.id, family: catalogEntry.family, subfamily: catalogEntry.subfamily, catalogDetails: cloneData(catalogEntry.details || {}) } : {}),
+        ...(catalogEntry ? { catalogId: catalogEntry.id, family: catalogEntry.family, subfamily: catalogEntry.subfamily, catalogDetails: cloneData(catalogEntry.details || {}), ...(catalogEntry.catalogRevision ? { catalogRevision: catalogEntry.catalogRevision } : {}) } : {}),
       });
       saveState();
       if (onboardingFlow) {
@@ -4412,6 +4610,8 @@ function importData(file) {
       state.budgetSettings.marketPricePerKg = Number(state.budgetSettings.marketPricePerKg) > 0 ? Number(state.budgetSettings.marketPricePerKg) : 4.5;
       state.budgetSettings.projectionRate = Number(state.budgetSettings.projectionRate) > 0 ? Number(state.budgetSettings.projectionRate) : 1.15;
       if (!Array.isArray(state.catalog)) state.catalog = cloneData(defaultSeedCatalog());
+      mergeReferenceCatalog(state);
+      migrateCatalogTypes(state);
       if (!["orbital", "night"].includes(state.theme)) state.theme = "orbital";
       storageWarningShown = false;
       render();
@@ -4428,7 +4628,7 @@ function importData(file) {
 function init() {
   hydrateIcons();
   render();
-  if (pendingCatalogPruneNotice > 0 || pendingCatalogEnrichNotice > 0) {
+  if (pendingCatalogPruneNotice > 0 || pendingCatalogEnrichNotice > 0 || pendingCatalogTypesNotice) {
     const parts = [];
     if (pendingCatalogPruneNotice > 0) {
       const n = pendingCatalogPruneNotice;
@@ -4438,8 +4638,10 @@ function init() {
       const n = pendingCatalogEnrichNotice;
       parts.push(`${n} nouvelle${n > 1 ? "s" : ""} variété${n > 1 ? "s" : ""} de tomates ajoutée${n > 1 ? "s" : ""} au catalogue`);
     }
+    if (pendingCatalogTypesNotice) parts.push("fiches de référence et classement actualisés");
     pendingCatalogPruneNotice = 0;
     pendingCatalogEnrichNotice = 0;
+    pendingCatalogTypesNotice = false;
     saveState();
     setTimeout(() => toast(`Catalogue mis à jour : ${parts.join(" et ")}.`, "success"), 0);
   }

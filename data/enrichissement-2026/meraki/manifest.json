@@ -1,0 +1,95 @@
+{
+  "catalogueUrl": "https://merakiseeds.com/tomato-seeds",
+  "pageUrlTemplate": "https://merakiseeds.com/{slug}",
+  "collectedAt": "2026-09-07",
+  "notes": "Boutique nopCommerce. La liste de catégorie contient des descriptions complètes (port, calibre, couleur, saveur, histoire, jours, sachet/prix) : les profils sont rédigés depuis les chunks de liste, sans ouvrir chaque fiche produit. Pagination : ?pagesize=100&pagenumber=N ; 17 pages au total pour la racine Tomatoes (1659 produits). Sous-catégories : determinate-tomato-seeds (Low Growing, 549), indeterminate-tomato-seeds (High Growing, 888), other-tomatoes-seeds (Other, 270) ; New for 2026 (233). Le tri par défaut est alphabétique A→Z.",
+  "pages": [
+    {
+      "page": 1,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100",
+      "productCount": 100
+    },
+    {
+      "page": 2,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=2",
+      "productCount": 100
+    },
+    {
+      "page": 3,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=3",
+      "productCount": 100
+    },
+    {
+      "page": 4,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=4",
+      "productCount": 100
+    },
+    {
+      "page": 5,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=5",
+      "productCount": 100
+    },
+    {
+      "page": 6,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=6",
+      "productCount": 100
+    },
+    {
+      "page": 7,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=7",
+      "productCount": 100
+    },
+    {
+      "page": 8,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=8",
+      "productCount": 100
+    },
+    {
+      "page": 9,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=9",
+      "productCount": 100
+    },
+    {
+      "page": 10,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=10",
+      "productCount": 100
+    },
+    {
+      "page": 11,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=11",
+      "productCount": 100
+    },
+    {
+      "page": 12,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=12",
+      "productCount": 100
+    },
+    {
+      "page": 13,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=13",
+      "productCount": 100
+    },
+    {
+      "page": 14,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=14",
+      "productCount": 100
+    },
+    {
+      "page": 15,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=15",
+      "productCount": 100
+    },
+    {
+      "page": 16,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=16",
+      "productCount": 100
+    },
+    {
+      "page": 17,
+      "url": "https://merakiseeds.com/tomato-seeds?pagesize=100&pagenumber=17",
+      "productCount": 59
+    }
+  ],
+  "listed": 1659,
+  "plan": "Racine Tomatoes terminée (17 pages, 1659 produits = compte de la catégorie racine). Prochaine étape : décider si les sous-catégories (Low Growing 549 / High Growing 888 / Other 270) apportent des produits hors racine (recouvrement probable) — vérifier par comptage avant de lancer ; puis le cas échéant les pages « New for 2026 » (233) / « New for 2027 » (7)."
+}

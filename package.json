@@ -5,6 +5,9 @@
   "description": "Carnet local pour suivre une saison de culture de tomates",
   "scripts": {
     "start": "python3 -m http.server 4173 --bind 0.0.0.0",
-    "build:sw": "node build-sw-cache.mjs"
+    "test": "node --test",
+    "build:sw": "node build-sw-cache.mjs",
+    "build:audit": "node build-catalog-report.mjs",
+    "build:catalog": "node build-catalog-import.mjs && node build-catalog-report.mjs && node build-sw-cache.mjs"
   }
 }

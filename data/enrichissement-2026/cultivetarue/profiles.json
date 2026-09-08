@@ -1,0 +1,314 @@
+{
+  "0-33": {
+    "growth": "D",
+    "colors": [
+      "red"
+    ],
+    "shape": "rond",
+    "weight": "Fruits ronds de 100 à 150 g selon le semencier.",
+    "height": "Plante compacte ; hauteur non chiffrée par le semencier.",
+    "maturity": "Précoce ; à cultiver en tout début de saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "Russie — création de Pavel Saraev, spécialiste des plantes potagères résistantes au froid.",
+    "description": "Création de Pavel Saraev, spécialiste russe des plantes potagères résistantes au froid : fruits ronds rouges de 100 à 150 g à chair juteuse et bonne saveur. Plante déterminée compacte, précoce, adaptée aux saisons difficiles et à la culture en pot, résistante aux maladies.",
+    "fruit": "Fruit rond ; rouge. Calibre indicatif : 100 à 150 g.",
+    "sources": [
+      "https://cultivetarue.fr/products/0-33"
+    ],
+    "breeder": "Pavel Saraev",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "1884-purple": {
+    "growth": "I",
+    "colors": [
+      "purple"
+    ],
+    "shape": "rond",
+    "weight": "Gros fruits ronds de 200 à 400 g selon le semencier.",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Tardive selon le semencier.",
+    "leaf": "Feuillage régulier selon le semencier.",
+    "origin": "USA — mutation spontanée de la 1884.",
+    "description": "Mutation spontanée à fruits pourpres de l'ancienne 1884 américaine : gros fruits ronds de 200 à 400 g à la robe pourpre foncé, chair juteuse à saveur exceptionnelle. Variété indéterminée au feuillage régulier, tardive.",
+    "fruit": "Fruit rond ; pourpre. Calibre indicatif : 200 à 400 g.",
+    "sources": [
+      "https://cultivetarue.fr/products/1884-purple"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "À conserver distincte de la 1884 rose (fiche 1884) : la couleur pourpre définit cette mutation.",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "1999": {
+    "growth": "WD",
+    "colors": [
+      "yellow",
+      "anthocyanin"
+    ],
+    "shape": "rond",
+    "weight": "Cerises jaunes à faible anthocyane sur les épaules (poids non chiffré).",
+    "height": "80 cm maximum selon le semencier.",
+    "maturity": "Précoce selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "USA — création récente de Bill Yoder.",
+    "description": "Création récente de Bill Yoder : plante déterminée naine ne dépassant pas 80 cm, précoce et très productive, adaptée à la culture en pot. Petites cerises jaunes rondes à faible anthocyane sur les épaules, douces et sucrées.",
+    "fruit": "Fruit rond ; jaune, faible pigmentation bleu-violet sur les épaules. Calibre indicatif : cerises (poids non chiffré).",
+    "sources": [
+      "https://cultivetarue.fr/products/1999"
+    ],
+    "breeder": "Bill Yoder",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "646": {
+    "growth": "I",
+    "colors": [
+      "pink"
+    ],
+    "shape": "beefsteak",
+    "weight": "Fruits de type beefsteak de 200 à 250 g selon le semencier.",
+    "height": "Plante à grand développement ; hauteur non chiffrée par le semencier.",
+    "maturity": "Mi-saison ; production jusqu'à tard dans la saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "Russie — variété héritage recensée par Natalia Khilenko, issue de sa collection familiale.",
+    "description": "Heirloom russe recensé par Natalia Khilenko et issu de sa collection familiale : fruits roses de type beefsteak de 200 à 250 g, aux épaules parfois lavées de vert, à la chair délicieuse légèrement sucrée. Plante indéterminée à grand développement, productive jusqu'à tard dans la saison et peu sensible aux aléas climatiques.",
+    "fruit": "Fruit charnu de type beefsteak ; rose, épaules parfois lavées de vert. Calibre indicatif : 200 à 250 g.",
+    "sources": [
+      "https://cultivetarue.fr/products/646"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "900-gramovyy-iz-minusinska": {
+    "growth": "I",
+    "colors": [
+      "pink",
+      "red"
+    ],
+    "shape": "cœur",
+    "weight": "Gros fruit cordiforme (poids non chiffré par le semencier ; le nom évoque des fruits d'environ 900 g).",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "Russie (Sibérie) — variété présentée par un collectionneur au festival de la tomate de de Minusinsk.",
+    "description": "Variété sibérienne présentée par un collectionneur au festival de la tomate de Minusinsk : gros fruits cordiformes rose-rouge à chair dense, juteuse et parfumée, à la saveur excellente et équilibrée entre sucre et acidité. Production échelonnée dans la saison, plante indéterminée.",
+    "fruit": "Fruit cordiforme ; rose / rouge. Calibre indicatif : gros fruit (poids non chiffré ; le nom évoque environ 900 g).",
+    "sources": [
+      "https://cultivetarue.fr/products/900-gramovyy-iz-minusinska"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "a-b-tiger-orange": {
+    "growth": "I",
+    "colors": [
+      "orange"
+    ],
+    "shape": "rond",
+    "weight": "Petit fruit de type gros cocktail (poids non chiffré).",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "Belgique — cultivar issu de la lignée Tiger Pilar.",
+    "description": "Cultivar belge issu de la lignée Tiger Pilar : fruits ronds de type gros cocktail à robe orange plus ou moins lavée de traces verdâtres, chair ferme et juteuse à saveur rafraîchissante. Plante indéterminée productive.",
+    "fruit": "Fruit rond ; orange, traces verdâtres plus ou moins marquées. Calibre indicatif : petit fruit de type gros cocktail (poids non chiffré).",
+    "sources": [
+      "https://cultivetarue.fr/products/a-b-tiger-orange"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "a-b-tiger-pilar": {
+    "growth": "I",
+    "colors": [
+      "green"
+    ],
+    "shape": "rond",
+    "weight": "Petit fruit de type gros cocktail (poids non chiffré).",
+    "height": "Plante à grand développement ; hauteur non chiffrée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "Belgique — lignées créées par Ambiorix, développées par des jardiniers amateurs.",
+    "description": "Cultivar issu de lignées créées par Ambiorix et développées par des jardiniers amateurs : fruits ronds de type gros cocktail à robe vert émeraude striée de plusieurs nuances de vert, chair ferme et juteuse à saveur rafraîchissante. Plante indéterminée à grand développement, productive.",
+    "fruit": "Fruit rond ; vert émeraude strié de vert. Calibre indicatif : petit fruit de type gros cocktail (poids non chiffré).",
+    "sources": [
+      "https://cultivetarue.fr/products/a-b-tiger-pilar"
+    ],
+    "breeder": "Ambiorix",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "abakanskiy-rozovyi": {
+    "growth": "I",
+    "colors": [
+      "pink"
+    ],
+    "shape": "cœur",
+    "weight": "Gros fruits cordiformes roses de 250 à 500 g selon le semencier.",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage régulier selon le semencier.",
+    "origin": "Russie.",
+    "description": "Heirloom russe à croissance indéterminée et feuillage régulier : gros fruits cordiformes roses de 250 à 500 g à chair charnue contenant peu de graines.",
+    "fruit": "Fruit cordiforme ; rose. Calibre indicatif : 250 à 500 g.",
+    "sources": [
+      "https://cultivetarue.fr/products/abakanskiy-rozovyi"
+    ],
+    "breeder": "",
+    "aliases": [
+      "Абаканский розовый"
+    ],
+    "note": "Le semencier donne le synonyme cyrillique Абаканский розовый.",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "abano": {
+    "growth": "I",
+    "colors": [
+      "red"
+    ],
+    "shape": "aplati",
+    "weight": "Fruits de calibre important (poids non chiffré).",
+    "height": "Plant vigoureux ; hauteur non chiffrée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "Italie (Piémont).",
+    "description": "Variété ancienne italienne du Piémont : plant vigoureux à grande production de fruits aplatis rouges de calibre important, à la saveur de tomate ancienne.",
+    "fruit": "Fruit aplati ; rouge. Calibre indicatif : gros fruit (poids non chiffré).",
+    "sources": [
+      "https://cultivetarue.fr/products/abano"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "abbatista-paste": {
+    "growth": "I",
+    "colors": [
+      "red"
+    ],
+    "shape": "allongé",
+    "weight": "Fruit moyen à gros (poids non chiffré).",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "USA.",
+    "description": "Variété américaine peu documentée : fruits allongés et bosselés se terminant par une pointe, rouges, à réserver plutôt au coulis et aux sauces malgré une saveur un peu sucrée ; très bonne production mais très peu de graines. Plante indéterminée de mi-saison.",
+    "fruit": "Fruit allongé et bosselé, à pointe ; rouge. Calibre indicatif : moyen à gros (poids non chiffré).",
+    "sources": [
+      "https://cultivetarue.fr/products/abbatista-paste"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "Le semencier signale lui-même le peu d'informations disponibles sur cette variété.",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "abe-hall": {
+    "growth": "I",
+    "colors": [
+      "pink"
+    ],
+    "shape": "variable",
+    "weight": "Fruits de 250 à 500 g selon le semencier.",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "USA — cultivar inscrit au Seed Savers Yearbook en 1997.",
+    "description": "Cultivar américain inscrit au Seed Savers Yearbook en 1997 : selon la légende rapportée par le semencier, les semences auraient été recueillies flottant sur l'Ohio par un certain Abe Hall, qui a donné son nom à la variété. Gros fruits roses de 250 à 500 g, les plus gros spécimens pouvant devenir assez difformes, à chair charnue à saveur de tomate ancienne. Plante indéterminée productive.",
+    "fruit": "Forme variable selon le fruit ou le lot ; rose. Calibre indicatif : 250 à 500 g.",
+    "sources": [
+      "https://cultivetarue.fr/products/abe-hall"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "Forme « renflée » selon le semencier, les plus gros fruits devenant difformes : transcrite en forme variable.",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "abraham-brown": {
+    "growth": "I",
+    "colors": [
+      "brown"
+    ],
+    "shape": "aplati",
+    "weight": "Fruit moyen (poids non chiffré).",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage de type pomme de terre selon le semencier.",
+    "origin": "USA.",
+    "description": "Variété développée et stabilisée par Millard Murdock à partir d'un croisement accidentel entre Black Magic et une variété non identifiée : fruits aplatis à robe très foncée et brillante, avec des traces vertes aux épaules, chair dense très parfumée à excellente saveur. Plante indéterminée à feuillage de pomme de terre, à production échelonnée.",
+    "fruit": "Fruit aplati ; brun / acajou, traces vertes aux épaules. Calibre indicatif : fruit moyen (poids non chiffré).",
+    "sources": [
+      "https://cultivetarue.fr/products/abraham-brown"
+    ],
+    "breeder": "Millard Murdock",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "abraham-green": {
+    "growth": "I",
+    "colors": [
+      "green"
+    ],
+    "shape": "rond",
+    "weight": "Fruits ronds de 150 à 200 g selon le semencier.",
+    "height": "Hauteur non documentée par le semencier.",
+    "maturity": "Mi-saison selon le semencier.",
+    "leaf": "Feuillage régulier selon le semencier.",
+    "origin": "USA.",
+    "description": "Variété américaine très récente, indéterminée au feuillage régulier : fruits ronds de 150 à 200 g de type GWR (qui restent verts à mûrissement), à l'épiderme et à la chair d'un vert éclatant, juteuse et d'excellente saveur.",
+    "fruit": "Fruit rond ; vert (type GWR). Calibre indicatif : 150 à 200 g.",
+    "sources": [
+      "https://cultivetarue.fr/products/abraham-green"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  },
+  "abrikos": {
+    "growth": "I",
+    "colors": [
+      "pink"
+    ],
+    "shape": "aplati",
+    "weight": "Fruits de 200 à 300 g, parfois plus, selon le semencier.",
+    "height": "Plante à très grand développement, à conduire sur plusieurs tiges ; hauteur non chiffrée par le semencier.",
+    "maturity": "Précoce selon le semencier ; très bonne et précoce productivité.",
+    "leaf": "Feuillage non documenté par le semencier.",
+    "origin": "Lituanie — variété rare du patrimoine lituanien.",
+    "description": "Variété rare du patrimoine lituanien : fruits aplatis roses de 200 à 300 g et plus, à l'épiderme duveteux dit « peau de pêche », chair charnue parfumée à saveur douce. Plante indéterminée à très grand développement, à conduire sur plusieurs tiges, très peu sensible aux aléas climatiques, à très bonne productivité précoce.",
+    "fruit": "Fruit aplati à épiderme duveteux ; rose. Calibre indicatif : 200 à 300 g et plus.",
+    "sources": [
+      "https://cultivetarue.fr/products/abrikos"
+    ],
+    "breeder": "",
+    "aliases": [],
+    "note": "",
+    "daysFromTransplant": 0,
+    "status": "partial"
+  }
+}

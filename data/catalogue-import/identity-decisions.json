@@ -1,0 +1,37 @@
+{
+  "existing": {
+    "P7001": {
+      "catalogId": "catalog-120",
+      "reason": "Brandywine Pink est déjà conservée comme Brandywine Pink - Rose."
+    },
+    "P6128": {
+      "catalogId": "catalog-016",
+      "reason": "Même nom Silvery Fir Tree, complété par le synonyme Serebristaya El."
+    },
+    "P6187": {
+      "catalogId": "catalog-074",
+      "reason": "La fiche du fournisseur cite explicitement le synonyme Dwarf wild fred et le même croisement Carbon × New Big Dwarf.",
+      "source": "https://kokopelli-semences.com/en/p/wild-fred-red-mid-season-tomato"
+    },
+    "P6242": {
+      "catalogId": "catalog-049",
+      "reason": "Nom commercial Roma Paste rapproché de la Roma déjà présente. Ne pas importer une seconde Roma ni recopier l’origine italienne 1800 contredite par les références historiques.",
+      "source": "https://www.livingseeds.co.za/roma-paste-tomato.html"
+    },
+    "P6334": {
+      "catalogId": "catalog-099",
+      "reason": "Market Miracle figure explicitement parmi les synonymes de Merveille des Marchés.",
+      "source": "https://tatianastomatobase.com/wiki/Merveille_des_March%C3%A9s"
+    }
+  },
+  "aliases": {
+    "P7494": {
+      "reference": "P7301",
+      "reason": "Tasty Evergreen est un synonyme attesté d’Evergreen.",
+      "source": "https://trueleafmarket.com/products/evergreen-tomato-seeds"
+    }
+  },
+  "excluded": {
+    "L0860": "Mélange de plusieurs variétés, pas une variété de référence unique."
+  }
+}

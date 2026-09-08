@@ -1,0 +1,73 @@
+{
+  "catalogueUrl": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates",
+  "collectedAt": "2026-09-07",
+  "advertisedProductCount": 411,
+  "pages": [
+    {
+      "page": 1,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=1",
+      "productCount": 36
+    },
+    {
+      "page": 2,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=2",
+      "productCount": 36
+    },
+    {
+      "page": 3,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=3",
+      "productCount": 36
+    },
+    {
+      "page": 4,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=4",
+      "productCount": 36
+    },
+    {
+      "page": 5,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=5",
+      "productCount": 36
+    },
+    {
+      "page": 6,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=6",
+      "productCount": 36
+    },
+    {
+      "page": 7,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=7",
+      "productCount": 36
+    },
+    {
+      "page": 8,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=8",
+      "productCount": 36
+    },
+    {
+      "page": 9,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=9",
+      "productCount": 36
+    },
+    {
+      "page": 10,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=10",
+      "productCount": 36
+    },
+    {
+      "page": 11,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=11",
+      "productCount": 36
+    },
+    {
+      "page": 12,
+      "url": "https://kokopelli-semences.fr/fr/c/semences/potageres/legumes-fruits/tomates?page=12",
+      "productCount": 15
+    }
+  ],
+  "excluded": [
+    {
+      "reference": "L0860",
+      "reason": "Mélange de plusieurs variétés, pas un cultivar unique."
+    }
+  ]
+}

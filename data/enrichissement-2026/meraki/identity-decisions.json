@@ -1,0 +1,622 @@
+{
+  "excluded": {},
+  "aliases": {},
+  "existing": {
+    "barrys-crazy-cherry-tomato": {
+      "catalogId": "catalog-025",
+      "reason": "Nom complet du semencier pour la fiche existante Barry's Crazy Cherry."
+    },
+    "banana-legs-tomato": {
+      "catalogId": "catalog-ref-P6627",
+      "reason": "Nom complet du semencier pour la fiche existante Banana Legs."
+    },
+    "bear-claw-beefsteak-tomato": {
+      "catalogId": "catalog-186",
+      "reason": "Nom complet du semencier pour la fiche existante Bear Claw."
+    },
+    "beauté-blanche-beefsteak-tomato": {
+      "catalogId": "catalog-127",
+      "reason": "Meraki indique que Beauté Blanche est aussi nommée White Beauty / White Wonder ; rattachée à la fiche White Beauty."
+    },
+    "black-and-brown-boar-tomato": {
+      "catalogId": "catalog-ref-L0107",
+      "reason": "Nom complet du semencier pour la fiche existante Black and Brown Boar."
+    },
+    "black-beauty-tomato": {
+      "catalogId": "catalog-ref-L0097",
+      "reason": "Nom complet du semencier pour la fiche existante Black Beauty."
+    },
+    "black-cherry-tomato": {
+      "catalogId": "catalog-051",
+      "reason": "Nom complet du semencier pour la fiche existante Black Cherry."
+    },
+    "black-from-tula-tomato": {
+      "catalogId": "catalog-154",
+      "reason": "Nom complet du semencier pour la fiche existante Black From Tula."
+    },
+    "black-icicle-tomato": {
+      "catalogId": "catalog-ref-P6065",
+      "reason": "La fiche existante Sosulka Chernaya porte l'alias Black Icicle ; même variété."
+    },
+    "black-krim-beefsteak-tomato": {
+      "catalogId": "catalog-027",
+      "reason": "Même variété que la fiche existante Noire de Crimée (Black Krim)."
+    },
+    "black-plum-tomato": {
+      "catalogId": "catalog-ref-P7406",
+      "reason": "La fiche existante Prune Noire porte l'alias Black Plum ; même variété."
+    },
+    "black-prince-tomato": {
+      "catalogId": "catalog-ref-P7403",
+      "reason": "La fiche existante Black Prince porte l'alias Prince Noir ; même variété."
+    },
+    "black-seaman-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7432",
+      "reason": "Même variété que la fiche existante Black Sea Man (alias Black Seamen)."
+    },
+    "black-shadow-tomato": {
+      "catalogId": "catalog-ref-P6085",
+      "reason": "Nom complet du semencier pour la fiche existante Black Shadow."
+    },
+    "blonde-boar-tomato": {
+      "catalogId": "catalog-ref-L0109",
+      "reason": "Nom complet du semencier pour la fiche existante Blonde Boar."
+    },
+    "bonny-best-tomato": {
+      "catalogId": "catalog-098",
+      "reason": "Nom identique : Bonny Best."
+    },
+    "boxer-rebellion-tomato": {
+      "catalogId": "catalog-ref-L0475",
+      "reason": "Nom identique : Boxer Rebellion."
+    },
+    "brandyfred-dwarf-tomato-project": {
+      "catalogId": "catalog-019",
+      "reason": "Nom identique : BrandyFred."
+    },
+    "brandywine-beefsteak-tomato": {
+      "catalogId": "catalog-057",
+      "reason": "Nom identique : Brandywine (générique)."
+    },
+    "brandywine-black-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7434",
+      "reason": "Nom identique : Brandywine Black (alias Black Brandywine)."
+    },
+    "brandywine-otv-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6331",
+      "reason": "Alias Brandywine OTV / Brandywine Off The Vine."
+    },
+    "brandywine-pink-beefsteak-tomato": {
+      "catalogId": "catalog-120",
+      "reason": "Alias exact Brandywine Pink ; pas de souche désignée chez Meraki."
+    },
+    "brandywine-red-beefsteak-tomato": {
+      "catalogId": "catalog-166",
+      "reason": "Nom identique : Red Brandywine."
+    },
+    "brandywine-yellow-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6624",
+      "reason": "Alias Brandywine Yellow / Yellow Brandywine."
+    },
+    "brin-de-muguet-cherry-tomato": {
+      "catalogId": "catalog-ref-P6141",
+      "reason": "Nom identique : Brin de Muguet."
+    },
+    "burbank-tomato": {
+      "catalogId": "catalog-ref-P6203",
+      "reason": "Nom identique : Burbank (alias Burbank Slicing)."
+    },
+    "burrackers-favorite-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7428",
+      "reason": "Nom identique : Burracker's Favorite."
+    },
+    "caitydid-dwarf-tomato-project": {
+      "catalogId": "catalog-012",
+      "reason": "Nom identique : Dwarf Caitydid."
+    },
+    "canestrino-di-lucca-tomato": {
+      "catalogId": "catalog-ref-L0157",
+      "reason": "Nom identique : Canestrino Di Lucca."
+    },
+    "carbon-beefsteak-tomato": {
+      "catalogId": "catalog-ref-L0307",
+      "reason": "Nom identique : Carbon."
+    },
+    "caro-rich-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6601",
+      "reason": "Nom identique : Caro Rich."
+    },
+    "bosque-blue-cherry-tomato": {
+      "catalogId": "catalog-ref-P6088",
+      "reason": "Nom identique : Bosque Blue (variété de cerise)."
+    },
+    "cherokee-green-beefsteak-tomato": {
+      "catalogId": "catalog-ref-L0207",
+      "reason": "Nom identique : Cherokee Green."
+    },
+    "cherokee-purple-beefsteak-tomato": {
+      "catalogId": "catalog-058",
+      "reason": "Nom identique : Cherokee Purple."
+    },
+    "chestnut-chocolate-tomato": {
+      "catalogId": "catalog-ref-L0098",
+      "reason": "Nom identique : Chestnut Chocolate."
+    },
+    "chocolate-lightning-dwarf-tomato-project": {
+      "catalogId": "catalog-073",
+      "reason": "Nom identique : Chocolate Lightning."
+    },
+    "copia-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7450",
+      "reason": "Nom identique : Copia."
+    },
+    "costoluto-fiorentino-beefsteak-tomato": {
+      "catalogId": "catalog-160",
+      "reason": "Nom identique : Costoluto Fiorentino."
+    },
+    "cream-sausage-tomato": {
+      "catalogId": "catalog-ref-P7200",
+      "reason": "Nom identique : Cream Sausage."
+    },
+    "corbarino-longkeeper-tomato": {
+      "catalogId": "catalog-ref-meraki-a-grappoli-corbarino-round-longkeeper-tomato",
+      "reason": "Le semencier indique « probablement la même variété que A Grappoli Corbarino » : rattachement à la forme ronde déjà cataloguée (calibre annoncé différent)."
+    },
+    "dark-galaxy-tomato": {
+      "catalogId": "catalog-ref-L0102",
+      "reason": "Nom identique : Dark Galaxy."
+    },
+    "dark-queen-beefsteak-tomato": {
+      "catalogId": "catalog-ref-L0099",
+      "reason": "Nom identique : Dark Queen."
+    },
+    "delicious-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6209",
+      "reason": "Alias exact Delicious (Delicious de Burpee)."
+    },
+    "dorothys-green-tomato": {
+      "catalogId": "catalog-ref-P7493",
+      "reason": "Alias Dorothy's Green (fiche Dorothy Green)."
+    },
+    "emerald-apple-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6080",
+      "reason": "Nom identique : Emerald Apple."
+    },
+    "emerald-evergreen-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7301",
+      "reason": "Alias Emerald Evergreen porté par la fiche Evergreen."
+    },
+    "emerald-giant-dwarf-tomato-project": {
+      "catalogId": "catalog-070",
+      "reason": "Nom identique : Dwarf Emerald Giant."
+    },
+    "elberta-peach-tomato": {
+      "catalogId": "catalog-010",
+      "reason": "Nom identique : Elberta Peach."
+    },
+    "esmeralda-golosina-cherry-tomato": {
+      "catalogId": "catalog-ref-P6081",
+      "reason": "Nom identique : Esmeralda Golosina."
+    },
+    "fat-frog-tomato": {
+      "catalogId": "catalog-001",
+      "reason": "Nom identique : Fat Frog."
+    },
+    "florida-petite-tomato": {
+      "catalogId": "catalog-005",
+      "reason": "Nom identique : Florida Petite."
+    },
+    "glacier-tomato": {
+      "catalogId": "catalog-110",
+      "reason": "Nom identique : Glacier."
+    },
+    "gold-dust-tomato": {
+      "catalogId": "catalog-080",
+      "reason": "Nom identique : Gold Dust (buisson déterminé orange, 90-180 g) ; variété orange issue de Taxi."
+    },
+    "golden-jubilee-beefsteak-tomato": {
+      "catalogId": "catalog-084",
+      "reason": "Nom identique : Golden Jubilee (1943, fruits jaune-orangé) ; calibre et histoire concordants."
+    },
+    "golden-sunray-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6703",
+      "reason": "Nom identique : Golden Sunray (classique américain conservé par Ben Quisenberry)."
+    },
+    "grappoli-dinvierno-longkeeper-tomato": {
+      "catalogId": "catalog-ref-rareseeds-tomato-a-grappoli-d-inverno",
+      "reason": "Même variété que la fiche A Grappoli D'Inverno (même signification « grappes d'hiver », Italie, grappes de petits fruits ovales rouges à peau épaisse, conservation 5-6 mois). Le lot Meraki est annoncé semi-déterminé (100-120 cm, 60-70 jours) mais spécifié « Indeterminate » sur la même page ; divergences conservées en note sur la fiche."
+    },
+    "green-bell-pepper-tomato": {
+      "catalogId": "catalog-ref-P7427",
+      "reason": "Nom identique : Green Bell Pepper (lignée de Tom Wagner, fruits type poivron vert à farcir)."
+    },
+    "green-brandy-cherry-tomato": {
+      "catalogId": "catalog-ref-P6368",
+      "reason": "Nom identique : Green Brandy (Tom Wagner, croisement Green Zebra × Brandywine)."
+    },
+    "green-moldovan-tomato": {
+      "catalogId": "catalog-ref-P7492",
+      "reason": "Même variété que Moldovan Green (inversion de nom déjà documentée sur la fiche cible)."
+    },
+    "green-sleeves-tomato": {
+      "catalogId": "catalog-ref-P7495",
+      "reason": "Alias de Green Sausage (Tom Wagner) : le semencier indique lui-même le nom alternatif Green Sleeves."
+    },
+    "groovy-tunes-tomato": {
+      "catalogId": "catalog-009",
+      "reason": "Nom identique : Groovy Tunes (Bunny Hop Seeds, micro-naine chartreuse à cerises pourpres)."
+    },
+    "halfmoon-china-tomato": {
+      "catalogId": "catalog-185",
+      "reason": "Nom identique : Halfmoon China (Sichuan, beefsteak ivoire-jaune)."
+    },
+    "hawaiian-pineapple-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6705",
+      "reason": "Nom identique : Hawaiian Pineapple (gros fruits multicolores)."
+    },
+    "great-white-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7414",
+      "reason": "Grosse Blanche : la fiche cible documente la commercialisation sous le nom Great White."
+    },
+    "hillbilly-beefsteak-tomato": {
+      "catalogId": "catalog-060",
+      "reason": "Nom identique : Hillbilly (bicolore des Appalaches, jaune strié de rouge-rose)."
+    },
+    "indigo-apple-tomato": {
+      "catalogId": "catalog-ref-P6090",
+      "reason": "Nom identique : Indigo Apple (lignée à anthocyanes OSU P20/Brad Gates)."
+    },
+    "japanese-trifele-black-tomato": {
+      "catalogId": "catalog-ref-P6172",
+      "reason": "Même variété : Japanese Black Trifele (alias Japanese Trifele Black documenté sur la fiche cible)."
+    },
+    "jochalos-tomato": {
+      "catalogId": "catalog-003",
+      "reason": "Nom identique : Jochalos (micro-naine de Bolivie)."
+    },
+    "kaleidoscopic-jewel-tomato": {
+      "catalogId": "catalog-ref-L0105",
+      "reason": "Nom identique : Kaleidoscopic Jewel (Brad Gates / Wild Boar Farms)."
+    },
+    "kangaroo-paw-green-dwarf-tomato-project": {
+      "catalogId": "catalog-075",
+      "reason": "Nom identique : Kangaroo Paw Green (DTP, famille Witty, Budai Torpe × Cherokee Green)."
+    },
+    "kootenai-mini-dwarf-tomato": {
+      "catalogId": "catalog-ref-P6216",
+      "reason": "Nom identique : Kootenai (obtention de l'Université d'Idaho, années 1960, fruits rouges 50-90 g)."
+    },
+    "koralik-tomato": {
+      "catalogId": "catalog-015",
+      "reason": "Nom identique : Koralik (cerise buissonnante, Pologne, déterminée)."
+    },
+    "legend-tomato": {
+      "catalogId": "catalog-ref-L0733",
+      "reason": "Nom identique : Legend (sélection de Jim Baggett, Oregon State University)."
+    },
+    "lime-green-salad-tomato": {
+      "catalogId": "catalog-ref-P7409",
+      "reason": "Nom identique : Lime Green Salad (alias déjà documenté sur la fiche Lime Green / Green Elf de Tom Wagner)."
+    },
+    "loxton-lass-dwarf-tomato-project": {
+      "catalogId": "catalog-018",
+      "reason": "Nom identique : Loxton Lass (DTP, famille Rosy, Rosella Purple × Orange Heirloom, Patrina Nuske Small)."
+    },
+    "lucid-gem-beefsteak-tomato": {
+      "catalogId": "catalog-ref-L0100",
+      "reason": "Nom identique : Lucid Gem (Brad Gates / Wild Boar Farms)."
+    },
+    "maskotka-tomato": {
+      "catalogId": "catalog-055",
+      "reason": "Nom identique : Maskotka (variété polonaise fixée, compacte 30-60 cm, cerises rouges, déterminée, pour pots et balcons)."
+    },
+    "manitoba-tomato": {
+      "catalogId": "catalog-ref-P6026",
+      "reason": "Nom identique : Manitoba (sélection de la station expérimentale de Morden, Manitoba, années 1950, pour saisons courtes ; fruits rouges ronds, déterminée)."
+    },
+    "matina-tomato": {
+      "catalogId": "catalog-ref-P6011",
+      "reason": "Nom identique : Matina (variété allemande précoce à fruits rouges ronds et feuillage pomme de terre, indéterminée)."
+    },
+    "köning-humbert-longkeeper-tomato": {
+      "catalogId": "catalog-100",
+      "reason": "Même variété historique : Re Umberto / Roi Humbert (King Humbert), déjà citée par Burpee en 1884 ; alias documentés sur la fiche existante."
+    },
+    "moskvich-tomato": {
+      "catalogId": "catalog-104",
+      "reason": "Nom identique : Moskvich (précoce, fruits rouges globuleux 110-170 g, pour climats frais)."
+    },
+    "mountain-gold-tomato": {
+      "catalogId": "catalog-085",
+      "reason": "Nom identique : Mountain Gold (ex NC 84173, sélection Randolph G. Gardner / NC State, fruits jaune-orangé 100-300 g, déterminée)."
+    },
+    "opalka-tomato": {
+      "catalogId": "catalog-ref-P6280",
+      "reason": "Nom identique : Opalka (variété polonaise à longs fruits rouges charnus de type coulis)."
+    },
+    "orange-queen-tomato": {
+      "catalogId": "catalog-ref-P6501",
+      "reason": "Nom identique : Orange Queen (fruits ronds orange ; obtention Livingstone, USA, 1882)."
+    },
+    "moonglow-tomato": {
+      "catalogId": "catalog-ref-P6611",
+      "reason": "Nom identique : Moonglow (ancienne variété à fruits ronds jaune-orange 100-250 g)."
+    },
+    "orange-banana-tomato": {
+      "catalogId": "catalog-ref-P6613",
+      "reason": "Nom identique : Orange Banana (ancienne variété russe à fruits allongés orange, type coulis)."
+    },
+    "orange-strawberry-beefsteak-tomato": {
+      "catalogId": "catalog-106",
+      "reason": "Nom identique : Orange Strawberry (gros fruits orange cordiformes, Carolyn Male, 1995)."
+    },
+    "orange-crimea-tomato": {
+      "catalogId": "catalog-033",
+      "reason": "Nom identique : Orange Crimea (fruits ronds-ovales orange 50-150 g, tetra-cis-lycopène 8,04 ; port à confirmer sur le lot, voir fiche existante)."
+    },
+    "mohamed-tomato": {
+      "catalogId": "catalog-007",
+      "reason": "Nom identique : Mohamed (micro-naine compacte 12-25 cm, cerises rouges 15-20 g, déterminée)."
+    },
+    "mint-julep-cherry-tomato": {
+      "catalogId": "catalog-ref-L0108",
+      "reason": "Alias déjà documenté : Mint Julep = Michael Pollan (fruits verts striés de jaune, saveur douce)."
+    },
+    "mr-snow-dwarf-tomato-project": {
+      "catalogId": "catalog-068",
+      "reason": "Nom identique : Dwarf Mr. Snow (famille Sneezy du DTP, Golden Dwarf Champion × Green Giant, Patrina Nuske Small, sélection Craig LeHoullier)."
+    },
+    "noire-charbonneuse-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7442",
+      "reason": "Nom composé : Noire Charbonneuse = Charbonneuse (heirloom française, beefsteaks rouge-brun 200-500 g, collets verts)."
+    },
+    "pas-pride-micro-dwarf-tomato": {
+      "catalogId": "catalog-008",
+      "reason": "Nom exact : Pa´s Pride, micro-naine de Heidi Schmaltz Dolan, fruits rouge-brun foncé rayés de vert, chair brun-verdâtre."
+    },
+    "perestroika-tomato": {
+      "catalogId": "catalog-097",
+      "reason": "Nom exact : Perestroika, variété sibérienne (Bill McDorman), fruits rouges légèrement allongés charnus, indéterminée."
+    },
+    "paul-robeson-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7315",
+      "reason": "Nom exact : Paul Robeson (hommage au chanteur), beefsteaks brun-rouge 150-400 g, chair riche."
+    },
+    "peach-blow-sutton-tomato": {
+      "catalogId": "catalog-ref-P6265",
+      "reason": "Nom exact : Peach Blow Sutton (fruits roses duveteux, variété ancienne anglaise) — ne pas confondre avec la sélection Peach Blow Sutton Blue vendue séparément."
+    },
+    "persimmon-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6616",
+      "reason": "Nom exact : Persimmon, gros fruits jaune-orange charnus peu grainés ; l’attribution à Thomas Jefferson (1781) n’est pas certifiée."
+    },
+    "polar-beauty-tomato": {
+      "catalogId": "catalog-ref-P6147",
+      "reason": "Nom exact : Polar Beauty, buisson compact de John Holm (Fairbanks, Alaska), fruits rouges aplatis ~6 cm, saison courte."
+    },
+    "persuasion-tomato": {
+      "catalogId": "catalog-ref-L0101",
+      "reason": "Nom exact : Persuasion, obtention de Brad Gates, fruits roses striés de vert-doré avec traces d’anthocyanes."
+    },
+    "pink-furry-boar-tomato": {
+      "catalogId": "catalog-ref-L0111",
+      "reason": "Nom exact : Pink Furry Boar (Brad Gates), fruits roses duveteux rayés de jaune-crème ; distinct de Red/Yellow Furry Boar."
+    },
+    "pineapple-pig-beefsteak-tomato": {
+      "catalogId": "catalog-ref-L0110",
+      "reason": "Nom exact : Pineapple Pig (Brad Gates), beefsteaks blanc-crème striés de vert, chair charnue."
+    },
+    "petit-ananas-tomato": {
+      "catalogId": "catalog-ref-L0064",
+      "reason": "Nom exact : Petit Ananas, cocktail bicolore jaune-orange parfois rosé ; distinct de la grosse Ananas."
+    },
+    "oxheart-orange-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6604",
+      "reason": "Alias exact déjà porté par Cœur de Bœuf Orange : « Orange Oxheart » — beefsteaks cœur orange 250-500 g."
+    },
+    "primary-colors-tomato": {
+      "catalogId": "catalog-ref-P6092",
+      "reason": "Nom exact : Primary Colors, lignée de Tom Wagner à fruits jaunes et pigmentation anthocyane."
+    },
+    "purple-calabash-beefsteak-tomato": {
+      "catalogId": "catalog-193",
+      "reason": "Nom exact : Purple Calabash, ancienne variété aux fruits pourpres très aplatis."
+    },
+    "purple-russian-plum-tomato": {
+      "catalogId": "catalog-024",
+      "reason": "Nom exact : Purple Russian (= Ukrainian Purple), fruits pourpre-rouge oblongs 7-10 cm, Ukraine."
+    },
+    "red-zebra-tomato": {
+      "catalogId": "catalog-ref-P7453",
+      "reason": "Nom exact : Red Zebra, sélection de Jeff Dawson (culture de Green Zebra), fruits rouges rayés de jaune."
+    },
+    "re-umberto-longkeeper-tomato": {
+      "catalogId": "catalog-100",
+      "reason": "Même variété historique que Roi Humbert / König Humbert (King Humbert, Re Umberto), alias portés sur la fiche existante ; déjà rattachée pour köning-humbert-longkeeper-tomato ; citée par Burpee en 1884."
+    },
+    "roman-candle-tomato": {
+      "catalogId": "catalog-ref-P6762",
+      "reason": "Nom exact : Roman Candle (alias Chandelle Romaine), sélection de John Swenson, fruits jaunes allongés."
+    },
+    "rosella-crimson-dwarf-tomato-project": {
+      "catalogId": "catalog-072",
+      "reason": "Nom exact : Rosella Crimson, DTP famille Sleepy (Budai × Stump of the World), sélection Patrina Nuske Small."
+    },
+    "rosella-purple-dwarf-tomato-project": {
+      "catalogId": "catalog-067",
+      "reason": "Nom exact : Rosella Purple, DTP famille Sleepy (Budai × Stump of the World), nommée par Craig LeHoullier."
+    },
+    "saint-pierre-tomato": {
+      "catalogId": "catalog-043",
+      "reason": "Nom exact : Saint-Pierre, ancienne variété française aux fruits ronds rouges, fiche déjà au catalogue."
+    },
+    "san-marzano-tomato": {
+      "catalogId": "catalog-048",
+      "reason": "Nom exact : San Marzano, variété italienne de Campanie de type coulis ; la souche Redorta (catalog-152) reste distincte."
+    },
+    "sart-roloise-beefsteak-tomato": {
+      "catalogId": "catalog-ref-L0814",
+      "reason": "Nom exact : Sart Roloise, croisement de Roland Boulanger (fruits clairs à épaules indigo), fiche déjà existante."
+    },
+    "schneewittchen-cherry-tomato": {
+      "catalogId": "catalog-ref-P7521",
+      "reason": "Même variété que la fiche existante portant l'alias « Schneewittchen » : sélection de Joe Bratka (New Jersey), cerise blanc ivoire-jaune, parfois traitée comme synonyme de Snow White."
+    },
+    "shimofuri-tomato": {
+      "catalogId": "catalog-017",
+      "reason": "Nom exact : Shimofuri, sélection d'Applestar au port retombant et feuillage panaché (fruits allongés roses à bout pointu)."
+    },
+    "sibirische-zimmertomate-tomato": {
+      "catalogId": "catalog-002",
+      "reason": "Nom exact : Sibirische Zimmertomate, tomate miniature sibérienne, fiche déjà au catalogue."
+    },
+    "silvery-fir-tree-tomato": {
+      "catalogId": "catalog-016",
+      "reason": "Nom exact : Silvery Fir Tree, variété russe à feuillage argenté évoquant la carotte."
+    },
+    "sleeping-lady-dwarf-tomato-project": {
+      "catalogId": "catalog-ref-P6170",
+      "reason": "Nom exact : Sleeping Lady, DTP famille Grumpy (Budai Torpe × Black from Tula), sélectionnée par Sherry Shiesl ; mêmes informations que la fiche existante."
+    },
+    "speckled-roman-paste-type-tomato": {
+      "catalogId": "catalog-ref-P7491",
+      "reason": "Nom exact : Speckled Roman (alias Striped Roman), sélection d'Antique Roman × Banana Legs."
+    },
+    "striped-cavern-tomato": {
+      "catalogId": "catalog-ref-P7306",
+      "reason": "Nom exact : Striped Cavern, tomate à farcir lobée rouge striée de jaune, proche d'un poivron."
+    },
+    "stump-of-the-world-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7190",
+      "reason": "Nom exact : Stump of the World, ancienne tomate de Ben Quisenberry, gros fruits roses aplatis (le semencier décrit rouge-rose) proches de Brandywine."
+    },
+    "sub-arctic-plenty-tomato": {
+      "catalogId": "catalog-ref-P6015",
+      "reason": "Nom exact : Sub-Arctic Plenty, déterminée précoce de saison courte (Beaverlodge, Alberta), petits fruits rouges."
+    },
+    "summer-cider-beefsteak-tomato": {
+      "catalogId": "catalog-ref-L0589",
+      "reason": "Même variété : la fiche existante porte l'alias « Summer Cider » (Summer Cider Apricot), gros fruits orange charnus."
+    },
+    "summertime-gold-dwarf-tomato-project": {
+      "catalogId": "catalog-069",
+      "reason": "Nom exact : Summertime Gold, DTP famille Sneezy (Golden Dwarf Champion × Green Giant), sélection David Lockwood 2007 ; mêmes informations que la fiche existante."
+    },
+    "tangerine-tomato": {
+      "catalogId": "catalog-ref-P6758",
+      "reason": "Nom exact : Tangerine, ancienne tomate ronde orange (citée Burpee 1937) ; le semencier annonce 100-200 g, la référence 180-400 g."
+    },
+    "tasmanian-chocolate-dwarf-tomato-project": {
+      "catalogId": "catalog-071",
+      "reason": "Nom exact : Tasmanian Chocolate, DTP (New Big Dwarf × Paul Robeson), sélectionnée et nommée par Linda Reid en Tasmanie."
+    },
+    "taxi-tomato": {
+      "catalogId": "catalog-ref-P6637",
+      "reason": "Même variété que Taxi Yellow : « Taxi » et « Taxi Yellow » sont des appellations du même cultivar jaune compact de saison courte (déterminée/indéterminée selon les vendeurs)."
+    },
+    "tiffen-mennonite-beefsteak-tomato": {
+      "catalogId": "catalog-157",
+      "reason": "Nom exact : Tiffen Mennonite, variété mennonite introduite au SSE par Thane H. Earle ; le semencier décrit une souche rouge brillant (certaines sources la disent rose)."
+    },
+    "tigerella-tomato": {
+      "catalogId": "catalog-ref-P7201",
+      "reason": "Nom exact : Tigerella, variété anglaise à petits fruits ronds rouges rayés de jaune."
+    },
+    "titmouse-micro-dwarf-tomato": {
+      "catalogId": "catalog-ref-meraki-sinichka-micro-dwarf-tomato",
+      "reason": "Le semencier indique « Probably the same variety as Sinichka » : « Sinichka » (синичка) signifie « mésange » en russe, nom dont Titmouse est la traduction ; micro-naine jaune doré déjà présente au catalogue sous le nom de Sinichka."
+    },
+    "tumbling-tom-red-tomato": {
+      "catalogId": "catalog-056",
+      "reason": "Nom exact : Tumbling Tom Red, variété retombante à cerises rouges déjà présente au catalogue."
+    },
+    "valencia-tomato": {
+      "catalogId": "catalog-ref-P6621",
+      "reason": "Nom exact : Valencia, ancienne tomate orange charnue déjà présente au catalogue."
+    },
+    "violet-jasper-tomato": {
+      "catalogId": "catalog-176",
+      "reason": "Nom exact : Violet Jasper, variété chinoise rose violacé à rayures vertes déjà présente au catalogue."
+    },
+    "white-queen-beefsteak-tomato": {
+      "catalogId": "catalog-128",
+      "reason": "Nom exact : White Queen, ancienne tomate blanche introduite en 1941 par Earl May Seed Co., déjà présente au catalogue."
+    },
+    "white-tomasol-tomato": {
+      "catalogId": "catalog-029",
+      "reason": "Nom exact : White Tomesol (le semencier écrit « White Tomasol » dans l'URL), variété blanc-crème à blush rose déjà présente au catalogue."
+    },
+    "white-wonder-beefsteak-tomato": {
+      "catalogId": "catalog-079",
+      "reason": "Nom exact : White Wonder, tomate blanche ivoire de type beefsteak déjà présente au catalogue."
+    },
+    "wild-fred-dwarf-tomato-project": {
+      "catalogId": "catalog-074",
+      "reason": "Nom exact : Wild Fred (Dwarf Wild Fred), variété naine du DTP issue de New Big Dwarf × Carbon, déjà présente au catalogue (alias Wild Fred)."
+    },
+    "woolly-green-zebra-tomato": {
+      "catalogId": "catalog-171",
+      "reason": "Nom exact : Woolly Green Zebra, sélection laineuse de Tom Wagner de type Green Zebra (fruits duveteux verts à rayures) déjà présente au catalogue."
+    },
+    "yellow-furry-boar-tomato": {
+      "catalogId": "catalog-ref-L0113",
+      "reason": "Nom exact : Yellow Furry Boar, forme jaune laineuse des « Furry Boar » de Brad Gates (Wild Boar Farms), déjà présente au catalogue."
+    },
+    "yellow-pear-cherry-tomato": {
+      "catalogId": "catalog-050",
+      "reason": "Nom exact : Yellow Pear (fiche « Poire jaune (Yellow Pearshape) »), très ancienne cerise jaune en forme de poire déjà présente au catalogue."
+    },
+    "yellow-perfection-tomato": {
+      "catalogId": "catalog-078",
+      "reason": "Nom exact : Yellow Perfection, ancienne variété anglaise à petits fruits ronds jaunes à peau fine, déjà présente au catalogue."
+    },
+    "zimmertomate-blau-tomato": {
+      "catalogId": "catalog-004",
+      "reason": "Même variété que « Blaue Zimmertomate » (Blue Room Tomato) : micro-naine déterminée à cerises rouge-noir anthocyane d'environ 20-25 g, déjà présente au catalogue."
+    },
+    "1884-beefsteak-tomato": {
+      "catalogId": "catalog-136",
+      "reason": "Nom exact : « 1884 », ancienne variété déjà présente au catalogue (fiche portant l'alias « 1884 Beefsteak Tomato » et la sourceRef de la page 1)."
+    },
+    "absinthe-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P6324",
+      "reason": "Nom exact : Absinthe, variété déjà présente au catalogue (fiche portant l'alias « Absinthe Beefsteak Tomato » et la sourceRef de la page 1)."
+    },
+    "adelaide-festival-dwarf-tomato-project": {
+      "catalogId": "catalog-076",
+      "reason": "Nom exact : Adelaide Festival, naine du DTP déjà présente au catalogue (fiche portant l'alias « Adelaide Festival DTP Dwarf Tomato » et la sourceRef de la page 1)."
+    },
+    "ailsa-craig-tomato": {
+      "catalogId": "catalog-ref-P6139",
+      "reason": "Nom exact : Ailsa Craig, variété écossaise déjà présente au catalogue (fiche portant l'alias « Ailsa Craig Tomato » et la sourceRef de la page 1)."
+    },
+    "alki-blue-blood-cherry-tomato": {
+      "catalogId": "catalog-175",
+      "reason": "Nom exact : Alki Blue Blood, variété déjà présente au catalogue (fiche portant l'alias « Alki Blue Blood Large Cherry Tomato » et la sourceRef de la page 1)."
+    },
+    "amana-orange-beefsteak-tomato": {
+      "catalogId": "catalog-129",
+      "reason": "Nom exact : Amana Orange, variété déjà présente au catalogue (fiche portant l'alias « Amana Orange Beefsteak Tomato » et la sourceRef de la page 1)."
+    },
+    "ananas-beefsteak-tomato": {
+      "catalogId": "catalog-045",
+      "reason": "Nom exact : Ananas (Pineapple), variété déjà présente au catalogue (fiche portant les alias « Ananas » et « Ananas Beefsteak Tomato », et la sourceRef de la page 1)."
+    },
+    "ananas-noir-beefsteak-tomato": {
+      "catalogId": "catalog-ref-P7444",
+      "reason": "Nom exact : Ananas Noir (Black Pineapple), variété déjà présente au catalogue (fiche portant l'alias « Ananas Noir Beefsteak Tomato » et la sourceRef de la page 1)."
+    },
+    "anna-russian-beefsteak-tomato": {
+      "catalogId": "catalog-124",
+      "reason": "Nom exact : Anna Russian, variété déjà présente au catalogue (fiche portant l'alias « Anna Russian Beefsteak Tomato » et la sourceRef de la page 1)."
+    },
+    "aunt-rubys-german-green-beefsteak-tomato": {
+      "catalogId": "catalog-077",
+      "reason": "Nom exact : Aunt Ruby's German Green, variété déjà présente au catalogue (fiche portant l'alias « Aunt Ruby's German Green Beefsteak Tomato » et la sourceRef de la page 1)."
+    },
+    "auriga-tomato": {
+      "catalogId": "catalog-ref-P6500",
+      "reason": "Nom exact : Auriga, variété déjà présente au catalogue (fiche portant l'alias « Auriga Tomato » et la sourceRef de la page 1)."
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "excluded": {},
+  "aliases": {},
+  "existing": {
+    "tomato-abe-lincoln-original": {
+      "catalogId": "catalog-ref-P6200",
+      "reason": "Baker Creek identifie explicitement sa référence à la Abraham Lincoln de H. W. Buckbee (1923) déjà fichée."
+    },
+    "tomato-alice-s-dream": {
+      "catalogId": "catalog-ref-meraki-alices-dream-beefsteak-tomato",
+      "reason": "Nom exact déjà porté en alias par la fiche Meraki."
+    },
+    "tomato-amish-paste": {
+      "catalogId": "catalog-061",
+      "reason": "Nom exact déjà fiché."
+    },
+    "tomato-ananas-noire-or-black-pineapple": {
+      "catalogId": "catalog-ref-P7444",
+      "reason": "Obtention de Pascal Moreau (Belgique) des deux côtés ; variante féminine du nom, Black Pineapple déjà en alias."
+    },
+    "tomato-apricot-zebra": {
+      "catalogId": "catalog-ref-meraki-apricot-zebra-cherry-tomato",
+      "reason": "Nom exact déjà porté en alias par la fiche Meraki."
+    },
+    "tomato-aunt-ruby-s-german-green": {
+      "catalogId": "catalog-077",
+      "reason": "Nom exact déjà fiché (variante d'apostrophe)."
+    },
+    "tomato-auriga": {
+      "catalogId": "catalog-ref-P6500",
+      "reason": "Nom exact déjà fiché."
+    },
+    "tomato-barry-s-crazy-cherry": {
+      "catalogId": "catalog-025",
+      "reason": "Nom exact déjà fiché."
+    },
+    "tomato-berkeley-tie-dye-green": {
+      "catalogId": "catalog-ref-meraki-berkeley-tie-dye-green-beefsteak-tomato",
+      "reason": "Nom exact déjà porté en alias par la fiche Meraki."
+    },
+    "tomato-berkeley-tie-dye-pink": {
+      "catalogId": "catalog-ref-meraki-berkeley-tie-dye-pink-beefsteak-tomato",
+      "reason": "Nom exact déjà porté en alias par la fiche Meraki."
+    },
+    "tomato-big-rainbow": {
+      "catalogId": "catalog-ref-meraki-big-rainbow-beefsteak-tomato",
+      "reason": "Heirloom Big Rainbow (Seed Savers Exchange) : beefsteak bicolore jaune à stries rouges, 85 jours des deux côtés."
+    },
+    "tomato-black-beauty": {
+      "catalogId": "catalog-ref-L0097",
+      "reason": "Nom exact déjà fiché."
+    },
+    "tomato-black-cherry": {
+      "catalogId": "catalog-051",
+      "reason": "Nom exact déjà fiché."
+    },
+    "tomato-black-from-tula": {
+      "catalogId": "catalog-154",
+      "reason": "Nom exact déjà fiché (variante de casse)."
+    },
+    "tomato-blue-cream-berries": {
+      "catalogId": "catalog-ref-meraki-blue-cream-berries-cherry-tomato",
+      "reason": "Création Wild Boar Farms (Brad Gates) des deux côtés, cerise crème aux épaules bleu-violet ; 75 jours Baker Creek contre 80 jours sur la fiche."
+    },
+    "tomato-blush-tiger": {
+      "catalogId": "catalog-ref-meraki-artisan-blush-tiger-cherry-tomato",
+      "reason": "Sélection Artisan Seeds : cocktail allongé d'environ 5 cm, 75 jours des deux côtés."
+    },
+    "tomato-bonny-best": {
+      "catalogId": "catalog-098",
+      "reason": "Nom exact déjà fiché."
+    },
+    "tomato-brad-s-atomic-grape": {
+      "catalogId": "catalog-ref-meraki-atomic-grape-cherry-tomato",
+      "reason": "Nom exact déjà porté en alias par la fiche Meraki."
+    },
+    "tomato-brandywine-sudduth-s-strain": {
+      "catalogId": "catalog-137",
+      "reason": "Nom exact déjà fiché (variante d'apostrophe)."
+    }
+  }
+}
