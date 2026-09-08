@@ -259,6 +259,9 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .variety-toolbar { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
 .filter-chips { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 3px; scrollbar-width: none; }
 .filter-chips::-webkit-scrollbar { display: none; }
+.catalog-filter-controls { flex: 1; min-width: 0; }
+.catalog-filter-controls .filter-chips { flex-wrap: wrap; overflow: visible; }
+.catalog-filter-controls .form-help { display: block; margin-top: 4px; }
 .variety-groups { display: grid; gap: 27px; }
 .variety-group h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 11px; color: var(--muted); font-size: 11px; letter-spacing: .17em; text-transform: uppercase; }
 .variety-group h2::after { content: ""; height: 1px; flex: 1; background: var(--line); }
@@ -1796,3 +1799,21 @@ body[data-theme="night"] .comparison-table tbody tr:hover { background: #142b22;
 .health-inline-row strong, .health-inline-row small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .health-inline-row strong { font-size: 10px; }
 .health-inline-row small { margin-top: 3px; color: var(--muted); font-size: 9px; }
+
+/* Documentary review: partial evidence is not a certification of a seed lot. */
+.catalog-audit-link { display: inline-block; margin-top: 7px; color: var(--green); font-size: 11px; text-underline-offset: 3px; }
+.catalog-review-status { display: inline-flex; align-items: center; gap: 5px; margin: 1px 0 5px; color: var(--muted); font-size: 10px; }
+.catalog-review-status svg { width: 12px; height: 12px; }
+.catalog-review-status.warning { color: var(--tomato); }
+.catalog-verification { margin: 16px 0; padding: 16px; border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 12px; background: var(--surface); }
+.catalog-verification.warning { border-left-color: var(--tomato); }
+.catalog-verification-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 15px; }
+.catalog-verification-heading strong { color: var(--ink); font-size: 13px; }
+.catalog-verification-heading span { color: var(--muted); font-size: 11px; }
+.catalog-verification p { margin: 10px 0 0; color: var(--ink); font-size: 12px; line-height: 1.6; }
+.catalog-verification .catalog-verification-limits { color: var(--muted); font-size: 11px; }
+.catalog-verification-sources { display: grid; gap: 7px; margin: 12px 0 0; padding-left: 18px; font-size: 12px; }
+.catalog-verification-sources a { color: var(--green); overflow-wrap: anywhere; text-underline-offset: 3px; }
+.catalog-planning-notice { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.catalog-form-source .catalog-planning-notice { padding-top: 6px; }
+.catalog-audit-link + .catalog-audit-link { margin-left: 16px; }

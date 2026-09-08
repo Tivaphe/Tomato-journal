@@ -1,0 +1,22 @@
+{
+  "excluded": {},
+  "aliases": {},
+  "existing": {
+    "abraham-lincoln": {
+      "catalogId": "catalog-ref-P6200",
+      "reason": "Nom exact déjà fiché."
+    },
+    "abraca-zebra": {
+      "catalogId": "catalog-ref-meraki-abracazebra-tomato",
+      "reason": "Même obtention de Tom Wagner (lignée Zebra) : petits fruits ronds verts striés ; le semencier français décrit des stries jaunes contre vert sombre sur la fiche."
+    },
+    "aaa-sweet-solano": {
+      "catalogId": "catalog-ref-meraki-aaa-sweet-solano-tomato",
+      "reason": "Même création de Brad Gates (Wild Boar Farms, 2009), mutation à fruits ronds jaune-orangé rayés de vert ; calibre 120-150 g selon Cultive ta rue contre 50-100 g sur la fiche."
+    },
+    "42-days": {
+      "catalogId": "catalog-ref-meraki-42-days-tomato",
+      "reason": "Nom exact ; même variété buissonnante ultra-précoce à petits fruits rouges ronds (origine Angleterre selon Cultive ta rue)."
+    }
+  }
+}

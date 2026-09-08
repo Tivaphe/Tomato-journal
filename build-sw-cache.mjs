@@ -10,6 +10,8 @@ const shellFiles = [
   "app.js",
   "photo-storage.js",
   "seed-catalog.js",
+  "docs/verification-catalogue.md",
+  "docs/enrichissement-catalogue.md",
   "manifest.webmanifest",
   "icon-192.png",
   "icon-512.png",
