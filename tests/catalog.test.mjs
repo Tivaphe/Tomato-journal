@@ -500,6 +500,51 @@ test("the readme catalog count matches the reference catalog size", () => {
   assert.ok(found.every((count) => count === referenceCount));
 });
 
+test("rare documented leaf types are offered and filter with the intended varieties", () => {
+  const app = createApp();
+  const options = app.run("CATALOG_FACET_OPTIONS.leaf.map(([value]) => value)");
+  for (const value of ["feuille-carotte", "stick", "oreille-souris", "chou-kale", "panaché"]) assert.ok(options.includes(value));
+  const filter = (leaf) => {
+    app.run(`varietyFacets.leaf = ${JSON.stringify(leaf)}`);
+    return app.read("varietiesForFilter().map((entry) => entry.id)");
+  };
+  // Carotte : Silvery Fir Tree et les autres variétés documentées, sans variété voisine.
+  assert.deepEqual(new Set(filter("feuille-carotte")), new Set([
+    "catalog-016",
+    "catalog-ref-meraki-carrot-mini-micro-dwarf-tomato",
+    "catalog-ref-meraki-lucinda-tomato",
+    "catalog-ref-meraki-spike-bush-tomato",
+  ]));
+  // Stick / pompon : le gène stick, pas tous les « bouquets » de fruits ou de fleurs.
+  const stick = filter("stick");
+  assert.ok(stick.includes("catalog-030"));
+  assert.ok(stick.includes("catalog-ref-meraki-mooncalf-stick-cherry-tomato"));
+  assert.ok(stick.includes("catalog-ref-meraki-stick-brown-cherry-tomato"));
+  assert.ok(stick.includes("catalog-ref-meraki-stick-red-tomato"));
+  assert.ok(stick.includes("catalog-ref-meraki-stick-yellow-cherry-tomato"));
+  assert.ok(!stick.includes("catalog-025"));
+  assert.ok(!stick.includes("catalog-055"));
+  assert.ok(!stick.includes("catalog-ref-meraki-curly-kaley-tomato"));
+  // Oreille de souris : seule la fiche Maushor ajoutée pour ce feuillage rare.
+  assert.deepEqual(filter("oreille-souris"), ["catalog-ref-grainedecarotte-maushor"]);
+  // Chou kale : les deux Curly Kaley, sans Kaleidoscopic Jewel (nom seulement) ni George's Greek.
+  const kale = filter("chou-kale");
+  assert.deepEqual(new Set(kale), new Set([
+    "catalog-ref-meraki-curly-kaley-long-micro-dwarf-tomato",
+    "catalog-ref-meraki-curly-kaley-tomato",
+  ]));
+  assert.ok(!kale.includes("catalog-ref-L0105"));
+  assert.ok(!kale.includes("catalog-ref-meraki-georges-greek-beefsteak-tomato"));
+  // Panaché : le feuillage panaché, y compris Sweet Splash Electra, sans les fruits simplement multicolores.
+  const panache = filter("panaché");
+  assert.ok(panache.includes("catalog-ref-meraki-sweet-splash-electra-dwarf-tomato"));
+  assert.ok(panache.includes("catalog-017"));
+  assert.ok(panache.includes("catalog-031"));
+  assert.ok(panache.includes("catalog-ref-meraki-variegated-dragon-tomato"));
+  assert.ok(!panache.includes("catalog-ref-L0105"));
+  assert.ok(!panache.includes("catalog-ref-meraki-georges-greek-beefsteak-tomato"));
+});
+
 test("catalogMaturityClass buckets maturity keywords and numeric ranges", () => {
   const app = createApp();
   assert.equal(app.run("catalogMaturityClass({ details: { maturité: \"Précoce\" } })"), "précoce");

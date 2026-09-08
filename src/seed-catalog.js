@@ -146838,5 +146838,82 @@ window.SEED_CATALOG = [
         }
       ]
     }
+  },
+  {
+    "id": "catalog-ref-grainedecarotte-maushor",
+    "catalogIndex": 2130,
+    "family": "Tomate (Solanum lycopersicum)",
+    "subfamily": "Indéterminée",
+    "name": "Maushor",
+    "aliases": [],
+    "details": {
+      "description_histoire_particularités": "Tomate allemande réputée pour son feuillage extrêmement rare, formé de petites feuilles recroquevillées et enroulées sur elles-mêmes, comparable à une oreille de souris. Fruits ronds et rouges de 10 à 50 g, à 2 ou 3 loges, mûrissant en mi-saison. La plante dépasse facilement 1,20 à 2,50 m selon les conditions. Le feuillage décrit ici reste la caractéristique la plus distinctive et la plus à vérifier sur le lot, car cette forme de feuille est extrêmement rare.",
+      "fruit": "Fruits ronds et rouges, de 10 à 50 g ; 2 à 3 loges, sans côtes.",
+      "type_de_fruit": "Fruit rond",
+      "gènes_potentiels": "",
+      "taille": "1,20 à 2,50 m selon les conditions",
+      "maturité": "Mi-saison",
+      "croissance": "Indéterminée",
+      "origine": "Non documenté",
+      "feuillage": "Feuillage rare « oreille de souris » : petites feuilles recroquevillées.",
+      "calibre_du_fruit": "10 à 50 g"
+    },
+    "plantDefaults": {
+      "type": "open",
+      "growth": "indeterminate",
+      "colors": [
+        "red"
+      ],
+      "colorMode": "solid",
+      "shape": "rond",
+      "size": "petit",
+      "fruitType": "Fruit rond",
+      "breeder": "Obtenteur non documenté",
+      "daysToMaturity": 0
+    },
+    "catalogRevision": 3,
+    "importedFrom": {
+      "catalogue": "enrichissement-2026-grainedecarotte",
+      "reference": "maushor",
+      "page": 1,
+      "url": "https://www.tomaten-atlas.de/sorten/m/1546-maushor",
+      "importedAt": "2026-09-07"
+    },
+    "sourceRefs": [
+      {
+        "reference": "maushor",
+        "url": "https://www.tomaten-atlas.de/sorten/m/1546-maushor",
+        "page": 1
+      }
+    ],
+    "verification": {
+      "checkedAt": "2026-09-07",
+      "status": "partial",
+      "scope": [
+        "description",
+        "aspect du fruit",
+        "croissance déclarée",
+        "précocité déclarée"
+      ],
+      "note": "Référence relevée sur la page 1 du catalogue tomaten-atlas.de le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Source principale Tomaten-Atlas ; Graine de Carotte confirme le feuillage « oreille de souris » et n'en connaît pas d'autre variété. Non établis précisément : origine, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée.",
+      "missingFields": [
+        "origine",
+        "délai chiffré depuis plantation",
+        "obtenteur"
+      ],
+      "updatedFields": [
+        "Nouvelle fiche documentaire"
+      ],
+      "sources": [
+        {
+          "title": "tomaten-atlas.de — Maushor",
+          "url": "https://www.tomaten-atlas.de/sorten/m/1546-maushor"
+        },
+        {
+          "title": "grainedecarotte.odoo.com — Maushor",
+          "url": "https://grainedecarotte.odoo.com/en/blog/genetics-1/the-different-foliage-of-tomatoes-15"
+        }
+      ]
+    }
   }
 ];

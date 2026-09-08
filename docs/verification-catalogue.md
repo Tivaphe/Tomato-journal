@@ -4,19 +4,19 @@
 
 ## Verdict et portée
 
-Les **1986 fiches** ont été passées en revue. Le catalogue contenait des erreurs et des informations trop affirmatives : ports de plante, précocités, couleurs, feuillages, origines et confusion entre calibre du fruit et hauteur du plant.
+Les **1987 fiches** ont été passées en revue. Le catalogue contenait des erreurs et des informations trop affirmatives : ports de plante, précocités, couleurs, feuillages, origines et confusion entre calibre du fruit et hauteur du plant.
 
 **Il ne s’agit pas d’une certification de toutes les informations ni des lots de graines.** Les points effectivement recoupés sont indiqués pour chaque fiche. Toute autre caractéristique conservée reste à confirmer, même si elle figure encore dans le catalogue.
 
-- 1982 fiches possèdent au moins une référence documentaire ; 2507 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
-- 1984 fiches ont reçu des mises à jour de texte ou de structuration. Cela ne signifie pas que ces 1984 fiches étaient entièrement fausses.
+- 1983 fiches possèdent au moins une référence documentaire ; 2509 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
+- 1985 fiches ont reçu des mises à jour de texte ou de structuration. Cela ne signifie pas que ces 1985 fiches étaient entièrement fausses.
 - 17 classements ont été révisés. Les cinq filtres demandés sont conservés.
 - 55 fiches disposent d’un délai chiffré explicitement rapporté à la plantation dans les références retenues.
 - Aucun identifiant, nom de variété ou lien de photo n’a été supprimé. Les doublons potentiels sont signalés, pas fusionnés.
 
 | État du contrôle | Fiches | Signification |
 | --- | ---: | --- |
-| Contrôle partiel | 1846 | Certains caractères ont été recoupés ; les autres ne sont pas certifiés. |
+| Contrôle partiel | 1847 | Certains caractères ont été recoupés ; les autres ne sont pas certifiés. |
 | Sources divergentes | 43 | Les références ne concordent pas sur un ou plusieurs caractères. |
 | Souche à préciser | 89 | Homonymie, synonymie incertaine, sélection distincte ou doublon potentiel. |
 | Documentation insuffisante | 3 | Pas de référence indépendante assez précise pour identifier la dénomination et valider la fiche. |
@@ -38349,3 +38349,23 @@ Référence relevée sur la page 1 du catalogue Cultive ta rue le 2026-09-07. De
 **Références consultées :**
 
 - Cultive ta rue — Abrikos — [1](https://cultivetarue.fr/products/abrikos)
+
+<a id="catalog-ref-grainedecarotte-maushor"></a>
+
+### 2130 — Maushor
+
+**Contrôle partiel** · Filtre : **Indéterminée** · Identifiant : `catalog-ref-grainedecarotte-maushor`
+
+**Portée du contrôle :** description, aspect du fruit, croissance déclarée, précocité déclarée.
+
+Référence relevée sur la page 1 du catalogue tomaten-atlas.de le 2026-09-07. Description reformulée à partir des références citées ; les informations commerciales ne sont pas des résultats d’essai. Source principale Tomaten-Atlas ; Graine de Carotte confirme le feuillage « oreille de souris » et n'en connaît pas d'autre variété. Non établis précisément : origine, délai chiffré depuis plantation, obtenteur. Aucune valeur manquante n’est inventée.
+
+- **Croissance renseignée :** Indéterminée.
+- **Maturité affichée :** Mi-saison
+- **Hauteur affichée :** 1,20 à 2,50 m selon les conditions
+- **Champs mis à jour :** Nouvelle fiche documentaire.
+
+**Références consultées :**
+
+- tomaten-atlas.de — Maushor — [1](https://www.tomaten-atlas.de/sorten/m/1546-maushor)
+- grainedecarotte.odoo.com — Maushor — [2](https://grainedecarotte.odoo.com/en/blog/genetics-1/the-different-foliage-of-tomatoes-15)
