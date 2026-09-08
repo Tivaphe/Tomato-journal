@@ -8,7 +8,7 @@ Les **1986 fiches** ont été passées en revue. Le catalogue contenait des erre
 
 **Il ne s’agit pas d’une certification de toutes les informations ni des lots de graines.** Les points effectivement recoupés sont indiqués pour chaque fiche. Toute autre caractéristique conservée reste à confirmer, même si elle figure encore dans le catalogue.
 
-- 1982 fiches possèdent au moins une référence documentaire ; 2471 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
+- 1982 fiches possèdent au moins une référence documentaire ; 2490 URL distinctes sont répertoriées. Une référence peut ne couvrir qu’un caractère ou le contexte d’un lot, et non sa conformité.
 - 1984 fiches ont reçu des mises à jour de texte ou de structuration. Cela ne signifie pas que ces 1984 fiches étaient entièrement fausses.
 - 17 classements ont été révisés. Les cinq filtres demandés sont conservés.
 - 55 fiches disposent d’un délai chiffré explicitement rapporté à la plantation dans les références retenues.
@@ -976,17 +976,19 @@ Fruit vert rayé, croissance indéterminée. Vérification du port, de l’aspec
 
 **Portée du contrôle :** dénomination, croissance, fruit, précocité.
 
-Doublon probable avec l’autre fiche Cornue des Andes / Andine Cornue. Les références consultées indiquent indéterminée ; les identifiants restent distincts pour préserver les liens du carnet. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : doublon probable avec l’autre fiche Cornue des Andes / Andine Cornue, les identifiants restant distincts pour préserver les liens du carnet. Tatiana’s TOMATObase confirme l’origine française (fruit « rapporté des Andes »), la croissance indéterminée, le feuillage régulier et la forme cornue jusqu’à 18 cm. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** Précoce à mi-saison selon les références et la souche.
-- **Hauteur affichée :** 1,5 à 2 m (indéterminée).
+- **Hauteur affichée :** 1,5 à 2 m (indéterminée, feuillage régulier).
 - **Champs mis à jour :** Description / historique, Maturité.
 
 **Références consultées :**
 
 - Semailles — Cornue des Andes — [1](https://www.semaille.com/fr/tomate-rouge/854-tomate-des-andes-5415166011770.html)
 - Promesse de Fleurs — Andine Cornue — [2](https://www.promessedefleurs.com/potager/plants-potagers/plants-potager-de-a-a-z/tomate-cornue-des-andes-en-plants-andine-cornue.html)
+- Tatiana's TOMATObase — Cornue Des Andes — [3](https://tatianastomatobase.com/wiki/Cornue_Des_Andes)
+- Tatiana's TOMATObase — Andine Cornue — [4](https://tatianastomatobase.com/wiki/Andine_Cornue)
 
 <a id="catalog-048"></a>
 
@@ -2017,10 +2019,10 @@ Indéterminée italienne, fruit allongé à sauce, 75 jours après plantation. L
 
 **Portée du contrôle :** croissance, fruit, précocité.
 
-Les observations citées décrivent des fruits roses, pas rouges malgré le nom Écarlate. L’équivalence Potiron / Potiron Écarlate n’est pas certaine pour tous les lots. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : variété ancienne française (inscrite au GNIS), indéterminée, à très gros fruits « potiron » destinés à farcir ; la plupart des fiches françaises la disent rouge vif, une accession de Tatiana donne des fruits roses. L’équivalence Potiron / Potiron Écarlate n’est pas certaine pour tous les lots : couleur et souche à confirmer. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Mi-saison dans la référence consultée.
+- **Maturité affichée :** Mi-saison à tardive selon les sources (75-80 jours à tardive, base non toujours précisée).
 - **Hauteur affichée :** Non documentée dans les références consultées.
 - **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante, Maturité.
 
@@ -2028,6 +2030,8 @@ Les observations citées décrivent des fruits roses, pas rouges malgré le nom 
 
 - Tatiana’s TOMATObase — Potiron Écarlate — [1](https://tatianastomatobase.com/wiki/Potiron_Ecarlate)
 - Tatiana’s TOMATObase — Potiron — [2](https://tatianastomatobase.com/wiki/Potiron)
+- Cultive ta Rue — Potiron Ecarlate — [3](https://cultivetarue.fr/products/potiron-ecarlate)
+- Essem'Bio — Potiron Ecarlate bio — [4](https://essembio.com/produits/1280-semences-biologiques-tomates-potiron-ecarlate-bio)
 
 <a id="catalog-104"></a>
 
@@ -2310,16 +2314,17 @@ Port indéterminé et feuillage pomme de terre confirmés. La fiche Victory Seed
 
 **Portée du contrôle :** dénomination, croissance, fruit, feuillage, précocité.
 
-Nom à préciser par souche ; doublon possible entre Brandywine et Brandywine Pink. L’histoire amish ancienne souvent répétée n’est pas démontrée pour toutes les formes roses. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : le type rose à gros fruits, feuillage pomme de terre et croissance indéterminée est confirmé ; l’ancienneté du nom (~1885-1889) est documentée. Doublon possible avec la fiche Brandywine. La souche précise (Sudduth’s, Joyce’s Strain, etc.) doit être nommée sur le lot : l’histoire « amish » ancienne n’est pas démontrée pour toutes les formes roses. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Tardive ; environ 90 jours annoncés par Victory Seeds, point de départ non explicite.
+- **Maturité affichée :** Tardive ; environ 80 à 100 jours selon la souche et les sources, point de départ non toujours explicite.
 - **Hauteur affichée :** Non documentée dans les références consultées.
 - **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante, Maturité.
 
 **Références consultées :**
 
 - Victory Seeds — Brandywine Pink — [1](https://victoryseeds.com/products/brandywine-pink-tomato)
+- Alliance of Native Seedkeepers — Pink Brandywine — [2](https://www.allianceofnativeseedkeepers.com/products/pink-brandywine-beefsteak-tomato)
 
 <a id="catalog-121"></a>
 
@@ -2524,17 +2529,19 @@ Recoupement web (2026-09-08) : croissance indéterminée, fruits jaunes et origi
 
 **Portée du contrôle :** dénomination, croissance, fruit, précocité.
 
-Plusieurs souches portent ce nom, notamment Yellow Oxheart et une sélection de Gattières bicolore. Seuls les caractères généraux sont recoupés ; origine et profil précis à confirmer sur le sachet. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : plusieurs souches distinctes portent ce nom, dont Yellow Oxheart conservé à Willis (Virginie) depuis 1915 et des sélections de Gattières bicolores. Seuls les caractères généraux (cœur jaune-orange, croissance indéterminée, chair dense douce) sont recoupés ; l’origine et le profil précis du lot restent à confirmer sur le sachet. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Plutôt tardive selon les références consultées.
-- **Hauteur affichée :** Non documentée dans les références consultées.
+- **Maturité affichée :** Plutôt tardive selon les sources consultées.
+- **Hauteur affichée :** Indéterminée, souvent 1,5 à 1,8 m.
 - **Champs mis à jour :** Description / historique, Description du fruit, Type de fruit, Hauteur de la plante, Maturité.
 
 **Références consultées :**
 
 - Pensez Sauvage — Cœur de Bœuf Jaune — [1](https://pensezsauvage.org/graines_bio_de_tomates/Tomate-Coeur-de-boeuf-jaune)
 - Kid Seed Co. — souche de Gattières — [2](https://kidseedco.com/products/tomato-coeur-de-boeuf-jaune-tomato)
+- Tomatofifou — Cœur de boeuf jaune / Yellow Oxheart — [3](https://www.tomatofifou.com/en/produit/coeur-de-boeuf-jaune/)
+- Renaissance Farms — Coeur de Boeuf Jaune — [4](https://renaissancefarms.org/product/coeur-de-boeuf-jaune/)
 
 <a id="catalog-132"></a>
 
@@ -2660,7 +2667,7 @@ Souche Sudduth distincte à conserver. Les références annoncent 80 ou 90 jours
 
 **Portée du contrôle :** dénomination, croissance, fruit, feuillage.
 
-Correction majeure : Marizol Purple est à feuillage régulier dans la référence. Le feuillage pomme de terre renvoie plutôt à Marizol Korney / Marizol Purple Potato Leaf. Les 500–1000 g ne sont pas un calibre moyen recoupé. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : Marizol Purple est bien à feuillage régulier dans la référence ; le feuillage pomme de terre renvoie plutôt à Marizol Korney / Marizol Purple Potato Leaf. L’historique familial (Forêt-Noire, fin XIXe ; introduction par Joseph Bratka, New Jersey, 1991 ; souche resélectionnée car instable) est documenté par Tatiana’s TOMATObase. Les 500-1000 g ne constituent pas un calibre moyen recoupé. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** Mi-saison
@@ -2832,7 +2839,7 @@ Deux références indiquent indéterminée ; l’ancien classement Bush ne renda
 
 **Portée du contrôle :** dénomination, croissance, fruit, précocité.
 
-La souche ukrainienne décrite est déterminée et précoce, distincte d’un homonyme américain de conserve. Fruits plus petits que les 120–180 g du catalogue : vérifier la souche. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : la souche ukrainienne précoce, déterminée, à petits fruits rouges est confirmée par Double Helix Farms, qui la distingue d’un homonyme américain de conserve. Les fruits sont plus petits que les 120-180 g évoqués ailleurs : vérifier la souche du lot. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Déterminée.
 - **Maturité affichée :** Précoce
@@ -2890,7 +2897,7 @@ Port indéterminé, origine bulgare et petits fruits rouges ronds recoupés ; la
 
 **Portée du contrôle :** dénomination, croissance, fruit, précocité.
 
-Doublon probable avec l’autre fiche Cornue des Andes / Andine Cornue. Les références consultées indiquent indéterminée ; les identifiants restent distincts pour préserver les liens du carnet. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : doublon probable avec l’autre fiche Cornue des Andes / Andine Cornue, les identifiants restant distincts pour préserver les liens du carnet. Tatiana’s TOMATObase confirme l’origine française rapportée des Andes, la croissance indéterminée, le feuillage régulier et la forme cornue. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** Précoce à mi-saison selon les références et la souche.
@@ -2901,6 +2908,8 @@ Doublon probable avec l’autre fiche Cornue des Andes / Andine Cornue. Les réf
 
 - Semailles — Cornue des Andes — [1](https://www.semaille.com/fr/tomate-rouge/854-tomate-des-andes-5415166011770.html)
 - Promesse de Fleurs — Andine Cornue — [2](https://www.promessedefleurs.com/potager/plants-potagers/plants-potager-de-a-a-z/tomate-cornue-des-andes-en-plants-andine-cornue.html)
+- Tatiana's TOMATObase — Cornue Des Andes — [3](https://tatianastomatobase.com/wiki/Cornue_Des_Andes)
+- Tatiana's TOMATObase — Andine Cornue — [4](https://tatianastomatobase.com/wiki/Andine_Cornue)
 
 <a id="catalog-151"></a>
 
@@ -3007,10 +3016,10 @@ Port indéterminé, gros fruits roses et développement dans l’Ohio recoupés.
 
 **Portée du contrôle :** dénomination, croissance, feuillage, couleur.
 
-Feuillage pomme de terre et croissance indéterminée confirmés. Origines géographiques et équivalences Mikado divergent ; ne pas certifier l’origine australienne. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : feuillage pomme de terre et croissance indéterminée confirmés. L’origine australienne et la mention Vilmorin 1885 sont reprises par plusieurs semenciers, mais restent débattues selon un autre vendeur : ne pas certifier l’origine australienne. Les équivalences Mikado diffèrent selon les souches. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Mi-saison à tardive selon les références.
+- **Maturité affichée :** Mi-saison à tardive (80 à 110 jours selon les sources, base non toujours précisée).
 - **Hauteur affichée :** Non documentée dans les références consultées.
 - **Champs mis à jour :** Description / historique, Hauteur de la plante, Maturité.
 
@@ -3018,6 +3027,8 @@ Feuillage pomme de terre et croissance indéterminée confirmés. Origines géog
 
 - Tatiana’s TOMATObase — Mikado Violettor — [1](https://tatianastomatobase.com/wiki/Mikado_Violettor)
 - The Plant Lady — Micado Violettor — [2](https://www.theplantlady.com/micado-violettor/)
+- Tomatofifou — Micado Violettor — [3](https://www.tomatofifou.com/en/produit/micado-violettor/)
+- Kokopelli — Micado Violettor — [4](https://kokopelli-semences.com/en/p/micado-violettor-pink-mid-season-tomato)
 
 <a id="catalog-157"></a>
 
@@ -3342,17 +3353,20 @@ Recoupement web (2026-09-08) : l’obtention par Tom Wagner à partir de « Bear
 
 **Portée du contrôle :** dénomination.
 
-Descriptions incompatibles sous Musk Zebra : couleur, forme, obtenteur et stabilité varient ; la sélection danoise est une autre dénomination. Aucun profil unique ne doit être certifié sans provenance. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : le type de Tom Wagner (croisement Moskvitch × Green Zebra, ~2012, non stabilisé, fruits striés variables) est bien documenté ; une autre souche « Musk Zebra » est décrite en prune chocolat et la sélection danoise est encore une autre dénomination. Aucun profil unique ne doit être certifié sans provenance du lot. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
 - **Maturité affichée :** Précoce
-- **Hauteur affichée :** Non documentée dans les références consultées.
+- **Hauteur affichée :** Indéterminée chez une partie des sources (~1,5 à 2 m) ; à confirmer sur le lot.
 - **Champs mis à jour :** Description / historique, Description du fruit, Hauteur de la plante.
 
 **Références consultées :**
 
 - Croatian Seeds — Musk Zebra — [1](https://www.croatianseeds-store.com/index.php?tmpl=component&option=com_virtuemart&view=productdetails&virtuemart_product_id=2192&format=pdf&Itemid=1037)
 - Tomatdatabasen — Green Musk Zebra Danish Selection — [2](https://tomatdatabasen.dk/Tomat_(8744)_.aspx)
+- Tomatofifou — Musk Zebra — [3](https://www.tomatofifou.com/en/produit/musk-zebra/)
+- Kokopelli — Musk Zebra — [4](https://kokopelli-semences.com/en/p/musk-zebra-variegated-mid-season-tomato)
+- Tomatenfluesterer — Musk Zebra — [5](https://www.tomatenfluesterer.at/products/musk-zebra)
 
 <a id="catalog-174"></a>
 
@@ -3499,7 +3513,7 @@ Une observation de culture indique une maturité longue et tardive malgré le no
 
 **Portée du contrôle :** couleur, forme.
 
-Deux descriptions générales confirment des fruits verts striés, mais n’établissent ni le pedigree exact, ni la croissance, ni la stabilité de cette sélection particulière. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : deux fiches générales confirment des fruits verts striés. Le nom renvoie à une sélection récente de Tom Wagner issue de Green Zebra (introduite par Wagner en 1983), mais ni le pedigree exact, ni la croissance, ni la stabilité de cette sélection particulière ne sont établis. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
 - **Maturité affichée :** Mi-saison
@@ -3510,6 +3524,8 @@ Deux descriptions générales confirment des fruits verts striés, mais n’éta
 
 - WebGraine — Green Zebra Arizona Hawaï Strain — [1](https://webgraine.com/seeds/158)
 - Aruyann — Green Zebra Arizona Hawai Strain — [2](https://aruyann.fr/produit/tomate-verte-green-zebra-arizona-hawai-strain/)
+- Kokopelli — Green Zebra Arizona Hawai Strain — [3](https://kokopelli-semences.com/en/p/green-zebra-arizona-hawai-strain-green-mid-season-tomato)
+- Home for the Harvest — Green Zebra (histoire) — [4](https://homefortheharvest.com/green-zebra-tomato/)
 
 <a id="catalog-182"></a>
 
@@ -3636,17 +3652,18 @@ Indéterminée à fruits sombres recoupée. Le croisement Black Prince × Black 
 
 **Portée du contrôle :** croissance, fruit, précocité.
 
-Les références Northern Lights indiquent indéterminée ; l’ancien classement déterminé est corrigé, sous réserve de confirmer le nom abrégé Northern Light et le feuillage du lot. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : les références Northern Lights confirment le port indéterminé (l’ancien classement déterminé est corrigé) et le fruit bicolore orange-jaune/rose. Le nom abrégé Northern Light et le feuillage (régulier ou pomme de terre selon les sources) restent à confirmer sur le lot. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
-- **Maturité affichée :** Précoce à mi-saison selon la souche et les conditions.
-- **Hauteur affichée :** Non documentée dans les références consultées.
+- **Maturité affichée :** Précoce à mi-saison selon la souche (environ 80-90 jours, base non toujours précisée).
+- **Hauteur affichée :** Indéterminée, vigoureuse ; hauteur à mesurer sur le lot.
 - **Champs mis à jour :** Type de plante, Description / historique, Hauteur de la plante, Maturité.
 
 **Références consultées :**
 
 - Cochrane Family Farm — Northern Lights — [1](http://cochranefamilyfarm.com/product/tomato-northern-lights-8023-3/)
 - Bounty Hunter Seeds — Northern Lights — [2](https://bountyhunterseeds.com/product/northern-lights-tomato/)
+- Oak Summit Nursery — Northern Lights — [3](https://oaksummitnursery.ca/products/northern-lights-tomato-seeds-heirloom-tomato-25-seeds)
 
 <a id="catalog-189"></a>
 
@@ -3716,17 +3733,19 @@ Indéterminée hongroise à gros fruits roses ovales à cordiformes, tardive. Le
 
 **Portée du contrôle :** dénomination, aspect du fruit, obtenteur rapporté.
 
-La variété sombre et l’attribution à Tom Wagner sont documentées, mais pas la filiation Brown Derby Mix, le niveau de stabilisation ni le port du lot. Ne pas confondre avec Brown Flesh Jumbo ou Zapotec Brown Flesh. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : la création par Tom Wagner (Tater-Mater Seeds, années 1980, lignée « Brown Derby Mix » 1985), la couleur rouge-brun marbrée et l’usage à farcir sont confirmés par plusieurs sources. Le niveau de stabilisation et le port du lot restent à préciser ; ne pas confondre avec Brown Flesh Jumbo ou Zapotec Brown Flesh. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Non confirmée pour ce lot.
-- **Maturité affichée :** Mi-saison
-- **Hauteur affichée :** Non documentée dans les références consultées.
+- **Maturité affichée :** Mi-saison.
+- **Hauteur affichée :** Indéterminée (~1,6 m), vigoureuse.
 - **Champs mis à jour :** Description / historique, Hauteur de la plante.
 
 **Références consultées :**
 
 - Tomodori — Brown Flesh — [1](https://tomodori.com/fichephoto.php?nom=Brown+Flesh)
 - Bifurcated Carrots — variétés de Tom Wagner — [2](https://bifurcatedcarrots.eu/2009/09/tom-wagner/)
+- Tomatofifou — Brown Flesh — [3](https://www.tomatofifou.com/en/produit/brown-flesh/)
+- Gardening Know How — Brown Flesh Tomato — [4](https://www.gardeningknowhow.com/edible/vegetables/tomato/brown-flesh-tomato-information.htm)
 
 <a id="catalog-193"></a>
 
@@ -3794,7 +3813,7 @@ Obtention Tom Wagner, fruits verts à ambrés et port indéterminé confirmés. 
 
 **Portée du contrôle :** croissance, fruit, hauteur, précocité.
 
-Indéterminée à fruits blancs/crème confirmée. L’identité avec White Beauty n’est pas prouvée ; les mentions Isbell 1927 et avant 1850 ne doivent pas être transférées automatiquement. Le filtre de type est un rangement pratique, pas une certification de la souche.
+Recoupement web (2026-09-08) : la croissance indéterminée et les fruits blanc/crème sont confirmés. Deux variétés proches existent (héritage canadien-français « Beauté blanche du Canada » et héritage américain « White Beauty » introduit 1850-1863, via Ben Quisenberry) ; l’identité exacte du lot et les dates (Isbell 1927, avant 1850) restent à confirmer sans transfert automatique. Le filtre de type est un rangement pratique, pas une certification de la souche.
 
 - **Croissance renseignée :** Indéterminée.
 - **Maturité affichée :** Mi-saison
@@ -3805,6 +3824,8 @@ Indéterminée à fruits blancs/crème confirmée. L’identité avec White Beau
 
 - Semeur — Beauté Blanche du Canada — [1](https://www.semeur.fr/wiki/index.php?title=Tomate_Beaut%C3%A9_blanche_du_Canada_op)
 - Tomodori — Beauté Blanche du Canada — [2](https://tomodori.com/forum/topic2791.html)
+- The Superior Gardener — Beauté Blanche du Canada — [3](https://thesuperiorgardener.ca/products/tomato-beaute-blanche-du-canada)
+- Kokopelli — White Beauty — [4](https://kokopelli-semences.com/en/p/white-beauty-white-mid-season-tomato)
 
 <a id="catalog-197"></a>
 

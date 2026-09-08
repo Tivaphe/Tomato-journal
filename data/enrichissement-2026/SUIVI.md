@@ -387,3 +387,15 @@ aucune URL nouvelle hors `verification.sources`, aucune fiche ajoutée/supprimé
   → **Rapport : 1 986 fiches, 2 471 références (2 448 → 2 471), tests 30/30.**
   Prochain lot : autres fiches signalées non encore recoupées (identité/doublons, puis « sources
   divergentes » des catalog-ref enrichissement).
+- **Lot 2 (13 fiches « souche à préciser » / doublons) : terminé.** Cornue des Andes (les deux
+  fiches 047/150), Potiron Écarlate, Brandywine Pink - Rose, Cœur de Bœuf Jaune, Marizol Purple,
+  Odessa, Micado Violettor, Musk Zebra, Green Zebra Arizona Hawai Strain, Northern Light(s),
+  Brown Flesh, Beauté Blanche du Canada. Apports : synonymes et généalogies précisés (ex. Cornue
+  des Andes = Andine Cornue/Des Andes/Poivron des Andes, origine française rapportée des Andes ;
+  Marizol Purple = héritage Forêt-Noire, introduit par Joseph Bratka 1991, feuillage régulier vs
+  Marizol Korney à feuillage pomme de terre ; Musk Zebra = croisement Tom Wagner Moskvitch × Green
+  Zebra, non stabilisé ; Brown Flesh = Tom Wagner 1985 « Brown Derby Mix » ; Cœur de Bœuf Jaune =
+  Yellow Oxheart de Willis VA 1915 ; Green Zebra introduite 1983 par Wagner), distinction de
+  doublons/homonymes (White Beauty vs Beauté blanche du Canada ; Musk Zebra prune chocolat vs
+  sélection danoise). Les deux fiches Cornue des Andes restent distinctes pour préserver les liens.
+  → **Rapport : 1 986 fiches, 2 490 références (2 471 → 2 490), tests 30/30.**
