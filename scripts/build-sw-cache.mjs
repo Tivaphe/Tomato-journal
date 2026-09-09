@@ -59,4 +59,14 @@ self.addEventListener("fetch", (event) => {
 });
 `;
 await writeFile(join(root, "sw.js"), serviceWorker);
+
+// Le README cite le cache courant : on le met à jour pour éviter le décalage
+// de documentation (vérifié ensuite par scripts/check-consistency.mjs).
+const readmePath = join(root, "README.md");
+const readme = await readFile(readmePath, "utf8");
+const updatedReadme = readme.replace(/tomato-journal-shell-[0-9a-f]{12}/g, cacheName);
+if (updatedReadme !== readme) {
+  await writeFile(readmePath, updatedReadme);
+  console.log("README.md : nom du cache mis à jour");
+}
 console.log(`${cacheName} (${shellFiles.length} shell assets)`);

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "python3 -m http.server 4173 --bind 0.0.0.0",
     "test": "node --test",
+    "check": "node scripts/check-consistency.mjs",
     "build:sw": "node scripts/build-sw-cache.mjs",
     "build:audit": "node scripts/build-catalog-report.mjs",
     "build:enrich": "node scripts/build-catalog-enrich.mjs",

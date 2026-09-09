@@ -274,9 +274,10 @@ Ouvrez l'application avec `http://localhost:4173` en développement, ou une adre
 <tr><th align="left">Sujet</th><th align="left">Détail</th></tr>
 <tr><td><b>Photos</b></td><td>Compressées puis conservées dans IndexedDB (<code>tomato-journal-media-v1</code>). L'état JSON ne garde que les métadonnées et l'identifiant média ; les anciennes photos en <code>dataUrl</code> sont migrées au premier lancement.</td></tr>
 <tr><td><b>Stockage</b></td><td>Le panneau <b>Plus</b> affiche une estimation du stockage, le nombre de photos et un avertissement en cas d'erreur ou de quota élevé.</td></tr>
+<tr><td><b>Catalogue et quota</b></td><td>Les 1987 fiches de référence sont livrées avec l'application et ne sont <b>jamais recopiées</b> dans <code>localStorage</code> : seules vos fiches locales, vos retouches et les fiches retirées y sont enregistrées (≈ 35 Ko au lieu de 4,2 Mo). Les anciennes sauvegardes qui contiennent encore le catalogue complet restent importables.</td></tr>
 <tr><td><b>Recherche globale</b></td><td>Plantes, fiches catalogue, candidates, croisements, tâches, photos et récoltes.</td></tr>
 <tr><td><b>Modules</b></td><td><code>src/photo-storage.js</code> encapsule la persistance binaire IndexedDB. La table <code>actionDispatch</code> de <code>src/app.js</code> est le point d'entrée du dispatch des actions UI.</td></tr>
-<tr><td><b>Cache PWA</b></td><td><code>npm run build:sw</code> hashe les assets du shell et régénère <code>sw.js</code>. Cache courant : <code>tomato-journal-shell-b6e0a0a8bb76</code>.</td></tr>
+<tr><td><b>Cache PWA</b></td><td><code>npm run build:sw</code> hashe les assets du shell, régénère <code>sw.js</code> et met à jour le nom du cache cité ici. Cache courant : <code>tomato-journal-shell-129d36205d9c</code>.</td></tr>
 <tr><td><b>Sécurité du rendu</b></td><td>Contexte de zone de la topbar, titres de page, tâches et résultats de recherche échappés via <code>escapeHTML()</code>.</td></tr>
 </table>
 
@@ -536,9 +537,10 @@ Open the app at `http://localhost:4173` in development, or at an `https://` addr
 <tr><th align="left">Topic</th><th align="left">Detail</th></tr>
 <tr><td><b>Photos</b></td><td>Compressed, then kept in IndexedDB (<code>tomato-journal-media-v1</code>). The JSON state only keeps metadata and the media id; legacy <code>dataUrl</code> photos are migrated on first launch.</td></tr>
 <tr><td><b>Storage</b></td><td>The <b>More</b> panel shows a storage estimate, the photo count, and a warning on errors or high quota.</td></tr>
+<tr><td><b>Catalog and quota</b></td><td>The 1987 reference sheets ship with the app and are <b>never copied</b> into <code>localStorage</code>: only your local sheets, your edits and the removed sheets are stored (≈ 35 KB instead of 4.2 MB). Older backups that still embed the full catalogue remain importable.</td></tr>
 <tr><td><b>Global search</b></td><td>Plants, catalog sheets, candidates, crosses, tasks, photos and harvests.</td></tr>
 <tr><td><b>Modules</b></td><td><code>src/photo-storage.js</code> wraps IndexedDB binary persistence. The <code>actionDispatch</code> table in <code>src/app.js</code> is the entry point for UI action dispatch.</td></tr>
-<tr><td><b>PWA cache</b></td><td><code>npm run build:sw</code> hashes the shell assets and regenerates <code>sw.js</code>. Current cache: <code>tomato-journal-shell-b6e0a0a8bb76</code>.</td></tr>
+<tr><td><b>PWA cache</b></td><td><code>npm run build:sw</code> hashes the shell assets, regenerates <code>sw.js</code> and refreshes the cache name quoted here. Current cache: <code>tomato-journal-shell-129d36205d9c</code>.</td></tr>
 <tr><td><b>Render safety</b></td><td>Top bar zone context, page titles, tasks and search results escaped with <code>escapeHTML()</code>.</td></tr>
 </table>
 

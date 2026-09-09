@@ -191,6 +191,80 @@ let pendingCatalogTypesNotice = false;
 const TOMATO_FAMILY_HINTS = ["tomate", "tomato", "lycopersicum", "lycopersicon", "solanum"];
 const CATALOG_SUBFAMILY_ORDER = ["Micro-naine", "Dwarf", "Bush", "Déterminée", "Indéterminée"];
 const SEED_CATALOG_BY_ID = new Map(defaultSeedCatalog().map((entry) => [entry.id, entry]));
+
+/* ---------------------------------------------------------------------------
+ * Persistance du catalogue.
+ * Le catalogue de référence (~4,2 Mo de JSON pour 1 987 fiches) est livré avec
+ * l'application : il n'est jamais recopié dans localStorage, sous peine de
+ * saturer le quota (~5 Mio par origine) et de faire échouer saveState() sans
+ * bloquer l'utilisateur. On ne persiste qu'un « overlay » : les fiches locales
+ * (ajoutées, croisements), les fiches de référence modifiées, et les
+ * identifiants de référence retirés.
+ * ------------------------------------------------------------------------- */
+const referenceJsonCache = new Map();
+
+function referenceEntryJson(entry) {
+  const cached = referenceJsonCache.get(entry.id);
+  if (cached !== undefined) return cached;
+  const json = JSON.stringify(entry);
+  referenceJsonCache.set(entry.id, json);
+  return json;
+}
+
+// Une fiche doit être persistée si elle n'appartient pas au catalogue de
+// référence, si elle est marquée comme locale, ou si son contenu diffère de la
+// fiche de référence (comparaison de contenu : couvre les migrations et les
+// mutations faites sur place, sans dépendre d'un marqueur).
+function isOverlayCatalogEntry(entry) {
+  const id = entry?.id;
+  if (!id) return false;
+  if (!SEED_CATALOG_BY_ID.has(id)) return true;
+  if (entry.userAdded || entry.userEdited || entry.crossId) return true;
+  return JSON.stringify(entry) !== referenceEntryJson(SEED_CATALOG_BY_ID.get(id));
+}
+
+function buildCatalogOverlay(catalog, removedIds = []) {
+  const overlay = [];
+  const kept = new Set();
+  (Array.isArray(catalog) ? catalog : []).forEach((entry) => {
+    if (!entry || typeof entry !== "object") return;
+    if (entry.id) kept.add(entry.id);
+    if (isOverlayCatalogEntry(entry)) overlay.push(cloneData(entry));
+  });
+  const removed = [...new Set([
+    ...(Array.isArray(removedIds) ? removedIds : []),
+    ...defaultSeedCatalog().filter((entry) => entry.id && !kept.has(entry.id)).map((entry) => entry.id),
+  ])];
+  return { overlay, removed };
+}
+
+// Les fiches de l'overlay conservent leur ordre d'origine ; les fiches de
+// référence intactes sont ajoutées ensuite, dans l'ordre du catalogue fourni.
+function buildCatalogFromOverlay(overlay, removedIds = []) {
+  const removed = new Set(Array.isArray(removedIds) ? removedIds : []);
+  const used = new Set();
+  const catalog = [];
+  (Array.isArray(overlay) ? overlay : []).forEach((entry) => {
+    if (!entry || typeof entry !== "object") return;
+    catalog.push(cloneData(entry));
+    if (entry.id) used.add(entry.id);
+  });
+  defaultSeedCatalog().forEach((entry) => {
+    if (!entry.id || used.has(entry.id) || removed.has(entry.id)) return;
+    catalog.push(cloneData(entry));
+  });
+  return catalog;
+}
+
+// Anciens formats : le catalogue complet était enregistré tel quel.
+function resolveStoredCatalog(data) {
+  const removed = Array.isArray(data?.catalogRemoved) ? data.catalogRemoved : [];
+  if (Array.isArray(data?.catalog)) return { catalog: data.catalog, removed };
+  if (Array.isArray(data?.catalogOverlay) || Array.isArray(data?.catalogRemoved)) {
+    return { catalog: buildCatalogFromOverlay(data.catalogOverlay, removed), removed };
+  }
+  return { catalog: null, removed };
+}
 let state = loadState();
 let route = "garden";
 let gardenFilter = "active";
@@ -402,9 +476,11 @@ function mergeReferenceCatalog(data) {
   if (!Array.isArray(data.catalog)) data.catalog = [];
   const ids = new Set(data.catalog.map((entry) => entry.id));
   const names = new Set(data.catalog.flatMap(catalogIdentityNames));
+  const removed = new Set(Array.isArray(data.catalogRemoved) ? data.catalogRemoved : []);
   let added = 0;
   for (const reference of defaultSeedCatalog()) {
     const keys = catalogIdentityNames(reference);
+    if (removed.has(reference.id)) continue;
     if (ids.has(reference.id) || keys.some((key) => names.has(key))) continue;
     data.catalog.push(cloneData(reference));
     ids.add(reference.id);
@@ -889,6 +965,7 @@ function buildDemoState() {
     units: "metric",
     theme: "orbital",
     catalog: cloneData(defaultSeedCatalog()),
+    catalogRemoved: [],
     regions: ["Bac surélevé", "Redwood Corner", "Zen Garden", "Serre"],
     seasons: [
       {
@@ -965,7 +1042,10 @@ function loadState() {
         if (!Object.prototype.hasOwnProperty.call(parsed, "candidates") || !Array.isArray(merged.candidates)) merged.candidates = [];
         if (!Object.prototype.hasOwnProperty.call(parsed, "seasonReviews") || !Array.isArray(merged.seasonReviews)) merged.seasonReviews = [];
         if (!Object.prototype.hasOwnProperty.call(parsed, "crosses") || !Array.isArray(merged.crosses)) merged.crosses = [];
-        if (!Array.isArray(merged.catalog)) merged.catalog = cloneData(defaultSeedCatalog());
+        const storedCatalog = resolveStoredCatalog(parsed);
+        merged.catalogRemoved = storedCatalog.removed;
+        merged.catalog = storedCatalog.catalog || cloneData(defaultSeedCatalog());
+        delete merged.catalogOverlay; // reconstruit à chaque sauvegarde
         if (!["orbital", "night"].includes(merged.theme)) merged.theme = "orbital";
         if (typeof merged.lastExportAt !== "string") merged.lastExportAt = "";
         if (!Array.isArray(merged.photos)) merged.photos = [];
@@ -981,6 +1061,10 @@ function loadState() {
           prune.removed.forEach((entry) => {
             if (entry?.userAdded || entry?.crossId) {
               merged.trash.unshift({ id: uid("trash"), type: "catalog", label: entry.name || "Variété du catalogue", deletedAt: todayIso(), data: { entry: cloneData(entry) } });
+            } else if (entry?.id && !merged.catalogRemoved.includes(entry.id)) {
+              // Fiche de référence retirée : on mémorise l'identifiant pour que
+              // la fusion suivante ne la réintroduise pas à chaque ouverture.
+              merged.catalogRemoved.push(entry.id);
             }
           });
           merged.catalogPrunedAt = todayIso();
@@ -1000,9 +1084,18 @@ function loadState() {
   return buildDemoState();
 }
 
+// Le catalogue de référence n'est pas persisté : on ne sérialise que l'overlay.
+function serializeState() {
+  const { catalog, ...payload } = state;
+  const overlay = buildCatalogOverlay(catalog, state.catalogRemoved);
+  payload.catalogOverlay = overlay.overlay;
+  payload.catalogRemoved = overlay.removed;
+  return JSON.stringify(payload);
+}
+
 function saveState() {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    localStorage.setItem(STORAGE_KEY, serializeState());
     storageStatus.saveError = false;
     refreshStorageEstimate();
     return true;
@@ -1860,8 +1953,15 @@ function restoreTrashItem(trashId) {
   } else if (item.type === "season") {
     if (!state.seasons.some((season) => Number(season.year) === Number(item.data.year))) state.seasons.push(item.data);
   } else if (item.type === "backup") {
-    state = cloneData(item.data.snapshot);
-    state.catalog = Array.isArray(state.catalog) ? state.catalog : cloneData(defaultSeedCatalog());
+    const snapshot = item.data.snapshot;
+    state = cloneData(snapshot);
+    // Une sauvegarde récente ne contient que l'overlay : on reconstruit le
+    // catalogue complet au lieu de repartir du catalogue de référence, sinon
+    // les fiches locales de la sauvegarde seraient perdues.
+    const restored = resolveStoredCatalog(snapshot);
+    state.catalogRemoved = restored.removed;
+    state.catalog = restored.catalog || cloneData(defaultSeedCatalog());
+    delete state.catalogOverlay;
     state.trash = state.trash || [];
   }
 
@@ -3052,6 +3152,12 @@ function handleStartupAction() {
   if (action) window.history.replaceState({}, document.title, window.location.pathname);
 }
 
+const MODAL_FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+function modalFocusableItems(modal) {
+  return [...modal.querySelectorAll(MODAL_FOCUSABLE)].filter((element) => element.offsetWidth || element.offsetHeight || element.getClientRects().length);
+}
+
 function openModal(html) {
   const root = document.getElementById("modal-root");
   lastFocusedElement = document.activeElement;
@@ -3059,7 +3165,27 @@ function openModal(html) {
   hydrateIcons(root);
   const backdrop = root.querySelector(".modal-backdrop");
   if (backdrop) backdrop.addEventListener("click", (event) => { if (event.target === backdrop) closeModal(); });
-  const focusable = root.querySelector("input, select, textarea, button");
+  // Les modales sont annoncées avec aria-modal="true" : on garde le focus à
+  // l'intérieur pour que Tab ne reparte pas dans la page d'arrière-plan.
+  const modal = root.querySelector(".modal");
+  if (modal) {
+    modal.addEventListener("keydown", (event) => {
+      if (event.key !== "Tab") return;
+      const items = modalFocusableItems(modal);
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+      if (event.shiftKey && (active === first || !modal.contains(active))) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (active === last || !modal.contains(active))) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+  }
+  const focusable = root.querySelector(MODAL_FOCUSABLE);
   if (focusable) setTimeout(() => focusable.focus(), 20);
 }
 
@@ -3103,7 +3229,7 @@ function undoTrash(trashId) {
 function confirmTwice(subject, extra = "") {
   const first = window.confirm(`Voulez-vous vraiment supprimer ${subject ? `« ${subject} »` : "cet élément"} ?${extra ? `\n\n${extra}` : ""}`);
   if (!first) return false;
-  return window.confirm(`Dernière confirmation\\n\\nConfirmez-vous vraiment la suppression de ${subject ? `« ${subject} »` : "cet élément"} ?`);
+  return window.confirm(`Dernière confirmation\n\nConfirmez-vous vraiment la suppression de ${subject ? `« ${subject} »` : "cet élément"} ?`);
 }
 
 function applyTheme() {
@@ -4849,7 +4975,10 @@ function importData(file) {
       if (!state.budgetSettings || typeof state.budgetSettings !== "object") state.budgetSettings = { marketPricePerKg: 4.5, projectionRate: 1.15 };
       state.budgetSettings.marketPricePerKg = Number(state.budgetSettings.marketPricePerKg) > 0 ? Number(state.budgetSettings.marketPricePerKg) : 4.5;
       state.budgetSettings.projectionRate = Number(state.budgetSettings.projectionRate) > 0 ? Number(state.budgetSettings.projectionRate) : 1.15;
-      if (!Array.isArray(state.catalog)) state.catalog = cloneData(defaultSeedCatalog());
+      const storedCatalog = resolveStoredCatalog(incoming);
+      state.catalogRemoved = storedCatalog.removed;
+      state.catalog = storedCatalog.catalog || cloneData(defaultSeedCatalog());
+      delete state.catalogOverlay; // reconstruit à chaque sauvegarde
       mergeReferenceCatalog(state);
       migrateCatalogTypes(state);
       if (!["orbital", "night"].includes(state.theme)) state.theme = "orbital";
@@ -4887,7 +5016,21 @@ function init() {
   }
   document.addEventListener("click", handleClick);
   document.addEventListener("submit", handleSubmit);
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && document.getElementById("modal-root")?.innerHTML) closeModal(); });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && document.getElementById("modal-root")?.innerHTML) {
+      closeModal();
+      return;
+    }
+    // Les cartes du potager et du catalogue sont des <article role="button">
+    // focusables : Entrée / Espace doivent les activer comme un vrai bouton.
+    if (event.key !== "Enter" && event.key !== " " && event.key !== "Spacebar") return;
+    const target = event.target;
+    if (!target?.closest || target.closest(".modal")) return;
+    const widget = target.closest('[role="button"]');
+    if (!widget || ["BUTTON", "A", "INPUT", "SELECT", "TEXTAREA"].includes(widget.tagName)) return;
+    event.preventDefault();
+    widget.click();
+  });
   document.addEventListener("input", (event) => {
     if (event.target.id === "global-search") {
       globalSearchQuery = event.target.value;

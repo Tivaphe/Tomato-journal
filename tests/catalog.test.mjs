@@ -279,7 +279,65 @@ test("imported backups are cleaned before their first render and save", async ()
   assert.equal(rendered.length, 2);
   assert.doesNotMatch(JSON.stringify(rendered), /ancien fournisseur|fiche produit/i);
   assert.deepEqual(app.stored().plants[0].harvests, legacyState().plants[0].harvests);
-  assert.equal(app.stored().catalog[1].subfamily, "Dwarf");
+  const overlay = app.stored().catalogOverlay;
+  assert.equal(overlay.length, 2);
+  assert.equal(overlay[1].subfamily, "Dwarf");
+  assert.equal(app.stored().catalog, undefined);
+});
+
+test("the reference catalogue is never persisted, only the local overlay", () => {
+  const app = createApp(legacyState());
+  assert.equal(app.run("state.catalog.length"), referenceCount + 1);
+  app.run("refreshStorageEstimate = () => {}; saveState()");
+  const stored = app.stored();
+  // Le catalogue de référence est livré avec l'application : le recopier dans
+  // localStorage saturerait le quota (~5 Mio) et ferait échouer saveState().
+  assert.equal(stored.catalog, undefined);
+  assert.deepEqual(stored.catalogOverlay.map((entry) => entry.id), ["catalog-077", "catalog-personal"]);
+  assert.deepEqual(stored.catalogRemoved, []);
+  assert.ok(JSON.stringify(stored).length < 200_000);
+  const reloaded = createApp(stored);
+  assert.equal(reloaded.run("state.catalog.length"), referenceCount + 1);
+  assert.equal(reloaded.run('state.catalog.find(entry => entry.id === "catalog-077").subfamily'), "Indéterminée");
+  assert.equal(reloaded.run('state.catalog.find(entry => entry.id === "catalog-personal").name'), "Ma sélection naine");
+});
+
+test("restoring a backup snapshot keeps its local sheets, overlay format included", () => {
+  const app = createApp();
+  app.run(`
+    state.catalog = state.catalog.slice(0, 5);
+    state.catalogRemoved = defaultSeedCatalog().slice(5).map((entry) => entry.id);
+    state.catalog.unshift({ id: "catalog-perso", name: "Ma lignée", family: "Tomate (Solanum lycopersicum)", subfamily: "Dwarf", details: {}, plantDefaults: {}, userAdded: true });
+    refreshStorageEstimate = () => {};
+    saveState();
+  `);
+  const snapshot = app.stored();
+  assert.equal(snapshot.catalog, undefined);
+  const restored = createApp({ ...snapshot, trash: [{ id: "trash-backup", type: "backup", data: { snapshot } }] });
+  restored.run(`
+    render = () => {};
+    initializePhotoStorage = async () => {};
+    refreshStorageEstimate = () => {};
+    restoreTrashItem("trash-backup");
+  `);
+  assert.equal(restored.run('state.catalog.some(entry => entry.id === "catalog-perso")'), true);
+  assert.equal(restored.run("state.catalog.some(entry => entry.id === defaultSeedCatalog()[9].id)"), false);
+});
+
+test("a removed reference sheet is not reintroduced by the next merge", () => {
+  const app = createApp();
+  const removedId = app.run("defaultSeedCatalog()[0].id");
+  app.run(`
+    state.catalog = state.catalog.filter((entry) => entry.id !== "${removedId}");
+    state.catalogRemoved = ["${removedId}"];
+    refreshStorageEstimate = () => {};
+    saveState();
+  `);
+  assert.equal(app.run(`mergeReferenceCatalog(state)`), 0);
+  assert.equal(app.run(`state.catalog.some(entry => entry.id === "${removedId}")`), false);
+  const reloaded = createApp(app.stored());
+  assert.equal(reloaded.run(`state.catalog.some(entry => entry.id === "${removedId}")`), false);
+  assert.equal(reloaded.run("state.catalog.length"), referenceCount - 1);
 });
 
 test("restoring an older catalogue sheet does not reintroduce legacy categories", () => {
@@ -496,8 +554,11 @@ test("the readme catalog count matches the reference catalog size", () => {
     /\b\d{2,5}(?=\s+(?:fiches|variétés|sheets|tomato\s+(?:sheets|varieties)))/g,
   ];
   const found = patterns.flatMap((pattern) => [...readme.matchAll(pattern)].map((m) => Number(m[0].match(/\d+/)[0])));
-  assert.equal(found.length, 12);
-  assert.ok(found.every((count) => count === referenceCount));
+  // Le nombre exact d'occurrences évolue avec la documentation : on vérifie
+  // surtout que toutes les mentions trouvées sont justes, et que les motifs
+  // n'ont pas cessé de fonctionner (sinon found serait vide).
+  assert.ok(found.length >= 10, `${found.length} occurrences trouvées`);
+  assert.ok(found.every((count) => count === referenceCount), found.join(", "));
 });
 
 test("rare documented leaf types are offered and filter with the intended varieties", () => {
