@@ -303,10 +303,14 @@ Tomato-journal/
 │   ├── build-sw-cache.mjs         # Régénère le cache versionné (sw.js)
 │   ├── build-catalog-import.mjs   # Import du catalogue
 │   ├── build-catalog-enrich.mjs   # Enrichissement multi-sources
-│   └── build-catalog-report.mjs   # Génération du rapport documentaire
+│   ├── build-catalog-report.mjs   # Génération du rapport documentaire
+│   ├── collect-tomatofifou.mjs    # Relevé Tomatofifou (sans doublon, relançable)
+│   └── lib/
+│       └── tomatofifou.mjs        # Analyse des pages et correspondances de libellés
 ├── docs/
 │   ├── verification-catalogue.md  # Audit des 1987 fiches
 │   ├── enrichissement-catalogue.md # Suivi de l'enrichissement
+│   ├── collecte-tomatofifou.md    # Mode d'emploi du relevé Tomatofifou
 │   ├── audit-2026-09.md            # Audit technique du dépôt (septembre 2026)
 │   └── screenshots/               # Captures d'écran
 ├── data/                          # Données d'enrichissement du catalogue

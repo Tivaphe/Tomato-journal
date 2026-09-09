@@ -10,6 +10,7 @@
     "build:sw": "node scripts/build-sw-cache.mjs",
     "build:audit": "node scripts/build-catalog-report.mjs",
     "build:enrich": "node scripts/build-catalog-enrich.mjs",
+    "collect:tomatofifou": "node scripts/collect-tomatofifou.mjs",
     "build:catalog": "node scripts/build-catalog-import.mjs && node scripts/build-catalog-report.mjs && node scripts/build-sw-cache.mjs"
   }
 }
