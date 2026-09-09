@@ -53,7 +53,6 @@ const ONLY_LISTING = flag("only-listing");
 const collectedAt = new Date().toISOString().slice(0, 10);
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const log = (message) => process.stdout.write(`${message}\n`);
 
 async function get(url) {
   if (FIXTURE) {
@@ -121,14 +120,19 @@ if (manifest && !FRESH) {
 } else {
   console.log("Collecte du listing…");
   const pages = [];
+  const seen = new Set();
   try {
   for (let page = 1; ; page += 1) {
     const url = page === 1 ? CATEGORY_URL : PAGE_URL_TEMPLATE.replace("{page}", String(page));
     const html = await getWithRetry(url);
     const { items, total } = parseListingPage(html, page);
-    if (!items.length) break;
-    pages.push({ page, url, productCount: items.length });
-    listing.push(...items);
+    const fresh = items.filter((item) => !seen.has(item.slug));
+    // Une page hors bornes renvoie souvent la dernière page : sans nouveau
+    // slug, la pagination est terminée.
+    if (!fresh.length) break;
+    for (const item of fresh) seen.add(item.slug);
+    pages.push({ page, url, productCount: fresh.length });
+    listing.push(...fresh);
     process.stdout.write(`  page ${page} · ${listing.length}${total ? ` / ${total}` : ""}\r`);
     if (pages.length >= 400 || (total && listing.length >= total)) break;
     await sleep(DELAY);
