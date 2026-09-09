@@ -306,6 +306,7 @@ Tomato-journal/
 ├── docs/
 │   ├── verification-catalogue.md  # Audit des 1987 fiches
 │   ├── enrichissement-catalogue.md # Suivi de l'enrichissement
+│   ├── audit-2026-09.md            # Audit technique du dépôt (septembre 2026)
 │   └── screenshots/               # Captures d'écran
 ├── data/                          # Données d'enrichissement du catalogue
 └── tests/                         # Tests de non-régression
@@ -567,6 +568,7 @@ Tomato-journal/
 ├── docs/
 │   ├── verification-catalogue.md  # Audit of all 1987 sheets
 │   ├── enrichissement-catalogue.md # Enrichment follow-up
+│   ├── audit-2026-09.md            # Technical repository audit (September 2026)
 │   └── screenshots/               # Screenshots
 ├── data/                          # Catalog enrichment data
 └── tests/                         # Regression tests
