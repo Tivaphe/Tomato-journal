@@ -270,6 +270,8 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .facet-reset:hover { border-color: var(--tomato); }
 .facet-reset svg { width: 14px; height: 14px; }
 .variety-groups { display: grid; gap: 27px; }
+.variety-more { display: flex; flex-direction: column; align-items: center; gap: 7px; margin-top: 21px; padding-top: 17px; border-top: 1px dashed var(--line); text-align: center; }
+.variety-more .form-help { max-width: 460px; }
 .variety-group h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 11px; color: var(--muted); font-size: 11px; letter-spacing: .17em; text-transform: uppercase; }
 .variety-group h2::after { content: ""; height: 1px; flex: 1; background: var(--line); }
 .variety-cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 11px; }

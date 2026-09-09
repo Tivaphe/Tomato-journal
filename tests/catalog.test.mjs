@@ -158,9 +158,62 @@ test("the catalogue renders only five filter buttons with accurate counts", () =
     const count = app.run("currentSeedCatalog().filter(entry => catalogSubfamily(entry) === selectedType).length");
     assert.equal(label, `${value} · ${count}`);
   }
-  assert.equal((html.match(/class="variety-card catalog-card"/g) || []).length, referenceCount);
+  // La liste est paginée : 60 fiches par page, avec un bouton « Afficher plus ».
+  const pageSize = app.run("VARIETY_PAGE_SIZE");
+  assert.equal((html.match(/class="variety-card catalog-card"/g) || []).length, pageSize);
+  assert.match(html, /data-action="show-more-varieties"/);
+  app.run(`
+    render = () => {};
+    document.querySelector = () => null;
+    actionDispatch["show-more-varieties"](null, null);
+  `);
+  const secondPage = app.run("renderVarieties()");
+  assert.equal((secondPage.match(/class="variety-card catalog-card"/g) || []).length, pageSize * 2);
   app.run("state.catalog = []");
   assert.equal((app.run("renderVarieties()").match(/data-action="variety-filter"/g) || []).length, 5);
+});
+
+test("the global search returns catalog sheets with a readable detail", () => {
+  const app = createApp();
+  const results = app.read('globalSearchItems("tomate")');
+  assert.ok(results.length > 0);
+  const catalogHits = results.filter((result) => result.kind === "catalog");
+  assert.ok(catalogHits.length > 0);
+  // Le détail affiché est reconstruit après le tri, jamais pour les 1 987 fiches.
+  assert.equal(catalogHits.every((result) => !result.entry), true);
+  assert.match(catalogHits[0].detail, /Tomate \(Solanum lycopersicum\)/);
+  // Mémoïsation : la même requête est servie par le cache, sans reparcourir
+  // les 1 987 fiches.
+  assert.equal(app.run('catalogSearchCache.query'), "tomate");
+  assert.ok(app.run("catalogSearchCache.results.length") > 0);
+  assert.deepEqual(app.read('globalSearchItems("tomate")'), results);
+});
+
+test("the variety index filters by facet without recomputing every sheet", () => {
+  const app = createApp();
+  const built = app.run("catalogIndex()");
+  assert.equal(built.records.length, referenceCount);
+  assert.equal(built.groups.subfamily.get("Dwarf").size, app.run('currentSeedCatalog().filter(entry => catalogSubfamily(entry) === "Dwarf").length'));
+  // Même résultat qu'un filtrage exhaustif, pour chaque facette.
+  app.run('varietyFacets.color = "green"');
+  const indexed = app.run("varietiesForFilter().map(entry => entry.id).sort()");
+  const exhaustive = app.run(`
+    currentSeedCatalog()
+      .filter((entry) => catalogColors(entry).includes("green"))
+      .map((entry) => entry.id)
+      .sort()
+  `);
+  assert.deepEqual(indexed, exhaustive);
+  app.run('varietyFacets.color = "all"; varietyFilter = "Dwarf"; varietySearch = "rose"');
+  const searched = app.run("varietiesForFilter().map(entry => entry.id).sort()");
+  const exhaustiveSearch = app.run(`
+    currentSeedCatalog()
+      .filter((entry) => catalogSubfamily(entry) === "Dwarf")
+      .filter((entry) => normalizeSearchText([entry.name, entry.family, entry.subfamily, catalogDetailsText(entry)].join(" ")).includes(normalizeSearchText("rose")))
+      .map((entry) => entry.id)
+      .sort()
+  `);
+  assert.deepEqual(searched, exhaustiveSearch);
 });
 
 test("each filter selects its own group and combines with accent-insensitive search", () => {

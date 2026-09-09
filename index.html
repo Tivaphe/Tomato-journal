@@ -106,8 +106,11 @@
     <div id="modal-root" aria-live="polite"></div>
     <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
 
-    <script src="src/seed-catalog.js"></script>
+    <!-- defer : les scripts s'exécutent après l'analyse du document, avant
+         DOMContentLoaded, dans l'ordre. Le premier affichage n'est plus bloqué
+         par l'analyse des 5,4 Mo du catalogue. -->
+    <script defer src="src/seed-catalog.js"></script>
     <script type="module" src="src/photo-storage.js"></script>
-    <script src="src/app.js"></script>
+    <script defer src="src/app.js"></script>
   </body>
 </html>

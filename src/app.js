@@ -271,7 +271,9 @@ let gardenFilter = "active";
 let selectedRegion = "Toutes les zones";
 let viewMode = "grid";
 let varietyFilter = "all";
+const VARIETY_PAGE_SIZE = 60;
 let varietySearch = "";
+let varietyLimit = VARIETY_PAGE_SIZE;
 const varietyFacets = { color: "all", size: "all", shape: "all", maturity: "all", leaf: "all", tolerance: "all" };
 let lastFocusedElement = null;
 let deferredInstallPrompt = null;
@@ -2277,22 +2279,93 @@ function catalogShortText(value, maxLength = 150) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trim()}…` : text;
 }
 
-function varietiesForFilter() {
-  const all = currentSeedCatalog();
-  return all.filter((entry) => {
-    const query = normalizeSearchText(varietySearch.trim());
-    const searchable = normalizeSearchText([entry.name, entry.family, entry.subfamily, catalogDetailsText(entry)].join(" "));
-    const matchesSearch = !query || searchable.includes(query);
-    const matchesFilter = varietyFilter === "all" || catalogSubfamily(entry) === varietyFilter;
-    const size = ["cerise", "petit", "moyen", "gros"].includes(entry.plantDefaults?.size) ? entry.plantDefaults.size : catalogSize(entry);
-    const matchesColor = varietyFacets.color === "all" || catalogColors(entry).includes(varietyFacets.color);
-    const matchesSize = varietyFacets.size === "all" || size === varietyFacets.size;
-    const matchesShape = varietyFacets.shape === "all" || catalogShape(entry) === varietyFacets.shape;
-    const matchesMaturity = varietyFacets.maturity === "all" || catalogMaturityClass(entry) === varietyFacets.maturity;
-    const matchesLeaf = varietyFacets.leaf === "all" || catalogLeafTypes(entry).includes(varietyFacets.leaf);
-    const matchesTolerance = varietyFacets.tolerance === "all" || catalogToleranceLabels(entry).includes(varietyFacets.tolerance);
-    return matchesSearch && matchesFilter && matchesColor && matchesSize && matchesShape && matchesMaturity && matchesLeaf && matchesTolerance;
+/* ---------------------------------------------------------------------------
+ * Index du catalogue.
+ * Les facettes (couleurs, taille, forme, maturité, feuillage, tolérances) et
+ * le texte de recherche sont déduits de la fiche par des expressions
+ * rationnelles coûteuses. Elles étaient recalculées pour les 1 987 fiches à
+ * chaque frappe clavier (~21 ms) et à chaque recherche globale (~63 ms).
+ * On les calcule une fois par chargement du catalogue et on les indexe par
+ * valeur : le filtrage devient une intersection d'ensembles.
+ * ------------------------------------------------------------------------- */
+const VARIETY_FACET_KEYS = ["color", "size", "shape", "maturity", "leaf", "tolerance"];
+let catalogIndexCache = { catalog: null, index: null };
+
+function catalogFacetRecord(entry) {
+  const size = ["cerise", "petit", "moyen", "gros"].includes(entry.plantDefaults?.size) ? entry.plantDefaults.size : catalogSize(entry);
+  return {
+    subfamily: catalogSubfamily(entry),
+    colors: catalogColors(entry),
+    size,
+    shape: catalogShape(entry),
+    maturity: catalogMaturityClass(entry),
+    leaf: catalogLeafTypes(entry),
+    tolerances: catalogToleranceLabels(entry),
+    search: normalizeSearchText([entry.name, entry.family, entry.subfamily, catalogDetailsText(entry)].join(" ")),
+  };
+}
+
+function buildCatalogIndex(catalog) {
+  const records = new Array(catalog.length);
+  const groups = { subfamily: new Map(), color: new Map(), size: new Map(), shape: new Map(), maturity: new Map(), leaf: new Map(), tolerance: new Map() };
+  const add = (group, value, position) => {
+    if (!value) return;
+    let bucket = groups[group].get(value);
+    if (!bucket) {
+      bucket = new Set();
+      groups[group].set(value, bucket);
+    }
+    bucket.add(position);
+  };
+  catalog.forEach((entry, position) => {
+    const record = catalogFacetRecord(entry);
+    records[position] = record;
+    add("subfamily", record.subfamily, position);
+    add("size", record.size, position);
+    add("shape", record.shape, position);
+    add("maturity", record.maturity, position);
+    record.colors.forEach((value) => add("color", value, position));
+    record.leaf.forEach((value) => add("leaf", value, position));
+    record.tolerances.forEach((value) => add("tolerance", value, position));
   });
+  return { records, groups };
+}
+
+// L'index est invalidé dès que le tableau du catalogue change d'identité.
+function catalogIndex() {
+  const catalog = currentSeedCatalog();
+  if (catalogIndexCache.catalog === catalog) return catalogIndexCache.index;
+  const index = buildCatalogIndex(catalog);
+  catalogIndexCache = { catalog, index };
+  return index;
+}
+
+function varietiesForFilter() {
+  const catalog = currentSeedCatalog();
+  const { records, groups } = catalogIndex();
+  const query = normalizeSearchText(varietySearch.trim());
+  const constraints = [];
+  if (varietyFilter !== "all") constraints.push(groups.subfamily.get(varietyFilter));
+  VARIETY_FACET_KEYS.forEach((key) => {
+    if (varietyFacets[key] !== "all") constraints.push(groups[key].get(varietyFacets[key]));
+  });
+  // Un filtre sans correspondance : aucun résultat, inutile de parcourir.
+  if (constraints.some((bucket) => !bucket || bucket.size === 0)) return [];
+
+  // On part du plus petit ensemble pour minimiser les tests.
+  let base = null;
+  constraints.forEach((bucket) => { if (!base || bucket.size < base.size) base = bucket; });
+  const matches = (position) => {
+    for (const bucket of constraints) if (!bucket.has(position)) return false;
+    return !query || records[position].search.includes(query);
+  };
+  const results = [];
+  if (base) {
+    for (const position of base) if (matches(position)) results.push(catalog[position]);
+  } else {
+    for (let position = 0; position < catalog.length; position += 1) if (matches(position)) results.push(catalog[position]);
+  }
+  return results;
 }
 
 function activeVarietyFacetCount() {
@@ -2332,13 +2405,10 @@ function catalogFacetValueLabel(key, value) {
 
 function renderVarieties() {
   const allCatalog = currentSeedCatalog();
-  const subfamilyCounts = allCatalog.reduce((counts, entry) => {
-    const subfamily = catalogSubfamily(entry);
-    counts[subfamily] = (counts[subfamily] || 0) + 1;
-    return counts;
-  }, {});
-  const filters = CATALOG_SUBFAMILY_ORDER.map((subfamily) => [subfamily, `${subfamily} · ${subfamilyCounts[subfamily] || 0}`]);
-  const entries = varietiesForFilter();
+  const { groups: facetGroups } = catalogIndex();
+  const filters = CATALOG_SUBFAMILY_ORDER.map((subfamily) => [subfamily, `${subfamily} · ${facetGroups.subfamily.get(subfamily)?.size || 0}`]);
+  const matching = varietiesForFilter();
+  const entries = matching.slice(0, varietyLimit);
   const groups = {};
   entries.forEach((entry) => {
     const group = catalogSubfamily(entry);
@@ -2347,15 +2417,15 @@ function renderVarieties() {
   });
   const orderedGroups = catalogSubfamilyList(entries);
   const activeCount = activeVarietyFacetCount();
-  const subtitle = activeCount
-    ? `${entries.length} variété${entries.length > 1 ? "s" : ""} affichée${entries.length > 1 ? "s" : ""} sur ${allCatalog.length} · ${activeCount} filtre${activeCount > 1 ? "s" : ""} actif${activeCount > 1 ? "s" : ""}`
+  const subtitle = activeCount || varietySearch.trim()
+    ? `${matching.length} variété${matching.length > 1 ? "s" : ""} sur ${allCatalog.length} · ${activeCount} filtre${activeCount > 1 ? "s" : ""} actif${activeCount > 1 ? "s" : ""}`
     : `${allCatalog.length} variétés de tomates · ${CATALOG_SUBFAMILY_ORDER.length} types de plantes`;
   const facetBar = `<div class="catalog-facets" role="group" aria-label="Filtres par caractéristiques"><label class="catalog-facet">Couleur<select data-facet="color" aria-label="Filtrer par couleur du fruit"><option value="all" ${varietyFacets.color === "all" ? "selected" : ""}>Toutes</option>${catalogFacetOptionsHTML("color")}</select></label><label class="catalog-facet">Taille du fruit<select data-facet="size" aria-label="Filtrer par taille du fruit"><option value="all" ${varietyFacets.size === "all" ? "selected" : ""}>Toutes</option>${catalogFacetOptionsHTML("size")}</select></label><label class="catalog-facet">Forme<select data-facet="shape" aria-label="Filtrer par forme du fruit"><option value="all" ${varietyFacets.shape === "all" ? "selected" : ""}>Toutes</option>${catalogFacetOptionsHTML("shape")}</select></label><label class="catalog-facet">Maturité<select data-facet="maturity" aria-label="Filtrer par précocité / maturité"><option value="all" ${varietyFacets.maturity === "all" ? "selected" : ""}>Toutes</option>${catalogFacetOptionsHTML("maturity")}</select></label><label class="catalog-facet">Feuillage<select data-facet="leaf" aria-label="Filtrer par type de feuillage"><option value="all" ${varietyFacets.leaf === "all" ? "selected" : ""}>Tous</option>${catalogFacetOptionsHTML("leaf")}</select></label><label class="catalog-facet">Tolérances<select data-facet="tolerance" aria-label="Filtrer par tolérance au climat ou résistances déclarées"><option value="all" ${varietyFacets.tolerance === "all" ? "selected" : ""}>Toutes</option>${catalogFacetOptionsHTML("tolerance")}</select></label>${activeCount ? `<button class="facet-reset" data-action="reset-variety-filters" type="button">${icon("close")} Réinitialiser (${activeCount})</button>` : ""}</div>`;
   return `${renderPageHeading(pageMeta.varieties.title, subtitle, `<button class="button secondary" data-action="add-catalog" type="button">${icon("plus")} Nouvelle variété</button><button class="button primary" data-action="add-plant" type="button">${icon("leaf")} Ajouter au potager</button>`)}
     <section class="catalog-intro"><div class="catalog-intro-icon">${icon("tag")}</div><div><strong>Des sources et des réserves pour chaque fiche</strong><p>Ouvrez une variété pour voir les points recoupés et ceux qui restent à confirmer. Les cinq filtres sont des regroupements pratiques : le port nain ou buissonnant ne suffit pas à déterminer la croissance.</p><a class="catalog-audit-link" href="docs/verification-catalogue.md" target="_blank" rel="noopener">Lire le rapport des ${defaultSeedCatalog().length} fiches</a>${window.SEED_CATALOG_IMPORT ? `<a class="catalog-audit-link" href="docs/enrichissement-catalogue.md" target="_blank" rel="noopener">Suivi de l’enrichissement · ${window.SEED_CATALOG_IMPORT.added} ajouts</a>` : ""}</div><span class="catalog-count">${allCatalog.length}<small>fiches</small></span></section>
     <div class="variety-toolbar"><div class="search-box">${icon("search")}<input id="variety-search" type="search" placeholder="Rechercher un nom, un type ou une caractéristique…" value="${escapeHTML(varietySearch)}" aria-label="Rechercher dans le catalogue" /></div><div class="catalog-filter-controls"><div class="filter-chips" role="group" aria-label="Filtrer par type de plante">${filters.map(([value, label]) => `<button class="pill ${varietyFilter === value ? "active tomato" : ""}" data-action="variety-filter" data-filter="${escapeHTML(value)}" type="button" aria-pressed="${varietyFilter === value}" title="${varietyFilter === value ? "Afficher tous les types" : `Filtrer : ${escapeHTML(value)}`}">${escapeHTML(label)}</button>`).join("")}</div><span class="form-help">Cliquez de nouveau sur le type actif pour tout afficher.</span></div></div>
     ${facetBar}
-    ${orderedGroups.length ? `<div class="variety-groups">${orderedGroups.map((group) => `<section class="variety-group"><h2>${escapeHTML(group)} <span class="catalog-group-count">${groups[group].length}</span></h2><div class="variety-cards">${groups[group].map(renderVarietyCard).join("")}</div></section>`).join("")}</div>` : `<div class="empty-state"><div><div class="empty-illustration" style="color:var(--purple);background:#f0e8ef">${icon("tag")}</div><h3>Aucune variété trouvée</h3><p>Essayez un autre mot-clé, un autre type de plante ou élargissez les filtres de caractéristiques.</p>${activeCount || varietySearch.trim() ? `<button class="button primary" data-action="reset-variety-filters" type="button">${icon("close")} Réinitialiser les filtres</button>` : `<button class="button primary" data-action="add-plant" type="button">${icon("plus")} Ajouter une plante</button>`}</div></div>`}`;
+    ${orderedGroups.length ? `<div class="variety-groups">${orderedGroups.map((group) => `<section class="variety-group"><h2>${escapeHTML(group)} <span class="catalog-group-count">${groups[group].length}</span></h2><div class="variety-cards">${groups[group].map(renderVarietyCard).join("")}</div></section>`).join("")}</div>${matching.length > entries.length ? `<div class="variety-more"><button class="button secondary" data-action="show-more-varieties" type="button">${icon("plus")} Afficher ${Math.min(VARIETY_PAGE_SIZE, matching.length - entries.length)} variété${Math.min(VARIETY_PAGE_SIZE, matching.length - entries.length) > 1 ? "s" : ""} de plus</button><span class="form-help">${entries.length} affichée${entries.length > 1 ? "s" : ""} sur ${matching.length} · la liste est paginée pour rester fluide sur mobile.</span></div>` : ""}` : `<div class="empty-state"><div><div class="empty-illustration" style="color:var(--purple);background:#f0e8ef">${icon("tag")}</div><h3>Aucune variété trouvée</h3><p>Essayez un autre mot-clé, un autre type de plante ou élargissez les filtres de caractéristiques.</p>${activeCount || varietySearch.trim() ? `<button class="button primary" data-action="reset-variety-filters" type="button">${icon("close")} Réinitialiser les filtres</button>` : `<button class="button primary" data-action="add-plant" type="button">${icon("plus")} Ajouter une plante</button>`}</div></div>`}`;
 }
 
 function renderVarietyCard(entry) {
@@ -3303,6 +3373,40 @@ function findPlant(id) {
   return state.plants.find((plant) => plant.id === id);
 }
 
+// La recherche globale est relancée à chaque rendu : on mémoïse la partie
+// catalogue, qui parcourt les 1 987 fiches, par requête. Le détail affiché
+// n'est reconstruit que pour les fiches retenues (14 au maximum).
+let catalogSearchCache = { catalog: null, query: "", results: [] };
+
+function catalogSearchMatches(normalizedQuery) {
+  const catalog = currentSeedCatalog();
+  if (catalogSearchCache.catalog === catalog && catalogSearchCache.query === normalizedQuery) return catalogSearchCache.results;
+  const records = catalogIndex().records;
+  const results = [];
+  catalog.forEach((entry, position) => {
+    const haystack = records[position]?.search || "";
+    if (normalizedQuery && !haystack.includes(normalizedQuery)) return;
+    const label = String(entry.name || "");
+    const starts = normalizeSearchText(label).startsWith(normalizedQuery);
+    results.push({
+      kind: "catalog",
+      id: String(entry.id || entry.catalogIndex || ""),
+      label,
+      detail: "",
+      icon: "tag",
+      season: "",
+      score: (starts ? 20 : 0) + (haystack.indexOf(normalizedQuery) === 0 ? 8 : 0),
+      entry,
+    });
+  });
+  catalogSearchCache = { catalog, query: normalizedQuery, results };
+  return results;
+}
+
+function catalogSearchDetail(entry) {
+  return [entry.family, entry.subfamily, catalogDetailsText(entry)].filter(Boolean).join(" · ");
+}
+
 function globalSearchItems(query) {
   const normalized = normalizeSearchText(query);
   if (!normalized) return [];
@@ -3314,7 +3418,7 @@ function globalSearchItems(query) {
     results.push({ kind, id: String(id || ""), label: String(label || ""), detail: String(detail || ""), icon: iconName, season, score: (starts ? 20 : 0) + (haystack.indexOf(normalized) === 0 ? 8 : 0) });
   };
   (state.plants || []).forEach((plant) => add("plant", plant.id, plant.name, [plant.family, plant.subfamily, plant.region, plant.location, plant.notes].filter(Boolean).join(" · "), "tomato", plant.season));
-  currentSeedCatalog().forEach((entry) => add("catalog", entry.id || entry.catalogIndex, entry.name, [entry.family, entry.subfamily, catalogDetailsText(entry)].filter(Boolean).join(" · "), "tag", ""));
+  results.push(...catalogSearchMatches(normalized));
   (state.candidates || []).forEach((candidate) => add("candidate", candidate.id, candidate.name, [candidate.family, candidate.subfamily, candidate.status ? candidateStatusLabel(candidate.status) : "", candidate.notes].filter(Boolean).join(" · "), "leaf", candidate.season));
   (state.crosses || []).forEach((cross) => add("cross", cross.id, cross.name, [cross.generation, crossParentLabel(cross.femaleParent), crossParentLabel(cross.maleParent), cross.traits, cross.notes].filter(Boolean).join(" · "), "leaf", cross.targetSeason));
   (state.tasks || []).forEach((task) => add("task", task.id, task.title, [task.notes, findPlant(task.plantId)?.name, task.amount].filter(Boolean).join(" · "), "calendar", task.season));
@@ -3322,7 +3426,10 @@ function globalSearchItems(query) {
   (state.seedInventory || []).forEach((seed) => add("seed", seed.id, seed.name, [seed.source, seed.location, seed.notes, seed.candidateId ? candidateById(seed.candidateId)?.name : ""].filter(Boolean).join(" · "), "leaf", ""));
   (state.healthLogs || []).forEach((log) => add("health", log.id, `${healthSymptomLabel(log.symptom)} · ${findPlant(log.plantId)?.name || "Plante"}`, [log.date, healthSeverityLabel(log.severity), log.treatment, log.notes].filter(Boolean).join(" · "), "info", findPlant(log.plantId)?.season || ""));
   (state.plants || []).forEach((plant) => (plant.harvests || []).forEach((harvest) => add("harvest", plant.id, `Récolte · ${plant.name}`, [harvest.date, `${harvest.weight} g`, harvest.notes].filter(Boolean).join(" · "), "scale", plant.season)));
-  return results.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label, "fr")).slice(0, 14);
+  return results
+    .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label, "fr"))
+    .slice(0, 14)
+    .map((result) => (result.entry ? { ...result, detail: catalogSearchDetail(result.entry), entry: undefined } : result));
 }
 
 function renderGlobalSearchResults() {
@@ -3393,6 +3500,7 @@ const actionDispatch = Object.freeze({
   "toggle-plant-selection": (_event, element) => togglePlantSelection(element),
   "clear-plant-selection": () => { bulkMode = false; selectedPlantIds.clear(); render(); },
   "apply-bulk-action": () => applyBulkAction(),
+  "show-more-varieties": () => { varietyLimit += VARIETY_PAGE_SIZE; render(); document.querySelector("[data-action=show-more-varieties]")?.focus(); },
   "add-catalog-photo": (_event, element) => { const entry = catalogEntryById(element.dataset.id); if (entry) openModal(renderCatalogPhotoForm(entry)); },
   "delete-catalog-photo": async (_event, element) => { const photo = (state.catalogPhotos || []).find((item) => item.id === element.dataset.id); if (!photo || !confirmTwice("cette photo de référence", "L'image locale sera supprimée de cette fiche et de la corbeille.")) return; await deleteCatalogPhotoRecord(photo); const entry = catalogEntryById(photo.catalogId); if (entry) delete entry.referencePhotoId; saveState(); if (entry) { closeModal(); openModal(renderCatalogDetail(entry)); } else { closeModal(); render(); } toast("Photo de référence retirée."); },
   "open-garden-map": () => openModal(renderGardenMapModal()),
@@ -3707,6 +3815,7 @@ function handleClick(event) {
   if (action === "variety-filter") {
     const selected = actionElement.dataset.filter;
     varietyFilter = varietyFilter === selected ? "all" : selected;
+    varietyLimit = VARIETY_PAGE_SIZE;
     render();
     document.querySelector(`[data-action="variety-filter"][data-filter="${selected}"]`)?.focus();
     return;
@@ -3715,6 +3824,7 @@ function handleClick(event) {
     Object.keys(varietyFacets).forEach((key) => { varietyFacets[key] = "all"; });
     varietyFilter = "all";
     varietySearch = "";
+    varietyLimit = VARIETY_PAGE_SIZE;
     render();
     return;
   }
@@ -5039,6 +5149,7 @@ function init() {
     }
     if (event.target.id === "variety-search") {
       varietySearch = event.target.value;
+      varietyLimit = VARIETY_PAGE_SIZE;
       const cursor = event.target.selectionStart;
       render();
       const replacement = document.getElementById("variety-search");
@@ -5056,6 +5167,7 @@ function init() {
     }
     if (event.target.matches("[data-facet]")) {
       varietyFacets[event.target.dataset.facet] = event.target.value || "all";
+      varietyLimit = VARIETY_PAGE_SIZE;
       render();
       return;
     }

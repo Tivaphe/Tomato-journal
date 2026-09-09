@@ -277,7 +277,7 @@ Ouvrez l'application avec `http://localhost:4173` en développement, ou une adre
 <tr><td><b>Catalogue et quota</b></td><td>Les 1987 fiches de référence sont livrées avec l'application et ne sont <b>jamais recopiées</b> dans <code>localStorage</code> : seules vos fiches locales, vos retouches et les fiches retirées y sont enregistrées (≈ 35 Ko au lieu de 4,2 Mo). Les anciennes sauvegardes qui contiennent encore le catalogue complet restent importables.</td></tr>
 <tr><td><b>Recherche globale</b></td><td>Plantes, fiches catalogue, candidates, croisements, tâches, photos et récoltes.</td></tr>
 <tr><td><b>Modules</b></td><td><code>src/photo-storage.js</code> encapsule la persistance binaire IndexedDB. La table <code>actionDispatch</code> de <code>src/app.js</code> est le point d'entrée du dispatch des actions UI.</td></tr>
-<tr><td><b>Cache PWA</b></td><td><code>npm run build:sw</code> hashe les assets du shell, régénère <code>sw.js</code> et met à jour le nom du cache cité ici. Cache courant : <code>tomato-journal-shell-129d36205d9c</code>.</td></tr>
+<tr><td><b>Cache PWA</b></td><td><code>npm run build:sw</code> hashe les assets du shell, régénère <code>sw.js</code> et met à jour le nom du cache cité ici. Cache courant : <code>tomato-journal-shell-65ef570d34ed</code>.</td></tr>
 <tr><td><b>Sécurité du rendu</b></td><td>Contexte de zone de la topbar, titres de page, tâches et résultats de recherche échappés via <code>escapeHTML()</code>.</td></tr>
 </table>
 
@@ -540,7 +540,7 @@ Open the app at `http://localhost:4173` in development, or at an `https://` addr
 <tr><td><b>Catalog and quota</b></td><td>The 1987 reference sheets ship with the app and are <b>never copied</b> into <code>localStorage</code>: only your local sheets, your edits and the removed sheets are stored (≈ 35 KB instead of 4.2 MB). Older backups that still embed the full catalogue remain importable.</td></tr>
 <tr><td><b>Global search</b></td><td>Plants, catalog sheets, candidates, crosses, tasks, photos and harvests.</td></tr>
 <tr><td><b>Modules</b></td><td><code>src/photo-storage.js</code> wraps IndexedDB binary persistence. The <code>actionDispatch</code> table in <code>src/app.js</code> is the entry point for UI action dispatch.</td></tr>
-<tr><td><b>PWA cache</b></td><td><code>npm run build:sw</code> hashes the shell assets, regenerates <code>sw.js</code> and refreshes the cache name quoted here. Current cache: <code>tomato-journal-shell-129d36205d9c</code>.</td></tr>
+<tr><td><b>PWA cache</b></td><td><code>npm run build:sw</code> hashes the shell assets, regenerates <code>sw.js</code> and refreshes the cache name quoted here. Current cache: <code>tomato-journal-shell-65ef570d34ed</code>.</td></tr>
 <tr><td><b>Render safety</b></td><td>Top bar zone context, page titles, tasks and search results escaped with <code>escapeHTML()</code>.</td></tr>
 </table>
 
